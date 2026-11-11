@@ -16,21 +16,26 @@
 | Gson | 2.11.0，JSON 处理 | Apache-2.0，[Gson](https://github.com/google/gson/tree/gson-parent-2.11.0) |
 | ZXing Core | 3.5.3，二维码生成 | Apache-2.0，[ZXing](https://github.com/zxing/zxing/tree/zxing-3.5.3) |
 | EdDSA-Java | `net.i2p.crypto:eddsa:0.3.0`，Ed25519 验签 | CC0-1.0，[EdDSA-Java](https://github.com/str4d/ed25519-java) |
-| LibVLC Android | `org.videolan.android:libvlc-all:4.0.0-eap29`，VLC 引擎与 Java/JNI 接口 | LGPL-2.1，相关文件允许按其声明选择后续版本，[LibVLC Android](https://code.videolan.org/videolan/libvlcjni)、[VideoLAN](https://www.videolan.org/vlc/libvlc.html) |
+| LibVLC Android 派生 SDK | 基于 `libvlc-all:4.0.0-eap29` 对应固定源码重构建的双 ARM 版本，VLC 引擎与 Java/JNI 接口 | 官方 `l` 构建配置，LGPL-3.0-or-later 与所含组件各自的授权、附加致谢条款；Java/JNI 文件保留原声明，[LibVLC Android](https://code.videolan.org/videolan/libvlcjni)、[VideoLAN](https://www.videolan.org/vlc/libvlc.html) |
+| LibVLC 所含 libass、FreeType、HarfBuzz 与 FriBidi | libass 0.17.4、FreeType 2.13.1、HarfBuzz 11.5.0、FriBidi 1.0.16，字幕与字体渲染 | 分别保留 ISC、FreeType License、Old MIT、LGPL 及各独立文件声明，[组件版权与许可原文](LICENSES/VLC-contrib-NOTICES.txt) |
 | IJK Java 绑定的 GSY 维护制品 | `io.github.carguo:gsyijkjava:1.0.0` | 制品及相关 Java 文件为 Apache-2.0，原文件保留其各自声明，[GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)、[IJK Java 绑定](https://github.com/CarGuo/ijkplayer/tree/30eb9441945da795079492041a791c121d2b8206/android/ijkplayer/ijkplayer-java) |
 | IJK 原生维护制品 | `gsyvideoplayer-arm64:11.3.0`、`gsyvideoplayer-armv7a:11.3.0`，IJK、ijksdl、FFmpeg 等共享库 | IJK / FFmpeg 相关代码为 LGPL-2.1-or-later，各子组件按自身声明，[IJK](https://github.com/bilibili/ijkplayer)、[GSYVideoPlayer 11.3.0](https://github.com/CarGuo/GSYVideoPlayer/tree/v11.3.0) |
 | OpenSSL | IJK ARM64 包含 1.1.1w，ARMv7 包含 1.0.2q | OpenSSL License 与 Original SSLeay License，[OpenSSL](https://github.com/openssl/openssl) |
-| Android NDK libc++ 运行库 | 随 LibVLC AAR 提供的 `libc++_shared.so` | Apache-2.0 WITH LLVM-exception 及保留的历史条款，[LLVM libc++](https://github.com/llvm/llvm-project/tree/main/libcxx) |
+| Android NDK C++ 运行库 | NDK r28c `28.2.13676358` 的双 ARM `libc++_shared.so`，Clang 19.0.1、LLVM 固定提交 `97a699bf4812a18fb657c2779f5296a4ab2694d2` | libc++、libc++abi、libunwind 的 Apache-2.0 WITH LLVM-exception 及保留的历史条款，[Android LLVM 对应源码](https://android.googlesource.com/toolchain/llvm-project/+/97a699bf4812a18fb657c2779f5296a4ab2694d2/) |
 
 AndroidX、Kotlin 和其它传递依赖随解析后的运行时一起使用。各项目内独立文件及所含依赖的授权声明继续有效，详细原始通知、源码与构建资料按照本版本的第三方资料清单查阅。
 
 ## LGPL 组件与用户权利
 
-LibVLC、IJK 及其所含相关库以共享库形式提供，本发行版的两种 ARM ABI 原生库保留上游 SDK 制品字节。IJK 两个 ABI 的 FFmpeg 构建均声明 `--disable-gpl` 与 `--disable-nonfree`。GSY 制品的 Apache 发布元数据和各原生库的 LGPL 许可分别适用于对应代码。
+LibVLC、IJK 及其所含相关库以共享库形式提供。本发行版的 LibVLC 使用固定上游基址及公开补丁重新构建，选择官方 `l` 许可配置，关闭 GPL contrib 并额外排除已核实主授权为 GPL 的插件。LibVLC 组合中的独立组件继续适用各自许可证及附加条款。
 
-使用者保留依据相应 LGPL 许可证复制、研究、修改和再分发这些库的权利，以及为使用修改后的库和调试相关修改所需的替换、重新链接与逆向工程权利。这些权利依相应许可证优先适用。完整条款见本仓库附带的许可证原文。[LGPL 2.1 原文](LICENSES/LGPL-2.1.txt)
+IJK 两种 ARM ABI 原生库保留上游 GSY SDK 制品字节，其 FFmpeg 构建均声明 `--disable-gpl` 与 `--disable-nonfree`。GSY 制品的 Apache 发布元数据和各原生库的 LGPL 许可分别适用于对应代码。
+
+使用者保留依据相应 LGPL 许可证复制、研究、修改和再分发这些库的权利，以及为使用修改后的库和调试相关修改所需的替换、重新链接与逆向工程权利。这些权利依相应许可证优先适用。完整条款见本仓库附带的许可证原文。[LGPL 2.1 原文](LICENSES/LGPL-2.1.txt)、[LGPL 3.0 原文](LICENSES/LGPL-3.0.txt)、[GPL 3.0 基础条款](LICENSES/GPL-3.0.txt)
 
 本版本第三方库的源码、构建资料、原始版权通知及制品对应关系通过同版本 Release 的第三方资料附件提供。附件清单区分实际原生版本标识、上游提交、构建说明与来源证据。Android 应用业务实现的授权范围由应用自身说明确定。[同版本发布与第三方资料](https://github.com/heavenke/AuroraTV-Public/releases)
+
+共享库替换、重新链接及 Android 自签安装的操作流程另附说明。[第三方共享库替换与重新打包](Library-replacement.md)
 
 ## 原生组件版本对应信息
 
@@ -38,10 +43,25 @@ LibVLC、IJK 及其所含相关库以共享库形式提供，本发行版的两�
 | --- | --- |
 | LibVLC core | `4.0.0-dev-37538-gc84ef1eda4`，对应 VLC 提交 `c84ef1eda4f14f8b57a5b266b51c843cf51ed28b` |
 | LibVLC JNI / Android 构建材料 | Android `libvlc-4.0.0-eap29` 标签所锁定的 JNI 提交 `a8d53a9151d7e4a9a5dfd0a5eb1cd92669afdc21` |
+| 本发行版 LibVLC 派生 AAR | Android API 21，`arm64-v8a` 与 `armeabi-v7a`；AAR SHA-256 为 `21696466595a0c0950f26fc7e164f99e8f6bfd59e452482ec6af32843e62d50d`，逐共享库指纹和补丁见同版本源码资料 |
 | IJK ARM64 | `k0.8.8-43-g30eb9441`，对应维护提交 `30eb9441945da795079492041a791c121d2b8206`；FFmpeg 构建标识 4.1.6 |
 | IJK ARMv7 | `k0.8.8-32-ge99d640e`，对应维护提交 `e99d640e5fe94c65132379307f92d7180bcde8e7`；FFmpeg 构建标识 `4.0--ijk0.8.8--20210205--001` |
 
 以上原生标识用于定位对应材料，构建分支和外部依赖版本按第三方资料附件内的逐项映射说明确定。[VLC core 提交](https://github.com/videolan/vlc/tree/c84ef1eda4f14f8b57a5b266b51c843cf51ed28b)、[IJK ARM64 提交](https://github.com/CarGuo/ijkplayer/tree/30eb9441945da795079492041a791c121d2b8206)、[IJK ARMv7 提交](https://github.com/CarGuo/ijkplayer/tree/e99d640e5fe94c65132379307f92d7180bcde8e7)
+
+## LibVLC 构建与功能差异
+
+X-Team 在上述固定基址应用 Android 构建补丁和模块筛选，重新生成两种 ABI 的 `libvlc.so`、`libvlcjni.so`，并采用对应 NDK r28c 的 `libc++_shared.so`。Java `classes.jar`、Android Manifest 和 Android 资源保留 eap29 Maven 制品原字节。所用构建脚本、源码归档、补丁、工具链来源、实际配置和模块授权审计随同版本第三方资料提供。
+
+最终每个 ABI 注册 305 个静态插件。筛选移除了 dummy / rc 命令行接口、file_logger / syslog 日志插件、Lua、stream_out_cycle / stream_out_rtp 流输出、hqdn3d 降噪、rotate 任意角度旋转及 deinterlace 软件去隔行插件族，包含对应架构优化实现。原 AAR 的 Lua 封面、网页播放列表脚本与 3D HRTF `.sofa` 数据一起移除。
+
+实际注册表包含 TS、MKV、avcodec、MediaCodec、Android 显示、libass 和 FreeType 模块，字幕字体依赖设备系统字体及对应字体渲染组件。RTSP 等能力沿用所选 `l` 配置下的实际模块集合。模块存在性、原生播放回归及用户实际观看效果分别记录于构建资料和测试结果。
+
+LibVLC 构建所用源码归档中的版权、许可证和作者通知另行汇编保留，每节列出归档名、原始路径及 SHA-256。汇编也保留源码包内可选组件、测试文件和宿主工具的通知；实际链接范围按同版本构建配置、链接记录及模块清单核对，各通知分别适用于其覆盖文件。[VLC 组件原始通知](LICENSES/VLC-contrib-NOTICES.txt)
+
+## FreeType 致谢
+
+本软件部分基于 FreeType Team 的工作。FreeType 的原始版权、许可条件与免责条款保存在组件通知汇编的 `freetype-2.13.1/docs/FTL.TXT` 中。[FreeType Project](https://www.freetype.org/)、[组件通知与 FTL 原文](LICENSES/VLC-contrib-NOTICES.txt)
 
 ## Media3 组件改动通知
 
@@ -61,8 +81,13 @@ OpenSSL Project、Eric Young 与 Tim Hudson 的原始版权、再分发条件和
 
 - [Apache License 2.0](LICENSES/Apache-2.0.txt)
 - [GNU Lesser General Public License 2.1](LICENSES/LGPL-2.1.txt)
+- [GNU Lesser General Public License 3.0](LICENSES/LGPL-3.0.txt)
+- [GNU General Public License 3.0](LICENSES/GPL-3.0.txt)
 - [CC0 1.0 Universal](LICENSES/CC0-1.0.txt)
 - [LLVM libc++ 许可证与 LLVM exception](LICENSES/LLVM-libcxx-LICENSE.txt)
+- [LLVM libc++abi 许可证与 LLVM exception](LICENSES/LLVM-libcxxabi-LICENSE.txt)
+- [LLVM libunwind 许可证与 LLVM exception](LICENSES/LLVM-libunwind-LICENSE.txt)
+- [VLC 所用源码组件的版权与许可通知](LICENSES/VLC-contrib-NOTICES.txt)
 - [ZXing 上游 NOTICE](LICENSES/ZXing-NOTICE.txt)
 - [原文来源与文件校验值](LICENSES/SOURCES.md)
 
