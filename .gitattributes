@@ -1,2 +1,3 @@
-LICENSES/* -text
+LICENSES/*.txt -text -whitespace
+LICENSES/SOURCES.md text eol=lf
 *.png binary
