@@ -1,3 +1,5 @@
 LICENSES/*.txt -text -whitespace
 LICENSES/SOURCES.md text eol=lf
 *.png binary
+
+third-party/** -text

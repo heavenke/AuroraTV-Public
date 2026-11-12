@@ -1,0 +1,47 @@
+[
+  {
+    "component": "libunwind",
+    "revision": "97a699bf4812a18fb657c2779f5296a4ab2694d2",
+    "url": "https://android.googlesource.com/toolchain/llvm-project/+archive/97a699bf4812a18fb657c2779f5296a4ab2694d2/libunwind.tar.gz",
+    "path": "llvm-android-97a699bf4812a18fb657c2779f5296a4ab2694d2-libunwind.tar.gz",
+    "sha256": "c1bdf0ba7b37470406d67a3fcafae322847344870bd7695fb1291498ec9563a5",
+    "size": 164927,
+    "archive_entries": 78
+  },
+  {
+    "component": "runtimes",
+    "revision": "97a699bf4812a18fb657c2779f5296a4ab2694d2",
+    "url": "https://android.googlesource.com/toolchain/llvm-project/+archive/97a699bf4812a18fb657c2779f5296a4ab2694d2/runtimes.tar.gz",
+    "path": "llvm-android-97a699bf4812a18fb657c2779f5296a4ab2694d2-runtimes.tar.gz",
+    "sha256": "e0f60e1fb8ae09aea81a46811c5e991361673daa32a89b26de412bb1455c15e2",
+    "size": 7581,
+    "archive_entries": 13
+  },
+  {
+    "component": "cmake",
+    "revision": "97a699bf4812a18fb657c2779f5296a4ab2694d2",
+    "url": "https://android.googlesource.com/toolchain/llvm-project/+archive/97a699bf4812a18fb657c2779f5296a4ab2694d2/cmake.tar.gz",
+    "path": "llvm-android-97a699bf4812a18fb657c2779f5296a4ab2694d2-cmake.tar.gz",
+    "sha256": "5cc87562aa01097831fb9d831b33c47ea37c2580b120370199d81349fb4061a7",
+    "size": 9973,
+    "archive_entries": 15
+  },
+  {
+    "component": "libcxxabi",
+    "revision": "97a699bf4812a18fb657c2779f5296a4ab2694d2",
+    "url": "https://android.googlesource.com/toolchain/llvm-project/+archive/97a699bf4812a18fb657c2779f5296a4ab2694d2/libcxxabi.tar.gz",
+    "path": "llvm-android-97a699bf4812a18fb657c2779f5296a4ab2694d2-libcxxabi.tar.gz",
+    "sha256": "75782e659437dd8145c7492a2f95f9e3114726d0cf4915aaee359eb66df46d68",
+    "size": 802708,
+    "archive_entries": 173
+  },
+  {
+    "component": "libcxx",
+    "revision": "97a699bf4812a18fb657c2779f5296a4ab2694d2",
+    "url": "https://android.googlesource.com/toolchain/llvm-project/+archive/97a699bf4812a18fb657c2779f5296a4ab2694d2/libcxx.tar.gz",
+    "path": "llvm-android-97a699bf4812a18fb657c2779f5296a4ab2694d2-libcxx.tar.gz",
+    "sha256": "3726557ad6bf15899fc7bc3a718fd69a235ad1bd7665852df8739f8d2e185f5d",
+    "size": 7253748,
+    "archive_entries": 12504
+  }
+]

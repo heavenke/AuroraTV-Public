@@ -1,0 +1,19 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+includedir=${prefix}/include
+libdir=${prefix}/lib
+pl_has_d3d11=0
+pl_has_dovi=1
+pl_has_gl_proc_addr=1
+pl_has_glslang=1
+pl_has_lcms=0
+pl_has_libdovi=0
+pl_has_opengl=1
+pl_has_shaderc=0
+pl_has_vk_proc_addr=0
+pl_has_vulkan=1
+
+Name: libplacebo
+Description: Reusable library for GPU-accelerated video/image rendering
+Version: 5.264.1
+Libs: -L${libdir} -lplacebo -lm -pthread -lglslang-default-resource-limits -lSPIRV -lMachineIndependent -lOSDependent -lOGLCompiler -lGenericCodeGen -ldl
+Cflags: -I${includedir} -pthread

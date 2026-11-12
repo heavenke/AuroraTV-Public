@@ -1,0 +1,14 @@
+# theoradec installed pkg-config file
+
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+
+Name: theora
+Description: Theora video codec (decoder)
+Version: 1.2.0
+Requires: ogg >= 1.3.4
+Conflicts:
+Libs: -L${libdir} -ltheoradec
+Cflags: -I${includedir}

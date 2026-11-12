@@ -1,0 +1,9 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: GNU FriBidi
+Description: Unicode Bidirectional Algorithm Library
+Version: 1.0.16
+Libs: -L${libdir} -lfribidi
+Cflags: -I${includedir}/fribidi

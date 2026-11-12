@@ -1,0 +1,6 @@
+8cff6b3e7e31a0d5d24a219b41b2916e2d8fc1e62b288cc35b2f42345ad2cdec  /root/.cache/aurora-vlc-lgpl/source/libvlc/patches/0001-compat-Workaround-sendmsg-bug-on-android.patch
+f095e66c304e7e3125a5d343f0ba626edabffc7423a47a801e05a0519e775729  /root/.cache/aurora-vlc-lgpl/source/libvlc/patches/0002-network-tls-Handle-errors-from-older-kernels.patch
+1588c18f59213e788d38657edbc97d9356f972b26fa776ede78aca299f680a42  /root/.cache/aurora-vlc-lgpl/source/libvlc/patches/0003-access_output-file-Add-error-dialog-for-write-open.patch
+2feb5e99fe9f618228071a7d1b9db9d92cb74e7879bf70348a3e73b152a4ab14  /root/.cache/aurora-vlc-lgpl/source/libvlc/patches/0004-input-es_out-set-video-exclusive.patch
+d63669f582cfb31305437b625ee30f971bfd67bded35a803e71c7dbe388fe2cf  /root/.cache/aurora-vlc-lgpl/source/libvlc/patches/0005-stream_ReadLine-increase-line-length-limit.patch
+2dbd7481b4a26daa0554c7a0ff7be93d3eb1c24b0b3b0d5ff26205198541596c  /root/.cache/aurora-vlc-lgpl/source/libvlc/patches/0006-input-display-discoverer-preparsers-logs.patch

@@ -1,0 +1,14 @@
+# rnnoise installed pkg-config file
+
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+
+Name: rnnoise
+Description: RNN-based noise suppression
+Version: unknown
+Conflicts:
+Libs:  -L${libdir} -lrnnoise 
+Cflags:  -I${includedir}/ 
+Requires:  

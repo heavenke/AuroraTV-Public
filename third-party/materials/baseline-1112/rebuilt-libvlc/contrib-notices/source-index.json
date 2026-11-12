@@ -1,0 +1,1781 @@
+{
+  "scope": "verbatim license/notice/authors files found in cached upstream source archives; optional/source-only components are included and membership must be checked against linker/configuration records",
+  "files": [
+    {
+      "archive": "dav1d-1.5.3.tar.xz",
+      "source_path": "dav1d-1.5.3/COPYING",
+      "path": "contrib-notices/dav1d-1.5.3.tar.xz/dav1d-1.5.3/COPYING",
+      "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5",
+      "size": 1317,
+      "archive_sha256": "732010aa5ef461fa93355ed2c6c5fedb48ddc4b74e697eaabe8907eaeb943011"
+    },
+    {
+      "archive": "ffmpeg-8.1.tar.xz",
+      "source_path": "ffmpeg-8.1/COPYING.LGPLv2.1",
+      "path": "contrib-notices/ffmpeg-8.1.tar.xz/ffmpeg-8.1/COPYING.LGPLv2.1",
+      "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30",
+      "size": 26517,
+      "archive_sha256": "b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a"
+    },
+    {
+      "archive": "ffmpeg-8.1.tar.xz",
+      "source_path": "ffmpeg-8.1/COPYING.GPLv2",
+      "path": "contrib-notices/ffmpeg-8.1.tar.xz/ffmpeg-8.1/COPYING.GPLv2",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "size": 18092,
+      "archive_sha256": "b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a"
+    },
+    {
+      "archive": "ffmpeg-8.1.tar.xz",
+      "source_path": "ffmpeg-8.1/COPYING.LGPLv3",
+      "path": "contrib-notices/ffmpeg-8.1.tar.xz/ffmpeg-8.1/COPYING.LGPLv3",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "size": 7651,
+      "archive_sha256": "b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a"
+    },
+    {
+      "archive": "ffmpeg-8.1.tar.xz",
+      "source_path": "ffmpeg-8.1/COPYING.GPLv3",
+      "path": "contrib-notices/ffmpeg-8.1.tar.xz/ffmpeg-8.1/COPYING.GPLv3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "size": 35147,
+      "archive_sha256": "b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a"
+    },
+    {
+      "archive": "ffmpeg-8.1.tar.xz",
+      "source_path": "ffmpeg-8.1/doc/authors.texi",
+      "path": "contrib-notices/ffmpeg-8.1.tar.xz/ffmpeg-8.1/doc/authors.texi",
+      "sha256": "fb5fac6dd8f7474033e933814491a8297d8723c52be4dcbcc82eef9c4f008dd2",
+      "size": 403,
+      "archive_sha256": "b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a"
+    },
+    {
+      "archive": "ffmpeg-8.1.tar.xz",
+      "source_path": "ffmpeg-8.1/LICENSE.md",
+      "path": "contrib-notices/ffmpeg-8.1.tar.xz/ffmpeg-8.1/LICENSE.md",
+      "sha256": "2e1d16c72fd74e12063776371da757322f8b77589386532f4fd8634bde7de1af",
+      "size": 4346,
+      "archive_sha256": "b072aed6871998cce9b36e7774033105ca29e33632be5b6347f3206898e0756a"
+    },
+    {
+      "archive": "flac-1.5.0.tar.xz",
+      "source_path": "flac-1.5.0/AUTHORS",
+      "path": "contrib-notices/flac-1.5.0.tar.xz/flac-1.5.0/AUTHORS",
+      "sha256": "89d44b9c876a8a5cbfc886348a151abd74eeb49e4b690b0cfe96d44a9afe8118",
+      "size": 2354,
+      "archive_sha256": "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920"
+    },
+    {
+      "archive": "flac-1.5.0.tar.xz",
+      "source_path": "flac-1.5.0/COPYING.GPL",
+      "path": "contrib-notices/flac-1.5.0.tar.xz/flac-1.5.0/COPYING.GPL",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "size": 18092,
+      "archive_sha256": "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920"
+    },
+    {
+      "archive": "flac-1.5.0.tar.xz",
+      "source_path": "flac-1.5.0/COPYING.FDL",
+      "path": "contrib-notices/flac-1.5.0.tar.xz/flac-1.5.0/COPYING.FDL",
+      "sha256": "c5d2b95c2538d2e41d8eedd9ecc750cd5fee085c7bb2bc3e2f95f4e59cc0b10d",
+      "size": 22954,
+      "archive_sha256": "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920"
+    },
+    {
+      "archive": "flac-1.5.0.tar.xz",
+      "source_path": "flac-1.5.0/COPYING.Xiph",
+      "path": "contrib-notices/flac-1.5.0.tar.xz/flac-1.5.0/COPYING.Xiph",
+      "sha256": "7866ee98760fc1f0156b4fe6bf530257e02be487ab3fd94e2b63799dd32d6b2c",
+      "size": 1509,
+      "archive_sha256": "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920"
+    },
+    {
+      "archive": "flac-1.5.0.tar.xz",
+      "source_path": "flac-1.5.0/COPYING.LGPL",
+      "path": "contrib-notices/flac-1.5.0.tar.xz/flac-1.5.0/COPYING.LGPL",
+      "sha256": "5df07007198989c622f5d41de8d703e7bef3d0e79d62e24332ee739a452af62a",
+      "size": 26436,
+      "archive_sha256": "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920"
+    },
+    {
+      "archive": "fluidlite-b0f187b404e393ee0a495b277154d55d7d03cbeb.tar.xz",
+      "source_path": "fluidlite-b0f187b404e393ee0a495b277154d55d7d03cbeb/LICENSE",
+      "path": "contrib-notices/fluidlite-b0f187b404e393ee0a495b277154d55d7d03cbeb.tar.xz/fluidlite-b0f187b404e393ee0a495b277154d55d7d03cbeb/LICENSE",
+      "sha256": "a5564e99fd7f49e1344152a8c5bc1d420d5f973b30e010946764db0b5b9e668c",
+      "size": 736,
+      "archive_sha256": "3b6ae2955d06267fae4953200917084c1e8a3eb5afb0e56c8679d004afa6f5c9"
+    },
+    {
+      "archive": "freetype-2.13.1.tar.xz",
+      "source_path": "freetype-2.13.1/LICENSE.TXT",
+      "path": "contrib-notices/freetype-2.13.1.tar.xz/freetype-2.13.1/LICENSE.TXT",
+      "sha256": "2e3bbb7d7c5c396368dd0853a790ec29ce5b8647163dde42a0493fb0d6556b2b",
+      "size": 2074,
+      "archive_sha256": "ea67e3b019b1104d1667aa274f5dc307d8cbd606b399bc32df308a77f1a564bf"
+    },
+    {
+      "archive": "fribidi-1.0.16.tar.xz",
+      "source_path": "fribidi-1.0.16/AUTHORS",
+      "path": "contrib-notices/fribidi-1.0.16.tar.xz/fribidi-1.0.16/AUTHORS",
+      "sha256": "cb173f55c9514c8f38f4647ac3fedd5f8611358d331e65ab955da931e826861c",
+      "size": 1640,
+      "archive_sha256": "1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c"
+    },
+    {
+      "archive": "fribidi-1.0.16.tar.xz",
+      "source_path": "fribidi-1.0.16/COPYING",
+      "path": "contrib-notices/fribidi-1.0.16.tar.xz/fribidi-1.0.16/COPYING",
+      "sha256": "32434afcc8666ba060e111d715bfdb6c2d5dd8a35fa4d3ab8ad67d8f850d2f2b",
+      "size": 26440,
+      "archive_sha256": "1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c"
+    },
+    {
+      "archive": "game-music-emu-0.6.4.tar.gz",
+      "source_path": "game-music-emu-0.6.4/gme/ext/LICENSE",
+      "path": "contrib-notices/game-music-emu-0.6.4.tar.gz/game-music-emu-0.6.4/gme/ext/LICENSE",
+      "sha256": "8fb093f26ed0d78c8ca033bbec7063ac5b34c5d2475e6bd121d03ccfaaf2355f",
+      "size": 1089,
+      "archive_sha256": "f2360feb5a32ace226c583df4faf6eff74145c81264aaea11e17a1af2f6f101a"
+    },
+    {
+      "archive": "game-music-emu-0.6.4.tar.gz",
+      "source_path": "game-music-emu-0.6.4/license.gpl2.txt",
+      "path": "contrib-notices/game-music-emu-0.6.4.tar.gz/game-music-emu-0.6.4/license.gpl2.txt",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "size": 18092,
+      "archive_sha256": "f2360feb5a32ace226c583df4faf6eff74145c81264aaea11e17a1af2f6f101a"
+    },
+    {
+      "archive": "game-music-emu-0.6.4.tar.gz",
+      "source_path": "game-music-emu-0.6.4/license.txt",
+      "path": "contrib-notices/game-music-emu-0.6.4.tar.gz/game-music-emu-0.6.4/license.txt",
+      "sha256": "d2efc89fbb7533572a472d34e07964951810a3a4f8d3159ecc2dcaa1452c5c26",
+      "size": 26938,
+      "archive_sha256": "f2360feb5a32ace226c583df4faf6eff74145c81264aaea11e17a1af2f6f101a"
+    },
+    {
+      "archive": "ggml-0.11.0.tar.gz",
+      "source_path": "ggml-0.11.0/AUTHORS",
+      "path": "contrib-notices/ggml-0.11.0.tar.gz/ggml-0.11.0/AUTHORS",
+      "sha256": "922076fa7d30acba9058abe144b9fe22815d26ac2ec3241e02977a20dd5df218",
+      "size": 14359,
+      "archive_sha256": "079d3549588b7b66c577b9921b8caa9971b732b95970837fcb5098b51a2935c5"
+    },
+    {
+      "archive": "ggml-0.11.0.tar.gz",
+      "source_path": "ggml-0.11.0/LICENSE",
+      "path": "contrib-notices/ggml-0.11.0.tar.gz/ggml-0.11.0/LICENSE",
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+      "size": 1078,
+      "archive_sha256": "079d3549588b7b66c577b9921b8caa9971b732b95970837fcb5098b51a2935c5"
+    },
+    {
+      "archive": "glad-2.0.4.tar.gz",
+      "source_path": "glad-2.0.4/LICENSE",
+      "path": "contrib-notices/glad-2.0.4.tar.gz/glad-2.0.4/LICENSE",
+      "sha256": "cbb325cd4ac5bd06717ffa34a322b984f9d285e4c67c8ca1b7380d6ef08c2a77",
+      "size": 3014,
+      "archive_sha256": "02629644c242dcc27c58222bd2c001d5e2f3765dbbcfd796542308bddebab401"
+    },
+    {
+      "archive": "glslang-12.3.1.tar.gz",
+      "source_path": "glslang-12.3.1/LICENSE.txt",
+      "path": "contrib-notices/glslang-12.3.1.tar.gz/glslang-12.3.1/LICENSE.txt",
+      "sha256": "adb783e734e906d1f46db5df29991dbde84bdb0ceab502ac2febb44fe3c2b5f4",
+      "size": 54705,
+      "archive_sha256": "a57836a583b3044087ac51bb0d5d2d803ff84591d55f89087fc29ace42a8b9a8"
+    },
+    {
+      "archive": "glslang-12.3.1.tar.gz",
+      "source_path": "glslang-12.3.1/license-checker.cfg",
+      "path": "contrib-notices/glslang-12.3.1.tar.gz/glslang-12.3.1/license-checker.cfg",
+      "sha256": "e6ead88c5894007be86546cfd24d6c0b9fafcbf832fc27d8330eb7d46cedc84a",
+      "size": 1731,
+      "archive_sha256": "a57836a583b3044087ac51bb0d5d2d803ff84591d55f89087fc29ace42a8b9a8"
+    },
+    {
+      "archive": "gmp-6.3.0.tar.xz",
+      "source_path": "gmp-6.3.0/COPYING",
+      "path": "contrib-notices/gmp-6.3.0.tar.xz/gmp-6.3.0/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "size": 35147,
+      "archive_sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898"
+    },
+    {
+      "archive": "gmp-6.3.0.tar.xz",
+      "source_path": "gmp-6.3.0/COPYING.LESSERv3",
+      "path": "contrib-notices/gmp-6.3.0.tar.xz/gmp-6.3.0/COPYING.LESSERv3",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c",
+      "size": 7639,
+      "archive_sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898"
+    },
+    {
+      "archive": "gmp-6.3.0.tar.xz",
+      "source_path": "gmp-6.3.0/AUTHORS",
+      "path": "contrib-notices/gmp-6.3.0.tar.xz/gmp-6.3.0/AUTHORS",
+      "sha256": "da5870e2f0482c5dc15b4cfed8bbfb51ce1279c8f8fc52bdb8c13c7cee949c32",
+      "size": 4098,
+      "archive_sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898"
+    },
+    {
+      "archive": "gnutls-3.8.10.tar.xz",
+      "source_path": "gnutls-3.8.10/AUTHORS",
+      "path": "contrib-notices/gnutls-3.8.10.tar.xz/gnutls-3.8.10/AUTHORS",
+      "sha256": "f3eccccedb3cdd1ecf182ea361b2e12f4da465eb4e366198c6ecbbb8c63b4b77",
+      "size": 10642,
+      "archive_sha256": "db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7"
+    },
+    {
+      "archive": "gnutls-3.8.10.tar.xz",
+      "source_path": "gnutls-3.8.10/COPYING",
+      "path": "contrib-notices/gnutls-3.8.10.tar.xz/gnutls-3.8.10/COPYING",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "size": 35149,
+      "archive_sha256": "db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7"
+    },
+    {
+      "archive": "gnutls-3.8.10.tar.xz",
+      "source_path": "gnutls-3.8.10/COPYING.LESSERv2",
+      "path": "contrib-notices/gnutls-3.8.10.tar.xz/gnutls-3.8.10/COPYING.LESSERv2",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "size": 26419,
+      "archive_sha256": "db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7"
+    },
+    {
+      "archive": "gnutls-3.8.10.tar.xz",
+      "source_path": "gnutls-3.8.10/doc/examples/tlsproxy/LICENSE",
+      "path": "contrib-notices/gnutls-3.8.10.tar.xz/gnutls-3.8.10/doc/examples/tlsproxy/LICENSE",
+      "sha256": "b42dbe48110754b99f026ad30e69b1069f826fb07e7c616b526bd1090952fb1b",
+      "size": 1090,
+      "archive_sha256": "db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7"
+    },
+    {
+      "archive": "gnutls-3.8.10.tar.xz",
+      "source_path": "gnutls-3.8.10/lib/accelerated/x86/license.txt",
+      "path": "contrib-notices/gnutls-3.8.10.tar.xz/gnutls-3.8.10/lib/accelerated/x86/license.txt",
+      "sha256": "0c35a52bcfa4da2f0df4a1282a6034e211c976b8b6d43691a639eef9c8aebf7e",
+      "size": 2463,
+      "archive_sha256": "db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7"
+    },
+    {
+      "archive": "gnutls-3.8.10.tar.xz",
+      "source_path": "gnutls-3.8.10/lib/inih/LICENSE.txt",
+      "path": "contrib-notices/gnutls-3.8.10.tar.xz/gnutls-3.8.10/lib/inih/LICENSE.txt",
+      "sha256": "9ae3b39e83e9158e44b67733baa3bb2d84e80efdcfb14a5820210a42c7abdf7f",
+      "size": 1510,
+      "archive_sha256": "db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7"
+    },
+    {
+      "archive": "gsm-1.0-pl22.tar.gz",
+      "source_path": "gsm-1.0-pl22/COPYRIGHT",
+      "path": "contrib-notices/gsm-1.0-pl22.tar.gz/gsm-1.0-pl22/COPYRIGHT",
+      "sha256": "81c68a3374937ed9b5e4929c709e81a2c4b35b5d1f450ecf8c473e2daea46ff6",
+      "size": 1450,
+      "archive_sha256": "f0072e91f6bb85a878b2f6dbf4a0b7c850c4deb8049d554c65340b3bf69df0ac"
+    },
+    {
+      "archive": "harfbuzz-11.5.0.tar.xz",
+      "source_path": "harfbuzz-11.5.0/AUTHORS",
+      "path": "contrib-notices/harfbuzz-11.5.0.tar.xz/harfbuzz-11.5.0/AUTHORS",
+      "sha256": "19bfe8f5ed100636cd24ab0c90a3f71c21d8b02d9ba00719447a0faab364d49f",
+      "size": 201,
+      "archive_sha256": "2d30ba45c4c8ec4de661a1002b4f88d0841ff1a3087f34629275f5436d722109"
+    },
+    {
+      "archive": "harfbuzz-11.5.0.tar.xz",
+      "source_path": "harfbuzz-11.5.0/COPYING",
+      "path": "contrib-notices/harfbuzz-11.5.0.tar.xz/harfbuzz-11.5.0/COPYING",
+      "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+      "size": 1971,
+      "archive_sha256": "2d30ba45c4c8ec4de661a1002b4f88d0841ff1a3087f34629275f5436d722109"
+    },
+    {
+      "archive": "harfbuzz-11.5.0.tar.xz",
+      "source_path": "harfbuzz-11.5.0/src/ms-use/COPYING",
+      "path": "contrib-notices/harfbuzz-11.5.0.tar.xz/harfbuzz-11.5.0/src/ms-use/COPYING",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "size": 1141,
+      "archive_sha256": "2d30ba45c4c8ec4de661a1002b4f88d0841ff1a3087f34629275f5436d722109"
+    },
+    {
+      "archive": "harfbuzz-11.5.0.tar.xz",
+      "source_path": "harfbuzz-11.5.0/test/COPYING",
+      "path": "contrib-notices/harfbuzz-11.5.0.tar.xz/harfbuzz-11.5.0/test/COPYING",
+      "sha256": "9b35b8485f69cd298fccbb3c40a827dc06cf1185553bef827903497d2944a8d7",
+      "size": 4370,
+      "archive_sha256": "2d30ba45c4c8ec4de661a1002b4f88d0841ff1a3087f34629275f5436d722109"
+    },
+    {
+      "archive": "harfbuzz-11.5.0.tar.xz",
+      "source_path": "harfbuzz-11.5.0/test/shape/data/aots/COPYING",
+      "path": "contrib-notices/harfbuzz-11.5.0.tar.xz/harfbuzz-11.5.0/test/shape/data/aots/COPYING",
+      "sha256": "f55f74bf740db07bb032a90aa74af4307adea3d489c1ccba12453cf0c0a764cb",
+      "size": 593,
+      "archive_sha256": "2d30ba45c4c8ec4de661a1002b4f88d0841ff1a3087f34629275f5436d722109"
+    },
+    {
+      "archive": "harfbuzz-11.5.0.tar.xz",
+      "source_path": "harfbuzz-11.5.0/test/shape/data/text-rendering-tests/COPYING",
+      "path": "contrib-notices/harfbuzz-11.5.0.tar.xz/harfbuzz-11.5.0/test/shape/data/text-rendering-tests/COPYING",
+      "sha256": "d24039e4d22c9bc72096f6174374539d92a3d6e1163938546ec59179fe095e6f",
+      "size": 584,
+      "archive_sha256": "2d30ba45c4c8ec4de661a1002b4f88d0841ff1a3087f34629275f5436d722109"
+    },
+    {
+      "archive": "jinja-3.1.2.tar.gz",
+      "source_path": "jinja-3.1.2/LICENSE.rst",
+      "path": "contrib-notices/jinja-3.1.2.tar.gz/jinja-3.1.2/LICENSE.rst",
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+      "size": 1475,
+      "archive_sha256": "ecae76cd1a064d40eb46c5375f07953d747f4d65b68cd3fa5f02c91714b799fc"
+    },
+    {
+      "archive": "jinja-3.1.2.tar.gz",
+      "source_path": "jinja-3.1.2/docs/license.rst",
+      "path": "contrib-notices/jinja-3.1.2.tar.gz/jinja-3.1.2/docs/license.rst",
+      "sha256": "c9362a7258a11c84a8f7e825ccbbb5c425c6fc02368d3aee6494533fb99ba1f4",
+      "size": 71,
+      "archive_sha256": "ecae76cd1a064d40eb46c5375f07953d747f4d65b68cd3fa5f02c91714b799fc"
+    },
+    {
+      "archive": "lame-3.100.tar.gz",
+      "source_path": "lame-3.100/COPYING",
+      "path": "contrib-notices/lame-3.100.tar.gz/lame-3.100/COPYING",
+      "sha256": "bfe4a52dc4645385f356a8e83cc54216a293e3b6f1cb4f79f5fc0277abf937fd",
+      "size": 25284,
+      "archive_sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+    },
+    {
+      "archive": "lame-3.100.tar.gz",
+      "source_path": "lame-3.100/LICENSE",
+      "path": "contrib-notices/lame-3.100.tar.gz/lame-3.100/LICENSE",
+      "sha256": "7a40cbd8818c57e5285e83c772a459a996d1662c824a879836b97b473c07cae4",
+      "size": 487,
+      "archive_sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+    },
+    {
+      "archive": "lame-3.100.tar.gz",
+      "source_path": "lame-3.100/mpglib/AUTHORS",
+      "path": "contrib-notices/lame-3.100.tar.gz/lame-3.100/mpglib/AUTHORS",
+      "sha256": "d8ecf9556aafa8c653796d6be3dc43deea374257680e21c30109a5c3c4484263",
+      "size": 604,
+      "archive_sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+    },
+    {
+      "archive": "lame-3.100.tar.gz",
+      "source_path": "lame-3.100/debian/copyright",
+      "path": "contrib-notices/lame-3.100.tar.gz/lame-3.100/debian/copyright",
+      "sha256": "1f27f9f698183275bd615c1140b7bf6e498750e9280597c6eb39790e54ae809b",
+      "size": 2303,
+      "archive_sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/AUTHORS",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/AUTHORS",
+      "sha256": "1bf4faf64255fc1ffe1428e56f58f36050eeaac47a6401e532ca15823d21e9ac",
+      "size": 13105,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/LICENSE",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/LICENSE",
+      "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2",
+      "size": 1316,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/third_party/fastfeat/LICENSE",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/third_party/fastfeat/LICENSE",
+      "sha256": "499041ddee5227b6f29ca06c17803e5fe24d60f243c69635cd76b7ba08d0ddd5",
+      "size": 1504,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/third_party/googletest/src/LICENSE",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/third_party/googletest/src/LICENSE",
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+      "size": 1475,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/third_party/highway/LICENSE-BSD3",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/third_party/highway/LICENSE-BSD3",
+      "sha256": "d25e82e26acd42ca3ccc9993622631163425b869b9e16284226d534cff6470f2",
+      "size": 1515,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/third_party/libwebm/AUTHORS.TXT",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/third_party/libwebm/AUTHORS.TXT",
+      "sha256": "3edb5f5496bfff3d6d4a62fa75fe996b814920d0d6e348c2e65c589e7ac5d177",
+      "size": 137,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/third_party/libwebm/LICENSE.TXT",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/third_party/libwebm/LICENSE.TXT",
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+      "size": 1496,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/third_party/libyuv/LICENSE",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/third_party/libyuv/LICENSE",
+      "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f",
+      "size": 1506,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/third_party/vector/LICENSE",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/third_party/vector/LICENSE",
+      "sha256": "ff6c857ce2708e87701323078aef115c1872a1f80a9649f86dc899b48083bc60",
+      "size": 1084,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libaom-3.14.1.tar.gz",
+      "source_path": "libaom-3.14.1/third_party/x86inc/LICENSE",
+      "path": "contrib-notices/libaom-3.14.1.tar.gz/libaom-3.14.1/third_party/x86inc/LICENSE",
+      "sha256": "719d8fa235f2068e0ae6d6a7dceb0a7720d7840f0f0ebed29957989e6ded3cd8",
+      "size": 936,
+      "archive_sha256": "44bf90dbd23e734d50e70a8c41c285193922938bd0d3bc2ee56764d181d55ef5"
+    },
+    {
+      "archive": "libarchive-3.8.7.tar.xz",
+      "source_path": "libarchive-3.8.7/COPYING",
+      "path": "contrib-notices/libarchive-3.8.7.tar.xz/libarchive-3.8.7/COPYING",
+      "sha256": "30e556b3959e3985d66efefec5eaac51d4995053caa1d3cffe6eb916f146f229",
+      "size": 3089,
+      "archive_sha256": "d3a8ba457ae25c27c84fd2830a2efdcc5b1d40bf585d4eb0d35f47e99e5d4774"
+    },
+    {
+      "archive": "libaribcaption-1.1.1.tar.gz",
+      "source_path": "libaribcaption-1.1.1/LICENSE",
+      "path": "contrib-notices/libaribcaption-1.1.1.tar.gz/libaribcaption-1.1.1/LICENSE",
+      "sha256": "5149f1ce4fe89190d86bfb440456701a3a7406fc2b19ef0d8b57661f62b32c04",
+      "size": 1065,
+      "archive_sha256": "278d03a0a662d00a46178afc64f32535ede2d78c603842b6fd1c55fa9cd44683"
+    },
+    {
+      "archive": "libass-0.17.4.tar.gz",
+      "source_path": "libass-0.17.4/COPYING",
+      "path": "contrib-notices/libass-0.17.4.tar.gz/libass-0.17.4/COPYING",
+      "sha256": "f7e30699d02798351e7f839e3d3bfeb29ce65e44efa7735c225464c4fd7dfe9c",
+      "size": 755,
+      "archive_sha256": "a886b3b80867f437bc55cff3280a652bfa0d37b43d2aff39ddf3c4f288b8c5a8"
+    },
+    {
+      "archive": "libbluray-1.4.0.tar.xz",
+      "source_path": "libbluray-1.4.0/COPYING",
+      "path": "contrib-notices/libbluray-1.4.0.tar.xz/libbluray-1.4.0/COPYING",
+      "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d",
+      "size": 24478,
+      "archive_sha256": "77937baf07eadda4b2b311cf3af4c50269d2ea3165041f5843d96476c4c92777"
+    },
+    {
+      "archive": "libbluray-1.4.0.tar.xz",
+      "source_path": "libbluray-1.4.0/contrib/asm/LICENSE.txt",
+      "path": "contrib-notices/libbluray-1.4.0.tar.xz/libbluray-1.4.0/contrib/asm/LICENSE.txt",
+      "sha256": "293b6af371eee28b0ff16f0334ea19e20a3d5522143faa4b95b346855507879a",
+      "size": 1598,
+      "archive_sha256": "77937baf07eadda4b2b311cf3af4c50269d2ea3165041f5843d96476c4c92777"
+    },
+    {
+      "archive": "libbluray-1.4.0.tar.xz",
+      "source_path": "libbluray-1.4.0/contrib/libudfread/COPYING",
+      "path": "contrib-notices/libbluray-1.4.0.tar.xz/libbluray-1.4.0/contrib/libudfread/COPYING",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "size": 26530,
+      "archive_sha256": "77937baf07eadda4b2b311cf3af4c50269d2ea3165041f5843d96476c4c92777"
+    },
+    {
+      "archive": "libdsm-0.4.3.tar.xz",
+      "source_path": "libdsm-0.4.3/AUTHORS",
+      "path": "contrib-notices/libdsm-0.4.3.tar.xz/libdsm-0.4.3/AUTHORS",
+      "sha256": "37442d1321e7452b1d7cebce4d7d0caeddf1b18baf967f1dcb1f8c45a7244939",
+      "size": 258,
+      "archive_sha256": "d31921bd6f6a23878266b945731f7d57505472ef85d66f944c43b9f8eacc2a8a"
+    },
+    {
+      "archive": "libdsm-0.4.3.tar.xz",
+      "source_path": "libdsm-0.4.3/COPYING",
+      "path": "contrib-notices/libdsm-0.4.3.tar.xz/libdsm-0.4.3/COPYING",
+      "sha256": "806b80ec9ff3b429533869fd5b0e47cad4e572e2c338f1994fa5f912b44d8008",
+      "size": 27427,
+      "archive_sha256": "d31921bd6f6a23878266b945731f7d57505472ef85d66f944c43b9f8eacc2a8a"
+    },
+    {
+      "archive": "libdvbpsi-1.3.3.tar.bz2",
+      "source_path": "libdvbpsi-1.3.3/COPYING",
+      "path": "contrib-notices/libdvbpsi-1.3.3.tar.bz2/libdvbpsi-1.3.3/COPYING",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "size": 26530,
+      "archive_sha256": "02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112"
+    },
+    {
+      "archive": "libdvbpsi-1.3.3.tar.bz2",
+      "source_path": "libdvbpsi-1.3.3/AUTHORS",
+      "path": "contrib-notices/libdvbpsi-1.3.3.tar.bz2/libdvbpsi-1.3.3/AUTHORS",
+      "sha256": "66ad6934bcf53c8c19cfc854ad95f179f3b5bb3a052d8001f1b2e99167851148",
+      "size": 2260,
+      "archive_sha256": "02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112"
+    },
+    {
+      "archive": "libebml-1.4.5.tar.xz",
+      "source_path": "libebml-1.4.5/LICENSE.LGPL",
+      "path": "contrib-notices/libebml-1.4.5.tar.xz/libebml-1.4.5/LICENSE.LGPL",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "size": 26530,
+      "archive_sha256": "4971640b0592da29c2d426f303e137a9b0b3d07e1b81d069c1e56a2f49ab221b"
+    },
+    {
+      "archive": "libebur128-1.2.6.tar.gz",
+      "source_path": "libebur128-1.2.6/COPYING",
+      "path": "contrib-notices/libebur128-1.2.6.tar.gz/libebur128-1.2.6/COPYING",
+      "sha256": "d6b4754bb67bdd08b97d5d11b2d7434997a371585a78fe77007149df3af8d09c",
+      "size": 1059,
+      "archive_sha256": "baa7fc293a3d4651e244d8022ad03ab797ca3c2ad8442c43199afe8059faa613"
+    },
+    {
+      "archive": "libgcrypt-1.12.0.tar.bz2",
+      "source_path": "libgcrypt-1.12.0/COPYING",
+      "path": "contrib-notices/libgcrypt-1.12.0.tar.bz2/libgcrypt-1.12.0/COPYING",
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+      "size": 17984,
+      "archive_sha256": "0311454e678189bad62a7e9402a9dd793025efff6e7449898616e2fc75e0f4f5"
+    },
+    {
+      "archive": "libgcrypt-1.12.0.tar.bz2",
+      "source_path": "libgcrypt-1.12.0/AUTHORS",
+      "path": "contrib-notices/libgcrypt-1.12.0.tar.bz2/libgcrypt-1.12.0/AUTHORS",
+      "sha256": "481225960dca5cdffc76a5d326f8a8227de869c947c1b2a1e3957cce82156758",
+      "size": 9112,
+      "archive_sha256": "0311454e678189bad62a7e9402a9dd793025efff6e7449898616e2fc75e0f4f5"
+    },
+    {
+      "archive": "libgcrypt-1.12.0.tar.bz2",
+      "source_path": "libgcrypt-1.12.0/COPYING.LIB",
+      "path": "contrib-notices/libgcrypt-1.12.0.tar.bz2/libgcrypt-1.12.0/COPYING.LIB",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "size": 26419,
+      "archive_sha256": "0311454e678189bad62a7e9402a9dd793025efff6e7449898616e2fc75e0f4f5"
+    },
+    {
+      "archive": "libgpg-error-1.56.tar.bz2",
+      "source_path": "libgpg-error-1.56/COPYING",
+      "path": "contrib-notices/libgpg-error-1.56.tar.bz2/libgpg-error-1.56/COPYING",
+      "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c",
+      "size": 18002,
+      "archive_sha256": "82c3d2deb4ad96ad3925d6f9f124fe7205716055ab50e291116ef27975d169c0"
+    },
+    {
+      "archive": "libgpg-error-1.56.tar.bz2",
+      "source_path": "libgpg-error-1.56/AUTHORS",
+      "path": "contrib-notices/libgpg-error-1.56.tar.bz2/libgpg-error-1.56/AUTHORS",
+      "sha256": "b38c7a3bd3dfd836a7514b04aac900ef95a61a3284cc56cd524d3a373432deb3",
+      "size": 2468,
+      "archive_sha256": "82c3d2deb4ad96ad3925d6f9f124fe7205716055ab50e291116ef27975d169c0"
+    },
+    {
+      "archive": "libgpg-error-1.56.tar.bz2",
+      "source_path": "libgpg-error-1.56/COPYING.LIB",
+      "path": "contrib-notices/libgpg-error-1.56.tar.bz2/libgpg-error-1.56/COPYING.LIB",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861",
+      "size": 26527,
+      "archive_sha256": "82c3d2deb4ad96ad3925d6f9f124fe7205716055ab50e291116ef27975d169c0"
+    },
+    {
+      "archive": "libiconv-1.18.tar.gz",
+      "source_path": "libiconv-1.18/COPYING.LIB",
+      "path": "contrib-notices/libiconv-1.18.tar.gz/libiconv-1.18/COPYING.LIB",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "size": 26419,
+      "archive_sha256": "3b08f5f4f9b4eb82f151a7040bfd6fe6c6fb922efe4b1659c66ea933276965e8"
+    },
+    {
+      "archive": "libiconv-1.18.tar.gz",
+      "source_path": "libiconv-1.18/AUTHORS",
+      "path": "contrib-notices/libiconv-1.18.tar.gz/libiconv-1.18/AUTHORS",
+      "sha256": "ed10ef2a01effb12849006d43262ffde5cf72a7d5423bbc8aa66fc6959774c0c",
+      "size": 31,
+      "archive_sha256": "3b08f5f4f9b4eb82f151a7040bfd6fe6c6fb922efe4b1659c66ea933276965e8"
+    },
+    {
+      "archive": "libiconv-1.18.tar.gz",
+      "source_path": "libiconv-1.18/libcharset/COPYING.LIB",
+      "path": "contrib-notices/libiconv-1.18.tar.gz/libiconv-1.18/libcharset/COPYING.LIB",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "size": 26419,
+      "archive_sha256": "3b08f5f4f9b4eb82f151a7040bfd6fe6c6fb922efe4b1659c66ea933276965e8"
+    },
+    {
+      "archive": "libiconv-1.18.tar.gz",
+      "source_path": "libiconv-1.18/libcharset/AUTHORS",
+      "path": "contrib-notices/libiconv-1.18.tar.gz/libiconv-1.18/libcharset/AUTHORS",
+      "sha256": "ed10ef2a01effb12849006d43262ffde5cf72a7d5423bbc8aa66fc6959774c0c",
+      "size": 31,
+      "archive_sha256": "3b08f5f4f9b4eb82f151a7040bfd6fe6c6fb922efe4b1659c66ea933276965e8"
+    },
+    {
+      "archive": "libiconv-1.18.tar.gz",
+      "source_path": "libiconv-1.18/COPYING",
+      "path": "contrib-notices/libiconv-1.18.tar.gz/libiconv-1.18/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "size": 35147,
+      "archive_sha256": "3b08f5f4f9b4eb82f151a7040bfd6fe6c6fb922efe4b1659c66ea933276965e8"
+    },
+    {
+      "archive": "libjpeg-turbo-3.1.3.tar.gz",
+      "source_path": "libjpeg-turbo-3.1.3/LICENSE.md",
+      "path": "contrib-notices/libjpeg-turbo-3.1.3.tar.gz/libjpeg-turbo-3.1.3/LICENSE.md",
+      "sha256": "2189dc45a8fe96204069f8124caa53a148dfdc193f50f584c6ca7849a6072872",
+      "size": 5620,
+      "archive_sha256": "075920b826834ac4ddf97661cc73491047855859affd671d52079c6867c1c6c0"
+    },
+    {
+      "archive": "libjpeg-turbo-3.1.3.tar.gz",
+      "source_path": "libjpeg-turbo-3.1.3/java/doc/legal/LICENSE",
+      "path": "contrib-notices/libjpeg-turbo-3.1.3.tar.gz/libjpeg-turbo-3.1.3/java/doc/legal/LICENSE",
+      "sha256": "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726",
+      "size": 19274,
+      "archive_sha256": "075920b826834ac4ddf97661cc73491047855859affd671d52079c6867c1c6c0"
+    },
+    {
+      "archive": "libjpeg-turbo-3.1.3.tar.gz",
+      "source_path": "libjpeg-turbo-3.1.3/release/License.rtf",
+      "path": "contrib-notices/libjpeg-turbo-3.1.3.tar.gz/libjpeg-turbo-3.1.3/release/License.rtf",
+      "sha256": "d26120ab237f87dea10aa4fa7fd4243cadffd26e54eb2f3903d5fb0f8ed336b2",
+      "size": 2178,
+      "archive_sha256": "075920b826834ac4ddf97661cc73491047855859affd671d52079c6867c1c6c0"
+    },
+    {
+      "archive": "libmatroska-1.7.1.tar.xz",
+      "source_path": "libmatroska-1.7.1/LICENSE.LGPL",
+      "path": "contrib-notices/libmatroska-1.7.1.tar.xz/libmatroska-1.7.1/LICENSE.LGPL",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "size": 26530,
+      "archive_sha256": "572a3033b8d93d48a6a858e514abce4b2f7a946fe1f02cbfeca39bfd703018b3"
+    },
+    {
+      "archive": "libmodplug-0.8.9.0.tar.gz",
+      "source_path": "libmodplug-0.8.9.0/COPYING",
+      "path": "contrib-notices/libmodplug-0.8.9.0.tar.gz/libmodplug-0.8.9.0/COPYING",
+      "sha256": "49942e7b3b175f549e751feb08b5270ca6f6c5fb7a1be9f9517db275ec32c92e",
+      "size": 57,
+      "archive_sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
+    },
+    {
+      "archive": "libmodplug-0.8.9.0.tar.gz",
+      "source_path": "libmodplug-0.8.9.0/AUTHORS",
+      "path": "contrib-notices/libmodplug-0.8.9.0.tar.gz/libmodplug-0.8.9.0/AUTHORS",
+      "sha256": "9bf4fdca73ed1f9654ba5930261fd8d31d3874327e9925bf64c4ac7dfd9ac11a",
+      "size": 648,
+      "archive_sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/LICENSE",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/LICENSE",
+      "sha256": "9c8713ccc5d6d93d20c7a1cfcb876e64baf551bfbe67faa4e60d39cda9ffd023",
+      "size": 1453,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/tests/LICENSE.CIPIC_subject_003_hrir_final",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/tests/LICENSE.CIPIC_subject_003_hrir_final",
+      "sha256": "78149b9a8138d9fdcbd77b66e554711a1a2a5451d16b432b5eaec6d642697d85",
+      "size": 2259,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/tests/LICENSE.D1_48K_24bit_0.3s_FIR_SOFA",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/tests/LICENSE.D1_48K_24bit_0.3s_FIR_SOFA",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/tests/LICENSE.FHK_HRIR_L2354",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/tests/LICENSE.FHK_HRIR_L2354",
+      "sha256": "47c326d67143bb68c008a900c954c8a6779bdafa25d350d12c57d532c3a32200",
+      "size": 19587,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/tests/LICENSE.H20_44K_16bit_256tap_FIR_SOFA",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/tests/LICENSE.H20_44K_16bit_256tap_FIR_SOFA",
+      "sha256": "44ba2315604e3fbe0f11c0d9cbb6114159ba74c3f31b5a72b2493476b3f9b44a",
+      "size": 1113,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/tests/LICENSE.LISTEN_1002_IRC_1002_C_HRIR",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/tests/LICENSE.LISTEN_1002_IRC_1002_C_HRIR",
+      "sha256": "29661b4a131466c1d5cdb786db0e531244c14850af0d3fb80fb8c801bdbe7145",
+      "size": 619,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/tests/LICENSE.MIT_KEMAR_pinnae",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/tests/LICENSE.MIT_KEMAR_pinnae",
+      "sha256": "548b43283652608c38ed82accb918fae135885016de78c969cbd8cd7215d15ec",
+      "size": 1414,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/tests/LICENSE.TU-Berlin_QU_KEMAR_anechoic",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/tests/LICENSE.TU-Berlin_QU_KEMAR_anechoic",
+      "sha256": "84be1cf7d2cf8ea106fcf1f24e360cd922a05f80c6172e3f70608b0eaed50460",
+      "size": 19431,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/tests/LICENSE.pulse",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/tests/LICENSE.pulse",
+      "sha256": "fabb8e1099a0812e0be1951a94cdda0def9b3e60f1aa5b649a0dbe01fc637fc0",
+      "size": 12851,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/windows/third-party/sys/LICENSE",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/windows/third-party/sys/LICENSE",
+      "sha256": "818fd40b46dfbe838f4dc0957bfe44afc4b35d450237723b82d793a0403f3c77",
+      "size": 7991,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libmysofa-1.2.1.tar.gz",
+      "source_path": "libmysofa-1.2.1/windows/third-party/zlib-1.2.11/LICENSE",
+      "path": "contrib-notices/libmysofa-1.2.1.tar.gz/libmysofa-1.2.1/windows/third-party/zlib-1.2.11/LICENSE",
+      "sha256": "05b547d6a157efb1659997b605b63cd36f2e3f30d167b5a6826ecdde052d154f",
+      "size": 66,
+      "archive_sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "archive": "libnfs-6.0.2.tar.gz",
+      "source_path": "libnfs-libnfs-6.0.2/COPYING",
+      "path": "contrib-notices/libnfs-6.0.2.tar.gz/libnfs-libnfs-6.0.2/COPYING",
+      "sha256": "edd960c0142b8ada98b43b6396b78f4e557b0bc70ac601a51e397ad04070e2c5",
+      "size": 1601,
+      "archive_sha256": "4e5459cc3e0242447879004e9ad28286d4d27daa42cbdcde423248fad911e747"
+    },
+    {
+      "archive": "libnfs-6.0.2.tar.gz",
+      "source_path": "libnfs-libnfs-6.0.2/LICENCE-BSD.txt",
+      "path": "contrib-notices/libnfs-6.0.2.tar.gz/libnfs-libnfs-6.0.2/LICENCE-BSD.txt",
+      "sha256": "d9406ced95457941032aa11d04623b8ab71f2827a3395ebef137aec475be35b1",
+      "size": 1457,
+      "archive_sha256": "4e5459cc3e0242447879004e9ad28286d4d27daa42cbdcde423248fad911e747"
+    },
+    {
+      "archive": "libnfs-6.0.2.tar.gz",
+      "source_path": "libnfs-libnfs-6.0.2/LICENCE-GPL-3.txt",
+      "path": "contrib-notices/libnfs-6.0.2.tar.gz/libnfs-libnfs-6.0.2/LICENCE-GPL-3.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "size": 35147,
+      "archive_sha256": "4e5459cc3e0242447879004e9ad28286d4d27daa42cbdcde423248fad911e747"
+    },
+    {
+      "archive": "libnfs-6.0.2.tar.gz",
+      "source_path": "libnfs-libnfs-6.0.2/LICENCE-LGPL-2.1.txt",
+      "path": "contrib-notices/libnfs-6.0.2.tar.gz/libnfs-libnfs-6.0.2/LICENCE-LGPL-2.1.txt",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "size": 26530,
+      "archive_sha256": "4e5459cc3e0242447879004e9ad28286d4d27daa42cbdcde423248fad911e747"
+    },
+    {
+      "archive": "libogg-1.3.6.tar.xz",
+      "source_path": "libogg-1.3.6/COPYING",
+      "path": "contrib-notices/libogg-1.3.6.tar.xz/libogg-1.3.6/COPYING",
+      "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814",
+      "size": 1466,
+      "archive_sha256": "5c8253428e181840cd20d41f3ca16557a9cc04bad4a3d04cce84808677fa1061"
+    },
+    {
+      "archive": "libogg-1.3.6.tar.xz",
+      "source_path": "libogg-1.3.6/AUTHORS",
+      "path": "contrib-notices/libogg-1.3.6.tar.xz/libogg-1.3.6/AUTHORS",
+      "sha256": "6fcb33d0cdd60b5054e7df820916388b590427514288c2bab01c626bb8ae9506",
+      "size": 198,
+      "archive_sha256": "5c8253428e181840cd20d41f3ca16557a9cc04bad4a3d04cce84808677fa1061"
+    },
+    {
+      "archive": "libplacebo-v5.264.1.tar.gz",
+      "source_path": "libplacebo-v5.264.1/LICENSE",
+      "path": "contrib-notices/libplacebo-v5.264.1.tar.gz/libplacebo-v5.264.1/LICENSE",
+      "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d",
+      "size": 24478,
+      "archive_sha256": "9eb0c198f58d994f1c0d173dd37647d4d07d27972412c48ab758e984503c787b"
+    },
+    {
+      "archive": "libplacebo-v5.264.1.tar.gz",
+      "source_path": "libplacebo-v5.264.1/demos/LICENSE",
+      "path": "contrib-notices/libplacebo-v5.264.1.tar.gz/libplacebo-v5.264.1/demos/LICENSE",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "size": 7048,
+      "archive_sha256": "9eb0c198f58d994f1c0d173dd37647d4d07d27972412c48ab758e984503c787b"
+    },
+    {
+      "archive": "libpng-1.6.53.tar.xz",
+      "source_path": "libpng-1.6.53/AUTHORS",
+      "path": "contrib-notices/libpng-1.6.53.tar.xz/libpng-1.6.53/AUTHORS",
+      "sha256": "ea08e02d4b34d5802d184f8e91cd2859caa52dc48f464574486ec780262bf623",
+      "size": 1657,
+      "archive_sha256": "1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
+    },
+    {
+      "archive": "libpng-1.6.53.tar.xz",
+      "source_path": "libpng-1.6.53/LICENSE",
+      "path": "contrib-notices/libpng-1.6.53.tar.xz/libpng-1.6.53/LICENSE",
+      "sha256": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a",
+      "size": 5345,
+      "archive_sha256": "1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
+    },
+    {
+      "archive": "libpng-1.6.53.tar.xz",
+      "source_path": "libpng-1.6.53/ci/LICENSE_MIT.txt",
+      "path": "contrib-notices/libpng-1.6.53.tar.xz/libpng-1.6.53/ci/LICENSE_MIT.txt",
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1",
+      "size": 1036,
+      "archive_sha256": "1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
+    },
+    {
+      "archive": "libpng-1.6.53.tar.xz",
+      "source_path": "libpng-1.6.53/contrib/gregbook/COPYING",
+      "path": "contrib-notices/libpng-1.6.53.tar.xz/libpng-1.6.53/contrib/gregbook/COPYING",
+      "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572",
+      "size": 18097,
+      "archive_sha256": "1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
+    },
+    {
+      "archive": "libpng-1.6.53.tar.xz",
+      "source_path": "libpng-1.6.53/contrib/gregbook/LICENSE",
+      "path": "contrib-notices/libpng-1.6.53.tar.xz/libpng-1.6.53/contrib/gregbook/LICENSE",
+      "sha256": "b6a03c1803eb58ffb1f1278d5c7d4096c4c116e66dce8a7553e8c77d163c3438",
+      "size": 2373,
+      "archive_sha256": "1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
+    },
+    {
+      "archive": "libpng-1.6.53.tar.xz",
+      "source_path": "libpng-1.6.53/contrib/pngexif/LICENSE_MIT.txt",
+      "path": "contrib-notices/libpng-1.6.53.tar.xz/libpng-1.6.53/contrib/pngexif/LICENSE_MIT.txt",
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1",
+      "size": 1036,
+      "archive_sha256": "1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
+    },
+    {
+      "archive": "libpng-1.6.53.tar.xz",
+      "source_path": "libpng-1.6.53/contrib/pngminus/LICENSE.txt",
+      "path": "contrib-notices/libpng-1.6.53.tar.xz/libpng-1.6.53/contrib/pngminus/LICENSE.txt",
+      "sha256": "1806f1f10d393e9e377b3a8d1b968452b54f1a90378f14eeef45426946ace330",
+      "size": 1164,
+      "archive_sha256": "1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
+    },
+    {
+      "archive": "libpng-1.6.53.tar.xz",
+      "source_path": "libpng-1.6.53/scripts/cmake/AUTHORS.md",
+      "path": "contrib-notices/libpng-1.6.53.tar.xz/libpng-1.6.53/scripts/cmake/AUTHORS.md",
+      "sha256": "50633b976f0133862c921aa67d56de2c0b42eb344c8ca3853686efb092a447db",
+      "size": 862,
+      "archive_sha256": "1d3fb8ccc2932d04aa3663e22ef5ef490244370f4e568d7850165068778d98d4"
+    },
+    {
+      "archive": "librist-v0.2.15.tar.gz",
+      "source_path": "librist-v0.2.15/COPYING",
+      "path": "contrib-notices/librist-v0.2.15.tar.gz/librist-v0.2.15/COPYING",
+      "sha256": "b9841591a3452ee30033d8e3586c7b1244a0b2fc1dc6cb04576957c313cb2792",
+      "size": 1319,
+      "archive_sha256": "6025d19b11b6ab57c5e8a00df68cbfc72ef83444afefd2bdcc81ce592884cb87"
+    },
+    {
+      "archive": "librist-v0.2.15.tar.gz",
+      "source_path": "librist-v0.2.15/contrib/mbedtls/LICENSE",
+      "path": "contrib-notices/librist-v0.2.15.tar.gz/librist-v0.2.15/contrib/mbedtls/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358,
+      "archive_sha256": "6025d19b11b6ab57c5e8a00df68cbfc72ef83444afefd2bdcc81ce592884cb87"
+    },
+    {
+      "archive": "libshout-2.4.6.tar.gz",
+      "source_path": "libshout-2.4.6/COPYING",
+      "path": "contrib-notices/libshout-2.4.6.tar.gz/libshout-2.4.6/COPYING",
+      "sha256": "7a4436f9ec37603356791c87de3bc444989befd2682d29efb3d97604e04c1852",
+      "size": 25275,
+      "archive_sha256": "39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910"
+    },
+    {
+      "archive": "libshout-2.4.6.tar.gz",
+      "source_path": "libshout-2.4.6/src/common/avl/COPYING",
+      "path": "contrib-notices/libshout-2.4.6.tar.gz/libshout-2.4.6/src/common/avl/COPYING",
+      "sha256": "7a4436f9ec37603356791c87de3bc444989befd2682d29efb3d97604e04c1852",
+      "size": 25275,
+      "archive_sha256": "39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910"
+    },
+    {
+      "archive": "libshout-2.4.6.tar.gz",
+      "source_path": "libshout-2.4.6/src/common/net/COPYING",
+      "path": "contrib-notices/libshout-2.4.6.tar.gz/libshout-2.4.6/src/common/net/COPYING",
+      "sha256": "7a4436f9ec37603356791c87de3bc444989befd2682d29efb3d97604e04c1852",
+      "size": 25275,
+      "archive_sha256": "39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910"
+    },
+    {
+      "archive": "libshout-2.4.6.tar.gz",
+      "source_path": "libshout-2.4.6/src/common/timing/COPYING",
+      "path": "contrib-notices/libshout-2.4.6.tar.gz/libshout-2.4.6/src/common/timing/COPYING",
+      "sha256": "7a4436f9ec37603356791c87de3bc444989befd2682d29efb3d97604e04c1852",
+      "size": 25275,
+      "archive_sha256": "39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910"
+    },
+    {
+      "archive": "libshout-2.4.6.tar.gz",
+      "source_path": "libshout-2.4.6/src/common/httpp/COPYING",
+      "path": "contrib-notices/libshout-2.4.6.tar.gz/libshout-2.4.6/src/common/httpp/COPYING",
+      "sha256": "7a4436f9ec37603356791c87de3bc444989befd2682d29efb3d97604e04c1852",
+      "size": 25275,
+      "archive_sha256": "39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910"
+    },
+    {
+      "archive": "libshout-2.4.6.tar.gz",
+      "source_path": "libshout-2.4.6/src/common/thread/COPYING",
+      "path": "contrib-notices/libshout-2.4.6.tar.gz/libshout-2.4.6/src/common/thread/COPYING",
+      "sha256": "7a4436f9ec37603356791c87de3bc444989befd2682d29efb3d97604e04c1852",
+      "size": 25275,
+      "archive_sha256": "39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910"
+    },
+    {
+      "archive": "libsmb2-6.1.tar.gz",
+      "source_path": "libsmb2-libsmb2-6.1/COPYING",
+      "path": "contrib-notices/libsmb2-6.1.tar.gz/libsmb2-libsmb2-6.1/COPYING",
+      "sha256": "749c710c2b3d5c95906c785f28af9abbe4ce909311e72eb72eee5c6873e2fa6f",
+      "size": 895,
+      "archive_sha256": "cee0a62457a46b1a4d48b9b0094cf53f489e3ff5028d1344c188156aeb1c7239"
+    },
+    {
+      "archive": "libsmb2-6.1.tar.gz",
+      "source_path": "libsmb2-libsmb2-6.1/LICENCE-LGPL-2.1.txt",
+      "path": "contrib-notices/libsmb2-6.1.tar.gz/libsmb2-libsmb2-6.1/LICENCE-LGPL-2.1.txt",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "size": 26530,
+      "archive_sha256": "cee0a62457a46b1a4d48b9b0094cf53f489e3ff5028d1344c188156aeb1c7239"
+    },
+    {
+      "archive": "libssh2-1.11.1.tar.xz",
+      "source_path": "libssh2-1.11.1/COPYING",
+      "path": "contrib-notices/libssh2-1.11.1.tar.xz/libssh2-1.11.1/COPYING",
+      "sha256": "f7f9633cf9ff2f1333f3d7ce46973a8716a4d2a2815ad56f30d437d5fea7bafe",
+      "size": 1959,
+      "archive_sha256": "9954cb54c4f548198a7cbebad248bdc87dd64bd26185708a294b2b50771e3769"
+    },
+    {
+      "archive": "libssh2-1.11.1.tar.xz",
+      "source_path": "libssh2-1.11.1/docs/AUTHORS",
+      "path": "contrib-notices/libssh2-1.11.1.tar.xz/libssh2-1.11.1/docs/AUTHORS",
+      "sha256": "e161024bacda626cc77bc905db2fcfb0870e83f53b98f9b8b736f22cb48ab862",
+      "size": 1219,
+      "archive_sha256": "9954cb54c4f548198a7cbebad248bdc87dd64bd26185708a294b2b50771e3769"
+    },
+    {
+      "archive": "libtasn1-4.19.0.tar.gz",
+      "source_path": "libtasn1-4.19.0/AUTHORS",
+      "path": "contrib-notices/libtasn1-4.19.0.tar.gz/libtasn1-4.19.0/AUTHORS",
+      "sha256": "fb00a53c054e6e23bfdd1481b71e40a9246095e110567483841371e05a984812",
+      "size": 456,
+      "archive_sha256": "1613f0ac1cf484d6ec0ce3b8c06d56263cc7242f1c23b30d82d23de345a63f7a"
+    },
+    {
+      "archive": "libtasn1-4.19.0.tar.gz",
+      "source_path": "libtasn1-4.19.0/doc/COPYING.LESSER",
+      "path": "contrib-notices/libtasn1-4.19.0.tar.gz/libtasn1-4.19.0/doc/COPYING.LESSER",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "size": 26530,
+      "archive_sha256": "1613f0ac1cf484d6ec0ce3b8c06d56263cc7242f1c23b30d82d23de345a63f7a"
+    },
+    {
+      "archive": "libtasn1-4.19.0.tar.gz",
+      "source_path": "libtasn1-4.19.0/doc/COPYING",
+      "path": "contrib-notices/libtasn1-4.19.0.tar.gz/libtasn1-4.19.0/doc/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "size": 35147,
+      "archive_sha256": "1613f0ac1cf484d6ec0ce3b8c06d56263cc7242f1c23b30d82d23de345a63f7a"
+    },
+    {
+      "archive": "libtasn1-4.19.0.tar.gz",
+      "source_path": "libtasn1-4.19.0/COPYING",
+      "path": "contrib-notices/libtasn1-4.19.0.tar.gz/libtasn1-4.19.0/COPYING",
+      "sha256": "7446831f659f7ebfd8d497acc7f05dfa8e31c6cb6ba1b45df33d4895ab80f5a6",
+      "size": 605,
+      "archive_sha256": "1613f0ac1cf484d6ec0ce3b8c06d56263cc7242f1c23b30d82d23de345a63f7a"
+    },
+    {
+      "archive": "libtheora-1.2.0.tar.xz",
+      "source_path": "libtheora-1.2.0/LICENSE",
+      "path": "contrib-notices/libtheora-1.2.0.tar.xz/libtheora-1.2.0/LICENSE",
+      "sha256": "2c902950c73a63cd285dc0c36573de9c5fefe66d49312949c51d941f33e92932",
+      "size": 960,
+      "archive_sha256": "ebdf77a8f5c0a8f7a9e42323844fa09502b34eb1d1fece7b5f54da41fe2122ec"
+    },
+    {
+      "archive": "libtheora-1.2.0.tar.xz",
+      "source_path": "libtheora-1.2.0/COPYING",
+      "path": "contrib-notices/libtheora-1.2.0.tar.xz/libtheora-1.2.0/COPYING",
+      "sha256": "8417fad7da775735564e209484a2e011e0fa201e94f01fdbee6e4977e478e6fc",
+      "size": 1470,
+      "archive_sha256": "ebdf77a8f5c0a8f7a9e42323844fa09502b34eb1d1fece7b5f54da41fe2122ec"
+    },
+    {
+      "archive": "libtheora-1.2.0.tar.xz",
+      "source_path": "libtheora-1.2.0/AUTHORS",
+      "path": "contrib-notices/libtheora-1.2.0.tar.xz/libtheora-1.2.0/AUTHORS",
+      "sha256": "ef0ba8da05924cf4e2f9acf782076892ed477c01a6d4cc9f5d107652cf84da8c",
+      "size": 828,
+      "archive_sha256": "ebdf77a8f5c0a8f7a9e42323844fa09502b34eb1d1fece7b5f54da41fe2122ec"
+    },
+    {
+      "archive": "libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6.tar.xz",
+      "source_path": "libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6/AUTHORS",
+      "path": "contrib-notices/libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6.tar.xz/libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6/AUTHORS",
+      "sha256": "ef0ba8da05924cf4e2f9acf782076892ed477c01a6d4cc9f5d107652cf84da8c",
+      "size": 828,
+      "archive_sha256": "10365bf80bfab92f4c2328a913a4225e115ef46aeb92ed971546ec6a2abeb7ac"
+    },
+    {
+      "archive": "libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6.tar.xz",
+      "source_path": "libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6/COPYING",
+      "path": "contrib-notices/libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6.tar.xz/libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6/COPYING",
+      "sha256": "8417fad7da775735564e209484a2e011e0fa201e94f01fdbee6e4977e478e6fc",
+      "size": 1470,
+      "archive_sha256": "10365bf80bfab92f4c2328a913a4225e115ef46aeb92ed971546ec6a2abeb7ac"
+    },
+    {
+      "archive": "libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6.tar.xz",
+      "source_path": "libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6/LICENSE",
+      "path": "contrib-notices/libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6.tar.xz/libtheora-fb92ede9ba5162d0b8134cd1ff57751df6f3dbe6/LICENSE",
+      "sha256": "2c902950c73a63cd285dc0c36573de9c5fefe66d49312949c51d941f33e92932",
+      "size": 960,
+      "archive_sha256": "10365bf80bfab92f4c2328a913a4225e115ef46aeb92ed971546ec6a2abeb7ac"
+    },
+    {
+      "archive": "libvorbis-1.3.7.tar.xz",
+      "source_path": "libvorbis-1.3.7/COPYING",
+      "path": "contrib-notices/libvorbis-1.3.7.tar.xz/libvorbis-1.3.7/COPYING",
+      "sha256": "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a",
+      "size": 1470,
+      "archive_sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
+    },
+    {
+      "archive": "libvorbis-1.3.7.tar.xz",
+      "source_path": "libvorbis-1.3.7/AUTHORS",
+      "path": "contrib-notices/libvorbis-1.3.7.tar.xz/libvorbis-1.3.7/AUTHORS",
+      "sha256": "f5cab9f16035f770f50299f85cf2938c06dc3a9a30425961067788102ec896d3",
+      "size": 65,
+      "archive_sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
+    },
+    {
+      "archive": "libvpx-1.15.2.tar.gz",
+      "source_path": "libvpx-1.15.2/AUTHORS",
+      "path": "contrib-notices/libvpx-1.15.2.tar.gz/libvpx-1.15.2/AUTHORS",
+      "sha256": "4f7d19d35614f7e56c65cc4475b78fed0086d20af973c65f2ec5a201b1617225",
+      "size": 8794,
+      "archive_sha256": "26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa"
+    },
+    {
+      "archive": "libvpx-1.15.2.tar.gz",
+      "source_path": "libvpx-1.15.2/LICENSE",
+      "path": "contrib-notices/libvpx-1.15.2.tar.gz/libvpx-1.15.2/LICENSE",
+      "sha256": "8267348d5af1262c11d1a08de2f5afc77457755f1ac658627dd9acf71011d615",
+      "size": 1537,
+      "archive_sha256": "26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa"
+    },
+    {
+      "archive": "libvpx-1.15.2.tar.gz",
+      "source_path": "libvpx-1.15.2/third_party/googletest/src/LICENSE",
+      "path": "contrib-notices/libvpx-1.15.2.tar.gz/libvpx-1.15.2/third_party/googletest/src/LICENSE",
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+      "size": 1475,
+      "archive_sha256": "26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa"
+    },
+    {
+      "archive": "libvpx-1.15.2.tar.gz",
+      "source_path": "libvpx-1.15.2/third_party/libwebm/AUTHORS.TXT",
+      "path": "contrib-notices/libvpx-1.15.2.tar.gz/libvpx-1.15.2/third_party/libwebm/AUTHORS.TXT",
+      "sha256": "3edb5f5496bfff3d6d4a62fa75fe996b814920d0d6e348c2e65c589e7ac5d177",
+      "size": 137,
+      "archive_sha256": "26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa"
+    },
+    {
+      "archive": "libvpx-1.15.2.tar.gz",
+      "source_path": "libvpx-1.15.2/third_party/libwebm/LICENSE.TXT",
+      "path": "contrib-notices/libvpx-1.15.2.tar.gz/libvpx-1.15.2/third_party/libwebm/LICENSE.TXT",
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+      "size": 1496,
+      "archive_sha256": "26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa"
+    },
+    {
+      "archive": "libvpx-1.15.2.tar.gz",
+      "source_path": "libvpx-1.15.2/third_party/libyuv/LICENSE",
+      "path": "contrib-notices/libvpx-1.15.2.tar.gz/libvpx-1.15.2/third_party/libyuv/LICENSE",
+      "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f",
+      "size": 1506,
+      "archive_sha256": "26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa"
+    },
+    {
+      "archive": "libvpx-1.15.2.tar.gz",
+      "source_path": "libvpx-1.15.2/third_party/x86inc/LICENSE",
+      "path": "contrib-notices/libvpx-1.15.2.tar.gz/libvpx-1.15.2/third_party/x86inc/LICENSE",
+      "sha256": "719d8fa235f2068e0ae6d6a7dceb0a7720d7840f0f0ebed29957989e6ded3cd8",
+      "size": 936,
+      "archive_sha256": "26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa"
+    },
+    {
+      "archive": "libxml2-2.15.1.tar.xz",
+      "source_path": "libxml2-2.15.1/Copyright",
+      "path": "contrib-notices/libxml2-2.15.1.tar.xz/libxml2-2.15.1/Copyright",
+      "sha256": "5d4873884a890122a4b9b20ad56ac6f7da1d796a5bfcf04a427970ac96217626",
+      "size": 1314,
+      "archive_sha256": "c008bac08fd5c7b4a87f7b8a71f283fa581d80d80ff8d2efd3b26224c39bc54c"
+    },
+    {
+      "archive": "libxml2-2.15.1.tar.xz",
+      "source_path": "libxml2-2.15.1/test/html-tokenizer/NOTICE",
+      "path": "contrib-notices/libxml2-2.15.1.tar.xz/libxml2-2.15.1/test/html-tokenizer/NOTICE",
+      "sha256": "d6a2cb265a0a249a234b89eeffa7f316ebe5bff546672a0a2b1a861dd2238460",
+      "size": 1270,
+      "archive_sha256": "c008bac08fd5c7b4a87f7b8a71f283fa581d80d80ff8d2efd3b26224c39bc54c"
+    },
+    {
+      "archive": "libxml2-2.15.1.tar.xz",
+      "source_path": "libxml2-2.15.1/result/html-tokenizer/NOTICE",
+      "path": "contrib-notices/libxml2-2.15.1.tar.xz/libxml2-2.15.1/result/html-tokenizer/NOTICE",
+      "sha256": "d6a2cb265a0a249a234b89eeffa7f316ebe5bff546672a0a2b1a861dd2238460",
+      "size": 1270,
+      "archive_sha256": "c008bac08fd5c7b4a87f7b8a71f283fa581d80d80ff8d2efd3b26224c39bc54c"
+    },
+    {
+      "archive": "live.2022.07.14.tar.gz",
+      "source_path": "live/COPYING",
+      "path": "contrib-notices/live.2022.07.14.tar.gz/live/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "size": 35147,
+      "archive_sha256": "56b5a40662dd3f43187e2162b7732d92fed38bc7563e6ae776b6caa3e0694420"
+    },
+    {
+      "archive": "live.2022.07.14.tar.gz",
+      "source_path": "live/COPYING.LESSER",
+      "path": "contrib-notices/live.2022.07.14.tar.gz/live/COPYING.LESSER",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "size": 7651,
+      "archive_sha256": "56b5a40662dd3f43187e2162b7732d92fed38bc7563e6ae776b6caa3e0694420"
+    },
+    {
+      "archive": "markupsafe-2.1.1.tar.gz",
+      "source_path": "markupsafe-2.1.1/LICENSE.rst",
+      "path": "contrib-notices/markupsafe-2.1.1.tar.gz/markupsafe-2.1.1/LICENSE.rst",
+      "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+      "size": 1475,
+      "archive_sha256": "0f83b6d1bf6fa65546221d42715034e7e654845583a84906c5936590f9a7ad8f"
+    },
+    {
+      "archive": "markupsafe-2.1.1.tar.gz",
+      "source_path": "markupsafe-2.1.1/docs/license.rst",
+      "path": "contrib-notices/markupsafe-2.1.1.tar.gz/markupsafe-2.1.1/docs/license.rst",
+      "sha256": "c9362a7258a11c84a8f7e825ccbbb5c425c6fc02368d3aee6494533fb99ba1f4",
+      "size": 71,
+      "archive_sha256": "0f83b6d1bf6fa65546221d42715034e7e654845583a84906c5936590f9a7ad8f"
+    },
+    {
+      "archive": "microdns-0.1.2.tar.xz",
+      "source_path": "microdns-0.1.2/AUTHORS",
+      "path": "contrib-notices/microdns-0.1.2.tar.xz/microdns-0.1.2/AUTHORS",
+      "sha256": "23c9bc2b0e5da9c1b08a5392f2b05615b5a85e6e12d0d3331708519aa50ec9d7",
+      "size": 560,
+      "archive_sha256": "666c4b9d86b5b3c37357bb78453c7e8b72cd65ade22d0a7963bfbefe51509b5c"
+    },
+    {
+      "archive": "microdns-0.1.2.tar.xz",
+      "source_path": "microdns-0.1.2/COPYING",
+      "path": "contrib-notices/microdns-0.1.2.tar.xz/microdns-0.1.2/COPYING",
+      "sha256": "f764ee3ea10043718c7cc2ce3e2c8a8b3a4e9a3f4b5b4bbb74c603d2a974aabe",
+      "size": 26598,
+      "archive_sha256": "666c4b9d86b5b3c37357bb78453c7e8b72cd65ade22d0a7963bfbefe51509b5c"
+    },
+    {
+      "archive": "mpg123-1.33.6.tar.bz2",
+      "source_path": "mpg123-1.33.6/AUTHORS",
+      "path": "contrib-notices/mpg123-1.33.6.tar.bz2/mpg123-1.33.6/AUTHORS",
+      "sha256": "fb18c9abae864a20f691e949e4c7871c79f5f0861b3a3dcaf5881c3c02cf5cc2",
+      "size": 9370,
+      "archive_sha256": "929a7c18ba662b8927aed4de229ad9ae8ab2b4806dd0f30b90113eb1b4e2195a"
+    },
+    {
+      "archive": "mpg123-1.33.6.tar.bz2",
+      "source_path": "mpg123-1.33.6/COPYING",
+      "path": "contrib-notices/mpg123-1.33.6.tar.bz2/mpg123-1.33.6/COPYING",
+      "sha256": "c22482728a634a8dfdb4ff72a96d4c1ed64cd8f3e79335c401751ac591609366",
+      "size": 40718,
+      "archive_sha256": "929a7c18ba662b8927aed4de229ad9ae8ab2b4806dd0f30b90113eb1b4e2195a"
+    },
+    {
+      "archive": "mpg123-1.33.6.tar.bz2",
+      "source_path": "mpg123-1.33.6/doc/LICENSE",
+      "path": "contrib-notices/mpg123-1.33.6.tar.bz2/mpg123-1.33.6/doc/LICENSE",
+      "sha256": "cca79ea6fc0a7715e52450df2d86311f990e85067dd13f4d7f5a88d4fd23a07c",
+      "size": 957,
+      "archive_sha256": "929a7c18ba662b8927aed4de229ad9ae8ab2b4806dd0f30b90113eb1b4e2195a"
+    },
+    {
+      "archive": "nettle-3.9.tar.gz",
+      "source_path": "nettle-3.9/COPYING.LESSERv3",
+      "path": "contrib-notices/nettle-3.9.tar.gz/nettle-3.9/COPYING.LESSERv3",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c",
+      "size": 7639,
+      "archive_sha256": "0ee7adf5a7201610bb7fe0acbb7c9b3be83be44904dd35ebbcd965cd896bfeaa"
+    },
+    {
+      "archive": "nettle-3.9.tar.gz",
+      "source_path": "nettle-3.9/AUTHORS",
+      "path": "contrib-notices/nettle-3.9.tar.gz/nettle-3.9/AUTHORS",
+      "sha256": "82f7d08cc22fa2460f4c17b5d7fab2fe4dd237eabc227a7ae9cd6ee8100eed5f",
+      "size": 4125,
+      "archive_sha256": "0ee7adf5a7201610bb7fe0acbb7c9b3be83be44904dd35ebbcd965cd896bfeaa"
+    },
+    {
+      "archive": "openapv-0.2.0.4.tar.gz",
+      "source_path": "openapv-0.2.0.4/LICENSE",
+      "path": "contrib-notices/openapv-0.2.0.4.tar.gz/openapv-0.2.0.4/LICENSE",
+      "sha256": "7ad8e53c0c3e24e7ba64dbcad5e7706108f3dc67cf6515ef761adac0a39dab25",
+      "size": 1503,
+      "archive_sha256": "1d8d31b0758d4b968d9b2ab483b3edb6de3440edcb27f14801ef42d6f2368e55"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/cpufeatures/LICENSE",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/cpufeatures/LICENSE",
+      "sha256": "c870d52f42a8f93023b99a85fe68d02637d6b04e5f35bbcd7f98759adb4e4d49",
+      "size": 577,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/ffmpeg/license.txt",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/ffmpeg/license.txt",
+      "sha256": "1f9d4168b4a9a2bdd1851023735a41d0ab09ffa5fcc1a721a99ebc1d7d35a9c5",
+      "size": 27393,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/include/opencl/LICENSE.txt",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/include/opencl/LICENSE.txt",
+      "sha256": "cfaceadff07c2c9458283079cd0166872aa2d93d5c480f1f417be321aa7e0f4d",
+      "size": 1309,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/ittnotify/src/ittnotify/LICENSE.BSD",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/ittnotify/src/ittnotify/LICENSE.BSD",
+      "sha256": "77cf47aa88df151faba9db8bbbfcff8e83dbe5f0ff0dac3ef76e63217f579a55",
+      "size": 1481,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/ittnotify/src/ittnotify/LICENSE.GPL",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/ittnotify/src/ittnotify/LICENSE.GPL",
+      "sha256": "d91b925f4e9000a4ae1f7218fa6b3b29a411126ae93959736a72cee43027ad2c",
+      "size": 17558,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/libjasper/LICENSE",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/libjasper/LICENSE",
+      "sha256": "edf9f4257cc33a1f396f9b062ca4a01dca7c79747c7d85b8947e603e5166760e",
+      "size": 2744,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/libjasper/copyright",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/libjasper/copyright",
+      "sha256": "86c11bd7b94d24d6c372bd95f8d8998b8a69c7d82a91dd0247878b28223feabe",
+      "size": 3042,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/libjpeg-turbo/LICENSE.md",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/libjpeg-turbo/LICENSE.md",
+      "sha256": "69e570a251515ced17d4492256d57c89db77ed949652f88a44c80c1ca9607920",
+      "size": 5209,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/libpng/LICENSE",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/libpng/LICENSE",
+      "sha256": "bf5e22b9dce8464064ae17a48ea1133c3369ac9e1d80ef9e320e5219aa14ea9b",
+      "size": 5345,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/libtiff/COPYRIGHT",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/libtiff/COPYRIGHT",
+      "sha256": "fbd6fed7938541d2c809c0826225fc85e551fdbfa8732b10f0c87e0847acafd7",
+      "size": 1146,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/libwebp/COPYING",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/libwebp/COPYING",
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+      "size": 1496,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/openexr/AUTHORS.ilmbase",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/openexr/AUTHORS.ilmbase",
+      "sha256": "3d01213ed07453794228b95e41fd5897bad65e1342ebfdefbe52311d6e1adcb4",
+      "size": 336,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/openexr/AUTHORS.openexr",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/openexr/AUTHORS.openexr",
+      "sha256": "35560b29d013ceea33c66e8a0dfa4fc41768302e441c49bf98a3cffffbc17bde",
+      "size": 1253,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/openexr/LICENSE",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/openexr/LICENSE",
+      "sha256": "14eba5f05238f57c77e94f0ebd29a0b3736ba0456ff990cda16e21b6903ac453",
+      "size": 1697,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/protobuf/LICENSE",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/protobuf/LICENSE",
+      "sha256": "af67c58de2e18677a0b8cb5fffbe2232aabb8eb2930e8cd684769cef3d74a262",
+      "size": 2133,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/3rdparty/quirc/LICENSE",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/3rdparty/quirc/LICENSE",
+      "sha256": "f64a0d2030dd3bb501f303eb66097ed92cd0c63f824e515b1116dafbce5346fe",
+      "size": 790,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/LICENSE",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/LICENSE",
+      "sha256": "a5a7cf90fe5ac9763baad852cf69cf9d9b89bff934a679fdc5c8fcecaeba9a25",
+      "size": 2294,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/modules/core/3rdparty/SoftFloat/COPYING.txt",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/modules/core/3rdparty/SoftFloat/COPYING.txt",
+      "sha256": "0c5b08365136da52639d777f1ebfc03988b0169d80655c90c59f1b3fa3e526a2",
+      "size": 1732,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "opencv-4.4.0.tar.gz",
+      "source_path": "opencv-4.4.0/modules/dnn/src/torch/COPYRIGHT.txt",
+      "path": "contrib-notices/opencv-4.4.0.tar.gz/opencv-4.4.0/modules/dnn/src/torch/COPYRIGHT.txt",
+      "sha256": "c5ced63019efecf865d6e65d33495507ba5e744fb9d648f2a2f142a169cafae5",
+      "size": 2046,
+      "archive_sha256": "bb95acd849e458be7f7024d17968568d1ccd2f0681d47fd60d34ffb4b8c52563"
+    },
+    {
+      "archive": "openjpeg-2.5.4.tar.gz",
+      "source_path": "openjpeg-2.5.4/AUTHORS.md",
+      "path": "contrib-notices/openjpeg-2.5.4.tar.gz/openjpeg-2.5.4/AUTHORS.md",
+      "sha256": "cf22e984f9fbb9be7550e9a94120595ba8c4a7de0d63f47d3725f4b2e28a4387",
+      "size": 712,
+      "archive_sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+    },
+    {
+      "archive": "openjpeg-2.5.4.tar.gz",
+      "source_path": "openjpeg-2.5.4/LICENSE",
+      "path": "contrib-notices/openjpeg-2.5.4.tar.gz/openjpeg-2.5.4/LICENSE",
+      "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6",
+      "size": 2112,
+      "archive_sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+    },
+    {
+      "archive": "openjpeg-2.5.4.tar.gz",
+      "source_path": "openjpeg-2.5.4/src/bin/wx/OPJViewer/source/license.txt",
+      "path": "contrib-notices/openjpeg-2.5.4.tar.gz/openjpeg-2.5.4/src/bin/wx/OPJViewer/source/license.txt",
+      "sha256": "8081c33f6953950dcf424aa844714658b73ada0fcaea16e4487f5fa07ef0960d",
+      "size": 1683,
+      "archive_sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+    },
+    {
+      "archive": "openjpeg-2.5.4.tar.gz",
+      "source_path": "openjpeg-2.5.4/thirdparty/astyle/LICENSE.md",
+      "path": "contrib-notices/openjpeg-2.5.4.tar.gz/openjpeg-2.5.4/thirdparty/astyle/LICENSE.md",
+      "sha256": "2e8480e753b7a1d100c80920f4250b1bc9f93a18c6a5953c42b11445218cd0fb",
+      "size": 1094,
+      "archive_sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+    },
+    {
+      "archive": "openjpeg-2.5.4.tar.gz",
+      "source_path": "openjpeg-2.5.4/thirdparty/liblcms2/COPYING",
+      "path": "contrib-notices/openjpeg-2.5.4.tar.gz/openjpeg-2.5.4/thirdparty/liblcms2/COPYING",
+      "sha256": "c725daac91a9259ce5e195683c0eeb797d345035c36ac5ba114c9fa80e11639a",
+      "size": 1078,
+      "archive_sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+    },
+    {
+      "archive": "openjpeg-2.5.4.tar.gz",
+      "source_path": "openjpeg-2.5.4/thirdparty/libpng/LICENSE",
+      "path": "contrib-notices/openjpeg-2.5.4.tar.gz/openjpeg-2.5.4/thirdparty/libpng/LICENSE",
+      "sha256": "7317e078e2d3b5d7ba5a6159e650945153262b44b76f6700f8e9edb261c5143e",
+      "size": 5345,
+      "archive_sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+    },
+    {
+      "archive": "opus-1.6.1.tar.gz",
+      "source_path": "opus-1.6.1/AUTHORS",
+      "path": "contrib-notices/opus-1.6.1.tar.gz/opus-1.6.1/AUTHORS",
+      "sha256": "f9fd849e652219ce98e008303370b352d37663d0ffb27b8dc514ad93c9c7438b",
+      "size": 239,
+      "archive_sha256": "6ffcb593207be92584df15b32466ed64bbec99109f007c82205f0194572411a1"
+    },
+    {
+      "archive": "opus-1.6.1.tar.gz",
+      "source_path": "opus-1.6.1/COPYING",
+      "path": "contrib-notices/opus-1.6.1.tar.gz/opus-1.6.1/COPYING",
+      "sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551",
+      "size": 1945,
+      "archive_sha256": "6ffcb593207be92584df15b32466ed64bbec99109f007c82205f0194572411a1"
+    },
+    {
+      "archive": "protobuf-3.21.1.tar.gz",
+      "source_path": "protobuf-3.21.1/third_party/googletest/googletest/LICENSE",
+      "path": "contrib-notices/protobuf-3.21.1.tar.gz/protobuf-3.21.1/third_party/googletest/googletest/LICENSE",
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+      "size": 1475,
+      "archive_sha256": "9ccabf07bd087bca3bb37067e04bf1d7377f0d60311cf3d2aa88e7af4c49a177"
+    },
+    {
+      "archive": "protobuf-3.21.1.tar.gz",
+      "source_path": "protobuf-3.21.1/third_party/googletest/googlemock/scripts/generator/LICENSE",
+      "path": "contrib-notices/protobuf-3.21.1.tar.gz/protobuf-3.21.1/third_party/googletest/googlemock/scripts/generator/LICENSE",
+      "sha256": "5e0df8c845c742e76f2f64d2d9ce1b7e74a2422fddbc577ae6a56319083de0bf",
+      "size": 11386,
+      "archive_sha256": "9ccabf07bd087bca3bb37067e04bf1d7377f0d60311cf3d2aa88e7af4c49a177"
+    },
+    {
+      "archive": "protobuf-3.21.1.tar.gz",
+      "source_path": "protobuf-3.21.1/third_party/googletest/googlemock/LICENSE",
+      "path": "contrib-notices/protobuf-3.21.1.tar.gz/protobuf-3.21.1/third_party/googletest/googlemock/LICENSE",
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+      "size": 1475,
+      "archive_sha256": "9ccabf07bd087bca3bb37067e04bf1d7377f0d60311cf3d2aa88e7af4c49a177"
+    },
+    {
+      "archive": "protobuf-3.21.1.tar.gz",
+      "source_path": "protobuf-3.21.1/LICENSE",
+      "path": "contrib-notices/protobuf-3.21.1.tar.gz/protobuf-3.21.1/LICENSE",
+      "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+      "size": 1732,
+      "archive_sha256": "9ccabf07bd087bca3bb37067e04bf1d7377f0d60311cf3d2aa88e7af4c49a177"
+    },
+    {
+      "archive": "protoc-21.1-cpp.tar.gz",
+      "source_path": "protobuf-3.21.1/third_party/googletest/googletest/LICENSE",
+      "path": "contrib-notices/protoc-21.1-cpp.tar.gz/protobuf-3.21.1/third_party/googletest/googletest/LICENSE",
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+      "size": 1475,
+      "archive_sha256": "9ccabf07bd087bca3bb37067e04bf1d7377f0d60311cf3d2aa88e7af4c49a177"
+    },
+    {
+      "archive": "protoc-21.1-cpp.tar.gz",
+      "source_path": "protobuf-3.21.1/third_party/googletest/googlemock/scripts/generator/LICENSE",
+      "path": "contrib-notices/protoc-21.1-cpp.tar.gz/protobuf-3.21.1/third_party/googletest/googlemock/scripts/generator/LICENSE",
+      "sha256": "5e0df8c845c742e76f2f64d2d9ce1b7e74a2422fddbc577ae6a56319083de0bf",
+      "size": 11386,
+      "archive_sha256": "9ccabf07bd087bca3bb37067e04bf1d7377f0d60311cf3d2aa88e7af4c49a177"
+    },
+    {
+      "archive": "protoc-21.1-cpp.tar.gz",
+      "source_path": "protobuf-3.21.1/third_party/googletest/googlemock/LICENSE",
+      "path": "contrib-notices/protoc-21.1-cpp.tar.gz/protobuf-3.21.1/third_party/googletest/googlemock/LICENSE",
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+      "size": 1475,
+      "archive_sha256": "9ccabf07bd087bca3bb37067e04bf1d7377f0d60311cf3d2aa88e7af4c49a177"
+    },
+    {
+      "archive": "protoc-21.1-cpp.tar.gz",
+      "source_path": "protobuf-3.21.1/LICENSE",
+      "path": "contrib-notices/protoc-21.1-cpp.tar.gz/protobuf-3.21.1/LICENSE",
+      "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+      "size": 1732,
+      "archive_sha256": "9ccabf07bd087bca3bb37067e04bf1d7377f0d60311cf3d2aa88e7af4c49a177"
+    },
+    {
+      "archive": "pupnp-release-1.14.20.tar.gz",
+      "source_path": "pupnp-release-1.14.20/COPYING",
+      "path": "contrib-notices/pupnp-release-1.14.20.tar.gz/pupnp-release-1.14.20/COPYING",
+      "sha256": "c8b99423cad48bb44e2cf52a496361404290865eac259a82da6d1e4331ececb3",
+      "size": 1477,
+      "archive_sha256": "34a1303ad3f091cdb190466a25eaa9ec620b29c0a36352fb0ad7d7436e6af9d5"
+    },
+    {
+      "archive": "pupnp-release-1.14.20.tar.gz",
+      "source_path": "pupnp-release-1.14.20/site/LICENSE",
+      "path": "contrib-notices/pupnp-release-1.14.20.tar.gz/pupnp-release-1.14.20/site/LICENSE",
+      "sha256": "0375955c8a79d6e8fa0792d45d00fc4e7710d7ac95bcbd27f9225a83f5c946fd",
+      "size": 1499,
+      "archive_sha256": "34a1303ad3f091cdb190466a25eaa9ec620b29c0a36352fb0ad7d7436e6af9d5"
+    },
+    {
+      "archive": "rnnoise-0.1.1.tar.gz",
+      "source_path": "rnnoise-0.1.1/AUTHORS",
+      "path": "contrib-notices/rnnoise-0.1.1.tar.gz/rnnoise-0.1.1/AUTHORS",
+      "sha256": "348b0956050157b718a11e1464633619b709b19b45172f336cef2205aa0cec63",
+      "size": 37,
+      "archive_sha256": "1641712c9ae31f3b364e8b2f2e0ec3ce24330e76055c151f695941b0ea5d3987"
+    },
+    {
+      "archive": "rnnoise-0.1.1.tar.gz",
+      "source_path": "rnnoise-0.1.1/COPYING",
+      "path": "contrib-notices/rnnoise-0.1.1.tar.gz/rnnoise-0.1.1/COPYING",
+      "sha256": "e2f59ff41d9d03adc3dcf3deff170f8c8cf4a6eb4a9b174762a7656d23200ffa",
+      "size": 1581,
+      "archive_sha256": "1641712c9ae31f3b364e8b2f2e0ec3ce24330e76055c151f695941b0ea5d3987"
+    },
+    {
+      "archive": "sam3.cpp-1.0.0.tar.gz",
+      "source_path": "sam3.cpp-1.0.0/LICENSE",
+      "path": "contrib-notices/sam3.cpp-1.0.0.tar.gz/sam3.cpp-1.0.0/LICENSE",
+      "sha256": "f12c454df33ecbeaa75bbba18fea4f1b37324f64e2e1492f278ac0c450de05b3",
+      "size": 1084,
+      "archive_sha256": "f844712819e1a169350805af904ee49236bf808e3c1d975a7fc4d9d3f9daa5a0"
+    },
+    {
+      "archive": "soxr-0.1.3-Source.tar.xz",
+      "source_path": "soxr-0.1.3-Source/AUTHORS",
+      "path": "contrib-notices/soxr-0.1.3-Source.tar.xz/soxr-0.1.3-Source/AUTHORS",
+      "sha256": "e5d53cd6c716dfeabe47a9f3613a8c6815aa4a67f0f77900787c59445396aeff",
+      "size": 39,
+      "archive_sha256": "b111c15fdc8c029989330ff559184198c161100a59312f5dc19ddeb9b5a15889"
+    },
+    {
+      "archive": "soxr-0.1.3-Source.tar.xz",
+      "source_path": "soxr-0.1.3-Source/LICENCE",
+      "path": "contrib-notices/soxr-0.1.3-Source.tar.xz/soxr-0.1.3-Source/LICENCE",
+      "sha256": "dc98676341fdcd29d9f279c9679d6a75288785b174ded8d1b2e316c366166135",
+      "size": 1024,
+      "archive_sha256": "b111c15fdc8c029989330ff559184198c161100a59312f5dc19ddeb9b5a15889"
+    },
+    {
+      "archive": "soxr-0.1.3-Source.tar.xz",
+      "source_path": "soxr-0.1.3-Source/COPYING.LGPL",
+      "path": "contrib-notices/soxr-0.1.3-Source.tar.xz/soxr-0.1.3-Source/COPYING.LGPL",
+      "sha256": "f2f118b9029ec1871b953639ecc46651b2fc7b62e295e6cf3ef2ac4c9a058b33",
+      "size": 26432,
+      "archive_sha256": "b111c15fdc8c029989330ff559184198c161100a59312f5dc19ddeb9b5a15889"
+    },
+    {
+      "archive": "spatialaudio-0.3.0.tar.bz2",
+      "source_path": "spatialaudio-0.3.0/LICENSE",
+      "path": "contrib-notices/spatialaudio-0.3.0.tar.bz2/spatialaudio-0.3.0/LICENSE",
+      "sha256": "63176449375086d82d675541c56bce8dd1ed7b2e9cff41c9fb8b8b388f2869b6",
+      "size": 27436,
+      "archive_sha256": "284c1dbd8efd46c03be84ac7070bc87cae81b7125352b143a70be3e2b96988e3"
+    },
+    {
+      "archive": "speex-1.2.1.tar.gz",
+      "source_path": "speex-1.2.1/AUTHORS",
+      "path": "contrib-notices/speex-1.2.1.tar.gz/speex-1.2.1/AUTHORS",
+      "sha256": "6e5a9d92c5f9ccd28fe0b15ad59443fbf435bfc6ab2221f532006d3717ddf642",
+      "size": 502,
+      "archive_sha256": "4b44d4f2b38a370a2d98a78329fefc56a0cf93d1c1be70029217baae6628feea"
+    },
+    {
+      "archive": "speex-1.2.1.tar.gz",
+      "source_path": "speex-1.2.1/COPYING",
+      "path": "contrib-notices/speex-1.2.1.tar.gz/speex-1.2.1/COPYING",
+      "sha256": "2654a4264b2bfe298dedc508748d140111840c315cc8eb646a3a68c13fa75b01",
+      "size": 1773,
+      "archive_sha256": "4b44d4f2b38a370a2d98a78329fefc56a0cf93d1c1be70029217baae6628feea"
+    },
+    {
+      "archive": "speexdsp-1.2.1.tar.gz",
+      "source_path": "speexdsp-1.2.1/AUTHORS",
+      "path": "contrib-notices/speexdsp-1.2.1.tar.gz/speexdsp-1.2.1/AUTHORS",
+      "sha256": "6e5a9d92c5f9ccd28fe0b15ad59443fbf435bfc6ab2221f532006d3717ddf642",
+      "size": 502,
+      "archive_sha256": "8c777343e4a6399569c72abc38a95b24db56882c83dbdb6c6424a5f4aeb54d3d"
+    },
+    {
+      "archive": "speexdsp-1.2.1.tar.gz",
+      "source_path": "speexdsp-1.2.1/COPYING",
+      "path": "contrib-notices/speexdsp-1.2.1.tar.gz/speexdsp-1.2.1/COPYING",
+      "sha256": "2654a4264b2bfe298dedc508748d140111840c315cc8eb646a3a68c13fa75b01",
+      "size": 1773,
+      "archive_sha256": "8c777343e4a6399569c72abc38a95b24db56882c83dbdb6c6424a5f4aeb54d3d"
+    },
+    {
+      "archive": "sqlite-autoconf-3460100.tar.gz",
+      "source_path": "sqlite-autoconf-3460100/tea/license.terms",
+      "path": "contrib-notices/sqlite-autoconf-3460100.tar.gz/sqlite-autoconf-3460100/tea/license.terms",
+      "sha256": "66e056b6e8687f32af30d5187611b98b12a8f46f07aaf62f43585f276e8f0ac9",
+      "size": 257,
+      "archive_sha256": "67d3fe6d268e6eaddcae3727fce58fcc8e9c53869bdd07a0c61e38ddf2965071"
+    },
+    {
+      "archive": "taglib-2.1.tar.gz",
+      "source_path": "taglib-2.1/AUTHORS",
+      "path": "contrib-notices/taglib-2.1.tar.gz/taglib-2.1/AUTHORS",
+      "sha256": "047780f6bded3712fc24edc77b9187bfa49ea3826ed090933cb6342458eace85",
+      "size": 889,
+      "archive_sha256": "95b788b39eaebab41f7e6d1c1d05ceee01a5d1225e4b6d11ed8976e96ba90b0c"
+    },
+    {
+      "archive": "taglib-2.1.tar.gz",
+      "source_path": "taglib-2.1/COPYING.LGPL",
+      "path": "contrib-notices/taglib-2.1.tar.gz/taglib-2.1/COPYING.LGPL",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "size": 26530,
+      "archive_sha256": "95b788b39eaebab41f7e6d1c1d05ceee01a5d1225e4b6d11ed8976e96ba90b0c"
+    },
+    {
+      "archive": "taglib-2.1.tar.gz",
+      "source_path": "taglib-2.1/COPYING.MPL",
+      "path": "contrib-notices/taglib-2.1.tar.gz/taglib-2.1/COPYING.MPL",
+      "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f",
+      "size": 25755,
+      "archive_sha256": "95b788b39eaebab41f7e6d1c1d05ceee01a5d1225e4b6d11ed8976e96ba90b0c"
+    },
+    {
+      "archive": "twolame-0.4.0.tar.gz",
+      "source_path": "twolame-0.4.0/doc/html/authors.html",
+      "path": "contrib-notices/twolame-0.4.0.tar.gz/twolame-0.4.0/doc/html/authors.html",
+      "sha256": "8249529eccb53bbf55492e1bb6fff7460561c54037c2838e3c812e1bd9e04da3",
+      "size": 4439,
+      "archive_sha256": "cc35424f6019a88c6f52570b63e1baf50f62963a3eac52a03a800bb070d7c87d"
+    },
+    {
+      "archive": "twolame-0.4.0.tar.gz",
+      "source_path": "twolame-0.4.0/AUTHORS",
+      "path": "contrib-notices/twolame-0.4.0.tar.gz/twolame-0.4.0/AUTHORS",
+      "sha256": "89acea387ca97766b248e553ea68400898669b1637cfa31e4ceefff9efa3744d",
+      "size": 1856,
+      "archive_sha256": "cc35424f6019a88c6f52570b63e1baf50f62963a3eac52a03a800bb070d7c87d"
+    },
+    {
+      "archive": "twolame-0.4.0.tar.gz",
+      "source_path": "twolame-0.4.0/COPYING",
+      "path": "contrib-notices/twolame-0.4.0.tar.gz/twolame-0.4.0/COPYING",
+      "sha256": "257a842724705950b07da76ce0e22ffa80ec77b3e9dfc6702522ac342409da0f",
+      "size": 26428,
+      "archive_sha256": "cc35424f6019a88c6f52570b63e1baf50f62963a3eac52a03a800bb070d7c87d"
+    },
+    {
+      "archive": "utfcpp-3.2.5.tar.gz",
+      "source_path": "utfcpp-3.2.5/LICENSE",
+      "path": "contrib-notices/utfcpp-3.2.5.tar.gz/utfcpp-3.2.5/LICENSE",
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+      "size": 1338,
+      "archive_sha256": "14fd1b3c466814cb4c40771b7f207b61d2c7a0aa6a5e620ca05c00df27f25afd"
+    },
+    {
+      "archive": "Vulkan-Headers-1.3.275.tar.gz",
+      "source_path": "Vulkan-Headers-1.3.275/LICENSE.md",
+      "path": "contrib-notices/Vulkan-Headers-1.3.275.tar.gz/Vulkan-Headers-1.3.275/LICENSE.md",
+      "sha256": "ac24e5ea920e4318e4d02c4086ae51f53cfb03feed06c18df1019e7ada1ec7bc",
+      "size": 458,
+      "archive_sha256": "7161da645dbd33fd4ea61eec08e0d77389a640010acbf4afc00234f84df9b314"
+    },
+    {
+      "archive": "zlib-1.3.2.tar.xz",
+      "source_path": "zlib-1.3.2/LICENSE",
+      "path": "contrib-notices/zlib-1.3.2.tar.xz/zlib-1.3.2/LICENSE",
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+      "size": 1002,
+      "archive_sha256": "d7a0654783a4da529d1bb793b7ad9c3318020af77667bcae35f95d0e42a792f3"
+    },
+    {
+      "archive": "zlib-1.3.2.tar.xz",
+      "source_path": "zlib-1.3.2/contrib/dotzlib/LICENSE_1_0.txt",
+      "path": "contrib-notices/zlib-1.3.2.tar.xz/zlib-1.3.2/contrib/dotzlib/LICENSE_1_0.txt",
+      "sha256": "36266a8fd073568394cb81cdb2b124f7fdae2c64c1a7ed09db34b4d22efa2951",
+      "size": 1359,
+      "archive_sha256": "d7a0654783a4da529d1bb793b7ad9c3318020af77667bcae35f95d0e42a792f3"
+    },
+    {
+      "archive": "zlib-1.3.2.tar.xz",
+      "source_path": "zlib-1.3.2/contrib/minizip/LICENSE.Info-Zip",
+      "path": "contrib-notices/zlib-1.3.2.tar.xz/zlib-1.3.2/contrib/minizip/LICENSE.Info-Zip",
+      "sha256": "fc686023047ce5ce3a18a9b8a777156f0e475929d3de06bac279f3c025d2b2ca",
+      "size": 3509,
+      "archive_sha256": "d7a0654783a4da529d1bb793b7ad9c3318020af77667bcae35f95d0e42a792f3"
+    },
+    {
+      "archive": "zvbi-0.2.35.tar.bz2",
+      "source_path": "zvbi-0.2.35/COPYING.LIB",
+      "path": "contrib-notices/zvbi-0.2.35.tar.bz2/zvbi-0.2.35/COPYING.LIB",
+      "sha256": "ab70717003986c4b2d4126371ee6406e554a924f107dba536f63946957526a72",
+      "size": 25292,
+      "archive_sha256": "fc883c34111a487c4a783f91b1b2bb5610d8d8e58dcba80c7ab31e67e4765318"
+    },
+    {
+      "archive": "zvbi-0.2.35.tar.bz2",
+      "source_path": "zvbi-0.2.35/AUTHORS",
+      "path": "contrib-notices/zvbi-0.2.35.tar.bz2/zvbi-0.2.35/AUTHORS",
+      "sha256": "f54cd71e21a8edf5d51c228df485f6a4a1307422274fa39a4469f08b30b7be40",
+      "size": 2932,
+      "archive_sha256": "fc883c34111a487c4a783f91b1b2bb5610d8d8e58dcba80c7ab31e67e4765318"
+    },
+    {
+      "archive": "zvbi-0.2.35.tar.bz2",
+      "source_path": "zvbi-0.2.35/COPYING",
+      "path": "contrib-notices/zvbi-0.2.35.tar.bz2/zvbi-0.2.35/COPYING",
+      "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c",
+      "size": 18002,
+      "archive_sha256": "fc883c34111a487c4a783f91b1b2bb5610d8d8e58dcba80c7ab31e67e4765318"
+    },
+    {
+      "archive": "freetype-2.13.1.tar.xz",
+      "source_path": "freetype-2.13.1/docs/FTL.TXT",
+      "path": "contrib-notices/freetype-2.13.1.tar.xz/freetype-2.13.1/docs/FTL.TXT",
+      "sha256": "08c135755dd589039470f1fdbb400daaabaaa50d0b366d19cebff4d22986baa1",
+      "size": 6743,
+      "archive_sha256": "ea67e3b019b1104d1667aa274f5dc307d8cbd606b399bc32df308a77f1a564bf"
+    }
+  ]
+}

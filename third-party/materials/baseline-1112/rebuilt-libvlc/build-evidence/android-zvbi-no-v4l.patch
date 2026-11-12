@@ -1,0 +1,13 @@
+diff --git a/contrib/src/zvbi/rules.mak b/contrib/src/zvbi/rules.mak
+index 1037b2e..ecef81f 100644
+--- a/contrib/src/zvbi/rules.mak
++++ b/contrib/src/zvbi/rules.mak
+@@ -43,6 +43,8 @@ ZVBICONF := \
+ 	--without-doxygen
+ 
+ ifdef HAVE_ANDROID
++# Android has no Linux V4L capture or pthread cancellation API.
++ZVBICONF += --disable-v4l
+ # discard bogus pthread_cancel calls
+ ZVBICONF += CFLAGS="$(CFLAGS) -Wno-implicit-function-declaration"
+ endif

@@ -1,0 +1,11 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: FreeType 2
+Description: A free, high-quality, and portable font engine.
+URL: https://freetype.org
+Version: 26.0.20
+Requires: zlib
+Libs: -L${libdir} -lfreetype
+Cflags: -I${includedir}/freetype2

@@ -1,0 +1,10 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+
+Name: libdvbpsi
+Description: libdvbpsi is a simple library designed for decoding and generation of MPEG TS and DVB PSI tables.
+Version: 1.3.3
+Libs: -L${libdir} -ldvbpsi
+Cflags: -I${includedir}

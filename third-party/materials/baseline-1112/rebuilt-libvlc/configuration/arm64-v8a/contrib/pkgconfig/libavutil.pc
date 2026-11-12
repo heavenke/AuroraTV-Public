@@ -1,0 +1,14 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+exec_prefix=${prefix}
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 60.26.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil -lm -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lz -latomic -landroid -lmediandk -pthread
+Libs.private: 
+Cflags: -I${includedir}

@@ -1,0 +1,15 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+host=arm-unknown-linux-androideabi
+mtcflags=
+mtlibs=
+
+Name: gpg-error
+Description: GPG Runtime
+Version: 1.56-unknown
+URL: https://www.gnupg.org/software/libgpg-error/index.html
+Libs:  -L${libdir} -lgpg-error  
+Cflags:  -I${includedir} 
+Requires:  

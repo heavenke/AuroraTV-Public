@@ -1,0 +1,384 @@
+
+libdeinterlace_aarch64_plugin.la|isa/aarch64/simd/deinterlace.c isa/aarch64/simd/merge.S||
+libdeinterlace_sve_plugin.la|isa/aarch64/sve/deinterlace.c isa/aarch64/sve/merge.S||
+libdata_plugin.la|access/data.c||
+libfilesystem_plugin.la|access/fs.h access/file.c access/directory.c access/fs.c||
+libidummy_plugin.la|access/idummy.c||
+libimem_plugin.la|access/imem-access.c||-lm
+libaccess_imem_plugin.la|access/imem.c||
+libsdp_plugin.la|access/sdp.c||
+libtimecode_plugin.la|access/timecode.c||
+libvdr_plugin.la|access/vdr.c||
+libshm_plugin.la|access/shm.c||-lm
+liblibbluray_plugin.la|access/bluray.c demux/mpeg/timestamps.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lbluray -pthread -lfreetype -lz -lxml2 -pthread -lm
+libdtv_plugin.la|access/dtv/dtv.h access/dtv/access.c access/dtv/linux.c access/dtv/en50221.c access/dtv/en50221.h access/dtv/en50221_capmt.h||
+libdvb_plugin.la|access/dvb/access.c access/dvb/linux_dvb.c access/dvb/scan.c access/dvb/scan.h access/dvb/scan_list.c access/dvb/scan_list.h access/dvb/dvb.h mux/mpeg/dvbpsi_compat.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ldvbpsi
+libftp_plugin.la|access/ftp.c||
+libgopher_plugin.la|access/gopher.c||
+libhttp_plugin.la|access/http.c||
+libwebdav_plugin.la|access/webdav.c||libvlc_http.la
+liblive555_plugin.la|access/live555.cpp access/mms/asf.c access/mms/buffer.c access/live555_dtsgen.h codec/opus_header.c codec/opus_header.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lliveMedia -lgroupsock -lBasicUsageEnvironment -lUsageEnvironment  
+libaccess_mms_plugin.la|access/mms/mms.c access/mms/mms.h access/mms/mmsh.c access/mms/mmsh.h access/mms/mmstu.c access/mms/mmstu.h access/mms/buffer.c access/mms/buffer.h access/mms/asf.h access/mms/asf.c demux/asf/libasf_guid.h||
+libdsm_plugin.la|access/dsm/access.c access/dsm/sd.c access/smb_common.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ldsm -pthread -liconv -llog -ltasn1 libvlc_access_cache.la
+libsmb2_plugin.la|access/smb2.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lsmb2  libvlc_access_cache.la -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ldsm -pthread -liconv -llog -ltasn1
+libtcp_plugin.la|access/tcp.c||
+libudp_plugin.la|access/udp.c||
+libamt_plugin.la|access/amt.c||
+libsftp_plugin.la|access/sftp.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lssh2 -lgcrypt -lgpg-error -lgcrypt -lgpg-error
+libnfs_plugin.la|access/nfs.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lnfs 
+libavio_plugin.la|access/avio.c access/avio.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lavformat -lm -latomic -lz -lavcodec -pthread -lm -latomic -lgsm -lmp3lame -lm -lopenjp2 -lm -pthread -lz -lavutil -lm -lz -latomic -landroid -lmediandk -pthread  -lm
+libsatip_plugin.la|access/satip.c||
+libaccess_concat_plugin.la|access/concat.c||
+librist_plugin.la|access/rist.c access/rist.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lrist -pthread -lgmp -lgnutls -lgmp -lhogweed -lgmp -lnettle -lz 
+libhttps_plugin.la|access/http/access.c||libvlc_http.la
+librtp_plugin.la|access/rtp/input.c access/rtp/input.h access/rtp/sdp.c access/rtp/sdp.h access/rtp/datagram.c access/rtp/vlc_dtls.h access/rtp/rtp.c access/rtp/rtp.h||libvlc_rtp.la  libvlc_srtp.la -lgcrypt -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lgpg-error
+libaccess_output_dummy_plugin.la|access_output/dummy.c||
+libaccess_output_file_plugin.la|access_output/file.c||
+libaccess_output_http_plugin.la|access_output/http.c||
+libaccess_output_livehttp_plugin.la|access_output/livehttp.c||-lgcrypt -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lgpg-error -lm
+libaccess_output_shout_plugin.la|access_output/shout.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lshout -lvorbis -lm -ltheora -logg -lspeex -lm 
+libaccess_http_put_plugin.la|access_output/http-put.c||libvlc_http.la
+libaccess_output_rist_plugin.la|access_output/rist.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lrist -pthread -lgmp -lgnutls -lgmp -lhogweed -lgmp -lnettle -lz 
+libandroid_audiodevice_plugin.la|audio_output/android/device.c audio_output/android/device.h||libandroid_env.la libvlc_android_audioformat_jni.la libvlc_android_dynamicsprocessing_jni.la
+libopensles_android_plugin.la|audio_output/android/opensles.c|| -lm
+libandroid_audiotrack_plugin.la|audio_output/android/audiotrack.c audio_output/android/device.h||libandroid_env.la libvlc_android_audioformat_jni.la libvlc_android_dynamicsprocessing_jni.la
+libandroid_aaudio_plugin.la|audio_output/android/aaudio.c audio_output/android/device.h||libandroid_env.la libvlc_android_dynamicsprocessing_jni.la 
+libadummy_plugin.la|audio_output/adummy.c||
+libafile_plugin.la|audio_output/file.c||
+libamem_plugin.la|audio_output/amem.c||
+libaudiobargraph_a_plugin.la|audio_filter/audiobargraph_a.c||-lm
+libchorus_flanger_plugin.la|audio_filter/chorus_flanger.c||-lm
+libcompressor_plugin.la|audio_filter/compressor.c audio_filter/dynamics.h||libdynamics_common.la -lm
+libexpander_plugin.la|audio_filter/expander.c audio_filter/dynamics.h||libdynamics_common.la -lm
+liblimiter_plugin.la|audio_filter/limiter.c audio_filter/dynamics.h||libdynamics_common.la -lm
+libequalizer_plugin.la|audio_filter/equalizer.c audio_filter/equalizer_presets.h||-lm
+libgate_plugin.la|audio_filter/gate.c||-lm
+libkaraoke_plugin.la|audio_filter/karaoke.c||
+libnormvol_plugin.la|audio_filter/normvol.c||-lm
+libgain_plugin.la|audio_filter/gain.c||
+libparam_eq_plugin.la|audio_filter/param_eq.c||-lm
+libscaletempo_plugin.la|audio_filter/scaletempo.c||-lm
+libscaletempo_pitch_plugin.la|audio_filter/scaletempo.c||-lm
+libspatializer_plugin.la|audio_filter/spatializer/allpass.cpp audio_filter/spatializer/allpass.hpp audio_filter/spatializer/comb.cpp audio_filter/spatializer/comb.hpp audio_filter/spatializer/denormals.h audio_filter/spatializer/denormals.c audio_filter/spatializer/tuning.h audio_filter/spatializer/revmodel.cpp audio_filter/spatializer/revmodel.hpp audio_filter/spatializer/spatializer.cpp||-lm
+libstereo_widen_plugin.la|audio_filter/stereo_widen.c||
+libcenter_plugin.la|audio_filter/center.c||-lm
+libstereopan_plugin.la|audio_filter/stereo_pan.c||-lm
+libdolby_surround_decoder_plugin.la|audio_filter/channel_mixer/dolby.c||
+libheadphone_channel_mixer_plugin.la|audio_filter/channel_mixer/headphone.c||-lm
+libmono_plugin.la|audio_filter/channel_mixer/mono.c||-lm
+libremap_plugin.la|audio_filter/channel_mixer/remap.c||
+libsimple_channel_mixer_plugin.la|audio_filter/channel_mixer/simple.c ||
+libtrivial_channel_mixer_plugin.la|audio_filter/channel_mixer/trivial.c||
+libspatialaudio_plugin.la|audio_filter/channel_mixer/spatialaudio.cpp||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lspatialaudio -lmysofa -lm -lz
+libtospdif_plugin.la|audio_filter/converter/tospdif.c packetizer/a52.h packetizer/dts_header.c packetizer/dts_header.h||
+libaudio_format_plugin.la|audio_filter/converter/format.c||-lm
+libsoxr_plugin.la|audio_filter/resampler/soxr.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lsoxr -lavcodec -pthread -lm -latomic -lgsm -lmp3lame -lm -lopenjp2 -lm -pthread -lz -lavutil -lm -lz -latomic -landroid -lmediandk -pthread -lavutil -lm -lz -latomic -landroid -lmediandk -pthread -lm
+libebur128_plugin.la|audio_filter/libebur128.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lebur128 -lm
+libugly_resampler_plugin.la|audio_filter/resampler/ugly.c||
+libspeex_resampler_plugin.la|audio_filter/resampler/speex.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lspeexdsp -lm
+librnnoise_plugin.la|audio_filter/rnnoise.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lrnnoise -lm
+libfloat_mixer_plugin.la|audio_mixer/float.c||-lm
+libinteger_mixer_plugin.la|audio_mixer/integer.c||-lm
+libi420_rgb_plugin.la|video_chroma/i420_rgb.c video_chroma/i420_rgb.h video_chroma/i420_rgb8.c video_chroma/i420_rgb16.c video_chroma/i420_rgb_c.h||
+libi420_nv12_plugin.la|video_chroma/i420_nv12.c||libchroma_copy.la
+libi422_i420_plugin.la|video_chroma/i422_i420.c||
+libgrey_yuv_plugin.la|video_chroma/grey_yuv.c||
+libyuy2_i420_plugin.la|video_chroma/yuy2_i420.c||
+libyuy2_i422_plugin.la|video_chroma/yuy2_i422.c||
+librv32_plugin.la|video_chroma/rv32.c||
+libchain_plugin.la|video_chroma/chain.c||
+libyuvp_plugin.la|video_chroma/yuvp.c||
+liborient_plugin.la|video_chroma/orient.c video_chroma/orient.h||
+libswscale_plugin.la|video_chroma/swscale.c codec/avcodec/chroma.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lswscale -lm -latomic -lavutil -lm -lz -latomic -landroid -lmediandk -pthread -lm
+libddummy_plugin.la|codec/ddummy.c||
+libedummy_plugin.la|codec/edummy.c||
+libspdif_plugin.la|codec/spdif.c||
+libadpcm_plugin.la|codec/adpcm.c||
+libaes3_plugin.la|codec/aes3.c||
+libaraw_plugin.la|codec/araw.c||-lm
+libg711_plugin.la|codec/g711.c||
+libfluidsynth_plugin.la|codec/fluidsynth.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lfluidlite -lm -lvorbisfile -lvorbis -lm -logg  
+liblpcm_plugin.la|codec/lpcm.c||
+libmpg123_plugin.la|codec/mpg123.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lmpg123 -lm
+libuleaddvaudio_plugin.la|codec/uleaddvaudio.c||
+libcdg_plugin.la|codec/cdg.c||
+librawvideo_plugin.la|codec/rawvideo.c||
+librtpvideo_plugin.la|codec/rtpvideo.c||
+libopenapv_plugin.la|codec/openapv.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib/oapv -loapv -lm  
+librtp_rawvid_plugin.la|codec/rtp-rawvid.c||
+libpng_plugin.la|codec/png.c||-lpng -lz -lm
+libjpeg_plugin.la|codec/jpeg.c||-ljpeg
+liblibass_plugin.la|codec/libass.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lass -lm -liconv -lfribidi -lharfbuzz -pthread -lm -lfreetype -lz   -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lfreetype -lz 
+libcc_plugin.la|codec/cc.c codec/cc.h codec/substext.h codec/cea708.h codec/cea708.c||
+libcvdsub_plugin.la|codec/cvdsub.c demux/mpeg/timestamps.h||
+libdvbsub_plugin.la|codec/dvbsub.c||
+libaribcaption_plugin.la|codec/arib/libaribcaption.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -laribcaption -lm -lunwind -ldl -lc -lunwind -ldl -lfreetype -lz  -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lfreetype -lz
+libscte18_plugin.la|codec/scte18.c codec/scte18.h codec/atsc_a65.c codec/atsc_a65.h||
+libscte27_plugin.la|codec/scte27.c||
+libspudec_plugin.la|codec/spudec/spudec.c codec/spudec/parse.c codec/spudec/spudec.h||
+libstl_plugin.la|codec/stl.c||
+libsubsdec_plugin.la|codec/subsdec.c codec/substext.h||
+libsubsusf_plugin.la|codec/subsusf.c||
+libttml_plugin.la|codec/ttml/substtml.c demux/ttml.c codec/ttml/ttml.h codec/ttml/ttml.c codec/ttml/genttml.c codec/ttml/imageupdater.h codec/ttml/ttmlpes.h codec/ttml/encttml.c||
+libwebvtt_plugin.la|codec/webvtt/subsvtt.c codec/webvtt/webvtt.c codec/webvtt/webvtt.h demux/webvtt.c demux/mp4/minibox.h codec/webvtt/encvtt.c mux/webvtt.c codec/webvtt/CSSGrammar.y codec/webvtt/CSSLexer.l codec/webvtt/css_parser.c codec/webvtt/css_parser.h codec/webvtt/css_style.c codec/webvtt/css_style.h codec/webvtt/css_bridge.h||
+libsvcdsub_plugin.la|codec/svcdsub.c demux/mpeg/timestamps.h||
+libt140_plugin.la|codec/t140.c||
+libtelx_plugin.la|codec/telx.c||
+libtextst_plugin.la|codec/textst.c demux/mpeg/timestamps.h||
+libzvbi_plugin.la|codec/zvbi.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lzvbi -lm -lpng -lz -lm -liconv 
+libsubstx3g_plugin.la|codec/substx3g.c codec/substext.h||
+libflac_plugin.la|codec/flac.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lFLAC -lm -pthread -logg
+libopus_plugin.la|codec/opus.c codec/opus_header.c codec/opus_header.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -logg -lopus -lm -lm
+libspeex_plugin.la|codec/speex.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -logg -lspeex -lm -lm
+libtheora_plugin.la|codec/theora.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ltheoraenc -ltheoradec -logg
+libvorbis_plugin.la|codec/vorbis.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lvorbisenc -lvorbis -lm -logg
+liboggspots_plugin.la|codec/oggspots.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -logg
+libavcodec_plugin.la|codec/avcodec/video.c codec/avcodec/subtitle.c codec/avcodec/audio.c codec/avcodec/va.c codec/avcodec/va.h codec/avcodec/avcodec.c codec/avcodec/avcodec.h packetizer/av1_obu.c packetizer/av1_obu.h packetizer/av1.h codec/avcodec/encoder.c  ||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lavcodec -pthread -lm -latomic -lgsm -lmp3lame -lm -lopenjp2 -lm -pthread -lz -lavutil -lm -lz -latomic -landroid -lmediandk -pthread -lm libavcodec_common.la 
+libmediacodec_plugin.la|codec/omxil/mediacodec.c codec/omxil/mediacodec.h codec/omxil/mediacodec_jni.c codec/omxil/mediacodec_ndk.c codec/omxil/utils.c codec/omxil/omxil_utils.h codec/omxil/qcom.c codec/omxil/qcom.h||libchroma_copy.la libvlc_hxxxhelper.la libandroid_utils.la  -lGLESv2 -lEGL -lmediandk
+libvpx_plugin.la|codec/vpx.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lvpx -lm
+libvpx_alpha_plugin.la|codec/vpx_alpha.c codec/alpha_combine.h ||
+libaom_plugin.la|codec/aom.c packetizer/iso_color_tables.h packetizer/av1_obu.c packetizer/av1_obu.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -laom -lm -pthread
+libtwolame_plugin.la|codec/twolame.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ltwolame -lm
+libdav1d_plugin.la|codec/dav1d.c packetizer/av1_obu.c packetizer/av1_obu.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ldav1d -pthread
+libdummy_plugin.la|control/dummy.c control/intromsg.h||
+libgestures_plugin.la|control/gestures.c||
+libhotkeys_plugin.la|control/hotkeys.c||-lm
+librc_plugin.la|control/intromsg.h control/cli/player.c control/cli/playlist.c control/cli/cli.c control/cli/cli.h|| -lm
+libflacsys_plugin.la|demux/flac.c packetizer/flac.h||libxiph_metadata.la
+libogg_plugin.la|demux/ogg.c demux/ogg.h demux/oggseek.c demux/oggseek.h demux/ogg_granule.c demux/ogg_granule.h demux/xiph.h demux/opus.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lvorbis -lm -logg -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -logg -lm libxiph_metadata.la
+libdemuxdump_plugin.la|demux/demuxdump.c||
+librawdv_plugin.la|demux/rawdv.c demux/rawdv.h||
+librawvid_plugin.la|demux/rawvid.c||
+libg64rtp_plugin.la|demux/g64rtp.c||
+libau_plugin.la|demux/au.c||
+librawaud_plugin.la|demux/rawaud.c||
+libwav_plugin.la|demux/wav.c demux/windows_audio_commons.h||
+libnsv_plugin.la|demux/nsv.c||
+libhx_plugin.la|demux/hx.c||
+libps_plugin.la|demux/mpeg/ps.c demux/mpeg/ps.h demux/mpeg/pes.h||
+libmod_plugin.la|demux/mod.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lmodplug -lm 
+libpva_plugin.la|demux/pva.c demux/mpeg/pes.h demux/mpeg/timestamps.h||
+libaiff_plugin.la|demux/aiff.c demux/mp4/coreaudio.h||
+libmjpeg_plugin.la|demux/mjpeg.c demux/mxpeg_helper.h||
+libsubtitle_plugin.la|demux/subtitle.c||-lm
+libty_plugin.la|demux/ty.c codec/cc.h demux/mpeg/pes.h demux/mpeg/timestamps.h||
+libvobsub_plugin.la|demux/vobsub.c demux/vobsub.h demux/mpeg/ps.h demux/mpeg/pes.h demux/subtitle_helper.h||
+libvoc_plugin.la|demux/voc.c||
+libxa_plugin.la|demux/xa.c||
+libnuv_plugin.la|demux/nuv.c||-lm
+libtta_plugin.la|demux/tta.c||
+libvc1_plugin.la|demux/vc1.c||
+libdemux_cdg_plugin.la|demux/cdg.c||
+libsmf_plugin.la|demux/smf.c||
+libdmxmus_plugin.la|demux/dmxmus.c||
+libgme_plugin.la|demux/gme.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lgme -lm -lunwind -ldl -lc -lunwind -ldl -lz  
+libimage_plugin.la|demux/image.c demux/mxpeg_helper.h||
+libdemux_stl_plugin.la|demux/stl.c||
+libasf_plugin.la|demux/asf/asf.c demux/asf/libasf.c demux/asf/libasf.h demux/asf/asfpacket.c demux/asf/asfpacket.h demux/asf/libasf_guid.h||
+libavi_plugin.la|demux/avi/avi.c demux/avi/libavi.c demux/avi/libavi.h demux/avi/bitmapinfoheader.h||
+libcaf_plugin.la|demux/caf.c||-lm
+libavformat_plugin.la|demux/avformat/demux.c demux/vobsub.h demux/avformat/avformat.c demux/avformat/avformat.h demux/avformat/mux.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lavformat -lm -latomic -lz -lavcodec -pthread -lm -latomic -lgsm -lmp3lame -lm -lopenjp2 -lm -pthread -lz -lavutil -lm -lz -latomic -landroid -lmediandk -pthread  -lm -lz libavcodec_common.la
+libdirectory_demux_plugin.la|demux/directory.c||
+libes_plugin.la|demux/mpeg/es.c meta_engine/ID3Tag.h meta_engine/ID3Text.h packetizer/dts_header.c packetizer/dts_header.h||
+libh26x_plugin.la|demux/mpeg/h26x.c packetizer/h264_nal.c packetizer/hevc_nal.h||-lm
+libmkv_plugin.la|demux/mkv/util.hpp demux/mkv/util.cpp demux/mkv/dvd_types.hpp demux/mkv/virtual_segment.hpp demux/mkv/virtual_segment.cpp demux/mkv/matroska_segment.hpp demux/mkv/matroska_segment.cpp demux/mkv/matroska_segment_parse.cpp demux/mkv/matroska_segment_seeker.hpp demux/mkv/matroska_segment_seeker.cpp demux/mkv/demux.hpp demux/mkv/demux.cpp demux/mkv/events.hpp demux/mkv/events.cpp demux/mkv/dispatcher.hpp demux/mkv/string_dispatcher.hpp demux/mkv/Ebml_parser.hpp demux/mkv/Ebml_parser.cpp demux/mkv/Ebml_dispatcher.hpp demux/mkv/chapters.hpp demux/mkv/chapters.cpp demux/mkv/chapter_command.hpp demux/mkv/chapter_command.cpp demux/mkv/chapter_command_dvd.hpp demux/mkv/chapter_command_dvd.cpp demux/mkv/chapter_command_script.hpp demux/mkv/chapter_command_script.cpp demux/mkv/chapter_command_script_common.hpp demux/mkv/chapter_command_script_common.cpp demux/mkv/stream_io_callback.hpp demux/mkv/stream_io_callback.cpp demux/mkv/vlc_colors.c demux/mkv/vlc_colors.h demux/mkv/lzokay.cpp demux/mkv/lzokay.hpp demux/vobsub.h demux/mkv/mkv.hpp demux/mkv/mkv.cpp demux/av1_unpack.h codec/webvtt/helpers.h demux/windows_audio_commons.h packetizer/dts_header.h packetizer/dts_header.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lmatroska -lebml  -lz libvlc_mp4.la
+libmp4_plugin.la|demux/mp4/mp4.c demux/mp4/mp4.h demux/mp4/fragments.c demux/mp4/fragments.h demux/mp4/attachments.c demux/mp4/attachments.h demux/mp4/languages.h demux/mp4/heif.c demux/mp4/heif.h demux/mp4/avci.h demux/mp4/qt_palette.h demux/mp4/essetup.c demux/mp4/meta.c demux/mp4/meta.h demux/mp4/coreaudio.h demux/av1_unpack.h demux/asf/asfpacket.c demux/asf/asfpacket.h packetizer/mpeg4systems.h packetizer/iso_color_tables.h meta_engine/ID3Genres.h||libvlc_mp4.la
+libmpgv_plugin.la|demux/mpeg/mpgv.c||
+libplaylist_plugin.la|demux/playlist/asx.c demux/playlist/b4s.c demux/playlist/bdmv.c demux/playlist/dvb.c demux/playlist/ifo.c demux/playlist/itml.c demux/playlist/itml.h demux/playlist/m3u.c demux/playlist/pls.c demux/playlist/podcast.c demux/playlist/qtl.c demux/playlist/ram.c demux/playlist/sgimb.c demux/playlist/wms.c demux/playlist/wpl.c demux/playlist/xspf.c demux/playlist/playlist.c demux/playlist/playlist.h||
+libts_plugin.la|demux/mpeg/ts.c demux/mpeg/ts.h demux/mpeg/ts_pid.h demux/mpeg/ts_pid_fwd.h demux/mpeg/ts_pid.c demux/mpeg/ts_psi.h demux/mpeg/ts_psi.c demux/mpeg/ts_si.h demux/mpeg/ts_si.c demux/mpeg/ts_psip.h demux/mpeg/ts_psip.c demux/mpeg/ts_psip_dvbpsi_fixes.h demux/mpeg/ts_psip_dvbpsi_fixes.c demux/mpeg/ts_decoders.h demux/mpeg/ts_decoders.c demux/mpeg/ts_streams.h demux/mpeg/ts_streams.c demux/mpeg/ts_scte.h demux/mpeg/ts_scte.c demux/mpeg/sections.c demux/mpeg/sections.h demux/mpeg/mpeg4_iod.c demux/mpeg/mpeg4_iod.h demux/mpeg/ts_arib.c demux/mpeg/ts_arib.h demux/mpeg/ts_sl.c demux/mpeg/ts_sl.h demux/mpeg/ts_metadata.c demux/mpeg/ts_metadata.h demux/mpeg/ts_hotfixes.c demux/mpeg/ts_hotfixes.h demux/mpeg/ts_strings.h demux/mpeg/ts_streams_private.h demux/mpeg/ts_packet.h demux/mpeg/ts_pes.c demux/mpeg/ts_pes.h demux/mpeg/ts_streamwrapper.h demux/mpeg/pes.h demux/mpeg/timestamps.h demux/mpeg/ts_descriptions.h demux/dvb-text.h demux/opus.h mux/mpeg/csa.c mux/mpeg/dvbpsi_compat.h mux/mpeg/streams.h mux/mpeg/tables.c mux/mpeg/tables.h mux/mpeg/tsutil.c mux/mpeg/tsutil.h access/dtv/en50221_capmt.h codec/jpeg2000.h codec/scte18.h codec/atsc_a65.c codec/atsc_a65.h codec/opus_header.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ldvbpsi   
+libadaptive_plugin.la|demux/adaptive/adaptive.cpp||libvlc_adaptive.la
+libnoseek_plugin.la|demux/filter/noseek.c||
+libdemux_chromecast_plugin.la|stream_out/chromecast/chromecast_demux.cpp stream_out/chromecast/chromecast.h stream_out/chromecast/chromecast_common.h||
+libmemory_keystore_plugin.la|keystore/memory.c keystore/list_util.c keystore/list_util.h||
+libfile_keystore_plugin.la|keystore/file.c keystore/file_crypt.h keystore/list_util.c keystore/list_util.h keystore/file_crypt_android.c ||libandroid_env.la
+libconsole_logger_plugin.la|logger/console.c||
+libfile_logger_plugin.la|logger/file.c||
+libsyslog_plugin.la|logger/syslog.c||
+libandroid_logger_plugin.la|logger/android.c||-llog
+libjson_tracer_plugin.la|logger/json.c||
+liblua_plugin.la|lua/extension.c lua/extension.h lua/extension_thread.c lua/intf.c lua/meta.c lua/stream_filter.c lua/services_discovery.c lua/vlc.c lua/vlc.h lua/libs.h lua/libs/configuration.c lua/libs/equalizer.c lua/libs/gettext.c lua/libs/dialog.c lua/libs/httpd.c lua/libs/input.c lua/libs/input.h lua/libs/messages.c lua/libs/misc.c lua/libs/misc.h lua/libs/net.c lua/libs/objects.c lua/libs/osd.c lua/libs/playlist.c lua/libs/sd.c lua/libs/stream.c lua/libs/strings.c lua/libs/tcp.c lua/libs/variables.c lua/libs/variables.h lua/libs/video.c lua/libs/vlm.c lua/libs/volume.c lua/libs/xml.c lua/libs/io.c lua/libs/errno.c lua/libs/rand.c lua/libs/renderers.c lua/libs/medialibrary.c ||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -llua5.4   -lm
+libfolder_plugin.la|meta_engine/folder.c||
+libtaglib_plugin.la|meta_engine/taglib.cpp meta_engine/ID3Pictures.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ltag -lz -lz
+libstats_plugin.la|misc/stats.c||
+libaudioscrobbler_plugin.la|misc/audioscrobbler.c||
+libexport_plugin.la|misc/playlist/html.c misc/playlist/m3u.c misc/playlist/xspf.c misc/playlist/export.c||
+libfingerprinter_plugin.la|misc/webservices/acoustid.c misc/webservices/acoustid.h misc/webservices/json_helper.h misc/fingerprinter.c||libvlc_json.la -lm
+libgnutls_plugin.la|misc/gnutls.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lgnutls -lgmp -lhogweed -lgmp -lnettle -lz 
+libaddonsvorepository_plugin.la|misc/addons/vorepository.c misc/addons/xmlreading.h||
+libaddonsfsstorage_plugin.la|misc/addons/fsstorage.c misc/addons/xmlreading.h||
+libxml_plugin.la|misc/xml/libxml.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lxml2 -pthread -lm
+libpreparserserializer_json_plugin.la|misc/preparser_serializer/json/serializer.c misc/preparser_serializer/json/serializer.h misc/preparser_serializer/json/fromjson.c misc/preparser_serializer/json/tojson.c||libvlc_json.la
+libmux_dummy_plugin.la|mux/dummy.c||
+libmux_asf_plugin.la|mux/asf.c demux/asf/libasf_guid.h||
+libmux_avi_plugin.la|mux/avi.c demux/avi/bitmapinfoheader.h||
+libmux_mp4_plugin.la|mux/mp4/mp4.c mux/mp4/libmp4mux.c mux/mp4/libmp4mux.h demux/mp4/libmp4.h mux/av1_pack.h packetizer/hxxx_nal.c packetizer/hxxx_nal.h packetizer/hevc_nal.c packetizer/hevc_nal.h packetizer/h264_nal.c packetizer/h264_nal.h mux/extradata.c mux/extradata.h packetizer/av1_obu.c codec/hxxx_helper.c codec/hxxx_helper.h||
+libmux_mpjpeg_plugin.la|mux/mpjpeg.c||
+libmux_ps_plugin.la|mux/mpeg/pes.c mux/mpeg/pes.h mux/mpeg/repack.c mux/mpeg/repack.h mux/mpeg/ps.c mux/mpeg/bits.h demux/mpeg/timestamps.h||
+libmux_wav_plugin.la|mux/wav.c||
+libmux_ogg_plugin.la|mux/ogg.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -logg
+libmux_ts_plugin.la|mux/mpeg/pes.c mux/mpeg/pes.h mux/mpeg/repack.c mux/mpeg/repack.h mux/mpeg/csa.c mux/mpeg/csa.h mux/mpeg/streams.h mux/mpeg/tables.c mux/mpeg/tables.h mux/mpeg/tsutil.c mux/mpeg/tsutil.h codec/jpeg2000.h mux/mpeg/ts.c mux/mpeg/bits.h mux/mpeg/dvbpsi_compat.h demux/mpeg/timestamps.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -ldvbpsi 
+libvlc_access_cache.la|access/cache.c access/cache.h||../src/libvlccore.la
+libvlc_http.la|access/http/transport.h access/http/message.c access/http/message.h access/http/resource.c access/http/resource.h access/http/file.c access/http/file.h access/http/live.c access/http/live.h access/http/outfile.c access/http/outfile.h access/http/hpack.c access/http/hpack.h access/http/hpackenc.c access/http/h2frame.c access/http/h2frame.h access/http/h2output.c access/http/h2output.h access/http/h2conn.c access/http/h1conn.c access/http/ports.c access/http/chunked.c access/http/tunnel.c access/http/conn.h access/http/connmgr.c access/http/connmgr.h||../src/libvlccore.la ../compat/libcompat.la 
+libvlc_rtp.la|access/rtp/rtpfmt.c access/rtp/rtp.h access/rtp/session.c||
+libvlc_srtp.la|access/rtp/srtp.c access/rtp/srtp.h||-lgcrypt -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lgpg-error
+libdynamics_common.la|audio_filter/dynamics.c audio_filter/dynamics.h||
+libvlc_android_audioformat_jni.la|audio_output/android/audioformat_jni.c audio_output/android/audioformat_jni.h||
+libvlc_android_dynamicsprocessing_jni.la|audio_output/android/dynamicsprocessing_jni.c audio_output/android/dynamicsprocessing_jni.h||
+libavcodec_common.la|codec/avcodec/fourcc.c codec/avcodec/avcommon.h codec/avcodec/chroma.c codec/avcodec/chroma.h codec/avcodec/avcommon_compat.h||
+libvlc_hxxxhelper.la|codec/hxxx_helper.c codec/hxxx_helper.h packetizer/hxxx_nal.h packetizer/hxxx_nal.c packetizer/hxxx_sei.h packetizer/hxxx_sei.c packetizer/h264_slice.c packetizer/h264_slice.h packetizer/h264_nal.c packetizer/h264_nal.h packetizer/h26x_nal_common.h packetizer/hevc_nal.c packetizer/hevc_nal.h||
+libvlc_motion.la|control/motionlib.c control/motionlib.h||
+libxiph_metadata.la|demux/xiph_metadata.h demux/xiph_metadata.c meta_engine/ID3Pictures.h||
+libavcodec_common.la|codec/avcodec/fourcc.c codec/avcodec/avcommon.h codec/avcodec/chroma.c codec/avcodec/chroma.h codec/avcodec/avcommon_compat.h||
+libvlc_mp4.la|demux/mp4/libmp4.c demux/mp4/libmp4.h||-lm -lz
+libvlc_adaptive.la|demux/adaptive/playlist/BaseAdaptationSet.cpp demux/adaptive/playlist/BaseAdaptationSet.h demux/adaptive/playlist/BasePeriod.cpp demux/adaptive/playlist/BasePeriod.h demux/adaptive/playlist/BasePlaylist.cpp demux/adaptive/playlist/BasePlaylist.hpp demux/adaptive/playlist/BaseRepresentation.cpp demux/adaptive/playlist/BaseRepresentation.h demux/adaptive/playlist/CodecDescription.cpp demux/adaptive/playlist/CodecDescription.hpp demux/adaptive/playlist/CommonAttributesElements.cpp demux/adaptive/playlist/CommonAttributesElements.h demux/adaptive/playlist/ICanonicalUrl.hpp demux/adaptive/playlist/Inheritables.hpp demux/adaptive/playlist/Inheritables.cpp demux/adaptive/playlist/Role.hpp demux/adaptive/playlist/Role.cpp demux/adaptive/playlist/Segment.cpp demux/adaptive/playlist/Segment.h demux/adaptive/playlist/SegmentBase.cpp demux/adaptive/playlist/SegmentBase.h demux/adaptive/playlist/SegmentBaseType.cpp demux/adaptive/playlist/SegmentBaseType.hpp demux/adaptive/playlist/SegmentChunk.cpp demux/adaptive/playlist/SegmentChunk.hpp demux/adaptive/playlist/SegmentList.cpp demux/adaptive/playlist/SegmentList.h demux/adaptive/playlist/SegmentTimeline.cpp demux/adaptive/playlist/SegmentTimeline.h demux/adaptive/playlist/SegmentInformation.cpp demux/adaptive/playlist/SegmentInformation.hpp demux/adaptive/playlist/SegmentTemplate.cpp demux/adaptive/playlist/SegmentTemplate.h demux/adaptive/playlist/Url.cpp demux/adaptive/playlist/Url.hpp demux/adaptive/playlist/Templates.hpp demux/adaptive/encryption/CommonEncryption.cpp demux/adaptive/encryption/CommonEncryption.hpp demux/adaptive/encryption/Keyring.cpp demux/adaptive/encryption/Keyring.hpp demux/adaptive/logic/AbstractAdaptationLogic.cpp demux/adaptive/logic/AbstractAdaptationLogic.h demux/adaptive/logic/AlwaysBestAdaptationLogic.cpp demux/adaptive/logic/AlwaysBestAdaptationLogic.h demux/adaptive/logic/AlwaysLowestAdaptationLogic.cpp demux/adaptive/logic/AlwaysLowestAdaptationLogic.hpp demux/adaptive/logic/BufferingLogic.cpp demux/adaptive/logic/BufferingLogic.hpp demux/adaptive/logic/IDownloadRateObserver.h demux/adaptive/logic/NearOptimalAdaptationLogic.cpp demux/adaptive/logic/NearOptimalAdaptationLogic.hpp demux/adaptive/logic/PredictiveAdaptationLogic.hpp demux/adaptive/logic/PredictiveAdaptationLogic.cpp demux/adaptive/logic/RateBasedAdaptationLogic.h demux/adaptive/logic/RateBasedAdaptationLogic.cpp demux/adaptive/logic/Representationselectors.hpp demux/adaptive/logic/Representationselectors.cpp demux/adaptive/logic/RoundRobinLogic.cpp demux/adaptive/logic/RoundRobinLogic.hpp demux/adaptive/mp4/AtomsReader.cpp demux/adaptive/mp4/AtomsReader.hpp demux/adaptive/http/AuthStorage.cpp demux/adaptive/http/AuthStorage.hpp demux/adaptive/http/BytesRange.cpp demux/adaptive/http/BytesRange.hpp demux/adaptive/http/Chunk.cpp demux/adaptive/http/Chunk.h demux/adaptive/http/ConnectionParams.cpp demux/adaptive/http/ConnectionParams.hpp demux/adaptive/http/Downloader.cpp demux/adaptive/http/Downloader.hpp demux/adaptive/http/HTTPConnection.cpp demux/adaptive/http/HTTPConnection.hpp demux/adaptive/http/HTTPConnectionManager.cpp demux/adaptive/http/HTTPConnectionManager.h demux/adaptive/plumbing/CommandsQueue.cpp demux/adaptive/plumbing/CommandsQueue.hpp demux/adaptive/plumbing/Demuxer.cpp demux/adaptive/plumbing/Demuxer.hpp demux/adaptive/plumbing/FakeESOut.cpp demux/adaptive/plumbing/FakeESOut.hpp demux/adaptive/plumbing/FakeESOutID.cpp demux/adaptive/plumbing/FakeESOutID.hpp demux/adaptive/plumbing/SourceStream.cpp demux/adaptive/plumbing/SourceStream.hpp demux/adaptive/BlockStreamInterface.hpp demux/adaptive/ID.hpp demux/adaptive/ID.cpp demux/adaptive/PlaylistManager.cpp demux/adaptive/PlaylistManager.h demux/adaptive/SegmentTracker.cpp demux/adaptive/SegmentTracker.hpp demux/adaptive/SharedResources.cpp demux/adaptive/SharedResources.hpp demux/adaptive/StreamFormat.cpp demux/adaptive/StreamFormat.hpp demux/adaptive/Streams.cpp demux/adaptive/Streams.hpp demux/adaptive/Time.hpp demux/adaptive/tools/Conversions.hpp demux/adaptive/tools/Conversions.cpp demux/adaptive/tools/Debug.hpp demux/adaptive/tools/FormatNamespace.cpp demux/adaptive/tools/FormatNamespace.hpp demux/adaptive/tools/Helper.cpp demux/adaptive/tools/Helper.h demux/adaptive/tools/Macros.hpp demux/adaptive/tools/MovingAverage.hpp demux/adaptive/tools/Properties.hpp demux/adaptive/tools/Retrieve.cpp demux/adaptive/tools/Retrieve.hpp demux/adaptive/xml/DOMHelper.cpp demux/adaptive/xml/DOMHelper.h demux/adaptive/xml/DOMParser.cpp demux/adaptive/xml/DOMParser.h demux/adaptive/xml/Namespaces.cpp demux/adaptive/xml/Namespaces.hpp demux/adaptive/xml/Node.cpp demux/adaptive/xml/Node.h meta_engine/ID3Tag.h demux/dash/mpd/AdaptationSet.cpp demux/dash/mpd/AdaptationSet.h demux/dash/mpd/DASHCommonAttributesElements.cpp demux/dash/mpd/DASHCommonAttributesElements.h demux/dash/mpd/DASHSegment.cpp demux/dash/mpd/DASHSegment.h demux/dash/mpd/ContentDescription.cpp demux/dash/mpd/ContentDescription.h demux/dash/mpd/IsoffMainParser.cpp demux/dash/mpd/IsoffMainParser.h demux/dash/mpd/MPD.cpp demux/dash/mpd/MPD.h demux/dash/mpd/Profile.cpp demux/dash/mpd/Profile.hpp demux/dash/mpd/ProgramInformation.cpp demux/dash/mpd/ProgramInformation.h demux/dash/mpd/Representation.cpp demux/dash/mpd/Representation.h demux/dash/mpd/TemplatedUri.cpp demux/dash/mpd/TemplatedUri.hpp demux/dash/mp4/IndexReader.cpp demux/dash/mp4/IndexReader.hpp demux/dash/DASHManager.cpp demux/dash/DASHManager.h demux/dash/DASHStream.cpp demux/dash/DASHStream.hpp demux/hls/playlist/M3U8.hpp demux/hls/playlist/M3U8.cpp demux/hls/playlist/Parser.hpp demux/hls/playlist/Parser.cpp demux/hls/playlist/HLSRepresentation.hpp demux/hls/playlist/HLSRepresentation.cpp demux/hls/playlist/HLSSegment.hpp demux/hls/playlist/HLSSegment.cpp demux/hls/playlist/Tags.hpp demux/hls/playlist/Tags.cpp demux/hls/HLSManager.hpp demux/hls/HLSManager.cpp demux/hls/HLSStreams.hpp demux/hls/HLSStreams.cpp demux/mpeg/timestamps.h meta_engine/ID3Meta.h demux/smooth/mp4/SmoothIndexReader.cpp demux/smooth/mp4/SmoothIndexReader.hpp demux/smooth/playlist/CodecParameters.cpp demux/smooth/playlist/CodecParameters.hpp demux/smooth/playlist/ForgedInitSegment.hpp demux/smooth/playlist/ForgedInitSegment.cpp demux/smooth/playlist/Manifest.hpp demux/smooth/playlist/Manifest.cpp demux/smooth/playlist/MemoryChunk.hpp demux/smooth/playlist/MemoryChunk.cpp demux/smooth/playlist/SmoothParser.hpp demux/smooth/playlist/SmoothParser.cpp demux/smooth/playlist/QualityLevel.cpp demux/smooth/playlist/QualityLevel.hpp demux/smooth/playlist/SmoothSegment.hpp demux/smooth/playlist/SmoothSegment.cpp demux/smooth/SmoothManager.hpp demux/smooth/SmoothManager.cpp demux/smooth/SmoothStream.hpp demux/smooth/SmoothStream.cpp mux/mp4/libmp4mux.c mux/mp4/libmp4mux.h packetizer/h264_nal.c packetizer/hevc_nal.c|| -lm libvlc_mp4.la libvlc_http.la -lgcrypt -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lgpg-error
+libvlc_json.la|demux/json/lexicon.l demux/json/grammar.y demux/json/json.c demux/json/json.h||../src/libvlccore.la ../compat/libcompat.la -lm
+libchroma_copy.la|video_chroma/copy.c video_chroma/copy.h||
+libdeinterlace_common.la|video_filter/deinterlace/common.c video_filter/deinterlace/common.h||
+libplacebo_utils.la|video_output/libplacebo/utils.h video_output/libplacebo/instance.h video_output/libplacebo/utils.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lplacebo -lm -pthread -lglslang-default-resource-limits -lSPIRV -lMachineIndependent -lOSDependent -lOGLCompiler -lGenericCodeGen -ldl
+libvlc_opengles.la|video_output/opengl/filter.c video_output/opengl/filter_priv.h video_output/opengl/filters.c video_output/opengl/filters.h video_output/opengl/gl_api.c video_output/opengl/gl_api.h video_output/opengl/gl_common.h video_output/opengl/gl_util.c video_output/opengl/gl_util.h video_output/opengl/importer.c video_output/opengl/importer.h video_output/opengl/importer_priv.h video_output/opengl/interop.h video_output/opengl/interop.c video_output/opengl/picture.c video_output/opengl/picture.h video_output/opengl/sampler.c video_output/opengl/sampler.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lplacebo -lm -pthread -lglslang-default-resource-limits -lSPIRV -lMachineIndependent -lOSDependent -lOGLCompiler -lGenericCodeGen -ldl libplacebo_utils.la -lm -lGLESv2
+libandroid_utils.la|video_output/android/utils.c video_output/android/utils.h||-lGLESv2 -lEGL -landroid libandroid_env.la
+libandroid_env.la|video_output/android/env.c video_output/android/env.h||
+libhxxxhelper_testdec_plugin.la|codec/hxxx_helper_testdec.c||libvlc_hxxxhelper.la
+libdemux_mock_plugin.la|demux/mock.c||-lm
+libglfilter_mock_plugin.la|video_output/opengl/filter_mock.c||-lm    libvlc_opengles.la -lGLESv2
+libnvdec_plugin.la|hw/nvdec/nvdec.c hw/nvdec/nvdec_fmt.h hw/nvdec/nvdec_priv.h hw/nvdec/hw_pool.c hw/nvdec/hw_pool.h|| libvlc_hxxxhelper.la
+libnvdec_chroma_plugin.la|hw/nvdec/chroma.c hw/nvdec/nvdec_fmt.h hw/nvdec/nvdec_priv.h||
+libpacketizer_av1_plugin.la|packetizer/av1.c packetizer/av1.h packetizer/av1_obu.c packetizer/av1_obu.h||
+libpacketizer_mpegvideo_plugin.la|packetizer/mpegvideo.c packetizer/mpegvideo.h packetizer/h26x_nal_common.h packetizer/iso_color_tables.h||
+libpacketizer_mpeg4video_plugin.la|packetizer/mpeg4video.c packetizer/h26x_nal_common.h packetizer/iso_color_tables.h||
+libpacketizer_mjpeg_plugin.la|packetizer/mjpeg.c||
+libpacketizer_mpeg4audio_plugin.la|packetizer/mpeg4audio.c packetizer/mpeg4audio.h||
+libpacketizer_mpegaudio_plugin.la|packetizer/mpegaudio.c packetizer/mpegaudio.h||
+libpacketizer_h264_plugin.la|packetizer/h264_nal.c packetizer/h264_nal.h packetizer/h264_slice.c packetizer/h264_slice.h packetizer/h264.c packetizer/hxxx_nal.h packetizer/hxxx_sei.c packetizer/hxxx_sei.h packetizer/hxxx_common.c packetizer/hxxx_common.h packetizer/hxxx_ep3b.h packetizer/iso_color_tables.h||
+libpacketizer_vc1_plugin.la|packetizer/vc1.c packetizer/hxxx_ep3b.h packetizer/hxxx_nal.h packetizer/iso_color_tables.h||
+libpacketizer_mlp_plugin.la|packetizer/mlp.c||
+libpacketizer_flac_plugin.la|packetizer/flac.c packetizer/flac.h||
+libpacketizer_hevc_plugin.la|packetizer/hevc.c packetizer/hevc_nal.h packetizer/hevc_nal.c packetizer/h26x_nal_common.h packetizer/hxxx_sei.c packetizer/hxxx_sei.h packetizer/hxxx_nal.h packetizer/hxxx_common.c packetizer/hxxx_common.h packetizer/hxxx_ep3b.h packetizer/iso_color_tables.h||
+libpacketizer_copy_plugin.la|packetizer/copy.c||
+libpacketizer_a52_plugin.la|packetizer/a52.c packetizer/a52.h||
+libpacketizer_dts_plugin.la|packetizer/dts.c packetizer/dts_header.c packetizer/dts_header.h||
+libpacketizer_avparser_plugin.la|packetizer/avparser.c packetizer/avparser.h codec/avcodec/avcodec.h||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lavcodec -pthread -lm -latomic -lgsm -lmp3lame -lm -lopenjp2 -lm -pthread -lz -lavutil -lm -lz -latomic -landroid -lmediandk -pthread  -lm libavcodec_common.la
+librtp_ac3_plugin.la|access/rtp/ac3.c||
+librtp_mpeg12_plugin.la|access/rtp/mpeg12.c||
+librtp_mpeg4_plugin.la|access/rtp/mpeg4.c||
+librtp_pcm_plugin.la|access/rtp/pcm.c||
+librtp_raw_plugin.la|access/rtp/raw.c||
+librtp_h264_plugin.la|access/rtp/h264.c access/rtp/h26x.h||
+librtp_h265_plugin.la|access/rtp/h265.c access/rtp/h26x.h||
+librtp_opus_plugin.la|access/rtp/opus.c||
+librtp_xiph_plugin.la|access/rtp/xiph.c||
+libpodcast_plugin.la|services_discovery/podcast.c||
+libradio_plugin.la|services_discovery/radio.c||
+libsap_plugin.la|services_discovery/sap.c access/rtp/sdp.c|| -lz
+libupnp_plugin.la|services_discovery/upnp.cpp services_discovery/upnp.hpp services_discovery/upnp-wrapper.hpp services_discovery/upnp-wrapper.cpp stream_out/renderer_common.hpp stream_out/renderer_common.cpp stream_out/dlna/profile_names.hpp stream_out/dlna/dlna_common.hpp stream_out/dlna/dlna.hpp stream_out/dlna/dlna.cpp control/upnp_server/cds/Object.hpp control/upnp_server/cds/Container.hpp control/upnp_server/cds/FixedContainer.cpp control/upnp_server/cds/FixedContainer.hpp control/upnp_server/cds/Item.cpp control/upnp_server/cds/Item.hpp control/upnp_server/cds/MLContainer.hpp control/upnp_server/cds/MLFolderContainer.hpp control/upnp_server/cds/cds.cpp control/upnp_server/cds/cds.hpp control/upnp_server/ml.hpp control/upnp_server/xml_wrapper.hpp control/upnp_server/upnp_server.hpp control/upnp_server/utils.cpp control/upnp_server/utils.hpp control/upnp_server/FileHandler.cpp control/upnp_server/FileHandler.hpp control/upnp_server/upnp_server.cpp||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -pthread -lupnp -lixml
+libmicrodns_plugin.la|services_discovery/microdns.c|| -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lmicrodns
+libstream_out_dummy_plugin.la|stream_out/dummy.c||
+libstream_out_cycle_plugin.la|stream_out/cycle.c||
+libstream_out_delay_plugin.la|stream_out/delay.c||
+libstream_out_stats_plugin.la|stream_out/stats.c||
+libstream_out_standard_plugin.la|stream_out/standard.c||
+libstream_out_duplicate_plugin.la|stream_out/duplicate.c||
+libstream_out_es_plugin.la|stream_out/es.c||
+libstream_out_display_plugin.la|stream_out/display.c||
+libstream_out_gather_plugin.la|stream_out/gather.c||
+libstream_out_bridge_plugin.la|stream_out/bridge.c||
+libstream_out_mosaic_bridge_plugin.la|stream_out/mosaic_bridge.c||
+libstream_out_autodel_plugin.la|stream_out/autodel.c||
+libstream_out_record_plugin.la|stream_out/record.c||
+libstream_out_smem_plugin.la|stream_out/smem.c||
+libstream_out_setid_plugin.la|stream_out/setid.c||
+libstream_out_trace_plugin.la|stream_out/trace.c||
+libstream_out_transcode_plugin.la|stream_out/transcode/transcode.c stream_out/transcode/transcode.h stream_out/transcode/encoder/encoder.c stream_out/transcode/encoder/encoder.h stream_out/transcode/encoder/encoder_priv.h stream_out/transcode/encoder/audio.c stream_out/transcode/encoder/spu.c stream_out/transcode/encoder/video.c stream_out/transcode/spu.c stream_out/transcode/audio.c stream_out/transcode/video.c stream_out/transcode/pcr_sync.h stream_out/transcode/pcr_sync.c stream_out/transcode/pcr_helper.h stream_out/transcode/pcr_helper.c||-lm
+libstream_out_hls_plugin.la|stream_out/hls/hls.h stream_out/hls/hls.c stream_out/hls/variant_maps.h stream_out/hls/variant_maps.c stream_out/hls/storage.h stream_out/hls/storage.c stream_out/hls/segments.h stream_out/hls/segments.c stream_out/hls/codecs.h stream_out/hls/codecs.c stream_out/hls/subtitles_segmenter.c||libvlc_hxxxhelper.la
+libstream_out_udp_plugin.la|stream_out/sdp_helper.c stream_out/sdp_helper.h stream_out/udp.c||
+libstream_out_rtp_plugin.la|stream_out/sdp_helper.c stream_out/sdp_helper.h stream_out/rtp.c stream_out/rtp.h stream_out/rtpfmt.c stream_out/rtcp.c stream_out/rtsp.c|| libvlc_srtp.la -lgcrypt -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lgpg-error
+libstream_out_chromecast_plugin.la|stream_out/chromecast/cast.cpp stream_out/chromecast/chromecast.h stream_out/chromecast/cast_channel.proto stream_out/renderer_common.hpp stream_out/renderer_common.cpp stream_out/chromecast/chromecast_common.h stream_out/chromecast/chromecast_ctrl.cpp stream_out/chromecast/chromecast_communication.cpp|stream_out/chromecast/3.21.1/cast_channel.pb.cc|-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lprotobuf-lite -pthread  libvlc_json.la -llog
+libclone_plugin.la|video_splitter/clone.c||
+libwall_plugin.la|video_splitter/wall.c||
+libsubsdelay_plugin.la|spu/subsdelay.c||
+libaudiobargraph_v_plugin.la|spu/audiobargraph_v.c||-lm
+liblogo_plugin.la|spu/logo.c||
+libmarq_plugin.la|spu/marq.c||
+libmosaic_plugin.la|spu/mosaic.c spu/mosaic.h||-lm
+librss_plugin.la|spu/rss.c||
+libdynamicoverlay_plugin.la|spu/dynamicoverlay/dynamicoverlay_buffer.c spu/dynamicoverlay/dynamicoverlay_queue.c spu/dynamicoverlay/dynamicoverlay_commands.c spu/dynamicoverlay/dynamicoverlay.c spu/dynamicoverlay/dynamicoverlay.h||
+libarchive_plugin.la|stream_extractor/archive.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -larchive -lz
+libcache_read_plugin.la|stream_filter/cache_read.c||
+libdecomp_plugin.la|stream_filter/decomp.c||
+libinflate_plugin.la|stream_filter/inflate.c||-lz
+libprefetch_plugin.la|stream_filter/prefetch.c||
+libhds_plugin.la|stream_filter/hds/hds.c||
+librecord_plugin.la|stream_filter/record.c||
+libadf_plugin.la|stream_filter/adf.c||
+libskiptags_plugin.la|stream_filter/skiptags.c||
+libtdummy_plugin.la|text_renderer/tdummy.c||
+libfreetype_plugin.la|text_renderer/freetype/platform_fonts.c text_renderer/freetype/platform_fonts.h text_renderer/freetype/freetype.c text_renderer/freetype/freetype.h text_renderer/freetype/ftcache.c text_renderer/freetype/ftcache.h text_renderer/freetype/text_layout.c text_renderer/freetype/text_layout.h text_renderer/freetype/lru.c text_renderer/freetype/lru.h text_renderer/freetype/fonts/backends.h text_renderer/freetype/blend/blend.h text_renderer/freetype/blend/rgb.h text_renderer/freetype/blend/yuv.h    text_renderer/freetype/fonts/android.c || -lm    -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lfribidi -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lharfbuzz -pthread -lm -lfreetype -lz -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lfreetype -lz
+libadjust_plugin.la|video_filter/adjust.c video_filter/adjust_sat_hue.c video_filter/adjust_sat_hue.h||-lm
+libalphamask_plugin.la|video_filter/alphamask.c||
+libball_plugin.la|video_filter/ball.c||-lm
+libblendbench_plugin.la|video_filter/blendbench.c||
+libbluescreen_plugin.la|video_filter/bluescreen.c||
+libcanvas_plugin.la|video_filter/canvas.c||
+libcolorthres_plugin.la|video_filter/colorthres.c||-lm
+libcroppadd_plugin.la|video_filter/croppadd.c||
+libedgedetection_plugin.la|video_filter/edgedetection.c||-lm
+liberase_plugin.la|video_filter/erase.c||
+libextract_plugin.la|video_filter/extract.c||-lm
+libgradient_plugin.la|video_filter/gradient.c||-lm
+libgrain_plugin.la|video_filter/grain.c||-lm
+libgaussianblur_plugin.la|video_filter/gaussianblur.c||-lm
+libinvert_plugin.la|video_filter/invert.c||
+libmagnify_plugin.la|video_filter/magnify.c||
+libformatcrop_plugin.la|video_filter/formatcrop.c||
+libmirror_plugin.la|video_filter/mirror.c||
+libmotionblur_plugin.la|video_filter/motionblur.c||
+libmotiondetect_plugin.la|video_filter/motiondetect.c||
+libposterize_plugin.la|video_filter/posterize.c||
+libpsychedelic_plugin.la|video_filter/psychedelic.c||-lm
+libripple_plugin.la|video_filter/ripple.c||-lm
+libscale_plugin.la|video_filter/scale.c||
+libscene_plugin.la|video_filter/scene.c||-lm
+libsepia_plugin.la|video_filter/sepia.c||
+libsharpen_plugin.la|video_filter/sharpen.c||
+libtransform_plugin.la|video_filter/transform.c||
+libwave_plugin.la|video_filter/wave.c||-lm
+libgradfun_plugin.la|video_filter/gradfun.c video_filter/gradfun.h||
+libantiflicker_plugin.la|video_filter/antiflicker.c||
+libhqdn3d_plugin.la|video_filter/hqdn3d.c video_filter/hqdn3d.h||-lm
+libanaglyph_plugin.la|video_filter/anaglyph.c||
+liboldmovie_plugin.la|video_filter/oldmovie.c||-lm
+libvhs_plugin.la|video_filter/vhs.c||
+libfps_plugin.la|video_filter/fps.c||
+libfreeze_plugin.la|video_filter/freeze.c||
+libpuzzle_plugin.la|video_filter/puzzle/puzzle.c video_filter/puzzle/puzzle.h video_filter/puzzle/puzzle_bezier.c video_filter/puzzle/puzzle_bezier.h video_filter/puzzle/puzzle_lib.c video_filter/puzzle/puzzle_lib.h video_filter/puzzle/puzzle_mgt.c video_filter/puzzle/puzzle_mgt.h video_filter/puzzle/puzzle_pce.c video_filter/puzzle/puzzle_pce.h||-lm
+librotate_plugin.la|video_filter/rotate.c||libvlc_motion.la -lm
+libdither_plugin.la|video_filter/dither.c||-lm
+libopengl_filter_plugin.la|video_filter/opengl.c||libvlc_opengles.la
+libdeinterlace_plugin.la|video_filter/deinterlace/deinterlace.c video_filter/deinterlace/deinterlace.h video_filter/deinterlace/merge.c video_filter/deinterlace/merge.h video_filter/deinterlace/helpers.c video_filter/deinterlace/helpers.h video_filter/deinterlace/algo_basic.c video_filter/deinterlace/algo_basic.h video_filter/deinterlace/algo_x.c video_filter/deinterlace/algo_x.h video_filter/deinterlace/algo_yadif.c video_filter/deinterlace/algo_yadif.h video_filter/deinterlace/yadif.h video_filter/deinterlace/algo_phosphor.c video_filter/deinterlace/algo_phosphor.h video_filter/deinterlace/algo_ivtc.c video_filter/deinterlace/algo_ivtc.h ||libdeinterlace_common.la
+libglblend_plugin.la|video_filter/deinterlace/glblend.c||libvlc_opengles.la
+libblend_plugin.la|video_filter/blend.cpp||
+libpl_scale_plugin.la|video_output/opengl/pl_scale.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lplacebo -lm -pthread -lglslang-default-resource-limits -lSPIRV -lMachineIndependent -lOSDependent -lOGLCompiler -lGenericCodeGen -ldl    libvlc_opengles.la
+libgladjust_plugin.la|video_filter/gladjust.c||libvlc_opengles.la
+libvisual_plugin.la|visualization/visual/visual.c visualization/visual/visual.h visualization/visual/effects.c visualization/visual/fft.c visualization/visual/fft.h visualization/visual/window.c visualization/visual/window.h visualization/visual/window_presets.h||-lm
+libplacebo_plugin.la|video_output/libplacebo/utils.h video_output/libplacebo/instance.h video_output/libplacebo/instance.c video_output/libplacebo/display.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lplacebo -lm -pthread -lglslang-default-resource-limits -lSPIRV -lMachineIndependent -lOSDependent -lOGLCompiler -lGenericCodeGen -ldl libplacebo_utils.la
+libplacebo_gles2_plugin.la|video_output/libplacebo/utils.h video_output/libplacebo/instance.h video_output/libplacebo/instance_opengl.c||-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib -lplacebo -lm -pthread -lglslang-default-resource-limits -lSPIRV -lMachineIndependent -lOSDependent -lOGLCompiler -lGenericCodeGen -ldl libvlc_opengles.la
+libglinterop_sw_plugin.la|video_output/opengl/interop_sw.c||libvlc_opengles.la
+libgles2_plugin.la|video_output/opengl/display.c video_output/opengl/gl_scale.h video_output/opengl/renderer.c video_output/opengl/renderer.h video_output/opengl/sub_renderer.c video_output/opengl/sub_renderer.h video_output/opengl/vout_helper.c video_output/opengl/vout_helper.h||libvlc_opengles.la
+libglfilter_draw_plugin.la|video_output/opengl/filter_draw.c||libvlc_opengles.la -lGLESv2
+libegl_display_generic_plugin.la|video_output/opengl/egl_display_generic.c||-lEGL
+libegl_pbuffer_filter_plugin.la|video_filter/egl_pbuffer.c video_output/opengl/egl_display.c video_output/opengl/egl_display.h||-lEGL  libvlc_opengles.la -lGLESv2
+libegl_surfacetexture_plugin.la|video_filter/egl_surfacetexture.c||-lEGL libandroid_utils.la libvlc_opengles.la
+libandroid_window_plugin.la|video_output/android/window.c video_output/wasync_resize_compressor.h||libandroid_utils.la  -lEGL -lGLESv2
+libandroid_display_plugin.la|video_output/android/display.c video_output/opengl/sub_renderer.c video_output/opengl/sub_renderer.h||libvlc_opengles.la -lEGL -lGLESv2 libandroid_utils.la
+libegl_android_plugin.la|video_output/opengl/egl.c||-lEGL libandroid_utils.la
+libglinterop_asurface_plugin.la|video_output/opengl/interop_asurface.c video_output/opengl/interop.h||libandroid_utils.la -lEGL -lGLESv2
+libglinterop_aimage_plugin.la|video_output/opengl/interop_aimage.c video_output/opengl/interop.h||libandroid_utils.la -lEGL -lGLESv2
+libdrm_display_plugin.la|video_output/drm/vlc_drm.h video_output/drm/fourcc.c video_output/drm/buffers.c video_output/drm/planes.c video_output/drm/display.c||
+libflaschen_plugin.la|video_output/flaschen.c||
+libvdummy_plugin.la|video_output/vdummy.c||
+libvideo_splitter_plugin.la|video_output/splitter.c||
+libvmem_plugin.la|video_output/vmem.c||
+libwdummy_plugin.la|video_output/wdummy.c||
+libwextern_plugin.la|video_output/wextern.c||
+libvgl_plugin.la|video_output/vgl.c||
+libyuv_plugin.la|video_output/yuv.c||

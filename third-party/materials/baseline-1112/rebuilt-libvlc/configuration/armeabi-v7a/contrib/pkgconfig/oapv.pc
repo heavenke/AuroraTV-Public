@@ -1,0 +1,15 @@
+# --- oapv.pc.in file ---
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/bin
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include/oapv
+
+Name: oapv
+Description: Advanced Professional Video Codec
+
+Version: 0.2.0.4
+
+
+Libs:  -L${libdir} -loapv  -L${libdir}/oapv -lm
+Cflags:  -I${includedir} -DOAPV_STATIC_DEFINE   -pthread
+Requires:  

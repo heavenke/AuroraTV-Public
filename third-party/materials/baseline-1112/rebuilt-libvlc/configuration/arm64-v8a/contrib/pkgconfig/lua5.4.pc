@@ -1,0 +1,12 @@
+version=5.4.4
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/include/lua5.4
+
+Name: lua
+Description: the lua programming language
+Version: 5.4.4
+URL: https://www.lua.org
+Cflags: -I${includedir}
+Libs:  -L${libdir} -llua5.4
+Requires:

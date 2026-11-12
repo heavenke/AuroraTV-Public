@@ -1,0 +1,110 @@
+diff --git a/modules/access_output/file.c b/modules/access_output/file.c
+index 45460b2..719ab11 100644
+--- a/modules/access_output/file.c
++++ b/modules/access_output/file.c
+@@ -87,6 +87,9 @@ static ssize_t Write( sout_access_out_t *p_access, block_t *p_buffer )
+         {
+             if (errno == EINTR)
+                 continue;
++            if (errno == ENOSPC)
++                vlc_dialog_display_error(p_access, "record",
++                                         "An error occurred during recording. Error: %s", vlc_strerror_c(errno));
+             block_ChainRelease (p_buffer);
+             msg_Err( p_access, "cannot write: %s", vlc_strerror_c(errno) );
+             return -1;
+@@ -304,8 +307,13 @@ static int Open( vlc_object_t *p_this )
+             if (fd != -1)
+                 break;
+             if (fd == -1)
++            {
+                 msg_Err (p_access, "cannot create %s: %s", path,
+                          vlc_strerror_c(errno));
++
++                vlc_dialog_display_error(p_access, "record",
++                                         "An error occurred during recording. Error: %s", vlc_strerror_c(errno));
++            }
+             if (overwrite || errno != EEXIST)
+                 break;
+             flags &= ~O_EXCL;
+diff --git a/src/input/es_out.c b/src/input/es_out.c
+index d7f6520..c2a28b5 100644
+--- a/src/input/es_out.c
++++ b/src/input/es_out.c
+@@ -4314,7 +4314,7 @@ input_EsOutNew(input_thread_t *p_input, input_source_t *main_source, float rate,
+ 
+     /* */
+     EsOutPropsInit( &p_sys->video, true, p_input, input_type,
+-                    ES_OUT_ES_POLICY_AUTO,
++                    ES_OUT_ES_POLICY_EXCLUSIVE,
+                     "video-track-id", "video-track", NULL, NULL );
+     EsOutPropsInit( &p_sys->audio, true, p_input, input_type,
+                     ES_OUT_ES_POLICY_EXCLUSIVE,
+diff --git a/src/input/input.c b/src/input/input.c
+index 92a7a81..cbcee38 100644
+--- a/src/input/input.c
++++ b/src/input/input.c
+@@ -304,7 +304,6 @@ input_thread_t * input_Create( vlc_object_t *p_parent, input_item_t *p_item,
+ 
+     if( priv->type != INPUT_TYPE_PLAYBACK )
+     {
+-        p_input->obj.logger = NULL;
+         p_input->obj.no_interact = true;
+     }
+ 
+diff --git a/src/input/stream.c b/src/input/stream.c
+index cc67fbd..dec3b0b 100644
+--- a/src/input/stream.c
++++ b/src/input/stream.c
+@@ -207,7 +207,7 @@ stream_t *(vlc_stream_NewMRL)(vlc_object_t* parent, const char* mrl )
+  * \return A pointer to the allocated output string. You need to free this when you are done.
+  */
+ #define STREAM_PROBE_LINE 2048
+-#define STREAM_LINE_MAX (2048*100)
++#define STREAM_LINE_MAX (2048*2048)
+ char *vlc_stream_ReadLine( stream_t *s )
+ {
+     stream_priv_t *priv = stream_priv(s);
+diff --git a/src/network/stream.c b/src/network/stream.c
+index 0990c61..cdb6c5f 100644
+--- a/src/network/stream.c
++++ b/src/network/stream.c
+@@ -385,8 +385,11 @@ static ssize_t vlc_tls_ConnectWrite(vlc_tls_t *tls,
+             return -1;
+     }
+     else
+-    if (errno != EOPNOTSUPP)
++    if (errno != EOPNOTSUPP && errno != EPIPE)
++    { /* If MSG_FASTOPEN was defined but the kernel doesn't support fast open at
++        all, EPIPE will be returned instead of EOPNOTSUPP */
+         return -1;
++    }
+     /* Fast open not supported or disabled... fallback to normal mode */
+ #endif
+ 
+diff --git a/src/posix/filesystem.c b/src/posix/filesystem.c
+index 2fdebda..7985609 100644
+--- a/src/posix/filesystem.c
++++ b/src/posix/filesystem.c
+@@ -360,7 +360,21 @@ ssize_t vlc_sendto(int fd, const void *buf, size_t len, int flags,
+         .msg_iovlen = 1,
+     };
+ 
+-    return vlc_sendmsg(fd, &msg, flags);
++    ssize_t ret = vlc_sendmsg(fd, &msg, flags);
++#if defined(__ANDROID__) && defined(__aarch64__)
++    /**
++     * Since we bumped the NDK version from 14 to 18, some devices (at least up to
++     * Android 6) are returning errors on 4 bytes, even though ssize_t is actually
++     * 8 bytes. This causes `value < 0` checks to yield false, and consider the value
++     * as a non error.
++     * As the patch lies in either the NDK or the Android kernel, or the device libc
++     * we can only work around it. If errno is not 0 & we receive -1, on 32bits or
++     * 64bits, we assume an error was returned.
++     */
++    if ((ret < 0 || ret == 0xFFFFFFFF) && errno != 0)
++        return -1;
++#endif
++    return ret;
+ }
+ 
+ ssize_t vlc_sendmsg(int fd, const struct msghdr *msg, int flags)

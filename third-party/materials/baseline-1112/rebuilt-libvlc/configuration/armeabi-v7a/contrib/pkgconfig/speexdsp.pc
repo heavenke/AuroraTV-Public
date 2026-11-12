@@ -1,0 +1,14 @@
+# libspeexdsp pkg-config source file
+
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+
+Name: speexdsp
+Description: Speexdsp is a speech processing library that goes along with the Speex codec
+Version: 1.2.1
+Conflicts:
+Libs:  -L${libdir} -lspeexdsp  -lm
+Cflags:  -I${includedir} 
+Requires:   

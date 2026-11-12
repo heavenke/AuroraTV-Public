@@ -1,0 +1,10 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: librist
+Description: Reliable Internet Stream Transport (RIST)
+Version: 0.2.15
+Requires: nettle, hogweed, gmp, gnutls
+Libs: -L${libdir} -lrist -pthread
+Cflags: -I${includedir} -pthread -DCJSON_HIDE_SYMBOLS

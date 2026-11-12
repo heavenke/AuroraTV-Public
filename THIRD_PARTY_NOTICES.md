@@ -1,6 +1,6 @@
 # 第三方软件通知
 
-适用于极光视界 Aurora TV **v1.0.0.1112**，整理日期为 2026-11-12。
+适用于极光视界 Aurora TV **v1.0.0.1112**，主线组件记录更新于2026-11-13。已发布公众版的对应组件以其同版本随包通知和校验清单为准。
 
 极光视界应用主体采用闭源分发。下列第三方软件保留原作者版权及各自许可证，媒体容器、编解码、字幕、加密和网络等能力中包含这些组件的工作。应用主体与品牌的授权说明、第三方软件的授权范围分别依照其相应条款执行。
 
@@ -16,6 +16,7 @@
 | Gson | 2.11.0，JSON 处理 | Apache-2.0，[Gson](https://github.com/google/gson/tree/gson-parent-2.11.0) |
 | ZXing Core | 3.5.3，二维码生成 | Apache-2.0，[ZXing](https://github.com/zxing/zxing/tree/zxing-3.5.3) |
 | EdDSA-Java | `net.i2p.crypto:eddsa:0.3.0`，Ed25519 验签 | CC0-1.0，[EdDSA-Java](https://github.com/str4d/ed25519-java) |
+| core-js 与 Babel 生成的运行时辅助代码 | 内置配置页的 ES5 与 Promise、集合兼容，支持 Android 5.0 WebView | MIT，[原始版权与许可](LICENSES/Config-web-runtime-LICENSE.txt) |
 | LibVLC Android 派生 SDK | 基于 `libvlc-all:4.0.0-eap29` 对应固定源码重构建的双 ARM 版本，VLC 引擎与 Java/JNI 接口 | 官方 `l` 构建配置，LGPL-3.0-or-later 与所含组件各自的授权、附加致谢条款；Java/JNI 文件保留原声明，[LibVLC Android](https://code.videolan.org/videolan/libvlcjni)、[VideoLAN](https://www.videolan.org/vlc/libvlc.html) |
 | LibVLC 所含 libass、FreeType、HarfBuzz 与 FriBidi | libass 0.17.4、FreeType 2.13.1、HarfBuzz 11.5.0、FriBidi 1.0.16，字幕与字体渲染 | 分别保留 ISC、FreeType License、Old MIT、LGPL 及各独立文件声明，[组件版权与许可原文](LICENSES/VLC-contrib-NOTICES.txt) |
 | IJK Java 绑定的 GSY 维护制品 | `io.github.carguo:gsyijkjava:1.0.0` | 制品及相关 Java 文件为 Apache-2.0，原文件保留其各自声明，[GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)、[IJK Java 绑定](https://github.com/CarGuo/ijkplayer/tree/30eb9441945da795079492041a791c121d2b8206/android/ijkplayer/ijkplayer-java) |
@@ -43,7 +44,7 @@ IJK 两种 ARM ABI 原生库保留上游 GSY SDK 制品字节，其 FFmpeg 构�
 | --- | --- |
 | LibVLC core | `4.0.0-dev-37538-gc84ef1eda4`，对应 VLC 提交 `c84ef1eda4f14f8b57a5b266b51c843cf51ed28b` |
 | LibVLC JNI / Android 构建材料 | Android `libvlc-4.0.0-eap29` 标签所锁定的 JNI 提交 `a8d53a9151d7e4a9a5dfd0a5eb1cd92669afdc21` |
-| 本发行版 LibVLC 派生 AAR | Android API 21，`arm64-v8a` 与 `armeabi-v7a`；AAR SHA-256 为 `21696466595a0c0950f26fc7e164f99e8f6bfd59e452482ec6af32843e62d50d`，逐共享库指纹和补丁见同版本源码资料 |
+| 本发行版 LibVLC 派生 AAR | Android API 21，`arm64-v8a` 与 `armeabi-v7a`；当前主线AAR SHA-256为`bc3928df4b1bcf8314e1776d741d96556426037a5eb99d1e1a3080e065308b8e`，逐共享库指纹和补丁见同版本源码资料 |
 | IJK ARM64 | `k0.8.8-43-g30eb9441`，对应维护提交 `30eb9441945da795079492041a791c121d2b8206`；FFmpeg 构建标识 4.1.6 |
 | IJK ARMv7 | `k0.8.8-32-ge99d640e`，对应维护提交 `e99d640e5fe94c65132379307f92d7180bcde8e7`；FFmpeg 构建标识 `4.0--ijk0.8.8--20210205--001` |
 
@@ -53,7 +54,11 @@ IJK 两种 ARM ABI 原生库保留上游 GSY SDK 制品字节，其 FFmpeg 构�
 
 X-Team 在上述固定基址应用 Android 构建补丁和模块筛选，重新生成两种 ABI 的 `libvlc.so`、`libvlcjni.so`，并采用对应 NDK r28c 的 `libc++_shared.so`。Java `classes.jar`、Android Manifest 和 Android 资源保留 eap29 Maven 制品原字节。所用构建脚本、源码归档、补丁、工具链来源、实际配置和模块授权审计随同版本第三方资料提供。
 
+2026-11-13本轮增量修改两种ABI的`libvlc.so`，其他JNI、运行库、Java及既有派生SDK资源字节保持。补丁路径为`tools/patches/vlc-mediacodec-mtk-main10-profile-fallback.patch`，为MediaTek HEVC Main10的profile漏报增加可选候选检索轮次。原生开关默认关闭，极光视界在自动与硬解模式启用；优先采用原有声明匹配候选，随后才允许对应MTK候选进入真实codec配置，配置及输出失败沿用原回退处理。该修改继续受对应VLC文件原有许可证约束。
+
 最终每个 ABI 注册 305 个静态插件。筛选移除了 dummy / rc 命令行接口、file_logger / syslog 日志插件、Lua、stream_out_cycle / stream_out_rtp 流输出、hqdn3d 降噪、rotate 任意角度旋转及 deinterlace 软件去隔行插件族，包含对应架构优化实现。原 AAR 的 Lua 封面、网页播放列表脚本与 3D HRTF `.sofa` 数据一起移除。
+
+本轮双ABI重新执行模块源授权审计，各为305个注册插件，GPL主授权模块源命中0；各自报告与当前AAR摘要清单保留对应关系。封装工具同时检查ELF节表边界以拒绝截断文件，原生播放能力由APP集成回归另行记录。
 
 实际注册表包含 TS、MKV、avcodec、MediaCodec、Android 显示、libass 和 FreeType 模块，字幕字体依赖设备系统字体及对应字体渲染组件。RTSP 等能力沿用所选 `l` 配置下的实际模块集合。模块存在性、原生播放回归及用户实际观看效果分别记录于构建资料和测试结果。
 

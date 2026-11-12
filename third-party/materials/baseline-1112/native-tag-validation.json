@@ -1,0 +1,101 @@
+[
+  {
+    "component": "gsyvideoplayer-armv7a:11.3.0",
+    "library": "libijkplayer.so",
+    "tag": "v11.3.0",
+    "runtime_load_segments_equal": true,
+    "tag_segments": [
+      {
+        "offset": 0,
+        "size": 283168,
+        "sha256": "0e64ebf26fd58cbfd131d069b3a6690b20c23243ab097feac34ffcaaf4b66e4c"
+      },
+      {
+        "offset": 286160,
+        "size": 10176,
+        "sha256": "1b3f39a013db46ec65464b6e00c09cd78806cab643009dba2c02db007d9bc740"
+      }
+    ],
+    "aar_segments": [
+      {
+        "offset": 0,
+        "size": 283168,
+        "sha256": "0e64ebf26fd58cbfd131d069b3a6690b20c23243ab097feac34ffcaaf4b66e4c"
+      },
+      {
+        "offset": 286160,
+        "size": 10176,
+        "sha256": "1b3f39a013db46ec65464b6e00c09cd78806cab643009dba2c02db007d9bc740"
+      }
+    ],
+    "ndk23_llvm_strip_unneeded_matches_aar_exactly": true,
+    "tag_sha256": "186411e96a25387ae1b11631d9fae1f23e8ad7536e2d90c87d15c6aebcb48439",
+    "aar_sha256": "59d4e9bd8684fc61e1d7593eaac294d940f9ab55ae8abcd3937457f49258c81b"
+  },
+  {
+    "component": "gsyvideoplayer-armv7a:11.3.0",
+    "library": "libijkffmpeg.so",
+    "tag": "v11.3.0",
+    "runtime_load_segments_equal": true,
+    "tag_segments": [
+      {
+        "offset": 0,
+        "size": 4391288,
+        "sha256": "0638e6dacb742d931690e1bc79aeb6a579b605274cac103eb90ce5c338b3b125"
+      },
+      {
+        "offset": 4393704,
+        "size": 218008,
+        "sha256": "1c042ccfe63d2eee799fdc77f0eae14372396503d8377ebed51fbf37bc47c0c5"
+      }
+    ],
+    "aar_segments": [
+      {
+        "offset": 0,
+        "size": 4391288,
+        "sha256": "0638e6dacb742d931690e1bc79aeb6a579b605274cac103eb90ce5c338b3b125"
+      },
+      {
+        "offset": 4393704,
+        "size": 218008,
+        "sha256": "1c042ccfe63d2eee799fdc77f0eae14372396503d8377ebed51fbf37bc47c0c5"
+      }
+    ],
+    "ndk23_llvm_strip_unneeded_matches_aar_exactly": true,
+    "tag_sha256": "8edc0cfd6d9d310d25f56107ae6b2ad0807e51ec86e4f5fffeae3281c29f7a0c",
+    "aar_sha256": "240bad545d3120877c07bea8d56878616ad9f62568368395d9f6ed8c50a20260"
+  },
+  {
+    "component": "gsyvideoplayer-armv7a:11.3.0",
+    "library": "libijksdl.so",
+    "tag": "v11.3.0",
+    "runtime_load_segments_equal": true,
+    "tag_segments": [
+      {
+        "offset": 0,
+        "size": 214704,
+        "sha256": "82a5bb5f82c23672b202f37ce6032581ea57ce7c5d33fe87623d6661149034d4"
+      },
+      {
+        "offset": 215212,
+        "size": 2140,
+        "sha256": "c9cbcf65c81fb623eb075221f490977638223bd80edd5729c0008f8cfc89b825"
+      }
+    ],
+    "aar_segments": [
+      {
+        "offset": 0,
+        "size": 214704,
+        "sha256": "82a5bb5f82c23672b202f37ce6032581ea57ce7c5d33fe87623d6661149034d4"
+      },
+      {
+        "offset": 215212,
+        "size": 2140,
+        "sha256": "c9cbcf65c81fb623eb075221f490977638223bd80edd5729c0008f8cfc89b825"
+      }
+    ],
+    "ndk23_llvm_strip_unneeded_matches_aar_exactly": true,
+    "tag_sha256": "f49bc532b74dac55d590dc7bd8dff7232d4802f82b8360c9db5a0dc6ca8bc374",
+    "aar_sha256": "7e3617ec82453a08f266e1a08f46021140d78d684fb15623e771dbd68a62f0cb"
+  }
+]

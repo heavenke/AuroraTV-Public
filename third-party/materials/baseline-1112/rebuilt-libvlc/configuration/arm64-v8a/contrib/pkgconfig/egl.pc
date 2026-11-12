@@ -1,0 +1,6 @@
+
+Name: EGL
+Description: EGL
+Version: 1.1
+Libs:  -lEGL
+Cflags: 

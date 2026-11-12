@@ -1,0 +1,6 @@
+
+Name: GLESv2
+Description: GLESv2
+Version: 2
+Libs:  -lGLESv2
+Cflags: 

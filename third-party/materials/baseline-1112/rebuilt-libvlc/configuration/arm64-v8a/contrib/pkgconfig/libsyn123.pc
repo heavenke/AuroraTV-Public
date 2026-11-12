@@ -1,0 +1,11 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+exec_prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/include
+
+Name: libsyn123
+Description: A signal synthesis library accompanying mpg123
+Version: 1.33.6
+Libs:  -L${libdir} -lsyn123   -lm
+Cflags:  -I${includedir} 
+Requires:  

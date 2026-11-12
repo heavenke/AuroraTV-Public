@@ -1,0 +1,11 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+exec_prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/include
+
+Name: libmpg123
+Description: An optimised MPEG Audio decoder
+Version: 1.33.6
+Libs:  -L${libdir} -lmpg123   -lm
+Cflags:  -I${includedir} 
+Requires:  

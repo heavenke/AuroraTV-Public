@@ -1,0 +1,11 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name:             libmatroska
+Description:      Library for parsing EBML data structures
+Version:          1.7.1
+Libs:              -L${libdir} -lmatroska 
+Cflags:            -I${includedir} 
+Requires:   libebml

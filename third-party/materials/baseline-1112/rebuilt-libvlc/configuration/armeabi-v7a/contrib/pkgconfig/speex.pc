@@ -1,0 +1,14 @@
+# libspeex pkg-config source file
+
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+
+Name: speex
+Description: Speex is an audio codec tuned for speech
+Version: 1.2.1
+Conflicts:
+Libs:  -L${libdir} -lspeex  -lm
+Cflags:  -I${includedir} 
+Requires:  

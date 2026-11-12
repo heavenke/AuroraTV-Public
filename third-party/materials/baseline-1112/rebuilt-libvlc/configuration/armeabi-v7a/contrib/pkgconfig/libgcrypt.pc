@@ -1,0 +1,17 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+host=arm-unknown-linux-androideabi
+api_version=1
+symmetric_ciphers="aes des rfc2268 arcfour chacha20"
+asymmetric_ciphers="dsa rsa ecc"
+digests="sha1 md5 rmd160 sha256 sha512 blake2 sha3"
+
+Name: libgcrypt
+Description: General purpose cryptographic library
+Version: 1.12.0-unknown
+URL: https://www.gnupg.org/software/libgcrypt/index.html
+Libs:  -L${libdir} -lgcrypt  
+Cflags:  -I${includedir}  
+Requires:   gpg-error

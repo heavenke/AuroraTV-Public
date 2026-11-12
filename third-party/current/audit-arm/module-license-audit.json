@@ -1,0 +1,4525 @@
+{
+  "vlc_revision": "c84ef1eda4f14f8b57a5b266b51c843cf51ed28b",
+  "module_registration_sha256": "5836c1f7471a078f490f397ee5b5698935f32784d8addd9cb7e74369acf4c7b6",
+  "registered_plugin_count": 305,
+  "gpl_primary_source_plugin_count": 0,
+  "unmapped_registered_plugins": [],
+  "required_playback_plugins": {
+    "android_display": true,
+    "avcodec": true,
+    "freetype": true,
+    "libass": true,
+    "mediacodec": true,
+    "mkv": true,
+    "ts": true
+  },
+  "registered_plugins": [
+    "access_concat",
+    "access_http_put",
+    "access_mms",
+    "access_output_dummy",
+    "access_output_file",
+    "access_output_http",
+    "access_output_livehttp",
+    "access_output_rist",
+    "access_output_shout",
+    "adaptive",
+    "adf",
+    "adjust",
+    "adpcm",
+    "aes3",
+    "afile",
+    "aiff",
+    "amem",
+    "amt",
+    "anaglyph",
+    "android_aaudio",
+    "android_audiodevice",
+    "android_audiotrack",
+    "android_display",
+    "android_logger",
+    "android_window",
+    "antiflicker",
+    "aom",
+    "araw",
+    "archive",
+    "aribcaption",
+    "asf",
+    "au",
+    "audio_format",
+    "avcodec",
+    "avformat",
+    "avi",
+    "avio",
+    "blend",
+    "cache_read",
+    "caf",
+    "canvas",
+    "cc",
+    "cdg",
+    "center",
+    "chain",
+    "chorus_flanger",
+    "colorthres",
+    "compressor",
+    "console_logger",
+    "croppadd",
+    "cvdsub",
+    "data",
+    "dav1d",
+    "decomp",
+    "demux_cdg",
+    "demux_chromecast",
+    "demux_mock",
+    "demux_stl",
+    "demuxdump",
+    "directory_demux",
+    "dither",
+    "dmxmus",
+    "dolby_surround_decoder",
+    "drm_display",
+    "dsm",
+    "dtv",
+    "dvb",
+    "dvbsub",
+    "ebur128",
+    "edgedetection",
+    "egl_android",
+    "egl_display_generic",
+    "egl_pbuffer_filter",
+    "egl_surfacetexture",
+    "equalizer",
+    "es",
+    "expander",
+    "extract",
+    "file_keystore",
+    "filesystem",
+    "fingerprinter",
+    "flac",
+    "flacsys",
+    "flaschen",
+    "float_mixer",
+    "fluidsynth",
+    "folder",
+    "formatcrop",
+    "fps",
+    "freetype",
+    "freeze",
+    "ftp",
+    "g64rtp",
+    "g711",
+    "gain",
+    "gate",
+    "gaussianblur",
+    "gladjust",
+    "glblend",
+    "gles2",
+    "glfilter_draw",
+    "glfilter_mock",
+    "glinterop_aimage",
+    "glinterop_asurface",
+    "glinterop_sw",
+    "gme",
+    "gnutls",
+    "gopher",
+    "gradfun",
+    "grey_yuv",
+    "h26x",
+    "hds",
+    "headphone_channel_mixer",
+    "http",
+    "https",
+    "hx",
+    "hxxxhelper_testdec",
+    "i420_nv12",
+    "i420_rgb",
+    "i422_i420",
+    "image",
+    "imem",
+    "inflate",
+    "integer_mixer",
+    "invert",
+    "jpeg",
+    "json_tracer",
+    "karaoke",
+    "libass",
+    "libbluray",
+    "limiter",
+    "live555",
+    "logo",
+    "lpcm",
+    "marq",
+    "mediacodec",
+    "memory_keystore",
+    "microdns",
+    "mjpeg",
+    "mkv",
+    "mod",
+    "mono",
+    "mp4",
+    "mpg123",
+    "mpgv",
+    "mux_asf",
+    "mux_avi",
+    "mux_dummy",
+    "mux_mp4",
+    "mux_mpjpeg",
+    "mux_ogg",
+    "mux_ps",
+    "mux_ts",
+    "mux_wav",
+    "nfs",
+    "normvol",
+    "noseek",
+    "nsv",
+    "nuv",
+    "nvdec",
+    "nvdec_chroma",
+    "ogg",
+    "oggspots",
+    "oldmovie",
+    "openapv",
+    "opengl_filter",
+    "opensles_android",
+    "opus",
+    "orient",
+    "packetizer_a52",
+    "packetizer_av1",
+    "packetizer_avparser",
+    "packetizer_copy",
+    "packetizer_dts",
+    "packetizer_flac",
+    "packetizer_h264",
+    "packetizer_hevc",
+    "packetizer_mjpeg",
+    "packetizer_mlp",
+    "packetizer_mpeg4audio",
+    "packetizer_mpeg4video",
+    "packetizer_mpegaudio",
+    "packetizer_mpegvideo",
+    "packetizer_vc1",
+    "param_eq",
+    "pl_scale",
+    "placebo",
+    "placebo_gles2",
+    "playlist",
+    "png",
+    "prefetch",
+    "preparserserializer_json",
+    "ps",
+    "pva",
+    "radio",
+    "rawaud",
+    "rawdv",
+    "rawvid",
+    "rawvideo",
+    "record",
+    "remap",
+    "rist",
+    "rnnoise",
+    "rtp",
+    "rtp_ac3",
+    "rtp_h264",
+    "rtp_h265",
+    "rtp_mpeg12",
+    "rtp_mpeg4",
+    "rtp_opus",
+    "rtp_pcm",
+    "rtp_raw",
+    "rtp_rawvid",
+    "rtp_xiph",
+    "rtpvideo",
+    "rv32",
+    "satip",
+    "scale",
+    "scaletempo",
+    "scaletempo_pitch",
+    "scte18",
+    "scte27",
+    "sdp",
+    "sepia",
+    "sftp",
+    "shm",
+    "simple_channel_mixer",
+    "skiptags",
+    "smb2",
+    "smf",
+    "soxr",
+    "spatialaudio",
+    "spatializer",
+    "spdif",
+    "speex",
+    "spudec",
+    "stereo_widen",
+    "stereopan",
+    "stl",
+    "stream_out_autodel",
+    "stream_out_bridge",
+    "stream_out_chromecast",
+    "stream_out_delay",
+    "stream_out_display",
+    "stream_out_dummy",
+    "stream_out_duplicate",
+    "stream_out_es",
+    "stream_out_gather",
+    "stream_out_hls",
+    "stream_out_mosaic_bridge",
+    "stream_out_record",
+    "stream_out_setid",
+    "stream_out_smem",
+    "stream_out_standard",
+    "stream_out_stats",
+    "stream_out_trace",
+    "stream_out_transcode",
+    "stream_out_udp",
+    "subsdec",
+    "subsdelay",
+    "substx3g",
+    "subsusf",
+    "subtitle",
+    "svcdsub",
+    "swscale",
+    "taglib",
+    "tcp",
+    "telx",
+    "textst",
+    "theora",
+    "timecode",
+    "tospdif",
+    "transform",
+    "trivial_channel_mixer",
+    "ts",
+    "tta",
+    "ttml",
+    "twolame",
+    "ty",
+    "udp",
+    "ugly_resampler",
+    "uleaddvaudio",
+    "upnp",
+    "vc1",
+    "vdr",
+    "vgl",
+    "vhs",
+    "video_splitter",
+    "vmem",
+    "vobsub",
+    "voc",
+    "vorbis",
+    "vpx",
+    "vpx_alpha",
+    "wav",
+    "wave",
+    "webdav",
+    "webvtt",
+    "wextern",
+    "xa",
+    "xml",
+    "yuvp",
+    "yuy2_i420",
+    "yuy2_i422",
+    "zvbi"
+  ],
+  "plugins": [
+    {
+      "name": "access_concat",
+      "archive": "libaccess_concat_plugin.la",
+      "sources": [
+        "access/concat.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "access_http_put",
+      "archive": "libaccess_http_put_plugin.la",
+      "sources": [
+        "access_output/http-put.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_http.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "access_mms",
+      "archive": "libaccess_mms_plugin.la",
+      "sources": [
+        "access/mms/mms.c",
+        "access/mms/mms.h",
+        "access/mms/mmsh.c",
+        "access/mms/mmsh.h",
+        "access/mms/mmstu.c",
+        "access/mms/mmstu.h",
+        "access/mms/buffer.c",
+        "access/mms/buffer.h",
+        "access/mms/asf.h",
+        "access/mms/asf.c",
+        "demux/asf/libasf_guid.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "access_output_dummy",
+      "archive": "libaccess_output_dummy_plugin.la",
+      "sources": [
+        "access_output/dummy.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "access_output_file",
+      "archive": "libaccess_output_file_plugin.la",
+      "sources": [
+        "access_output/file.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "access_output_http",
+      "archive": "libaccess_output_http_plugin.la",
+      "sources": [
+        "access_output/http.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "access_output_livehttp",
+      "archive": "libaccess_output_livehttp_plugin.la",
+      "sources": [
+        "access_output/livehttp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lgcrypt",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lgpg-error",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "access_output_rist",
+      "archive": "libaccess_output_rist_plugin.la",
+      "sources": [
+        "access_output/rist.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lrist",
+        "-pthread",
+        "-lgmp",
+        "-lgnutls",
+        "-lgmp",
+        "-lhogweed",
+        "-lgmp",
+        "-lnettle",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "access_output_shout",
+      "archive": "libaccess_output_shout_plugin.la",
+      "sources": [
+        "access_output/shout.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lshout",
+        "-lvorbis",
+        "-lm",
+        "-ltheora",
+        "-logg",
+        "-lspeex",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "adaptive",
+      "archive": "libadaptive_plugin.la",
+      "sources": [
+        "demux/adaptive/adaptive.cpp"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_adaptive.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "adf",
+      "archive": "libadf_plugin.la",
+      "sources": [
+        "stream_filter/adf.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "adjust",
+      "archive": "libadjust_plugin.la",
+      "sources": [
+        "video_filter/adjust.c",
+        "video_filter/adjust_sat_hue.c",
+        "video_filter/adjust_sat_hue.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "adpcm",
+      "archive": "libadpcm_plugin.la",
+      "sources": [
+        "codec/adpcm.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "aes3",
+      "archive": "libaes3_plugin.la",
+      "sources": [
+        "codec/aes3.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "afile",
+      "archive": "libafile_plugin.la",
+      "sources": [
+        "audio_output/file.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "aiff",
+      "archive": "libaiff_plugin.la",
+      "sources": [
+        "demux/aiff.c",
+        "demux/mp4/coreaudio.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "amem",
+      "archive": "libamem_plugin.la",
+      "sources": [
+        "audio_output/amem.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "amt",
+      "archive": "libamt_plugin.la",
+      "sources": [
+        "access/amt.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "anaglyph",
+      "archive": "libanaglyph_plugin.la",
+      "sources": [
+        "video_filter/anaglyph.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "android_aaudio",
+      "archive": "libandroid_aaudio_plugin.la",
+      "sources": [
+        "audio_output/android/aaudio.c",
+        "audio_output/android/device.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libandroid_env.la",
+        "libvlc_android_dynamicsprocessing_jni.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "android_audiodevice",
+      "archive": "libandroid_audiodevice_plugin.la",
+      "sources": [
+        "audio_output/android/device.c",
+        "audio_output/android/device.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libandroid_env.la",
+        "libvlc_android_audioformat_jni.la",
+        "libvlc_android_dynamicsprocessing_jni.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "android_audiotrack",
+      "archive": "libandroid_audiotrack_plugin.la",
+      "sources": [
+        "audio_output/android/audiotrack.c",
+        "audio_output/android/device.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libandroid_env.la",
+        "libvlc_android_audioformat_jni.la",
+        "libvlc_android_dynamicsprocessing_jni.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "android_display",
+      "archive": "libandroid_display_plugin.la",
+      "sources": [
+        "video_output/android/display.c",
+        "video_output/opengl/sub_renderer.c",
+        "video_output/opengl/sub_renderer.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_opengles.la",
+        "-lEGL",
+        "-lGLESv2",
+        "libandroid_utils.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "android_logger",
+      "archive": "libandroid_logger_plugin.la",
+      "sources": [
+        "logger/android.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-llog"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "android_window",
+      "archive": "libandroid_window_plugin.la",
+      "sources": [
+        "video_output/android/window.c",
+        "video_output/wasync_resize_compressor.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libandroid_utils.la",
+        "-lEGL",
+        "-lGLESv2"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "antiflicker",
+      "archive": "libantiflicker_plugin.la",
+      "sources": [
+        "video_filter/antiflicker.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "aom",
+      "archive": "libaom_plugin.la",
+      "sources": [
+        "codec/aom.c",
+        "packetizer/iso_color_tables.h",
+        "packetizer/av1_obu.c",
+        "packetizer/av1_obu.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-laom",
+        "-lm",
+        "-pthread"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "araw",
+      "archive": "libaraw_plugin.la",
+      "sources": [
+        "codec/araw.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "archive",
+      "archive": "libarchive_plugin.la",
+      "sources": [
+        "stream_extractor/archive.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-larchive",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "aribcaption",
+      "archive": "libaribcaption_plugin.la",
+      "sources": [
+        "codec/arib/libaribcaption.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-laribcaption",
+        "-lm",
+        "-lunwind",
+        "-ldl",
+        "-lc",
+        "-lunwind",
+        "-ldl",
+        "-lfreetype",
+        "-lz",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lfreetype",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "asf",
+      "archive": "libasf_plugin.la",
+      "sources": [
+        "demux/asf/asf.c",
+        "demux/asf/libasf.c",
+        "demux/asf/libasf.h",
+        "demux/asf/asfpacket.c",
+        "demux/asf/asfpacket.h",
+        "demux/asf/libasf_guid.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "au",
+      "archive": "libau_plugin.la",
+      "sources": [
+        "demux/au.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "audio_format",
+      "archive": "libaudio_format_plugin.la",
+      "sources": [
+        "audio_filter/converter/format.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "avcodec",
+      "archive": "libavcodec_plugin.la",
+      "sources": [
+        "codec/avcodec/video.c",
+        "codec/avcodec/subtitle.c",
+        "codec/avcodec/audio.c",
+        "codec/avcodec/va.c",
+        "codec/avcodec/va.h",
+        "codec/avcodec/avcodec.c",
+        "codec/avcodec/avcodec.h",
+        "packetizer/av1_obu.c",
+        "packetizer/av1_obu.h",
+        "packetizer/av1.h",
+        "codec/avcodec/encoder.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lavcodec",
+        "-pthread",
+        "-lm",
+        "-latomic",
+        "-lgsm",
+        "-lmp3lame",
+        "-lm",
+        "-lopenjp2",
+        "-lm",
+        "-pthread",
+        "-lz",
+        "-lavutil",
+        "-lm",
+        "-lz",
+        "-latomic",
+        "-landroid",
+        "-lmediandk",
+        "-pthread",
+        "-lm",
+        "libavcodec_common.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "avformat",
+      "archive": "libavformat_plugin.la",
+      "sources": [
+        "demux/avformat/demux.c",
+        "demux/vobsub.h",
+        "demux/avformat/avformat.c",
+        "demux/avformat/avformat.h",
+        "demux/avformat/mux.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lavformat",
+        "-lm",
+        "-latomic",
+        "-lz",
+        "-lavcodec",
+        "-pthread",
+        "-lm",
+        "-latomic",
+        "-lgsm",
+        "-lmp3lame",
+        "-lm",
+        "-lopenjp2",
+        "-lm",
+        "-pthread",
+        "-lz",
+        "-lavutil",
+        "-lm",
+        "-lz",
+        "-latomic",
+        "-landroid",
+        "-lmediandk",
+        "-pthread",
+        "-lm",
+        "-lz",
+        "libavcodec_common.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "avi",
+      "archive": "libavi_plugin.la",
+      "sources": [
+        "demux/avi/avi.c",
+        "demux/avi/libavi.c",
+        "demux/avi/libavi.h",
+        "demux/avi/bitmapinfoheader.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "avio",
+      "archive": "libavio_plugin.la",
+      "sources": [
+        "access/avio.c",
+        "access/avio.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lavformat",
+        "-lm",
+        "-latomic",
+        "-lz",
+        "-lavcodec",
+        "-pthread",
+        "-lm",
+        "-latomic",
+        "-lgsm",
+        "-lmp3lame",
+        "-lm",
+        "-lopenjp2",
+        "-lm",
+        "-pthread",
+        "-lz",
+        "-lavutil",
+        "-lm",
+        "-lz",
+        "-latomic",
+        "-landroid",
+        "-lmediandk",
+        "-pthread",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "blend",
+      "archive": "libblend_plugin.la",
+      "sources": [
+        "video_filter/blend.cpp"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "cache_read",
+      "archive": "libcache_read_plugin.la",
+      "sources": [
+        "stream_filter/cache_read.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "caf",
+      "archive": "libcaf_plugin.la",
+      "sources": [
+        "demux/caf.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "canvas",
+      "archive": "libcanvas_plugin.la",
+      "sources": [
+        "video_filter/canvas.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "cc",
+      "archive": "libcc_plugin.la",
+      "sources": [
+        "codec/cc.c",
+        "codec/cc.h",
+        "codec/substext.h",
+        "codec/cea708.h",
+        "codec/cea708.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "cdg",
+      "archive": "libcdg_plugin.la",
+      "sources": [
+        "codec/cdg.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "center",
+      "archive": "libcenter_plugin.la",
+      "sources": [
+        "audio_filter/center.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "chain",
+      "archive": "libchain_plugin.la",
+      "sources": [
+        "video_chroma/chain.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "chorus_flanger",
+      "archive": "libchorus_flanger_plugin.la",
+      "sources": [
+        "audio_filter/chorus_flanger.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "colorthres",
+      "archive": "libcolorthres_plugin.la",
+      "sources": [
+        "video_filter/colorthres.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "compressor",
+      "archive": "libcompressor_plugin.la",
+      "sources": [
+        "audio_filter/compressor.c",
+        "audio_filter/dynamics.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libdynamics_common.la",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "console_logger",
+      "archive": "libconsole_logger_plugin.la",
+      "sources": [
+        "logger/console.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "croppadd",
+      "archive": "libcroppadd_plugin.la",
+      "sources": [
+        "video_filter/croppadd.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "cvdsub",
+      "archive": "libcvdsub_plugin.la",
+      "sources": [
+        "codec/cvdsub.c",
+        "demux/mpeg/timestamps.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "data",
+      "archive": "libdata_plugin.la",
+      "sources": [
+        "access/data.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "dav1d",
+      "archive": "libdav1d_plugin.la",
+      "sources": [
+        "codec/dav1d.c",
+        "packetizer/av1_obu.c",
+        "packetizer/av1_obu.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ldav1d",
+        "-pthread"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "decomp",
+      "archive": "libdecomp_plugin.la",
+      "sources": [
+        "stream_filter/decomp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "demux_cdg",
+      "archive": "libdemux_cdg_plugin.la",
+      "sources": [
+        "demux/cdg.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "demux_chromecast",
+      "archive": "libdemux_chromecast_plugin.la",
+      "sources": [
+        "stream_out/chromecast/chromecast_demux.cpp",
+        "stream_out/chromecast/chromecast.h",
+        "stream_out/chromecast/chromecast_common.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "demux_mock",
+      "archive": "libdemux_mock_plugin.la",
+      "sources": [
+        "demux/mock.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "demux_stl",
+      "archive": "libdemux_stl_plugin.la",
+      "sources": [
+        "demux/stl.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "demuxdump",
+      "archive": "libdemuxdump_plugin.la",
+      "sources": [
+        "demux/demuxdump.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "directory_demux",
+      "archive": "libdirectory_demux_plugin.la",
+      "sources": [
+        "demux/directory.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "dither",
+      "archive": "libdither_plugin.la",
+      "sources": [
+        "video_filter/dither.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "dmxmus",
+      "archive": "libdmxmus_plugin.la",
+      "sources": [
+        "demux/dmxmus.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "dolby_surround_decoder",
+      "archive": "libdolby_surround_decoder_plugin.la",
+      "sources": [
+        "audio_filter/channel_mixer/dolby.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "drm_display",
+      "archive": "libdrm_display_plugin.la",
+      "sources": [
+        "video_output/drm/vlc_drm.h",
+        "video_output/drm/fourcc.c",
+        "video_output/drm/buffers.c",
+        "video_output/drm/planes.c",
+        "video_output/drm/display.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "dsm",
+      "archive": "libdsm_plugin.la",
+      "sources": [
+        "access/dsm/access.c",
+        "access/dsm/sd.c",
+        "access/smb_common.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ldsm",
+        "-pthread",
+        "-liconv",
+        "-llog",
+        "-ltasn1",
+        "libvlc_access_cache.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "dtv",
+      "archive": "libdtv_plugin.la",
+      "sources": [
+        "access/dtv/dtv.h",
+        "access/dtv/access.c",
+        "access/dtv/linux.c",
+        "access/dtv/en50221.c",
+        "access/dtv/en50221.h",
+        "access/dtv/en50221_capmt.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "dvb",
+      "archive": "libdvb_plugin.la",
+      "sources": [
+        "access/dvb/access.c",
+        "access/dvb/linux_dvb.c",
+        "access/dvb/scan.c",
+        "access/dvb/scan.h",
+        "access/dvb/scan_list.c",
+        "access/dvb/scan_list.h",
+        "access/dvb/dvb.h",
+        "mux/mpeg/dvbpsi_compat.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ldvbpsi"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "dvbsub",
+      "archive": "libdvbsub_plugin.la",
+      "sources": [
+        "codec/dvbsub.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "ebur128",
+      "archive": "libebur128_plugin.la",
+      "sources": [
+        "audio_filter/libebur128.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lebur128",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "edgedetection",
+      "archive": "libedgedetection_plugin.la",
+      "sources": [
+        "video_filter/edgedetection.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "egl_android",
+      "archive": "libegl_android_plugin.la",
+      "sources": [
+        "video_output/opengl/egl.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lEGL",
+        "libandroid_utils.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "egl_display_generic",
+      "archive": "libegl_display_generic_plugin.la",
+      "sources": [
+        "video_output/opengl/egl_display_generic.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lEGL"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "egl_pbuffer_filter",
+      "archive": "libegl_pbuffer_filter_plugin.la",
+      "sources": [
+        "video_filter/egl_pbuffer.c",
+        "video_output/opengl/egl_display.c",
+        "video_output/opengl/egl_display.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lEGL",
+        "libvlc_opengles.la",
+        "-lGLESv2"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "egl_surfacetexture",
+      "archive": "libegl_surfacetexture_plugin.la",
+      "sources": [
+        "video_filter/egl_surfacetexture.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lEGL",
+        "libandroid_utils.la",
+        "libvlc_opengles.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "equalizer",
+      "archive": "libequalizer_plugin.la",
+      "sources": [
+        "audio_filter/equalizer.c",
+        "audio_filter/equalizer_presets.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "es",
+      "archive": "libes_plugin.la",
+      "sources": [
+        "demux/mpeg/es.c",
+        "meta_engine/ID3Tag.h",
+        "meta_engine/ID3Text.h",
+        "packetizer/dts_header.c",
+        "packetizer/dts_header.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "expander",
+      "archive": "libexpander_plugin.la",
+      "sources": [
+        "audio_filter/expander.c",
+        "audio_filter/dynamics.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libdynamics_common.la",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "extract",
+      "archive": "libextract_plugin.la",
+      "sources": [
+        "video_filter/extract.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "file_keystore",
+      "archive": "libfile_keystore_plugin.la",
+      "sources": [
+        "keystore/file.c",
+        "keystore/file_crypt.h",
+        "keystore/list_util.c",
+        "keystore/list_util.h",
+        "keystore/file_crypt_android.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libandroid_env.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "filesystem",
+      "archive": "libfilesystem_plugin.la",
+      "sources": [
+        "access/fs.h",
+        "access/file.c",
+        "access/directory.c",
+        "access/fs.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "fingerprinter",
+      "archive": "libfingerprinter_plugin.la",
+      "sources": [
+        "misc/webservices/acoustid.c",
+        "misc/webservices/acoustid.h",
+        "misc/webservices/json_helper.h",
+        "misc/fingerprinter.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_json.la",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "flac",
+      "archive": "libflac_plugin.la",
+      "sources": [
+        "codec/flac.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lFLAC",
+        "-lm",
+        "-pthread",
+        "-logg"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "flacsys",
+      "archive": "libflacsys_plugin.la",
+      "sources": [
+        "demux/flac.c",
+        "packetizer/flac.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libxiph_metadata.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "flaschen",
+      "archive": "libflaschen_plugin.la",
+      "sources": [
+        "video_output/flaschen.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "float_mixer",
+      "archive": "libfloat_mixer_plugin.la",
+      "sources": [
+        "audio_mixer/float.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "fluidsynth",
+      "archive": "libfluidsynth_plugin.la",
+      "sources": [
+        "codec/fluidsynth.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lfluidlite",
+        "-lm",
+        "-lvorbisfile",
+        "-lvorbis",
+        "-lm",
+        "-logg"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "folder",
+      "archive": "libfolder_plugin.la",
+      "sources": [
+        "meta_engine/folder.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "formatcrop",
+      "archive": "libformatcrop_plugin.la",
+      "sources": [
+        "video_filter/formatcrop.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "fps",
+      "archive": "libfps_plugin.la",
+      "sources": [
+        "video_filter/fps.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "freetype",
+      "archive": "libfreetype_plugin.la",
+      "sources": [
+        "text_renderer/freetype/platform_fonts.c",
+        "text_renderer/freetype/platform_fonts.h",
+        "text_renderer/freetype/freetype.c",
+        "text_renderer/freetype/freetype.h",
+        "text_renderer/freetype/ftcache.c",
+        "text_renderer/freetype/ftcache.h",
+        "text_renderer/freetype/text_layout.c",
+        "text_renderer/freetype/text_layout.h",
+        "text_renderer/freetype/lru.c",
+        "text_renderer/freetype/lru.h",
+        "text_renderer/freetype/fonts/backends.h",
+        "text_renderer/freetype/blend/blend.h",
+        "text_renderer/freetype/blend/rgb.h",
+        "text_renderer/freetype/blend/yuv.h",
+        "text_renderer/freetype/fonts/android.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lfribidi",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lharfbuzz",
+        "-pthread",
+        "-lm",
+        "-lfreetype",
+        "-lz",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lfreetype",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "freeze",
+      "archive": "libfreeze_plugin.la",
+      "sources": [
+        "video_filter/freeze.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "ftp",
+      "archive": "libftp_plugin.la",
+      "sources": [
+        "access/ftp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "g64rtp",
+      "archive": "libg64rtp_plugin.la",
+      "sources": [
+        "demux/g64rtp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "g711",
+      "archive": "libg711_plugin.la",
+      "sources": [
+        "codec/g711.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gain",
+      "archive": "libgain_plugin.la",
+      "sources": [
+        "audio_filter/gain.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gate",
+      "archive": "libgate_plugin.la",
+      "sources": [
+        "audio_filter/gate.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gaussianblur",
+      "archive": "libgaussianblur_plugin.la",
+      "sources": [
+        "video_filter/gaussianblur.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gladjust",
+      "archive": "libgladjust_plugin.la",
+      "sources": [
+        "video_filter/gladjust.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_opengles.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "glblend",
+      "archive": "libglblend_plugin.la",
+      "sources": [
+        "video_filter/deinterlace/glblend.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_opengles.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gles2",
+      "archive": "libgles2_plugin.la",
+      "sources": [
+        "video_output/opengl/display.c",
+        "video_output/opengl/gl_scale.h",
+        "video_output/opengl/renderer.c",
+        "video_output/opengl/renderer.h",
+        "video_output/opengl/sub_renderer.c",
+        "video_output/opengl/sub_renderer.h",
+        "video_output/opengl/vout_helper.c",
+        "video_output/opengl/vout_helper.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_opengles.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "glfilter_draw",
+      "archive": "libglfilter_draw_plugin.la",
+      "sources": [
+        "video_output/opengl/filter_draw.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_opengles.la",
+        "-lGLESv2"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "glfilter_mock",
+      "archive": "libglfilter_mock_plugin.la",
+      "sources": [
+        "video_output/opengl/filter_mock.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm",
+        "libvlc_opengles.la",
+        "-lGLESv2"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "glinterop_aimage",
+      "archive": "libglinterop_aimage_plugin.la",
+      "sources": [
+        "video_output/opengl/interop_aimage.c",
+        "video_output/opengl/interop.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libandroid_utils.la",
+        "-lEGL",
+        "-lGLESv2"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "glinterop_asurface",
+      "archive": "libglinterop_asurface_plugin.la",
+      "sources": [
+        "video_output/opengl/interop_asurface.c",
+        "video_output/opengl/interop.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libandroid_utils.la",
+        "-lEGL",
+        "-lGLESv2"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "glinterop_sw",
+      "archive": "libglinterop_sw_plugin.la",
+      "sources": [
+        "video_output/opengl/interop_sw.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_opengles.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gme",
+      "archive": "libgme_plugin.la",
+      "sources": [
+        "demux/gme.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lgme",
+        "-lm",
+        "-lunwind",
+        "-ldl",
+        "-lc",
+        "-lunwind",
+        "-ldl",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gnutls",
+      "archive": "libgnutls_plugin.la",
+      "sources": [
+        "misc/gnutls.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lgnutls",
+        "-lgmp",
+        "-lhogweed",
+        "-lgmp",
+        "-lnettle",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gopher",
+      "archive": "libgopher_plugin.la",
+      "sources": [
+        "access/gopher.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "gradfun",
+      "archive": "libgradfun_plugin.la",
+      "sources": [
+        "video_filter/gradfun.c",
+        "video_filter/gradfun.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "grey_yuv",
+      "archive": "libgrey_yuv_plugin.la",
+      "sources": [
+        "video_chroma/grey_yuv.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "h26x",
+      "archive": "libh26x_plugin.la",
+      "sources": [
+        "demux/mpeg/h26x.c",
+        "packetizer/h264_nal.c",
+        "packetizer/hevc_nal.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "hds",
+      "archive": "libhds_plugin.la",
+      "sources": [
+        "stream_filter/hds/hds.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "headphone_channel_mixer",
+      "archive": "libheadphone_channel_mixer_plugin.la",
+      "sources": [
+        "audio_filter/channel_mixer/headphone.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "http",
+      "archive": "libhttp_plugin.la",
+      "sources": [
+        "access/http.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "https",
+      "archive": "libhttps_plugin.la",
+      "sources": [
+        "access/http/access.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_http.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "hx",
+      "archive": "libhx_plugin.la",
+      "sources": [
+        "demux/hx.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "hxxxhelper_testdec",
+      "archive": "libhxxxhelper_testdec_plugin.la",
+      "sources": [
+        "codec/hxxx_helper_testdec.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_hxxxhelper.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "i420_nv12",
+      "archive": "libi420_nv12_plugin.la",
+      "sources": [
+        "video_chroma/i420_nv12.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libchroma_copy.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "i420_rgb",
+      "archive": "libi420_rgb_plugin.la",
+      "sources": [
+        "video_chroma/i420_rgb.c",
+        "video_chroma/i420_rgb.h",
+        "video_chroma/i420_rgb8.c",
+        "video_chroma/i420_rgb16.c",
+        "video_chroma/i420_rgb_c.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "i422_i420",
+      "archive": "libi422_i420_plugin.la",
+      "sources": [
+        "video_chroma/i422_i420.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "image",
+      "archive": "libimage_plugin.la",
+      "sources": [
+        "demux/image.c",
+        "demux/mxpeg_helper.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "imem",
+      "archive": "libimem_plugin.la",
+      "sources": [
+        "access/imem-access.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "inflate",
+      "archive": "libinflate_plugin.la",
+      "sources": [
+        "stream_filter/inflate.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "integer_mixer",
+      "archive": "libinteger_mixer_plugin.la",
+      "sources": [
+        "audio_mixer/integer.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "invert",
+      "archive": "libinvert_plugin.la",
+      "sources": [
+        "video_filter/invert.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "jpeg",
+      "archive": "libjpeg_plugin.la",
+      "sources": [
+        "codec/jpeg.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-ljpeg"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "json_tracer",
+      "archive": "libjson_tracer_plugin.la",
+      "sources": [
+        "logger/json.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "karaoke",
+      "archive": "libkaraoke_plugin.la",
+      "sources": [
+        "audio_filter/karaoke.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "libass",
+      "archive": "liblibass_plugin.la",
+      "sources": [
+        "codec/libass.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lass",
+        "-lm",
+        "-liconv",
+        "-lfribidi",
+        "-lharfbuzz",
+        "-pthread",
+        "-lm",
+        "-lfreetype",
+        "-lz",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lfreetype",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "libbluray",
+      "archive": "liblibbluray_plugin.la",
+      "sources": [
+        "access/bluray.c",
+        "demux/mpeg/timestamps.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lbluray",
+        "-pthread",
+        "-lfreetype",
+        "-lz",
+        "-lxml2",
+        "-pthread",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "limiter",
+      "archive": "liblimiter_plugin.la",
+      "sources": [
+        "audio_filter/limiter.c",
+        "audio_filter/dynamics.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libdynamics_common.la",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "live555",
+      "archive": "liblive555_plugin.la",
+      "sources": [
+        "access/live555.cpp",
+        "access/mms/asf.c",
+        "access/mms/buffer.c",
+        "access/live555_dtsgen.h",
+        "codec/opus_header.c",
+        "codec/opus_header.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lliveMedia",
+        "-lgroupsock",
+        "-lBasicUsageEnvironment",
+        "-lUsageEnvironment"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "logo",
+      "archive": "liblogo_plugin.la",
+      "sources": [
+        "spu/logo.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "lpcm",
+      "archive": "liblpcm_plugin.la",
+      "sources": [
+        "codec/lpcm.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "marq",
+      "archive": "libmarq_plugin.la",
+      "sources": [
+        "spu/marq.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mediacodec",
+      "archive": "libmediacodec_plugin.la",
+      "sources": [
+        "codec/omxil/mediacodec.c",
+        "codec/omxil/mediacodec.h",
+        "codec/omxil/mediacodec_jni.c",
+        "codec/omxil/mediacodec_ndk.c",
+        "codec/omxil/utils.c",
+        "codec/omxil/omxil_utils.h",
+        "codec/omxil/qcom.c",
+        "codec/omxil/qcom.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libchroma_copy.la",
+        "libvlc_hxxxhelper.la",
+        "libandroid_utils.la",
+        "-lGLESv2",
+        "-lEGL",
+        "-lmediandk"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "memory_keystore",
+      "archive": "libmemory_keystore_plugin.la",
+      "sources": [
+        "keystore/memory.c",
+        "keystore/list_util.c",
+        "keystore/list_util.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "microdns",
+      "archive": "libmicrodns_plugin.la",
+      "sources": [
+        "services_discovery/microdns.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lmicrodns"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mjpeg",
+      "archive": "libmjpeg_plugin.la",
+      "sources": [
+        "demux/mjpeg.c",
+        "demux/mxpeg_helper.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mkv",
+      "archive": "libmkv_plugin.la",
+      "sources": [
+        "demux/mkv/util.hpp",
+        "demux/mkv/util.cpp",
+        "demux/mkv/dvd_types.hpp",
+        "demux/mkv/virtual_segment.hpp",
+        "demux/mkv/virtual_segment.cpp",
+        "demux/mkv/matroska_segment.hpp",
+        "demux/mkv/matroska_segment.cpp",
+        "demux/mkv/matroska_segment_parse.cpp",
+        "demux/mkv/matroska_segment_seeker.hpp",
+        "demux/mkv/matroska_segment_seeker.cpp",
+        "demux/mkv/demux.hpp",
+        "demux/mkv/demux.cpp",
+        "demux/mkv/events.hpp",
+        "demux/mkv/events.cpp",
+        "demux/mkv/dispatcher.hpp",
+        "demux/mkv/string_dispatcher.hpp",
+        "demux/mkv/Ebml_parser.hpp",
+        "demux/mkv/Ebml_parser.cpp",
+        "demux/mkv/Ebml_dispatcher.hpp",
+        "demux/mkv/chapters.hpp",
+        "demux/mkv/chapters.cpp",
+        "demux/mkv/chapter_command.hpp",
+        "demux/mkv/chapter_command.cpp",
+        "demux/mkv/chapter_command_dvd.hpp",
+        "demux/mkv/chapter_command_dvd.cpp",
+        "demux/mkv/chapter_command_script.hpp",
+        "demux/mkv/chapter_command_script.cpp",
+        "demux/mkv/chapter_command_script_common.hpp",
+        "demux/mkv/chapter_command_script_common.cpp",
+        "demux/mkv/stream_io_callback.hpp",
+        "demux/mkv/stream_io_callback.cpp",
+        "demux/mkv/vlc_colors.c",
+        "demux/mkv/vlc_colors.h",
+        "demux/mkv/lzokay.cpp",
+        "demux/mkv/lzokay.hpp",
+        "demux/vobsub.h",
+        "demux/mkv/mkv.hpp",
+        "demux/mkv/mkv.cpp",
+        "demux/av1_unpack.h",
+        "codec/webvtt/helpers.h",
+        "demux/windows_audio_commons.h",
+        "packetizer/dts_header.h",
+        "packetizer/dts_header.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lmatroska",
+        "-lebml",
+        "-lz",
+        "libvlc_mp4.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mod",
+      "archive": "libmod_plugin.la",
+      "sources": [
+        "demux/mod.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lmodplug",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mono",
+      "archive": "libmono_plugin.la",
+      "sources": [
+        "audio_filter/channel_mixer/mono.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mp4",
+      "archive": "libmp4_plugin.la",
+      "sources": [
+        "demux/mp4/mp4.c",
+        "demux/mp4/mp4.h",
+        "demux/mp4/fragments.c",
+        "demux/mp4/fragments.h",
+        "demux/mp4/attachments.c",
+        "demux/mp4/attachments.h",
+        "demux/mp4/languages.h",
+        "demux/mp4/heif.c",
+        "demux/mp4/heif.h",
+        "demux/mp4/avci.h",
+        "demux/mp4/qt_palette.h",
+        "demux/mp4/essetup.c",
+        "demux/mp4/meta.c",
+        "demux/mp4/meta.h",
+        "demux/mp4/coreaudio.h",
+        "demux/av1_unpack.h",
+        "demux/asf/asfpacket.c",
+        "demux/asf/asfpacket.h",
+        "packetizer/mpeg4systems.h",
+        "packetizer/iso_color_tables.h",
+        "meta_engine/ID3Genres.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_mp4.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mpg123",
+      "archive": "libmpg123_plugin.la",
+      "sources": [
+        "codec/mpg123.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lmpg123",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mpgv",
+      "archive": "libmpgv_plugin.la",
+      "sources": [
+        "demux/mpeg/mpgv.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_asf",
+      "archive": "libmux_asf_plugin.la",
+      "sources": [
+        "mux/asf.c",
+        "demux/asf/libasf_guid.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_avi",
+      "archive": "libmux_avi_plugin.la",
+      "sources": [
+        "mux/avi.c",
+        "demux/avi/bitmapinfoheader.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_dummy",
+      "archive": "libmux_dummy_plugin.la",
+      "sources": [
+        "mux/dummy.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_mp4",
+      "archive": "libmux_mp4_plugin.la",
+      "sources": [
+        "mux/mp4/mp4.c",
+        "mux/mp4/libmp4mux.c",
+        "mux/mp4/libmp4mux.h",
+        "demux/mp4/libmp4.h",
+        "mux/av1_pack.h",
+        "packetizer/hxxx_nal.c",
+        "packetizer/hxxx_nal.h",
+        "packetizer/hevc_nal.c",
+        "packetizer/hevc_nal.h",
+        "packetizer/h264_nal.c",
+        "packetizer/h264_nal.h",
+        "mux/extradata.c",
+        "mux/extradata.h",
+        "packetizer/av1_obu.c",
+        "codec/hxxx_helper.c",
+        "codec/hxxx_helper.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_mpjpeg",
+      "archive": "libmux_mpjpeg_plugin.la",
+      "sources": [
+        "mux/mpjpeg.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_ogg",
+      "archive": "libmux_ogg_plugin.la",
+      "sources": [
+        "mux/ogg.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-logg"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_ps",
+      "archive": "libmux_ps_plugin.la",
+      "sources": [
+        "mux/mpeg/pes.c",
+        "mux/mpeg/pes.h",
+        "mux/mpeg/repack.c",
+        "mux/mpeg/repack.h",
+        "mux/mpeg/ps.c",
+        "mux/mpeg/bits.h",
+        "demux/mpeg/timestamps.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_ts",
+      "archive": "libmux_ts_plugin.la",
+      "sources": [
+        "mux/mpeg/pes.c",
+        "mux/mpeg/pes.h",
+        "mux/mpeg/repack.c",
+        "mux/mpeg/repack.h",
+        "mux/mpeg/csa.c",
+        "mux/mpeg/csa.h",
+        "mux/mpeg/streams.h",
+        "mux/mpeg/tables.c",
+        "mux/mpeg/tables.h",
+        "mux/mpeg/tsutil.c",
+        "mux/mpeg/tsutil.h",
+        "codec/jpeg2000.h",
+        "mux/mpeg/ts.c",
+        "mux/mpeg/bits.h",
+        "mux/mpeg/dvbpsi_compat.h",
+        "demux/mpeg/timestamps.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ldvbpsi"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "mux_wav",
+      "archive": "libmux_wav_plugin.la",
+      "sources": [
+        "mux/wav.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "nfs",
+      "archive": "libnfs_plugin.la",
+      "sources": [
+        "access/nfs.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lnfs"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "normvol",
+      "archive": "libnormvol_plugin.la",
+      "sources": [
+        "audio_filter/normvol.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "noseek",
+      "archive": "libnoseek_plugin.la",
+      "sources": [
+        "demux/filter/noseek.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "nsv",
+      "archive": "libnsv_plugin.la",
+      "sources": [
+        "demux/nsv.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "nuv",
+      "archive": "libnuv_plugin.la",
+      "sources": [
+        "demux/nuv.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "nvdec",
+      "archive": "libnvdec_plugin.la",
+      "sources": [
+        "hw/nvdec/nvdec.c",
+        "hw/nvdec/nvdec_fmt.h",
+        "hw/nvdec/nvdec_priv.h",
+        "hw/nvdec/hw_pool.c",
+        "hw/nvdec/hw_pool.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_hxxxhelper.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "nvdec_chroma",
+      "archive": "libnvdec_chroma_plugin.la",
+      "sources": [
+        "hw/nvdec/chroma.c",
+        "hw/nvdec/nvdec_fmt.h",
+        "hw/nvdec/nvdec_priv.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "ogg",
+      "archive": "libogg_plugin.la",
+      "sources": [
+        "demux/ogg.c",
+        "demux/ogg.h",
+        "demux/oggseek.c",
+        "demux/oggseek.h",
+        "demux/ogg_granule.c",
+        "demux/ogg_granule.h",
+        "demux/xiph.h",
+        "demux/opus.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lvorbis",
+        "-lm",
+        "-logg",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-logg",
+        "-lm",
+        "libxiph_metadata.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "oggspots",
+      "archive": "liboggspots_plugin.la",
+      "sources": [
+        "codec/oggspots.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-logg"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "oldmovie",
+      "archive": "liboldmovie_plugin.la",
+      "sources": [
+        "video_filter/oldmovie.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "openapv",
+      "archive": "libopenapv_plugin.la",
+      "sources": [
+        "codec/openapv.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib/oapv",
+        "-loapv",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "opengl_filter",
+      "archive": "libopengl_filter_plugin.la",
+      "sources": [
+        "video_filter/opengl.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_opengles.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "opensles_android",
+      "archive": "libopensles_android_plugin.la",
+      "sources": [
+        "audio_output/android/opensles.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "opus",
+      "archive": "libopus_plugin.la",
+      "sources": [
+        "codec/opus.c",
+        "codec/opus_header.c",
+        "codec/opus_header.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-logg",
+        "-lopus",
+        "-lm",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "orient",
+      "archive": "liborient_plugin.la",
+      "sources": [
+        "video_chroma/orient.c",
+        "video_chroma/orient.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_a52",
+      "archive": "libpacketizer_a52_plugin.la",
+      "sources": [
+        "packetizer/a52.c",
+        "packetizer/a52.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_av1",
+      "archive": "libpacketizer_av1_plugin.la",
+      "sources": [
+        "packetizer/av1.c",
+        "packetizer/av1.h",
+        "packetizer/av1_obu.c",
+        "packetizer/av1_obu.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_avparser",
+      "archive": "libpacketizer_avparser_plugin.la",
+      "sources": [
+        "packetizer/avparser.c",
+        "packetizer/avparser.h",
+        "codec/avcodec/avcodec.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lavcodec",
+        "-pthread",
+        "-lm",
+        "-latomic",
+        "-lgsm",
+        "-lmp3lame",
+        "-lm",
+        "-lopenjp2",
+        "-lm",
+        "-pthread",
+        "-lz",
+        "-lavutil",
+        "-lm",
+        "-lz",
+        "-latomic",
+        "-landroid",
+        "-lmediandk",
+        "-pthread",
+        "-lm",
+        "libavcodec_common.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_copy",
+      "archive": "libpacketizer_copy_plugin.la",
+      "sources": [
+        "packetizer/copy.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_dts",
+      "archive": "libpacketizer_dts_plugin.la",
+      "sources": [
+        "packetizer/dts.c",
+        "packetizer/dts_header.c",
+        "packetizer/dts_header.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_flac",
+      "archive": "libpacketizer_flac_plugin.la",
+      "sources": [
+        "packetizer/flac.c",
+        "packetizer/flac.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_h264",
+      "archive": "libpacketizer_h264_plugin.la",
+      "sources": [
+        "packetizer/h264_nal.c",
+        "packetizer/h264_nal.h",
+        "packetizer/h264_slice.c",
+        "packetizer/h264_slice.h",
+        "packetizer/h264.c",
+        "packetizer/hxxx_nal.h",
+        "packetizer/hxxx_sei.c",
+        "packetizer/hxxx_sei.h",
+        "packetizer/hxxx_common.c",
+        "packetizer/hxxx_common.h",
+        "packetizer/hxxx_ep3b.h",
+        "packetizer/iso_color_tables.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_hevc",
+      "archive": "libpacketizer_hevc_plugin.la",
+      "sources": [
+        "packetizer/hevc.c",
+        "packetizer/hevc_nal.h",
+        "packetizer/hevc_nal.c",
+        "packetizer/h26x_nal_common.h",
+        "packetizer/hxxx_sei.c",
+        "packetizer/hxxx_sei.h",
+        "packetizer/hxxx_nal.h",
+        "packetizer/hxxx_common.c",
+        "packetizer/hxxx_common.h",
+        "packetizer/hxxx_ep3b.h",
+        "packetizer/iso_color_tables.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_mjpeg",
+      "archive": "libpacketizer_mjpeg_plugin.la",
+      "sources": [
+        "packetizer/mjpeg.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_mlp",
+      "archive": "libpacketizer_mlp_plugin.la",
+      "sources": [
+        "packetizer/mlp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_mpeg4audio",
+      "archive": "libpacketizer_mpeg4audio_plugin.la",
+      "sources": [
+        "packetizer/mpeg4audio.c",
+        "packetizer/mpeg4audio.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_mpeg4video",
+      "archive": "libpacketizer_mpeg4video_plugin.la",
+      "sources": [
+        "packetizer/mpeg4video.c",
+        "packetizer/h26x_nal_common.h",
+        "packetizer/iso_color_tables.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_mpegaudio",
+      "archive": "libpacketizer_mpegaudio_plugin.la",
+      "sources": [
+        "packetizer/mpegaudio.c",
+        "packetizer/mpegaudio.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_mpegvideo",
+      "archive": "libpacketizer_mpegvideo_plugin.la",
+      "sources": [
+        "packetizer/mpegvideo.c",
+        "packetizer/mpegvideo.h",
+        "packetizer/h26x_nal_common.h",
+        "packetizer/iso_color_tables.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "packetizer_vc1",
+      "archive": "libpacketizer_vc1_plugin.la",
+      "sources": [
+        "packetizer/vc1.c",
+        "packetizer/hxxx_ep3b.h",
+        "packetizer/hxxx_nal.h",
+        "packetizer/iso_color_tables.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "param_eq",
+      "archive": "libparam_eq_plugin.la",
+      "sources": [
+        "audio_filter/param_eq.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "pl_scale",
+      "archive": "libpl_scale_plugin.la",
+      "sources": [
+        "video_output/opengl/pl_scale.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lplacebo",
+        "-lm",
+        "-pthread",
+        "-lglslang-default-resource-limits",
+        "-lSPIRV",
+        "-lMachineIndependent",
+        "-lOSDependent",
+        "-lOGLCompiler",
+        "-lGenericCodeGen",
+        "-ldl",
+        "libvlc_opengles.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "placebo",
+      "archive": "libplacebo_plugin.la",
+      "sources": [
+        "video_output/libplacebo/utils.h",
+        "video_output/libplacebo/instance.h",
+        "video_output/libplacebo/instance.c",
+        "video_output/libplacebo/display.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lplacebo",
+        "-lm",
+        "-pthread",
+        "-lglslang-default-resource-limits",
+        "-lSPIRV",
+        "-lMachineIndependent",
+        "-lOSDependent",
+        "-lOGLCompiler",
+        "-lGenericCodeGen",
+        "-ldl",
+        "libplacebo_utils.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "placebo_gles2",
+      "archive": "libplacebo_gles2_plugin.la",
+      "sources": [
+        "video_output/libplacebo/utils.h",
+        "video_output/libplacebo/instance.h",
+        "video_output/libplacebo/instance_opengl.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lplacebo",
+        "-lm",
+        "-pthread",
+        "-lglslang-default-resource-limits",
+        "-lSPIRV",
+        "-lMachineIndependent",
+        "-lOSDependent",
+        "-lOGLCompiler",
+        "-lGenericCodeGen",
+        "-ldl",
+        "libvlc_opengles.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "playlist",
+      "archive": "libplaylist_plugin.la",
+      "sources": [
+        "demux/playlist/asx.c",
+        "demux/playlist/b4s.c",
+        "demux/playlist/bdmv.c",
+        "demux/playlist/dvb.c",
+        "demux/playlist/ifo.c",
+        "demux/playlist/itml.c",
+        "demux/playlist/itml.h",
+        "demux/playlist/m3u.c",
+        "demux/playlist/pls.c",
+        "demux/playlist/podcast.c",
+        "demux/playlist/qtl.c",
+        "demux/playlist/ram.c",
+        "demux/playlist/sgimb.c",
+        "demux/playlist/wms.c",
+        "demux/playlist/wpl.c",
+        "demux/playlist/xspf.c",
+        "demux/playlist/playlist.c",
+        "demux/playlist/playlist.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "png",
+      "archive": "libpng_plugin.la",
+      "sources": [
+        "codec/png.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lpng",
+        "-lz",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "prefetch",
+      "archive": "libprefetch_plugin.la",
+      "sources": [
+        "stream_filter/prefetch.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "preparserserializer_json",
+      "archive": "libpreparserserializer_json_plugin.la",
+      "sources": [
+        "misc/preparser_serializer/json/serializer.c",
+        "misc/preparser_serializer/json/serializer.h",
+        "misc/preparser_serializer/json/fromjson.c",
+        "misc/preparser_serializer/json/tojson.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_json.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "ps",
+      "archive": "libps_plugin.la",
+      "sources": [
+        "demux/mpeg/ps.c",
+        "demux/mpeg/ps.h",
+        "demux/mpeg/pes.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "pva",
+      "archive": "libpva_plugin.la",
+      "sources": [
+        "demux/pva.c",
+        "demux/mpeg/pes.h",
+        "demux/mpeg/timestamps.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "radio",
+      "archive": "libradio_plugin.la",
+      "sources": [
+        "services_discovery/radio.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rawaud",
+      "archive": "librawaud_plugin.la",
+      "sources": [
+        "demux/rawaud.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rawdv",
+      "archive": "librawdv_plugin.la",
+      "sources": [
+        "demux/rawdv.c",
+        "demux/rawdv.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rawvid",
+      "archive": "librawvid_plugin.la",
+      "sources": [
+        "demux/rawvid.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rawvideo",
+      "archive": "librawvideo_plugin.la",
+      "sources": [
+        "codec/rawvideo.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "record",
+      "archive": "librecord_plugin.la",
+      "sources": [
+        "stream_filter/record.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "remap",
+      "archive": "libremap_plugin.la",
+      "sources": [
+        "audio_filter/channel_mixer/remap.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rist",
+      "archive": "librist_plugin.la",
+      "sources": [
+        "access/rist.c",
+        "access/rist.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lrist",
+        "-pthread",
+        "-lgmp",
+        "-lgnutls",
+        "-lgmp",
+        "-lhogweed",
+        "-lgmp",
+        "-lnettle",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rnnoise",
+      "archive": "librnnoise_plugin.la",
+      "sources": [
+        "audio_filter/rnnoise.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lrnnoise",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp",
+      "archive": "librtp_plugin.la",
+      "sources": [
+        "access/rtp/input.c",
+        "access/rtp/input.h",
+        "access/rtp/sdp.c",
+        "access/rtp/sdp.h",
+        "access/rtp/datagram.c",
+        "access/rtp/vlc_dtls.h",
+        "access/rtp/rtp.c",
+        "access/rtp/rtp.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_rtp.la",
+        "libvlc_srtp.la",
+        "-lgcrypt",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lgpg-error"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_ac3",
+      "archive": "librtp_ac3_plugin.la",
+      "sources": [
+        "access/rtp/ac3.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_h264",
+      "archive": "librtp_h264_plugin.la",
+      "sources": [
+        "access/rtp/h264.c",
+        "access/rtp/h26x.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_h265",
+      "archive": "librtp_h265_plugin.la",
+      "sources": [
+        "access/rtp/h265.c",
+        "access/rtp/h26x.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_mpeg12",
+      "archive": "librtp_mpeg12_plugin.la",
+      "sources": [
+        "access/rtp/mpeg12.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_mpeg4",
+      "archive": "librtp_mpeg4_plugin.la",
+      "sources": [
+        "access/rtp/mpeg4.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_opus",
+      "archive": "librtp_opus_plugin.la",
+      "sources": [
+        "access/rtp/opus.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_pcm",
+      "archive": "librtp_pcm_plugin.la",
+      "sources": [
+        "access/rtp/pcm.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_raw",
+      "archive": "librtp_raw_plugin.la",
+      "sources": [
+        "access/rtp/raw.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_rawvid",
+      "archive": "librtp_rawvid_plugin.la",
+      "sources": [
+        "codec/rtp-rawvid.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtp_xiph",
+      "archive": "librtp_xiph_plugin.la",
+      "sources": [
+        "access/rtp/xiph.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rtpvideo",
+      "archive": "librtpvideo_plugin.la",
+      "sources": [
+        "codec/rtpvideo.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "rv32",
+      "archive": "librv32_plugin.la",
+      "sources": [
+        "video_chroma/rv32.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "satip",
+      "archive": "libsatip_plugin.la",
+      "sources": [
+        "access/satip.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "scale",
+      "archive": "libscale_plugin.la",
+      "sources": [
+        "video_filter/scale.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "scaletempo",
+      "archive": "libscaletempo_plugin.la",
+      "sources": [
+        "audio_filter/scaletempo.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "scaletempo_pitch",
+      "archive": "libscaletempo_pitch_plugin.la",
+      "sources": [
+        "audio_filter/scaletempo.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "scte18",
+      "archive": "libscte18_plugin.la",
+      "sources": [
+        "codec/scte18.c",
+        "codec/scte18.h",
+        "codec/atsc_a65.c",
+        "codec/atsc_a65.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "scte27",
+      "archive": "libscte27_plugin.la",
+      "sources": [
+        "codec/scte27.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "sdp",
+      "archive": "libsdp_plugin.la",
+      "sources": [
+        "access/sdp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "sepia",
+      "archive": "libsepia_plugin.la",
+      "sources": [
+        "video_filter/sepia.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "sftp",
+      "archive": "libsftp_plugin.la",
+      "sources": [
+        "access/sftp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lssh2",
+        "-lgcrypt",
+        "-lgpg-error",
+        "-lgcrypt",
+        "-lgpg-error"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "shm",
+      "archive": "libshm_plugin.la",
+      "sources": [
+        "access/shm.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "simple_channel_mixer",
+      "archive": "libsimple_channel_mixer_plugin.la",
+      "sources": [
+        "audio_filter/channel_mixer/simple.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "skiptags",
+      "archive": "libskiptags_plugin.la",
+      "sources": [
+        "stream_filter/skiptags.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "smb2",
+      "archive": "libsmb2_plugin.la",
+      "sources": [
+        "access/smb2.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lsmb2",
+        "libvlc_access_cache.la",
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ldsm",
+        "-pthread",
+        "-liconv",
+        "-llog",
+        "-ltasn1"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "smf",
+      "archive": "libsmf_plugin.la",
+      "sources": [
+        "demux/smf.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "soxr",
+      "archive": "libsoxr_plugin.la",
+      "sources": [
+        "audio_filter/resampler/soxr.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lsoxr",
+        "-lavcodec",
+        "-pthread",
+        "-lm",
+        "-latomic",
+        "-lgsm",
+        "-lmp3lame",
+        "-lm",
+        "-lopenjp2",
+        "-lm",
+        "-pthread",
+        "-lz",
+        "-lavutil",
+        "-lm",
+        "-lz",
+        "-latomic",
+        "-landroid",
+        "-lmediandk",
+        "-pthread",
+        "-lavutil",
+        "-lm",
+        "-lz",
+        "-latomic",
+        "-landroid",
+        "-lmediandk",
+        "-pthread",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "spatialaudio",
+      "archive": "libspatialaudio_plugin.la",
+      "sources": [
+        "audio_filter/channel_mixer/spatialaudio.cpp"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lspatialaudio",
+        "-lmysofa",
+        "-lm",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "spatializer",
+      "archive": "libspatializer_plugin.la",
+      "sources": [
+        "audio_filter/spatializer/allpass.cpp",
+        "audio_filter/spatializer/allpass.hpp",
+        "audio_filter/spatializer/comb.cpp",
+        "audio_filter/spatializer/comb.hpp",
+        "audio_filter/spatializer/denormals.h",
+        "audio_filter/spatializer/denormals.c",
+        "audio_filter/spatializer/tuning.h",
+        "audio_filter/spatializer/revmodel.cpp",
+        "audio_filter/spatializer/revmodel.hpp",
+        "audio_filter/spatializer/spatializer.cpp"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "spdif",
+      "archive": "libspdif_plugin.la",
+      "sources": [
+        "codec/spdif.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "speex",
+      "archive": "libspeex_plugin.la",
+      "sources": [
+        "codec/speex.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-logg",
+        "-lspeex",
+        "-lm",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "spudec",
+      "archive": "libspudec_plugin.la",
+      "sources": [
+        "codec/spudec/spudec.c",
+        "codec/spudec/parse.c",
+        "codec/spudec/spudec.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stereo_widen",
+      "archive": "libstereo_widen_plugin.la",
+      "sources": [
+        "audio_filter/stereo_widen.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stereopan",
+      "archive": "libstereopan_plugin.la",
+      "sources": [
+        "audio_filter/stereo_pan.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stl",
+      "archive": "libstl_plugin.la",
+      "sources": [
+        "codec/stl.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_autodel",
+      "archive": "libstream_out_autodel_plugin.la",
+      "sources": [
+        "stream_out/autodel.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_bridge",
+      "archive": "libstream_out_bridge_plugin.la",
+      "sources": [
+        "stream_out/bridge.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_chromecast",
+      "archive": "libstream_out_chromecast_plugin.la",
+      "sources": [
+        "stream_out/chromecast/cast.cpp",
+        "stream_out/chromecast/chromecast.h",
+        "stream_out/chromecast/cast_channel.proto",
+        "stream_out/renderer_common.hpp",
+        "stream_out/renderer_common.cpp",
+        "stream_out/chromecast/chromecast_common.h",
+        "stream_out/chromecast/chromecast_ctrl.cpp",
+        "stream_out/chromecast/chromecast_communication.cpp"
+      ],
+      "generated_sources": [
+        "stream_out/chromecast/3.21.1/cast_channel.pb.cc"
+      ],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lprotobuf-lite",
+        "-pthread",
+        "libvlc_json.la",
+        "-llog"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_delay",
+      "archive": "libstream_out_delay_plugin.la",
+      "sources": [
+        "stream_out/delay.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_display",
+      "archive": "libstream_out_display_plugin.la",
+      "sources": [
+        "stream_out/display.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_dummy",
+      "archive": "libstream_out_dummy_plugin.la",
+      "sources": [
+        "stream_out/dummy.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_duplicate",
+      "archive": "libstream_out_duplicate_plugin.la",
+      "sources": [
+        "stream_out/duplicate.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_es",
+      "archive": "libstream_out_es_plugin.la",
+      "sources": [
+        "stream_out/es.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_gather",
+      "archive": "libstream_out_gather_plugin.la",
+      "sources": [
+        "stream_out/gather.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_hls",
+      "archive": "libstream_out_hls_plugin.la",
+      "sources": [
+        "stream_out/hls/hls.h",
+        "stream_out/hls/hls.c",
+        "stream_out/hls/variant_maps.h",
+        "stream_out/hls/variant_maps.c",
+        "stream_out/hls/storage.h",
+        "stream_out/hls/storage.c",
+        "stream_out/hls/segments.h",
+        "stream_out/hls/segments.c",
+        "stream_out/hls/codecs.h",
+        "stream_out/hls/codecs.c",
+        "stream_out/hls/subtitles_segmenter.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_hxxxhelper.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_mosaic_bridge",
+      "archive": "libstream_out_mosaic_bridge_plugin.la",
+      "sources": [
+        "stream_out/mosaic_bridge.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_record",
+      "archive": "libstream_out_record_plugin.la",
+      "sources": [
+        "stream_out/record.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_setid",
+      "archive": "libstream_out_setid_plugin.la",
+      "sources": [
+        "stream_out/setid.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_smem",
+      "archive": "libstream_out_smem_plugin.la",
+      "sources": [
+        "stream_out/smem.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_standard",
+      "archive": "libstream_out_standard_plugin.la",
+      "sources": [
+        "stream_out/standard.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_stats",
+      "archive": "libstream_out_stats_plugin.la",
+      "sources": [
+        "stream_out/stats.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_trace",
+      "archive": "libstream_out_trace_plugin.la",
+      "sources": [
+        "stream_out/trace.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_transcode",
+      "archive": "libstream_out_transcode_plugin.la",
+      "sources": [
+        "stream_out/transcode/transcode.c",
+        "stream_out/transcode/transcode.h",
+        "stream_out/transcode/encoder/encoder.c",
+        "stream_out/transcode/encoder/encoder.h",
+        "stream_out/transcode/encoder/encoder_priv.h",
+        "stream_out/transcode/encoder/audio.c",
+        "stream_out/transcode/encoder/spu.c",
+        "stream_out/transcode/encoder/video.c",
+        "stream_out/transcode/spu.c",
+        "stream_out/transcode/audio.c",
+        "stream_out/transcode/video.c",
+        "stream_out/transcode/pcr_sync.h",
+        "stream_out/transcode/pcr_sync.c",
+        "stream_out/transcode/pcr_helper.h",
+        "stream_out/transcode/pcr_helper.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "stream_out_udp",
+      "archive": "libstream_out_udp_plugin.la",
+      "sources": [
+        "stream_out/sdp_helper.c",
+        "stream_out/sdp_helper.h",
+        "stream_out/udp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "subsdec",
+      "archive": "libsubsdec_plugin.la",
+      "sources": [
+        "codec/subsdec.c",
+        "codec/substext.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "subsdelay",
+      "archive": "libsubsdelay_plugin.la",
+      "sources": [
+        "spu/subsdelay.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "substx3g",
+      "archive": "libsubstx3g_plugin.la",
+      "sources": [
+        "codec/substx3g.c",
+        "codec/substext.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "subsusf",
+      "archive": "libsubsusf_plugin.la",
+      "sources": [
+        "codec/subsusf.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "subtitle",
+      "archive": "libsubtitle_plugin.la",
+      "sources": [
+        "demux/subtitle.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "svcdsub",
+      "archive": "libsvcdsub_plugin.la",
+      "sources": [
+        "codec/svcdsub.c",
+        "demux/mpeg/timestamps.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "swscale",
+      "archive": "libswscale_plugin.la",
+      "sources": [
+        "video_chroma/swscale.c",
+        "codec/avcodec/chroma.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lswscale",
+        "-lm",
+        "-latomic",
+        "-lavutil",
+        "-lm",
+        "-lz",
+        "-latomic",
+        "-landroid",
+        "-lmediandk",
+        "-pthread",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "taglib",
+      "archive": "libtaglib_plugin.la",
+      "sources": [
+        "meta_engine/taglib.cpp",
+        "meta_engine/ID3Pictures.h"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ltag",
+        "-lz",
+        "-lz"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "tcp",
+      "archive": "libtcp_plugin.la",
+      "sources": [
+        "access/tcp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "telx",
+      "archive": "libtelx_plugin.la",
+      "sources": [
+        "codec/telx.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "textst",
+      "archive": "libtextst_plugin.la",
+      "sources": [
+        "codec/textst.c",
+        "demux/mpeg/timestamps.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "theora",
+      "archive": "libtheora_plugin.la",
+      "sources": [
+        "codec/theora.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ltheoraenc",
+        "-ltheoradec",
+        "-logg"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "timecode",
+      "archive": "libtimecode_plugin.la",
+      "sources": [
+        "access/timecode.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "tospdif",
+      "archive": "libtospdif_plugin.la",
+      "sources": [
+        "audio_filter/converter/tospdif.c",
+        "packetizer/a52.h",
+        "packetizer/dts_header.c",
+        "packetizer/dts_header.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "transform",
+      "archive": "libtransform_plugin.la",
+      "sources": [
+        "video_filter/transform.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "trivial_channel_mixer",
+      "archive": "libtrivial_channel_mixer_plugin.la",
+      "sources": [
+        "audio_filter/channel_mixer/trivial.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "ts",
+      "archive": "libts_plugin.la",
+      "sources": [
+        "demux/mpeg/ts.c",
+        "demux/mpeg/ts.h",
+        "demux/mpeg/ts_pid.h",
+        "demux/mpeg/ts_pid_fwd.h",
+        "demux/mpeg/ts_pid.c",
+        "demux/mpeg/ts_psi.h",
+        "demux/mpeg/ts_psi.c",
+        "demux/mpeg/ts_si.h",
+        "demux/mpeg/ts_si.c",
+        "demux/mpeg/ts_psip.h",
+        "demux/mpeg/ts_psip.c",
+        "demux/mpeg/ts_psip_dvbpsi_fixes.h",
+        "demux/mpeg/ts_psip_dvbpsi_fixes.c",
+        "demux/mpeg/ts_decoders.h",
+        "demux/mpeg/ts_decoders.c",
+        "demux/mpeg/ts_streams.h",
+        "demux/mpeg/ts_streams.c",
+        "demux/mpeg/ts_scte.h",
+        "demux/mpeg/ts_scte.c",
+        "demux/mpeg/sections.c",
+        "demux/mpeg/sections.h",
+        "demux/mpeg/mpeg4_iod.c",
+        "demux/mpeg/mpeg4_iod.h",
+        "demux/mpeg/ts_arib.c",
+        "demux/mpeg/ts_arib.h",
+        "demux/mpeg/ts_sl.c",
+        "demux/mpeg/ts_sl.h",
+        "demux/mpeg/ts_metadata.c",
+        "demux/mpeg/ts_metadata.h",
+        "demux/mpeg/ts_hotfixes.c",
+        "demux/mpeg/ts_hotfixes.h",
+        "demux/mpeg/ts_strings.h",
+        "demux/mpeg/ts_streams_private.h",
+        "demux/mpeg/ts_packet.h",
+        "demux/mpeg/ts_pes.c",
+        "demux/mpeg/ts_pes.h",
+        "demux/mpeg/ts_streamwrapper.h",
+        "demux/mpeg/pes.h",
+        "demux/mpeg/timestamps.h",
+        "demux/mpeg/ts_descriptions.h",
+        "demux/dvb-text.h",
+        "demux/opus.h",
+        "mux/mpeg/csa.c",
+        "mux/mpeg/dvbpsi_compat.h",
+        "mux/mpeg/streams.h",
+        "mux/mpeg/tables.c",
+        "mux/mpeg/tables.h",
+        "mux/mpeg/tsutil.c",
+        "mux/mpeg/tsutil.h",
+        "access/dtv/en50221_capmt.h",
+        "codec/jpeg2000.h",
+        "codec/scte18.h",
+        "codec/atsc_a65.c",
+        "codec/atsc_a65.h",
+        "codec/opus_header.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ldvbpsi"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "tta",
+      "archive": "libtta_plugin.la",
+      "sources": [
+        "demux/tta.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "ttml",
+      "archive": "libttml_plugin.la",
+      "sources": [
+        "codec/ttml/substtml.c",
+        "demux/ttml.c",
+        "codec/ttml/ttml.h",
+        "codec/ttml/ttml.c",
+        "codec/ttml/genttml.c",
+        "codec/ttml/imageupdater.h",
+        "codec/ttml/ttmlpes.h",
+        "codec/ttml/encttml.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "twolame",
+      "archive": "libtwolame_plugin.la",
+      "sources": [
+        "codec/twolame.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-ltwolame",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "ty",
+      "archive": "libty_plugin.la",
+      "sources": [
+        "demux/ty.c",
+        "codec/cc.h",
+        "demux/mpeg/pes.h",
+        "demux/mpeg/timestamps.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "udp",
+      "archive": "libudp_plugin.la",
+      "sources": [
+        "access/udp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "ugly_resampler",
+      "archive": "libugly_resampler_plugin.la",
+      "sources": [
+        "audio_filter/resampler/ugly.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "uleaddvaudio",
+      "archive": "libuleaddvaudio_plugin.la",
+      "sources": [
+        "codec/uleaddvaudio.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "upnp",
+      "archive": "libupnp_plugin.la",
+      "sources": [
+        "services_discovery/upnp.cpp",
+        "services_discovery/upnp.hpp",
+        "services_discovery/upnp-wrapper.hpp",
+        "services_discovery/upnp-wrapper.cpp",
+        "stream_out/renderer_common.hpp",
+        "stream_out/renderer_common.cpp",
+        "stream_out/dlna/profile_names.hpp",
+        "stream_out/dlna/dlna_common.hpp",
+        "stream_out/dlna/dlna.hpp",
+        "stream_out/dlna/dlna.cpp",
+        "control/upnp_server/cds/Object.hpp",
+        "control/upnp_server/cds/Container.hpp",
+        "control/upnp_server/cds/FixedContainer.cpp",
+        "control/upnp_server/cds/FixedContainer.hpp",
+        "control/upnp_server/cds/Item.cpp",
+        "control/upnp_server/cds/Item.hpp",
+        "control/upnp_server/cds/MLContainer.hpp",
+        "control/upnp_server/cds/MLFolderContainer.hpp",
+        "control/upnp_server/cds/cds.cpp",
+        "control/upnp_server/cds/cds.hpp",
+        "control/upnp_server/ml.hpp",
+        "control/upnp_server/xml_wrapper.hpp",
+        "control/upnp_server/upnp_server.hpp",
+        "control/upnp_server/utils.cpp",
+        "control/upnp_server/utils.hpp",
+        "control/upnp_server/FileHandler.cpp",
+        "control/upnp_server/FileHandler.hpp",
+        "control/upnp_server/upnp_server.cpp"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-pthread",
+        "-lupnp",
+        "-lixml"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vc1",
+      "archive": "libvc1_plugin.la",
+      "sources": [
+        "demux/vc1.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vdr",
+      "archive": "libvdr_plugin.la",
+      "sources": [
+        "access/vdr.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vgl",
+      "archive": "libvgl_plugin.la",
+      "sources": [
+        "video_output/vgl.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vhs",
+      "archive": "libvhs_plugin.la",
+      "sources": [
+        "video_filter/vhs.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "video_splitter",
+      "archive": "libvideo_splitter_plugin.la",
+      "sources": [
+        "video_output/splitter.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vmem",
+      "archive": "libvmem_plugin.la",
+      "sources": [
+        "video_output/vmem.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vobsub",
+      "archive": "libvobsub_plugin.la",
+      "sources": [
+        "demux/vobsub.c",
+        "demux/vobsub.h",
+        "demux/mpeg/ps.h",
+        "demux/mpeg/pes.h",
+        "demux/subtitle_helper.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "voc",
+      "archive": "libvoc_plugin.la",
+      "sources": [
+        "demux/voc.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vorbis",
+      "archive": "libvorbis_plugin.la",
+      "sources": [
+        "codec/vorbis.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lvorbisenc",
+        "-lvorbis",
+        "-lm",
+        "-logg"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vpx",
+      "archive": "libvpx_plugin.la",
+      "sources": [
+        "codec/vpx.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lvpx",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "vpx_alpha",
+      "archive": "libvpx_alpha_plugin.la",
+      "sources": [
+        "codec/vpx_alpha.c",
+        "codec/alpha_combine.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "wav",
+      "archive": "libwav_plugin.la",
+      "sources": [
+        "demux/wav.c",
+        "demux/windows_audio_commons.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "wave",
+      "archive": "libwave_plugin.la",
+      "sources": [
+        "video_filter/wave.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "webdav",
+      "archive": "libwebdav_plugin.la",
+      "sources": [
+        "access/webdav.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "libvlc_http.la"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "webvtt",
+      "archive": "libwebvtt_plugin.la",
+      "sources": [
+        "codec/webvtt/subsvtt.c",
+        "codec/webvtt/webvtt.c",
+        "codec/webvtt/webvtt.h",
+        "demux/webvtt.c",
+        "demux/mp4/minibox.h",
+        "codec/webvtt/encvtt.c",
+        "mux/webvtt.c",
+        "codec/webvtt/CSSGrammar.y",
+        "codec/webvtt/CSSLexer.l",
+        "codec/webvtt/css_parser.c",
+        "codec/webvtt/css_parser.h",
+        "codec/webvtt/css_style.c",
+        "codec/webvtt/css_style.h",
+        "codec/webvtt/css_bridge.h"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "wextern",
+      "archive": "libwextern_plugin.la",
+      "sources": [
+        "video_output/wextern.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "xa",
+      "archive": "libxa_plugin.la",
+      "sources": [
+        "demux/xa.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "xml",
+      "archive": "libxml_plugin.la",
+      "sources": [
+        "misc/xml/libxml.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lxml2",
+        "-pthread",
+        "-lm"
+      ],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "yuvp",
+      "archive": "libyuvp_plugin.la",
+      "sources": [
+        "video_chroma/yuvp.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "yuy2_i420",
+      "archive": "libyuy2_i420_plugin.la",
+      "sources": [
+        "video_chroma/yuy2_i420.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "yuy2_i422",
+      "archive": "libyuy2_i422_plugin.la",
+      "sources": [
+        "video_chroma/yuy2_i422.c"
+      ],
+      "generated_sources": [],
+      "libadd": [],
+      "gpl_primary_source_hits": []
+    },
+    {
+      "name": "zvbi",
+      "archive": "libzvbi_plugin.la",
+      "sources": [
+        "codec/zvbi.c"
+      ],
+      "generated_sources": [],
+      "libadd": [
+        "-L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib",
+        "-lzvbi",
+        "-lm",
+        "-lpng",
+        "-lz",
+        "-lm",
+        "-liconv"
+      ],
+      "gpl_primary_source_hits": []
+    }
+  ],
+  "scope": "Primary-grant audit of declared selected module source files. Contrib configure flags and linked dependencies require the accompanying build provenance. Device playback is tested separately."
+}

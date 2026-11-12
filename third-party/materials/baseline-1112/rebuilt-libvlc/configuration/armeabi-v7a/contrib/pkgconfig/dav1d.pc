@@ -1,0 +1,9 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libdav1d
+Description: AV1 decoding library
+Version: 1.5.3
+Libs: -L${libdir} -ldav1d -pthread
+Cflags: -I${includedir} -pthread

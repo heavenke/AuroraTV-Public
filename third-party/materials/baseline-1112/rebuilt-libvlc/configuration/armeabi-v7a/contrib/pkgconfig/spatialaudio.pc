@@ -1,0 +1,9 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libspatialaudio
+Description: Spatial audio rendering library
+Version: 0.3.0
+Libs: -L${libdir} -lspatialaudio -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib -lmysofa -lm -lz
+Cflags: -I${includedir} -I/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include

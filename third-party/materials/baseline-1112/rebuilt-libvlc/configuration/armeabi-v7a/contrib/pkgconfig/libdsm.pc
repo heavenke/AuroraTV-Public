@@ -1,0 +1,10 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libdsm
+Description: Minimalist and read-only smb client library
+Version: 0.4.3
+Requires: libtasn1
+Libs: -L${libdir} -ldsm -pthread -liconv -llog
+Cflags: -I${includedir} -pthread

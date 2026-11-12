@@ -1,0 +1,14 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+exec_prefix=${prefix}
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/include
+
+Name: libaribcaption
+Description: Portable ARIB STD-B24 Caption Decoder/Renderer
+URL: https://github.com/xqq/libaribcaption
+Version: 1.1.1
+Requires: freetype2
+Requires.private:
+Cflags: -I${includedir}
+Libs: -L${libdir} -laribcaption -lm -lunwind -ldl -lc -lunwind -ldl -lfreetype
+Libs.private:

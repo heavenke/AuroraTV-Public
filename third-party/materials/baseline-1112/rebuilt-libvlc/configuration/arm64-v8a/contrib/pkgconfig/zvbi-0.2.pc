@@ -1,0 +1,11 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android
+exec_prefix=${prefix}
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/aarch64-linux-android/include
+
+Name: ZVBI 
+Description: VBI Capturing and Decoding Library
+Requires: 
+Version: 0.2.35
+Libs: -L${libdir} -lzvbi -lm  -lpng -lz  -lm -liconv
+Cflags: -I${includedir}

@@ -1,0 +1,6 @@
+Name: soxr
+Description: High quality, one-dimensional sample-rate conversion library
+Version: 0.1.3
+Libs:  -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib -lsoxr  -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib -lavcodec -pthread -lm -latomic -lgsm -lmp3lame -lm -lopenjp2 -lm -pthread -lz -lavutil -lm -lz -latomic -landroid -lmediandk -pthread -L/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib -lavutil -lm -lz -latomic -landroid -lmediandk -pthread
+Cflags:  -I/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include 
+Requires:  

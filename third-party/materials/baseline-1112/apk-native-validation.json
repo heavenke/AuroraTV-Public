@@ -1,0 +1,65 @@
+{
+  "apk_sha256": "0b074445464b9b997b7f50d55652d099ed8e5a56d82bc531cbf102ca8cf6ab9c",
+  "libraries": [
+    {
+      "native": "lib/arm64-v8a/libc++_shared.so",
+      "sha256": "0c52cfab2df0d957d8b346a2bdc5ae8d71feca2591924d77e1cd724d5bf74352",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/arm64-v8a/libijkffmpeg.so",
+      "sha256": "526b247dd1857c4df5c2b236e2c3ab6f9d64a9498b46b582d0fad5de32c42514",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/arm64-v8a/libijkplayer.so",
+      "sha256": "16a2954c81affb9b058dec54466dd4d17e1b08adf92d817feb1138403d9f51dd",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/arm64-v8a/libijksdl.so",
+      "sha256": "7b0818ce97da420c387780dfc2fcb7c91983efd97ec9eba0c0c838d41b041075",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/arm64-v8a/libvlc.so",
+      "sha256": "b7586ef7f9903c7f2da98385641c740c99aaf14b48541c3d12a6c53b1cd9c05c",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/arm64-v8a/libvlcjni.so",
+      "sha256": "bd032e15dc413276273f52668b4d013b83b5ade53ebee5e2529c3c6f85563338",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/armeabi-v7a/libc++_shared.so",
+      "sha256": "7ce65fd0fdd49236bc2ee618f6968dbb3fca46434845f563f2bb4c994878853e",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/armeabi-v7a/libijkffmpeg.so",
+      "sha256": "240bad545d3120877c07bea8d56878616ad9f62568368395d9f6ed8c50a20260",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/armeabi-v7a/libijkplayer.so",
+      "sha256": "59d4e9bd8684fc61e1d7593eaac294d940f9ab55ae8abcd3937457f49258c81b",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/armeabi-v7a/libijksdl.so",
+      "sha256": "7e3617ec82453a08f266e1a08f46021140d78d684fb15623e771dbd68a62f0cb",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/armeabi-v7a/libvlc.so",
+      "sha256": "9f095838467be01bc8414d1017a659101d6e86f6c05cf879c7771a709879ff36",
+      "matches_maven_original": true
+    },
+    {
+      "native": "lib/armeabi-v7a/libvlcjni.so",
+      "sha256": "307dc8c68b351e50a1117a4fb7995c2092ca5b11f1224f57539457597b064138",
+      "matches_maven_original": true
+    }
+  ]
+}

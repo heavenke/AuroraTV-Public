@@ -1,0 +1,17 @@
+{
+  "ndk_release": "r28c",
+  "ndk_revision": "28.2.13676358",
+  "archive_url": "https://dl.google.com/android/repository/android-ndk-r28c-linux.zip",
+  "archive_bytes": 722261334,
+  "archive_sha1": "a7b54a5de87fecd125a17d54f73c446199e72a64",
+  "archive_sha256": "dfb20d396df28ca02a8c708314b814a4d961dc9074f9a161932746f815aa552f",
+  "clang": "Android 13624864 r530567e 19.0.1",
+  "llvm_revision": "97a699bf4812a18fb657c2779f5296a4ab2694d2",
+  "libcxx_header_version": 190000,
+  "api": 21,
+  "abis": ["arm64-v8a", "armeabi-v7a"],
+  "host": "Ubuntu 20.04 WSL1 x86_64",
+  "host_workaround": "Original BOLT clang runs through the system Linux dynamic loader with host-only readlink shim so its spawned cc1 resolves the overlay driver. Original compiler bytes are unchanged. Shim is not linked into Android binaries.",
+  "compiler_version_file": "ndk-clang-version.txt",
+  "compiler_source_metadata_file": "ndk-clang_source_info.md"
+}

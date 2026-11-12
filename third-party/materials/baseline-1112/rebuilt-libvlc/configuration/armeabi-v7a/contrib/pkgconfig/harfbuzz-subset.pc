@@ -1,0 +1,10 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: harfbuzz-subset
+Description: HarfBuzz font subsetter
+Version: 11.5.0
+Requires: harfbuzz =  11.5.0
+Libs: -L${libdir} -lharfbuzz-subset -lm
+Cflags: -I${includedir}/harfbuzz

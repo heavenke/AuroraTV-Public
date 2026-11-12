@@ -1,0 +1,10 @@
+Name: libmysofa
+Description: SOFA file reader for better HRTFs
+Version: 1.1
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+
+#Requires.private:
+Libs:  -L${libdir} -lmysofa  -lz -lm 
+Cflags:  -I${includedir} 
+Requires:   

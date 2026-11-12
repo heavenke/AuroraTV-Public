@@ -1,0 +1,11 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libarchive
+Description: library that can create and read several streaming archive formats
+Version: 3.8.7
+Libs:  -L${libdir} -larchive   -lz
+Cflags:  -I${includedir}  -DLIBARCHIVE_STATIC
+Requires:   

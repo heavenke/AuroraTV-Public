@@ -1,0 +1,12 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fluidlite
+Description: Software SoundFont Synthesizer
+URL: https://github.com/divideconcept/FluidLite
+Version: 1.2.2
+Libs:  -L${libdir} -lfluidlite  -lm
+Cflags:  -I${includedir}  -DFLUIDLITE_STATIC
+Requires:   vorbisfile

@@ -1,0 +1,1874 @@
+{
+  "vlc_commit": "c84ef1eda4f14f8b57a5b266b51c843cf51ed28b",
+  "note": "All recipes in the pinned upstream tree, not an assertion that every package is enabled in the AAR",
+  "packages": {
+    "amf": {
+      "sha512sums": [
+        "37d618c846bd2ba77ee282ac152fc5f807631007fca8156fca7e541ad1d1cb23786794aaad1ee3d3eb30b2011c4336bec9011031202c3238d91fe48d1e92f97b  AMF-1.5.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/amf/rules.mak",
+      "source_expressions": [
+        "AMF_VERSION := 1.5.0",
+        "AMF_URL := $(GITHUB)/GPUOpen-LibrariesAndSDKs/AMF/releases/download/v$(AMF_VERSION)/AMF-headers-v$(AMF_VERSION).tar.gz",
+        "AMF_GITURL := $(GITHUB)/GPUOpen-LibrariesAndSDKs/AMF.git",
+        "AMF_BRANCH := v$(AMF_VERSION)",
+        "$(TARBALLS)/AMF-$(AMF_VERSION).tar.gz:",
+        "\t$(call download,$(AMF_URL))",
+        ".sum-amf: AMF-$(AMF_VERSION).tar.gz",
+        "\tcd \"$(@:.tar.xz=)\" && git clone -n --depth=1 --filter=blob:none --no-checkout --branch $(AMF_BRANCH) $(AMF_GITURL) \"$(notdir $(@:.tar.xz=))\"",
+        "amf: UNPACK_DIR=amf-headers-v$(AMF_VERSION)",
+        "amf: AMF-$(AMF_VERSION).tar.gz .sum-amf"
+      ]
+    },
+    "aom": {
+      "sha512sums": [
+        "a4c3427db0bb4cd49b8873ffae0a287570b86d6f0733da52798b08470519755ffe08198222be86d3bc8c9bd0052477017dc595b98bbbd77f76bfe7b9ce48d7fa  libaom-3.14.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/aom/rules.mak",
+      "source_expressions": [
+        "AOM_VERSION := 3.14.1",
+        "AOM_URL := https://storage.googleapis.com/aom-releases/libaom-$(AOM_VERSION).tar.gz",
+        "$(TARBALLS)/libaom-$(AOM_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(AOM_URL),aom)",
+        ".sum-aom: libaom-$(AOM_VERSION).tar.gz",
+        "aom: libaom-$(AOM_VERSION).tar.gz .sum-aom"
+      ]
+    },
+    "aribb24": {
+      "sha512sums": [
+        "622cc0c3928fd6db0b5ab3921f27348c956af20f8c0133ad5d9bf4de3d199077d9f23cc86ae149a9f0d13c7ee5906ec95de3fb8388207160cebd1f0c59078c8f  aribb24-1.0.3.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/aribb24/rules.mak",
+      "source_expressions": [
+        "ARIBB24_VERSION := 1.0.3",
+        "ARIBB24_URL := $(GITHUB)/nkoriyama/aribb24/archive/v$(ARIBB24_VERSION).tar.gz",
+        "$(TARBALLS)/aribb24-$(ARIBB24_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(ARIBB24_URL),aribb24)",
+        ".sum-aribb24: aribb24-$(ARIBB24_VERSION).tar.gz",
+        "aribb24: aribb24-$(ARIBB24_VERSION).tar.gz .sum-aribb24"
+      ]
+    },
+    "aribb25": {
+      "sha512sums": [
+        "24eda8c610bb8775847420023d2a35135fbcd03296cb69c80b1f8745bb6c1ee5f33199ed980d86e6c9f26a6ca3a2029b16ca2c6ab36fdbfd91a3f69cca5f3dad  aribb25-0.2.7.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/aribb25/rules.mak",
+      "source_expressions": [
+        "ARIBB25_VERSION := 0.2.7",
+        "ARIBB25_URL := $(VIDEOLAN)/aribb25/$(ARIBB25_VERSION)/aribb25-$(ARIBB25_VERSION).tar.gz",
+        "$(TARBALLS)/aribb25-$(ARIBB25_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(ARIBB25_URL),aribb25)",
+        ".sum-aribb25: aribb25-$(ARIBB25_VERSION).tar.gz",
+        "aribb25: aribb25-$(ARIBB25_VERSION).tar.gz .sum-aribb25"
+      ]
+    },
+    "asdcplib": {
+      "sha512sums": [
+        "aa98f3a3dfc2d19e9dbe7aaeb487201a09ec658a9cd1a48f88443993a69f6951a43ca4788ef52120ce8604aa72e8f134af6a9656106a64a8b660baa5c4a79a1f  asdcplib-rel_2_13_2.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/asdcplib/rules.mak",
+      "source_expressions": [
+        "ASDCPLIB_VERSION := 2_13_2",
+        "ASDCPLIB_URL := $(GITHUB)/cinecert/asdcplib/archive/refs/tags/rel_$(ASDCPLIB_VERSION).tar.gz",
+        "$(TARBALLS)/asdcplib-rel_$(ASDCPLIB_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(ASDCPLIB_URL),asdcplib)",
+        ".sum-asdcplib: asdcplib-rel_$(ASDCPLIB_VERSION).tar.gz",
+        "asdcplib: asdcplib-rel_$(ASDCPLIB_VERSION).tar.gz .sum-asdcplib"
+      ]
+    },
+    "ass": {
+      "sha512sums": [
+        "d368144c19384957e77174748d7cc5d08a978a87daa3b4e944fc50614c6583bb585c90365d0593ed40cfc486e07cdc4cefed5aeabea9883b084879207c16043a  libass-0.17.4.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/ass/rules.mak",
+      "source_expressions": [
+        "ASS_VERSION := 0.17.4",
+        "ASS_URL := $(GITHUB)/libass/libass/releases/download/$(ASS_VERSION)/libass-$(ASS_VERSION).tar.gz",
+        "$(TARBALLS)/libass-$(ASS_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(ASS_URL),ass)",
+        ".sum-ass: libass-$(ASS_VERSION).tar.gz",
+        "libass: libass-$(ASS_VERSION).tar.gz .sum-ass"
+      ]
+    },
+    "basu": {
+      "sha512sums": [
+        "b8017bbfdb5b408bd380e3b1cb1443321863ed8c9487ab0c8c80860c2ffb0c0403c81daf7e87f815027e9a826d08aa82a54c496bc87527209933e0d007b0c9ea  basu-0.2.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/basu/rules.mak",
+      "source_expressions": [
+        "BASU_VERSION := 0.2.1",
+        "BASU_URL := https://git.sr.ht/~emersion/basu/refs/download/v$(BASU_VERSION)/basu-$(BASU_VERSION).tar.gz",
+        "$(TARBALLS)/basu-$(BASU_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(BASU_URL),basu)",
+        ".sum-basu: basu-$(BASU_VERSION).tar.gz",
+        "basu: basu-$(BASU_VERSION).tar.gz .sum-basu"
+      ]
+    },
+    "bluray": {
+      "sha512sums": [
+        "7284169b32624e5ca4fd71b260a4cc2921efafb1f63143a562568be45e373bfcbfeac63895d5659ccdcb11d7dbd0236cc46ccb15c12eff855703010e46991f27  libbluray-1.4.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/bluray/rules.mak",
+      "source_expressions": [
+        "BLURAY_VERSION := 1.4.0",
+        "BLURAY_URL := $(VIDEOLAN)/libbluray/$(BLURAY_VERSION)/libbluray-$(BLURAY_VERSION).tar.xz",
+        "$(TARBALLS)/libbluray-$(BLURAY_VERSION).tar.xz:",
+        "\t$(call download,$(BLURAY_URL))",
+        ".sum-bluray: libbluray-$(BLURAY_VERSION).tar.xz",
+        "bluray: libbluray-$(BLURAY_VERSION).tar.xz .sum-bluray"
+      ]
+    },
+    "bpg": {
+      "sha512sums": [
+        "2d5f7a035033d8b969c2765a4f1368e1a2c8c5ace12aec5d449ca5cc4ef5eb89431a75f2d6d03fd7117b548801b5554503411f499f497da69ff33ca6e714553d  libbpg-0.9.8.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/bpg/rules.mak",
+      "source_expressions": [
+        "BPG_VERSION := 0.9.8",
+        "BPG_URL := https://bellard.org/bpg/libbpg-$(BPG_VERSION).tar.gz",
+        "$(TARBALLS)/libbpg-$(BPG_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(BPG_URL),bpg)",
+        ".sum-bpg: libbpg-$(BPG_VERSION).tar.gz",
+        "bpg: libbpg-$(BPG_VERSION).tar.gz .sum-bpg"
+      ]
+    },
+    "breakpad": {
+      "sha512sums": [
+        "63b4e963d46eaf1ca3e4d0a93f5e02282992b48a730da613e987fcbd3d0135f8cfea32a52014e4e0e76ddabe1879950e110b4067b49e46f6fd739cbc7f461e0e  breakpad-0.1.3.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/breakpad/rules.mak",
+      "source_expressions": [
+        "BREAKPAD_VERSION := 0.1.3",
+        "BREAKPAD_URL := $(CONTRIB_VIDEOLAN)/breakpad/breakpad-$(BREAKPAD_VERSION).tar.gz",
+        "$(TARBALLS)/breakpad-$(BREAKPAD_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(BREAKPAD_URL),breakpad)",
+        ".sum-breakpad: breakpad-$(BREAKPAD_VERSION).tar.gz",
+        "breakpad: breakpad-$(BREAKPAD_VERSION).tar.gz .sum-breakpad"
+      ]
+    },
+    "caca": {
+      "sha512sums": [
+        "ab03e6c7d17fd152b2d5e9161799531f5e87322e174cb9d25874700f5bc1acfaf8bc2736e733998dad906f793c5a0304740dd39eec04a5e4c3d181bb109b4f23  libcaca-0.99.beta20.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/caca/rules.mak",
+      "source_expressions": [
+        "CACA_VERSION := 0.99.beta20",
+        "CACA_URL := $(GITHUB)/cacalabs/libcaca/releases/download/v$(CACA_VERSION)/libcaca-$(CACA_VERSION).tar.gz",
+        "$(TARBALLS)/libcaca-$(CACA_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(CACA_URL),caca)",
+        ".sum-caca: libcaca-$(CACA_VERSION).tar.gz",
+        "caca: libcaca-$(CACA_VERSION).tar.gz .sum-caca"
+      ]
+    },
+    "cargo-c": {
+      "recipe_source_path": "contrib/src/cargo-c/rules.mak",
+      "source_expressions": [
+        "CARGOC_VERSION := 0.10.9",
+        "\t\t$(CARGO_NATIVE) install --target=$(RUST_HOST) --locked $(CARGOC_FEATURES) cargo-c --version $(CARGOC_VERSION)"
+      ]
+    },
+    "chromaprint": {
+      "sha512sums": [
+        "517936826be34f492a63677b0f009985a802432ed906d08f9e6d48ef6fc67744a8f8bef579407eecc49d1948430442b7505445e8674389c17bb9e18ac1d259cf  chromaprint-1.6.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/chromaprint/rules.mak",
+      "source_expressions": [
+        "CHROMAPRINT_VERSION := 1.6.0",
+        "CHROMAPRINT_URL := $(GITHUB)/acoustid/chromaprint/releases/download/v$(CHROMAPRINT_VERSION)/chromaprint-$(CHROMAPRINT_VERSION).tar.gz",
+        "$(TARBALLS)/chromaprint-$(CHROMAPRINT_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(CHROMAPRINT_URL),chromaprint)",
+        ".sum-chromaprint: chromaprint-$(CHROMAPRINT_VERSION).tar.gz",
+        "chromaprint: chromaprint-$(CHROMAPRINT_VERSION).tar.gz .sum-chromaprint"
+      ]
+    },
+    "daala": {
+      "recipe_source_path": "contrib/src/daala/rules.mak",
+      "source_expressions": [
+        "DAALA_VERSION := e248823a04292a8c2f56aa260f5c0b369d41d64e",
+        "DAALA_GITURL := https://gitlab.xiph.org/xiph/daala.git",
+        "$(TARBALLS)/daala-$(DAALA_VERSION).tar.xz:",
+        "\t$(call download_git,$(DAALA_GITURL),,$(DAALA_VERSION))",
+        ".sum-daala: daala-$(DAALA_VERSION).tar.xz",
+        "\t$(call check_githash,$(DAALA_VERSION))",
+        "daala: daala-$(DAALA_VERSION).tar.xz .sum-daala"
+      ]
+    },
+    "dav1d": {
+      "sha512sums": [
+        "3d6a1a67a3c7d171747fd244566b23c66c174c4aad1964fef95367b2b33a187abb544e83dccc27d9cda409c8156b7c44a8bf33af810e8fa79d08cb5f3796fa54  dav1d-1.5.3.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/dav1d/rules.mak",
+      "source_expressions": [
+        "DAV1D_VERSION := 1.5.3",
+        "DAV1D_URL := $(VIDEOLAN)/dav1d/$(DAV1D_VERSION)/dav1d-$(DAV1D_VERSION).tar.xz",
+        "$(TARBALLS)/dav1d-$(DAV1D_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(DAV1D_URL),dav1d)",
+        ".sum-dav1d: dav1d-$(DAV1D_VERSION).tar.xz",
+        "dav1d: dav1d-$(DAV1D_VERSION).tar.xz .sum-dav1d"
+      ]
+    },
+    "decklink": {
+      "recipe_source_path": "contrib/src/decklink/rules.mak",
+      "source_expressions": [
+        "DECKLINK_VERSION := 1977bf76bb5bde80d171373cf8d80dd01161679b",
+        "DECKLINK_GITURL := https://gitlab.com/robUx4/decklink-oss.git",
+        "$(TARBALLS)/decklink-$(DECKLINK_VERSION).tar.xz:",
+        "\t$(call download_git,$(DECKLINK_GITURL),,$(DECKLINK_VERSION))",
+        ".sum-decklink: $(TARBALLS)/decklink-$(DECKLINK_VERSION).tar.xz",
+        "\t$(call check_githash,$(DECKLINK_VERSION))",
+        "decklink: decklink-$(DECKLINK_VERSION).tar.xz .sum-decklink"
+      ]
+    },
+    "dvbcsa": {
+      "sha512sums": [
+        "f336bc90711261bb86bb42f897d5207a71da5a384bfb7d641de7e1fb3a43d20aeec250e9a5ceaf0b20f1e4335ccda70055675256c6889873bf1bfff55005a015  libdvbcsa-1.1.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/dvbcsa/rules.mak",
+      "source_expressions": [
+        "DVBCSA_VERSION := 1.1.0",
+        "DVBCSA_URL := $(VIDEOLAN)/libdvbcsa/$(DVBCSA_VERSION)/libdvbcsa-$(DVBCSA_VERSION).tar.gz",
+        "$(TARBALLS)/libdvbcsa-$(DVBCSA_VERSION).tar.gz:",
+        "\t$(call download,$(DVBCSA_URL))",
+        ".sum-dvbcsa: libdvbcsa-$(DVBCSA_VERSION).tar.gz",
+        "libdvbcsa: libdvbcsa-$(DVBCSA_VERSION).tar.gz .sum-dvbcsa"
+      ]
+    },
+    "dvbpsi": {
+      "sha512sums": [
+        "70f9e783a947e026ea50afe98ad2b3bfce075bd8d76932f73a6253b077a3a180aa632e9a1fff20308e2f0f3f881d727b4e4aad9b8da2b384edf9a3a0f9eacc69  libdvbpsi-1.3.3.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/dvbpsi/rules.mak",
+      "source_expressions": [
+        "DVBPSI_VERSION := 1.3.3",
+        "DVBPSI_URL := $(VIDEOLAN)/libdvbpsi/$(DVBPSI_VERSION)/libdvbpsi-$(DVBPSI_VERSION).tar.bz2",
+        "$(TARBALLS)/libdvbpsi-$(DVBPSI_VERSION).tar.bz2:",
+        "\t$(call download,$(DVBPSI_URL))",
+        ".sum-dvbpsi: libdvbpsi-$(DVBPSI_VERSION).tar.bz2",
+        "libdvbpsi: libdvbpsi-$(DVBPSI_VERSION).tar.bz2 .sum-dvbpsi"
+      ]
+    },
+    "dvdcss": {
+      "sha512sums": [
+        "439fbd9dae60b9a114d3429a19703478c734e8525ac6852da6f05f72d9ca44ca0ac5e874ab6a10017e7f31869fcd29f01d1bc156c4f0331b4e4abd98ec2f95cd  libdvdcss-1.5.0.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/dvdcss/rules.mak",
+      "source_expressions": [
+        "DVDCSS_VERSION := 1.5.0",
+        "DVDCSS_URL := $(VIDEOLAN_GIT)/videolan/libdvdcss/-/archive/$(DVDCSS_VERSION)/libdvdcss-$(DVDCSS_VERSION).tar.bz2",
+        "LIBDVDCSS_GITURL:=$(VIDEOLAN_GIT)/videolan/libdvdcss.git",
+        "# \t$(call download_git,$(LIBDVDCSS_GITURL),$(LIBDVDCSS_BRANCH),$(LIBDVDCSS_GITVERSION))",
+        "$(TARBALLS)/libdvdcss-$(DVDCSS_VERSION).tar.bz2:",
+        "\t$(call download,$(DVDCSS_URL))",
+        ".sum-dvdcss: libdvdcss-$(DVDCSS_VERSION).tar.bz2",
+        "dvdcss: libdvdcss-$(DVDCSS_VERSION).tar.bz2 .sum-dvdcss"
+      ]
+    },
+    "dvdnav": {
+      "sha512sums": [
+        "4df6336050f3b79ca2edafac28dd0383b950272ba6d8ebe6e43a85eddc737ce740d72a3fc1fa03c26fc5f285125e3672a022555a5399259386b2036c467a47f3  libdvdnav-7.0.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/dvdnav/rules.mak",
+      "source_expressions": [
+        "LIBDVDNAV_VERSION := 7.0.0",
+        "LIBDVDNAV_URL := $(VIDEOLAN)/libdvdnav/$(LIBDVDNAV_VERSION)/libdvdnav-$(LIBDVDNAV_VERSION).tar.xz",
+        "$(TARBALLS)/libdvdnav-$(LIBDVDNAV_VERSION).tar.xz:",
+        "\t$(call download,$(LIBDVDNAV_URL))",
+        ".sum-dvdnav: libdvdnav-$(LIBDVDNAV_VERSION).tar.xz",
+        "dvdnav: libdvdnav-$(LIBDVDNAV_VERSION).tar.xz .sum-dvdnav"
+      ]
+    },
+    "dvdread": {
+      "sha512sums": [
+        "03e7376327ba211fcc51ee4e4705b1cc7649c613a96e186eb62821b57a11a519c46720e33cf3351cd95fa02db200e40d3b1b9f7e4fe5a3003853fc40c5f511f0  libdvdread-7.0.1.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/dvdread/rules.mak",
+      "source_expressions": [
+        "LIBDVDREAD_VERSION := 7.0.1",
+        "LIBDVDREAD_URL := $(VIDEOLAN)/libdvdread/$(LIBDVDREAD_VERSION)/libdvdread-$(LIBDVDREAD_VERSION).tar.xz",
+        "LIBDVDREAD_GITURL:=$(VIDEOLAN_GIT)/videolan/libdvdread.git",
+        "# \t$(call download_git,$(LIBDVDREAD_GITURL),$(LIBDVDREAD_BRANCH),$(LIBDVDREAD_GITVERSION))",
+        "$(TARBALLS)/libdvdread-$(LIBDVDREAD_VERSION).tar.xz:",
+        "\t$(call download,$(LIBDVDREAD_URL))",
+        ".sum-dvdread: libdvdread-$(LIBDVDREAD_VERSION).tar.xz",
+        "dvdread: libdvdread-$(LIBDVDREAD_VERSION).tar.xz .sum-dvdread"
+      ]
+    },
+    "ebml": {
+      "sha512sums": [
+        "6ee2afd538de8b028a1acd4a0f00a8aa230deac297573d868683e96f22fa4953858d3a1d8ab414ac27757f35699e6149f0aaef6eb4d235baa79226d8f36ccb5c  libebml-1.4.5.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/ebml/rules.mak",
+      "source_expressions": [
+        "EBML_VERSION := 1.4.5",
+        "EBML_URL := https://dl.matroska.org/downloads/libebml/libebml-$(EBML_VERSION).tar.xz",
+        "$(TARBALLS)/libebml-$(EBML_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(EBML_URL),ebml)",
+        ".sum-ebml: libebml-$(EBML_VERSION).tar.xz",
+        "ebml: libebml-$(EBML_VERSION).tar.xz .sum-ebml",
+        "\t$(HOSTVARS_CMAKE) $(CMAKE) -DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ]
+    },
+    "faad2": {
+      "sha512sums": [
+        "fd140c0f4e7946e95a49a8652e26f33b138fc3375da34d5e3a55cdde8a74be429eb6fe0180bd434841022cee3c2ec65fe40dda7440fe0dd2761622174f992490  faad2-2.11.2.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/faad2/rules.mak",
+      "source_expressions": [
+        "FAAD2_VERSION := 2.11.2",
+        "FAAD2_URL := $(GITHUB)/knik0/faad2/archive/refs/tags/$(FAAD2_VERSION).tar.gz",
+        "$(TARBALLS)/faad2-$(FAAD2_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(FAAD2_URL),faad2)",
+        ".sum-faad2: faad2-$(FAAD2_VERSION).tar.gz",
+        "faad2: faad2-$(FAAD2_VERSION).tar.gz .sum-faad2"
+      ]
+    },
+    "ffi": {
+      "sha512sums": [
+        "fc47f5d25197c631754efe05a349edb556d072807ecef19b41f17c1a8f39c95221be64926fbd05b1f8439181df1ddff8fc01462ce3a26005b75159ddc27e6f6a  libffi-3.0.13.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/ffi/rules.mak",
+      "source_expressions": [
+        "FFI_VERSION := 3.0.13",
+        "FFI_URL := https://www.sourceware.org/pub/libffi/libffi-$(FFI_VERSION).tar.gz",
+        "$(TARBALLS)/libffi-$(FFI_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(FFI_URL),ffi)",
+        ".sum-ffi: libffi-$(FFI_VERSION).tar.gz",
+        "ffi: libffi-$(FFI_VERSION).tar.gz .sum-ffi"
+      ]
+    },
+    "ffmpeg": {
+      "sha512sums": [
+        "9deb30b93c27873564ec094693e72ff552f63a09af3175f9118672b88299a4e9495502aa0fb2dfbcd45857ba255f24b829bdd3c3c17d0f1eee75423302a9af8c  ffmpeg-8.1.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/ffmpeg/rules.mak",
+      "source_expressions": [
+        "FFMPEG_HASH=ec47a3b95f88fc3f820b900038ac439e4eb3fede",
+        "# FFMPEG_VERSION := $(FFMPEG_MAJVERSION).$(FFMPEG_REVISION)",
+        "FFMPEG_VERSION := $(FFMPEG_MAJVERSION)",
+        "FFMPEG_URL := https://ffmpeg.org/releases/ffmpeg-$(FFMPEG_VERSION).tar.xz",
+        "FFMPEG_GITURL := https://code.ffmpeg.org/FFmpeg/FFmpeg.git",
+        "FFMPEG_BASENAME := $(subst .,_,$(subst \\,_,$(subst /,_,$(FFMPEG_HASH))))",
+        "\t$(call download_git,$(FFMPEG_GITURL),$(FFMPEG_BRANCH),$(FFMPEG_HASH))",
+        "# \t$(call check_githash,$(FFMPEG_HASH))",
+        "$(TARBALLS)/ffmpeg-$(FFMPEG_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(FFMPEG_URL),ffmpeg)",
+        ".sum-ffmpeg: ffmpeg-$(FFMPEG_VERSION).tar.xz",
+        "ffmpeg: ffmpeg-$(FFMPEG_VERSION).tar.xz .sum-ffmpeg"
+      ]
+    },
+    "flac": {
+      "sha512sums": [
+        "34c9193b804e990b0828a5759e4d7ef1d1859174262d3b305d03e65285edb35c7f429e8071d9dd2c6da0c16e842b40b439bf215704636ae15dd5886151f0d17a  flac-1.5.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/flac/rules.mak",
+      "source_expressions": [
+        "FLAC_VERSION := 1.5.0",
+        "FLAC_URL := $(GITHUB)/xiph/flac/releases/download/$(FLAC_VERSION)/flac-$(FLAC_VERSION).tar.xz",
+        "$(TARBALLS)/flac-$(FLAC_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(FLAC_URL),flac)",
+        ".sum-flac: flac-$(FLAC_VERSION).tar.xz",
+        "flac: flac-$(FLAC_VERSION).tar.xz .sum-flac"
+      ]
+    },
+    "fluid": {
+      "sha512sums": [
+        "621a54f7d9845a9350381e9aa99f342b28050e1dd80983e69828acc685ace39ee5376f8e40d7a93ddb247718e4bcfb3f196cbd4027343251f8c0fbe3c0d219ed  fluidsynth-2.3.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/fluid/rules.mak",
+      "source_expressions": [
+        "FLUID_VERSION := 2.3.0",
+        "FLUID_URL := $(GITHUB)/FluidSynth/fluidsynth/archive/refs/tags/v$(FLUID_VERSION).tar.gz",
+        "$(TARBALLS)/fluidsynth-$(FLUID_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(FLUID_URL),fluid)",
+        ".sum-fluid: fluidsynth-$(FLUID_VERSION).tar.gz",
+        "fluidsynth: fluidsynth-$(FLUID_VERSION).tar.gz .sum-fluid"
+      ]
+    },
+    "fluidlite": {
+      "recipe_source_path": "contrib/src/fluidlite/rules.mak",
+      "source_expressions": [
+        "FLUID_GITURL := $(GITHUB)/divideconcept/FluidLite.git",
+        "FLUID_HASH := b0f187b404e393ee0a495b277154d55d7d03cbeb",
+        "$(TARBALLS)/fluidlite-$(FLUID_HASH).tar.xz:",
+        "\t$(call download_git,$(FLUID_GITURL),,$(FLUID_HASH))",
+        ".sum-fluidlite: fluidlite-$(FLUID_HASH).tar.xz",
+        "\t$(call check_githash,$(FLUID_HASH))",
+        "fluidlite: fluidlite-$(FLUID_HASH).tar.xz .sum-fluidlite"
+      ]
+    },
+    "fontconfig": {
+      "sha512sums": [
+        "73287cc3f8f8261a27c2920b0f9430dd6e3ac8733fb2ba55e1b5934cee211023b6415e1d14ddad04ef3c7819727ed34d80aa503d2734bdfc2f1c733c4096463f  fontconfig-2.14.2.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/fontconfig/rules.mak",
+      "source_expressions": [
+        "FONTCONFIG_VERSION := 2.14.2",
+        "FONTCONFIG_URL := https://www.freedesktop.org/software/fontconfig/release/fontconfig-$(FONTCONFIG_VERSION).tar.gz",
+        "$(TARBALLS)/fontconfig-$(FONTCONFIG_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(FONTCONFIG_URL),fontconfig)",
+        ".sum-fontconfig: fontconfig-$(FONTCONFIG_VERSION).tar.gz",
+        "fontconfig: fontconfig-$(FONTCONFIG_VERSION).tar.gz .sum-fontconfig"
+      ]
+    },
+    "freetype2": {
+      "sha512sums": [
+        "045c43f9a3ca33e7d6a98c286895b94ea6ccfbb83851270d1b1861b31ef3ee5a574d8e49c6414c4e14bdfb9276dc49a0677b3be3e4f40ef279dcda99b769b962  freetype-2.13.1.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/freetype2/rules.mak",
+      "source_expressions": [
+        "FREETYPE2_VERSION := 2.13.1",
+        "FREETYPE2_URL := $(SF)/freetype/freetype2/$(FREETYPE2_VERSION)/freetype-$(FREETYPE2_VERSION).tar.xz",
+        "$(TARBALLS)/freetype-$(FREETYPE2_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(FREETYPE2_URL),freetype2)",
+        ".sum-freetype2: freetype-$(FREETYPE2_VERSION).tar.xz",
+        "freetype: freetype-$(FREETYPE2_VERSION).tar.xz .sum-freetype2"
+      ]
+    },
+    "fribidi": {
+      "sha512sums": [
+        "e3a56f36155f6813e3609473639fc533de742309f561c463012dc90b412a1ac7694b765d92669b2cbfaee973ca0e92fa5e926e68a1a078921f26ef17d82ab651  fribidi-1.0.16.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/fribidi/rules.mak",
+      "source_expressions": [
+        "FRIBIDI_VERSION := 1.0.16",
+        "FRIBIDI_URL := $(GITHUB)/fribidi/fribidi/releases/download/v$(FRIBIDI_VERSION)/fribidi-$(FRIBIDI_VERSION).tar.xz",
+        "$(TARBALLS)/fribidi-$(FRIBIDI_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(FRIBIDI_URL),fribidi)",
+        ".sum-fribidi: fribidi-$(FRIBIDI_VERSION).tar.xz",
+        "fribidi: fribidi-$(FRIBIDI_VERSION).tar.xz .sum-fribidi"
+      ]
+    },
+    "fxc2": {
+      "recipe_source_path": "contrib/src/fxc2/rules.mak",
+      "source_expressions": [
+        "FXC2_HASH := 654c29d62a02714ea0bacfb118c3e05127f846e0",
+        "FXC2_VERSION := git-$(FXC2_HASH)",
+        "FXC2_GITURL := $(GITHUB)/mozilla/fxc2.git",
+        "$(TARBALLS)/fxc2-$(FXC2_VERSION).tar.xz:",
+        "\t$(call download_git,$(FXC2_GITURL),,$(FXC2_HASH))",
+        ".sum-fxc2: fxc2-$(FXC2_VERSION).tar.xz",
+        "\t$(call check_githash,$(FXC2_HASH))",
+        "fxc2: fxc2-$(FXC2_VERSION).tar.xz .sum-fxc2"
+      ]
+    },
+    "gcrypt": {
+      "sha512sums": [
+        "9421461297bd79b14f94d1ab275c3ed93b5d433531915c5cc7a718a94d32978a46feccb7a33fe63a60780ff00d465fbe1fe9ada5c250cf6d10a525c246c63d1c  libgcrypt-1.12.0.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/gcrypt/rules.mak",
+      "source_expressions": [
+        "GCRYPT_VERSION := 1.12.0",
+        "GCRYPT_URL := $(GNUGPG)/libgcrypt/libgcrypt-$(GCRYPT_VERSION).tar.bz2",
+        "$(TARBALLS)/libgcrypt-$(GCRYPT_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(GCRYPT_URL),gcrypt)",
+        ".sum-gcrypt: libgcrypt-$(GCRYPT_VERSION).tar.bz2",
+        "gcrypt: libgcrypt-$(GCRYPT_VERSION).tar.bz2 .sum-gcrypt"
+      ]
+    },
+    "gettext": {
+      "sha512sums": [
+        "544e41c9390695df1c21542842e9ca027a03cb7d4045d8cd759dec1a3dfb624aae900751b458bdb31d6454b37c40c474a952059b884555a03c7c95d6d0e687b1  gettext-0.26.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/gettext/rules.mak",
+      "source_expressions": [
+        "GETTEXT_VERSION := 0.26",
+        "GETTEXT_URL := $(GNU)/gettext/gettext-$(GETTEXT_VERSION).tar.xz",
+        "$(TARBALLS)/gettext-$(GETTEXT_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(GETTEXT_URL),gettext)",
+        ".sum-gettext: gettext-$(GETTEXT_VERSION).tar.xz",
+        "gettext: gettext-$(GETTEXT_VERSION).tar.xz .sum-gettext"
+      ]
+    },
+    "ggml": {
+      "sha512sums": [
+        "c49b6498101f50a5ebde158f5707237f6df3af0182e819651003ec5f418144f9ca68cc8434189f2a658ea705269fad2d263cfe4931c12b369883aa5a66182ed9  ggml-0.11.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/ggml/rules.mak",
+      "source_expressions": [
+        "GGML_VERSION := 0.11.0",
+        "GGML_URL := $(GITHUB)/ggml-org/ggml/archive/refs/tags/v$(GGML_VERSION).tar.gz",
+        "$(TARBALLS)/ggml-$(GGML_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(GGML_URL),ggml)",
+        ".sum-ggml: ggml-$(GGML_VERSION).tar.gz",
+        "ggml: ggml-$(GGML_VERSION).tar.gz .sum-ggml"
+      ]
+    },
+    "glad": {
+      "sha512sums": [
+        "328d0dbe33e69f846d1c54226c6675694404f41e53c4762e6013c7bfe76b0700f0b28f4117a2018a09c9c23ccb6ad94d7b20882fefc2513941a4515686c9b9e7  glad-2.0.4.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/glad/rules.mak",
+      "source_expressions": [
+        "GLAD_VERSION := 2.0.4",
+        "GLAD_URL := $(GITHUB)/Dav1dde/glad/archive/refs/tags/v$(GLAD_VERSION).tar.gz",
+        "$(TARBALLS)/glad-$(GLAD_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(GLAD_URL),glad)",
+        ".sum-glad: glad-$(GLAD_VERSION).tar.gz",
+        "glad: glad-$(GLAD_VERSION).tar.gz .sum-glad"
+      ]
+    },
+    "glew": {
+      "sha512sums": [
+        "cb4caecf32ec0f180c2691dc7769ffc99571c64f259a2663a2b80e788f1c2fd5362c59e0caaeefed6fb78a4070366d244666a657358049b09071b59fae2377e0  glew-2.3.1.tgz"
+      ],
+      "recipe_source_path": "contrib/src/glew/rules.mak",
+      "source_expressions": [
+        "GLEW_VERSION := 2.3.1",
+        "GLEW_URL := $(GITHUB)/nigels-com/glew/releases/download/glew-$(GLEW_VERSION)/glew-$(GLEW_VERSION).tgz",
+        "$(TARBALLS)/glew-$(GLEW_VERSION).tgz:",
+        "\t$(call download_pkg,$(GLEW_URL),glew)",
+        ".sum-glew: glew-$(GLEW_VERSION).tgz",
+        "glew: glew-$(GLEW_VERSION).tgz .sum-glew"
+      ]
+    },
+    "glib": {
+      "sha512sums": [
+        "0402c063975680ff2385876f521b37aa4cc599d2570eb79976ad2a1b530e47a086d514fe122fd870b4a8f7358f48c926285694d153cc2c32cf6963ed2d5da9d9  glib-2.75.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/glib/rules.mak",
+      "source_expressions": [
+        "GLIB_VERSION := 2.75",
+        "GLIB_MINOR_VERSION := $(GLIB_VERSION).0",
+        "GLIB_URL := https://ftp.gnome.org/pub/gnome/sources/glib/$(GLIB_VERSION)/glib-$(GLIB_MINOR_VERSION).tar.xz",
+        "$(TARBALLS)/glib-$(GLIB_MINOR_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(GLIB_URL),glib)",
+        ".sum-glib: glib-$(GLIB_MINOR_VERSION).tar.xz",
+        "glib: glib-$(GLIB_MINOR_VERSION).tar.xz .sum-glib"
+      ]
+    },
+    "glslang": {
+      "sha512sums": [
+        "201a295e47db552f8233d5f3072e7f03e36ad4d6f867a5f63d846e04d4276a94d26ff380f17128cbe24c031b47bbbf51a2c1ac0ad7a0140634be577f2d7343f8  glslang-12.3.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/glslang/rules.mak",
+      "source_expressions": [
+        "GLSLANG_VERSION := 12.3.1",
+        "GLSLANG_URL := $(GITHUB)/KhronosGroup/glslang/archive/refs/tags/$(GLSLANG_VERSION).tar.gz",
+        "# if GLSLANG_VERSION_MAJOR >= $(GLSLANG_MIN_VER) \\n",
+        "$(TARBALLS)/glslang-$(GLSLANG_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(GLSLANG_URL),glslang)",
+        ".sum-glslang: glslang-$(GLSLANG_VERSION).tar.gz",
+        "glslang: glslang-$(GLSLANG_VERSION).tar.gz .sum-glslang"
+      ]
+    },
+    "gme": {
+      "sha512sums": [
+        "b5da7f0ea9f3f5698157dd1feb5071cbc3bb44c96a2c1675162c7be384c755d6e01f5d98c4a6bd9ef7b1904b8eed3dab54dd2edac19cd18a7312c6cf7a91d98a  game-music-emu-0.6.4.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/gme/rules.mak",
+      "source_expressions": [
+        "GME_VERSION := 0.6.4",
+        "GME_URL := $(GITHUB)/libgme/game-music-emu/archive/refs/tags/$(GME_VERSION).tar.gz",
+        "$(TARBALLS)/game-music-emu-$(GME_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(GME_URL),gme)",
+        ".sum-gme: game-music-emu-$(GME_VERSION).tar.gz",
+        "game-music-emu: game-music-emu-$(GME_VERSION).tar.gz .sum-gme"
+      ]
+    },
+    "gmp": {
+      "sha512sums": [
+        "e85a0dab5195889948a3462189f0e0598d331d3457612e2d3350799dba2e244316d256f8161df5219538eb003e4b5343f989aaa00f96321559063ed8c8f29fd2  gmp-6.3.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/gmp/rules.mak",
+      "source_expressions": [
+        "GMP_VERSION := 6.3.0",
+        "GMP_URL := https://gmplib.org/download/gmp/gmp-$(GMP_VERSION).tar.xz",
+        "$(TARBALLS)/gmp-$(GMP_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(GMP_URL),gmp)",
+        ".sum-gmp: gmp-$(GMP_VERSION).tar.xz",
+        "gmp: gmp-$(GMP_VERSION).tar.xz .sum-gmp"
+      ]
+    },
+    "gnutls": {
+      "sha512sums": [
+        "d453bd4527af95cb3905ce8753ceafd969e3f442ad1d148544a233ebf13285b999930553a805a0511293cc25390bb6a040260df5544a7c55019640f920ad3d92  gnutls-3.8.10.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/gnutls/rules.mak",
+      "source_expressions": [
+        "GNUTLS_VERSION := $(GNUTLS_MAJVERSION).10",
+        "GNUTLS_URL := $(GNUGPG)/gnutls/v$(GNUTLS_MAJVERSION)/gnutls-$(GNUTLS_VERSION).tar.xz",
+        "$(TARBALLS)/gnutls-$(GNUTLS_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(GNUTLS_URL),gnutls)",
+        ".sum-gnutls: gnutls-$(GNUTLS_VERSION).tar.xz",
+        "gnutls: gnutls-$(GNUTLS_VERSION).tar.xz .sum-gnutls"
+      ]
+    },
+    "goom": {
+      "sha512sums": [
+        "790e3ab8dee122320ad8b3ae15f6a1cd2780222d5ae97979f614f16ba73b4b853960e7945ef9053ad9eddf9e29e69d0c52f0875d07c5c6c7cee41d764bf4ea5f  goom-2k4-0-src.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/goom/rules.mak",
+      "source_expressions": [
+        "GOOM_VERSION := 2k4-0",
+        "GOOM_URL := $(CONTRIB_VIDEOLAN)/goom/goom-$(GOOM_VERSION)-src.tar.gz",
+        "$(TARBALLS)/goom-$(GOOM_VERSION)-src.tar.gz:",
+        "\t$(call download,$(GOOM_URL))",
+        ".sum-goom: goom-$(GOOM_VERSION)-src.tar.gz",
+        "goom: goom-$(GOOM_VERSION)-src.tar.gz .sum-goom"
+      ]
+    },
+    "gpg-error": {
+      "sha512sums": [
+        "ff4160f4133cf1a90eddf5f59d6248214b59db4f021f124302be37bf04fa1f2eb665560914cbe289095e630a31ba141252e7a72a8e6dbbc622cb135a2066259a  libgpg-error-1.56.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/gpg-error/rules.mak",
+      "source_expressions": [
+        "GPGERROR_VERSION := 1.56",
+        "GPGERROR_URL := $(GNUGPG)/libgpg-error/libgpg-error-$(GPGERROR_VERSION).tar.bz2",
+        "$(TARBALLS)/libgpg-error-$(GPGERROR_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(GPGERROR_URL),gpg-error)",
+        ".sum-gpg-error: libgpg-error-$(GPGERROR_VERSION).tar.bz2",
+        "libgpg-error: libgpg-error-$(GPGERROR_VERSION).tar.bz2 .sum-gpg-error"
+      ]
+    },
+    "gsm": {
+      "sha512sums": [
+        "f4284f096ed4d606ddece5c1b28edb63feacc26a0b664f1350c040dbf50113d27bedfd9896bf1620cb4fc3a6c8f6a5244955a6c625ded833dcee607c63c97dd2  gsm-1.0-pl22.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/gsm/rules.mak",
+      "source_expressions": [
+        "GSM_URL := https://www.quut.com/gsm/gsm-$(GSM_MAJVERSION).$(GSM_MINVERSION).tar.gz",
+        "\t$(call download_pkg,$(GSM_URL),gsm)"
+      ]
+    },
+    "harfbuzz": {
+      "sha512sums": [
+        "94f2e8fcaede877ef869e9c71ea075af581210f7b05cf516c3bad768351a1c6b7df9a61022ec075b5f2c952cca3b9294a3b674ffd21b1604426b5a8e1693a022  harfbuzz-11.5.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/harfbuzz/rules.mak",
+      "source_expressions": [
+        "HARFBUZZ_VERSION := 11.5.0",
+        "HARFBUZZ_URL := $(GITHUB)/harfbuzz/harfbuzz/releases/download/$(HARFBUZZ_VERSION)/harfbuzz-$(HARFBUZZ_VERSION).tar.xz",
+        "$(TARBALLS)/harfbuzz-$(HARFBUZZ_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(HARFBUZZ_URL),harfbuzz)",
+        ".sum-harfbuzz: harfbuzz-$(HARFBUZZ_VERSION).tar.xz",
+        "harfbuzz: harfbuzz-$(HARFBUZZ_VERSION).tar.xz .sum-harfbuzz"
+      ]
+    },
+    "iconv": {
+      "sha512sums": [
+        "a55eb3b7b785a78ab8918db8af541c9e11deb5ff4f89d54483287711ed797d87848ce0eafffa7ce26d9a7adb4b5a9891cb484f94bd4f51d3ce97a6a47b4c719a  libiconv-1.18.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/iconv/rules.mak",
+      "source_expressions": [
+        "LIBICONV_VERSION := 1.18",
+        "LIBICONV_URL := $(GNU)/libiconv/libiconv-$(LIBICONV_VERSION).tar.gz",
+        "$(TARBALLS)/libiconv-$(LIBICONV_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(LIBICONV_URL),iconv)",
+        ".sum-iconv: libiconv-$(LIBICONV_VERSION).tar.gz",
+        "iconv: libiconv-$(LIBICONV_VERSION).tar.gz .sum-iconv"
+      ]
+    },
+    "jack": {
+      "sha512sums": [
+        "a52655ca895e37a49a14cb72811f25c65c54bc26ae6d4ce35331b8b85f87905f1be25a88b2efb96c47b344abd0a6bf9371e4043e05ccf91cb08287835e5cc8ac  jack1-0.121.3.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/jack/rules.mak",
+      "source_expressions": [
+        "JACK_VERSION := 0.121.3",
+        "JACK_URL := $(GITHUB)/jackaudio/jack1/archive/$(JACK_VERSION).tar.gz",
+        "$(TARBALLS)/jack1-$(JACK_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(JACK_URL),jack)",
+        ".sum-jack: jack1-$(JACK_VERSION).tar.gz",
+        "jack: jack1-$(JACK_VERSION).tar.gz .sum-jack"
+      ]
+    },
+    "jinja": {
+      "sha512sums": [
+        "50feebc7eed4c8b5bb0c2951784c1c115e3ee1c0e0c91bbf1884551b1312ef8fce24804a2ca1dfd8c543406529afe4817567c39e7cfd15028b54049853623144  jinja-3.1.2.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/jinja/rules.mak",
+      "source_expressions": [
+        "JINJA_VERSION := 3.1.2",
+        "JINJA_URL := $(GITHUB)/pallets/jinja/archive/refs/tags/$(JINJA_VERSION).tar.gz",
+        "$(TARBALLS)/jinja-$(JINJA_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(JINJA_URL),jinja)",
+        ".sum-jinja: jinja-$(JINJA_VERSION).tar.gz",
+        "jinja: jinja-$(JINJA_VERSION).tar.gz .sum-jinja"
+      ]
+    },
+    "jpeg": {
+      "sha512sums": [
+        "d3410a072044b4962c1aa08eb144b4e4b959f4f65203dfac4013b14e2fd987b9a6ee9b59f5570980fa691ddf5e9f9d3aa328a63afb487a46c2e76de722f3d693  libjpeg-turbo-3.1.3.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/jpeg/rules.mak",
+      "source_expressions": [
+        "JPEG_VERSION := 3.1.3",
+        "JPEG_URL := $(GITHUB)/libjpeg-turbo/libjpeg-turbo/releases/download/$(JPEG_VERSION)/libjpeg-turbo-$(JPEG_VERSION).tar.gz",
+        "$(TARBALLS)/libjpeg-turbo-$(JPEG_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(JPEG_URL),jpeg)",
+        ".sum-jpeg: libjpeg-turbo-$(JPEG_VERSION).tar.gz",
+        "jpeg: libjpeg-turbo-$(JPEG_VERSION).tar.gz .sum-jpeg"
+      ]
+    },
+    "kate": {
+      "sha512sums": [
+        "dd4d87776e212f7e5c78f87b1bdd3c88046fe59eb1ede2124e716c0dfbba27d526c5130f8a877de8d3ab7ad3e7063118e546facde1ca85fba19001ed3d565979  libkate-0.4.3.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/kate/rules.mak",
+      "source_expressions": [
+        "KATE_VERSION := 0.4.3",
+        "KATE_URL := $(XIPH)/kate/libkate-$(KATE_VERSION).tar.gz",
+        "$(TARBALLS)/libkate-$(KATE_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(KATE_URL),kate)",
+        ".sum-kate: libkate-$(KATE_VERSION).tar.gz",
+        "libkate: libkate-$(KATE_VERSION).tar.gz .sum-kate"
+      ]
+    },
+    "lame": {
+      "sha512sums": [
+        "0844b9eadb4aacf8000444621451277de365041cc1d97b7f7a589da0b7a23899310afd4e4d81114b9912aa97832621d20588034715573d417b2923948c08634b  lame-3.100.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/lame/rules.mak",
+      "source_expressions": [
+        "LAME_VERSION := 3.100",
+        "LAME_URL := $(SF)/lame/lame-$(LAME_VERSION).tar.gz",
+        "$(TARBALLS)/lame-$(LAME_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(LAME_URL),lame)",
+        ".sum-lame: lame-$(LAME_VERSION).tar.gz",
+        "lame: lame-$(LAME_VERSION).tar.gz .sum-lame"
+      ]
+    },
+    "libarchive": {
+      "sha512sums": [
+        "0673accf9ac6ede2d1c7e68419d00898f35e43130c5ec6b5fcdea85d174d8b0cc56d1d609bd5533370c3cca5f6ddd5b59fc153f2dadea2b4b5c2421a574ea352  libarchive-3.8.7.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/libarchive/rules.mak",
+      "source_expressions": [
+        "LIBARCHIVE_VERSION := 3.8.7",
+        "LIBARCHIVE_URL := $(GITHUB)/libarchive/libarchive/releases/download/v$(LIBARCHIVE_VERSION)/libarchive-$(LIBARCHIVE_VERSION).tar.xz",
+        "$(TARBALLS)/libarchive-$(LIBARCHIVE_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(LIBARCHIVE_URL),libarchive)",
+        ".sum-libarchive: libarchive-$(LIBARCHIVE_VERSION).tar.xz",
+        "libarchive: libarchive-$(LIBARCHIVE_VERSION).tar.xz .sum-libarchive"
+      ]
+    },
+    "libaribcaption": {
+      "sha512sums": [
+        "3f3c802ae68734126d9b4a0525b3353af4c1a3807cd21bfa04b89f2092fe565cb2413bcdd0b762313d40b7e0ab75c7e8066bf4a1879c16637f35ee164f6ef6a4  libaribcaption-1.1.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/libaribcaption/rules.mak",
+      "source_expressions": [
+        "LIBARIBCC_VERSION := 1.1.1",
+        "LIBARIBCC_URL := $(GITHUB)/xqq/libaribcaption/archive/refs/tags/v$(LIBARIBCC_VERSION).tar.gz",
+        "$(TARBALLS)/libaribcaption-$(LIBARIBCC_VERSION).tar.gz:",
+        "\t${call download_pkg,$(LIBARIBCC_URL),libaribcaption}",
+        ".sum-libaribcaption: libaribcaption-$(LIBARIBCC_VERSION).tar.gz",
+        "libaribcaption: libaribcaption-$(LIBARIBCC_VERSION).tar.gz .sum-libaribcaption"
+      ]
+    },
+    "libdsm": {
+      "sha512sums": [
+        "4abe2318aa5d63397404ce87fc42be30d364dffef3bdf6e081a2bb3ac4f011f39fa8acb5ba06361e94795a308df321b077e7a3cf2ec10d5e1e6c9b912cbbd8ba  libdsm-0.4.3.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/libdsm/rules.mak",
+      "source_expressions": [
+        "LIBDSM_VERSION := 0.4.3",
+        "LIBDSM_URL := $(GITHUB)/videolabs/libdsm/releases/download/v$(LIBDSM_VERSION)/libdsm-$(LIBDSM_VERSION).tar.xz",
+        "$(TARBALLS)/libdsm-$(LIBDSM_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(LIBDSM_URL),libdsm)",
+        ".sum-libdsm: libdsm-$(LIBDSM_VERSION).tar.xz",
+        "libdsm: libdsm-$(LIBDSM_VERSION).tar.xz .sum-libdsm"
+      ]
+    },
+    "libebur128": {
+      "sha512sums": [
+        "ab188c6d32cd14613119258313a8a3fb1167b55501c9f5b6d3ba738d674bc58f24ac3034c23d9730ed8dc3e95a23619bfb81719e4c79807a9a16c1a5b3423582  libebur128-1.2.6.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/libebur128/rules.mak",
+      "source_expressions": [
+        "LIBEBUR128_VERSION := 1.2.6",
+        "LIBEBUR128_URL := $(GITHUB)/jiixyj/libebur128/archive/v$(LIBEBUR128_VERSION).tar.gz",
+        "$(TARBALLS)/libebur128-$(LIBEBUR128_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(LIBEBUR128_URL),libebur128)",
+        ".sum-libebur128: libebur128-$(LIBEBUR128_VERSION).tar.gz",
+        "libebur128: libebur128-$(LIBEBUR128_VERSION).tar.gz .sum-libebur128",
+        "\t-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ]
+    },
+    "libplacebo": {
+      "sha512sums": [
+        "305f43b71f078f4113def43c444df667dfbdd2a6a34d3b457b15da0b3499ca97ec9a8acbd151d58c8e1a593ace3d8aa61067b32556c6bae451efbb217d60a731  libplacebo-v5.264.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/libplacebo/rules.mak",
+      "source_expressions": [
+        "PLACEBO_VERSION := 5.264.1",
+        "PLACEBO_ARCHIVE = libplacebo-v$(PLACEBO_VERSION).tar.gz",
+        "PLACEBO_URL := $(VIDEOLAN_GIT)/videolan/libplacebo/-/archive/v$(PLACEBO_VERSION)/$(PLACEBO_ARCHIVE)",
+        "\t$(call download_pkg,$(PLACEBO_URL),libplacebo)"
+      ]
+    },
+    "librist": {
+      "sha512sums": [
+        "906382576025b39b9ac13e4ad20648b5c2a61e215d7dc0d30e043dc3c30d6fd9586c7349cfeb2c5fd4c576e833c16dbe003c6f774a6372ea1bfc3c4fefa81663  librist-v0.2.15.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/librist/rules.mak",
+      "source_expressions": [
+        "LIBRIST_VERSION := v0.2.15",
+        "LIBRIST_URL := $(VIDEOLAN_GIT)/rist/librist/-/archive/$(LIBRIST_VERSION)/librist-$(LIBRIST_VERSION).tar.gz",
+        "$(TARBALLS)/librist-$(LIBRIST_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(LIBRIST_URL),librist)",
+        ".sum-librist: librist-$(LIBRIST_VERSION).tar.gz",
+        "librist: librist-$(LIBRIST_VERSION).tar.gz .sum-librist"
+      ]
+    },
+    "libtasn1": {
+      "sha512sums": [
+        "287f5eddfb5e21762d9f14d11997e56b953b980b2b03a97ed4cd6d37909bda1ed7d2cdff9da5d270a21d863ab7e54be6b85c05f1075ac5d8f0198997cf335ef4  libtasn1-4.19.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/libtasn1/rules.mak",
+      "source_expressions": [
+        "LIBTASN1_VERSION := 4.19.0",
+        "LIBTASN1_URL := $(GNU)/libtasn1/libtasn1-$(LIBTASN1_VERSION).tar.gz",
+        "$(TARBALLS)/libtasn1-$(LIBTASN1_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(LIBTASN1_URL),libtasn1)",
+        ".sum-libtasn1: libtasn1-$(LIBTASN1_VERSION).tar.gz",
+        "libtasn1: libtasn1-$(LIBTASN1_VERSION).tar.gz .sum-libtasn1"
+      ]
+    },
+    "libxml2": {
+      "sha512sums": [
+        "429c7d0dc3cbcb8de1bf6eb588fb8025fee009c9b25e87c96ecc5de57cc12b558b0ab8141f333d73ca687109335f297c9f9776abbb9da9afc9d8e79041c86b7f  libxml2-2.15.1.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/libxml2/rules.mak",
+      "source_expressions": [
+        "LIBXML2_VERSION := 2.15.1",
+        "LIBXML2_URL := https://download.gnome.org/sources/libxml2/2.15/libxml2-$(LIBXML2_VERSION).tar.xz",
+        "$(TARBALLS)/libxml2-$(LIBXML2_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(LIBXML2_URL),libxml2)",
+        ".sum-libxml2: libxml2-$(LIBXML2_VERSION).tar.xz",
+        "libxml2: libxml2-$(LIBXML2_VERSION).tar.xz .sum-libxml2"
+      ]
+    },
+    "live555": {
+      "sha512sums": [
+        "382544d9d9fe200699669a1f3301efb4ccec0193499c95b532ea923c380b1ec6fa721a4118d36a447ba9df08575f185498f244293c66bbe97cff0482eab033c7  live.2022.07.14.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/live555/rules.mak",
+      "source_expressions": [
+        "LIVE555_VERSION := 2022.07.14",
+        "LIVE555_FILE := live.$(LIVE555_VERSION).tar.gz",
+        "LIVEDOTCOM_URL := $(CONTRIB_VIDEOLAN)/live555/$(LIVE555_FILE)",
+        "\t$(call download_pkg,$(LIVEDOTCOM_URL),live555)",
+        "\tmv live live.$(LIVE555_VERSION)",
+        "\tmv live.$(LIVE555_VERSION) $@ && touch $@"
+      ]
+    },
+    "lua": {
+      "sha512sums": [
+        "af0c35d5ba00fecbb2dd617bd7b825edf7418a16a73076e04f2a0df58cdbf098dc3ff4402e974afd789eb5d86d2e12ec6df9c84b99b23656ea694a85f83bcd21  lua-5.4.4.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/lua/rules.mak",
+      "source_expressions": [
+        "LUA_VERSION := $(LUA_SHORTVERSION).4",
+        "LUA_URL := https://www.lua.org/ftp/lua-$(LUA_VERSION).tar.gz",
+        "$(TARBALLS)/lua-$(LUA_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(LUA_URL),lua)",
+        ".sum-lua: lua-$(LUA_VERSION).tar.gz",
+        "lua: lua-$(LUA_VERSION).tar.gz .sum-lua",
+        "luac: UNPACK_DIR=luac-$(LUA_VERSION)",
+        "luac: lua-$(LUA_VERSION).tar.gz .sum-luac"
+      ]
+    },
+    "mad": {
+      "sha512sums": [
+        "2cad30347fb310dc605c46bacd9da117f447a5cabedd8fefdb24ab5de641429e5ec5ce8af7aefa6a75a3f545d3adfa255e3fa0a2d50971f76bc0c4fc0400cc45  libmad-0.15.1b.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/mad/rules.mak",
+      "source_expressions": [
+        "MAD_VERSION := 0.15.1b",
+        "MAD_URL := $(CONTRIB_VIDEOLAN)/mad/libmad-$(MAD_VERSION).tar.gz",
+        "$(TARBALLS)/libmad-$(MAD_VERSION).tar.gz:",
+        "\t$(call download,$(MAD_URL))",
+        ".sum-mad: libmad-$(MAD_VERSION).tar.gz",
+        "libmad: libmad-$(MAD_VERSION).tar.gz .sum-mad"
+      ]
+    },
+    "markupsafe": {
+      "sha512sums": [
+        "6b06a5f470858409eb186d20edd129be90f31030be91fcc73e989b0a4ee51c3755cce0938edd9a7c73471d307385260f868101b5e11cc4d97c309420b5a573da  markupsafe-2.1.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/markupsafe/rules.mak",
+      "source_expressions": [
+        "MARKUPSAFE_VERSION := 2.1.1",
+        "MARKUPSAFE_URL := $(GITHUB)/pallets/markupsafe/archive/refs/tags/$(MARKUPSAFE_VERSION).tar.gz",
+        "$(TARBALLS)/markupsafe-$(MARKUPSAFE_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(MARKUPSAFE_URL),markupsafe)",
+        ".sum-markupsafe: markupsafe-$(MARKUPSAFE_VERSION).tar.gz",
+        "markupsafe: markupsafe-$(MARKUPSAFE_VERSION).tar.gz .sum-markupsafe"
+      ]
+    },
+    "matroska": {
+      "sha512sums": [
+        "a6f38d388f6c9bfe399b9263ba4ef0965cfb4e27b39ac04453d5c9a9db8eac719a04c87b58d88b612902297e17aa7437382a66332f3f5b3d41744a13351751fd  libmatroska-1.7.1.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/matroska/rules.mak",
+      "source_expressions": [
+        "MATROSKA_VERSION := 1.7.1",
+        "MATROSKA_URL := https://dl.matroska.org/downloads/libmatroska/libmatroska-$(MATROSKA_VERSION).tar.xz",
+        "$(TARBALLS)/libmatroska-$(MATROSKA_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(MATROSKA_URL),matroska)",
+        ".sum-matroska: libmatroska-$(MATROSKA_VERSION).tar.xz",
+        "matroska: libmatroska-$(MATROSKA_VERSION).tar.xz .sum-matroska",
+        "\t$(HOSTVARS_CMAKE) $(CMAKE) -DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ]
+    },
+    "medialibrary": {
+      "sha512sums": [
+        "ec04cd28a19e547debf1a911fbcd33345a53a3f963e83d6f878c9836ebfefd4045c42a670a2c076ba3767bf91884f542e48dab6a254fc29285041fa9be35fe73  medialibrary-0.13.2.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/medialibrary/rules.mak",
+      "source_expressions": [
+        "MEDIALIBRARY_VERSION := 0.13.2",
+        "MEDIALIBRARY_URL := $(VIDEOLAN_GIT)/videolan/medialibrary/-/archive/$(MEDIALIBRARY_VERSION)/medialibrary-$(MEDIALIBRARY_VERSION).tar.bz2",
+        "$(TARBALLS)/medialibrary-$(MEDIALIBRARY_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(MEDIALIBRARY_URL),medialibrary)",
+        ".sum-medialibrary: medialibrary-$(MEDIALIBRARY_VERSION).tar.bz2",
+        "medialibrary: medialibrary-$(MEDIALIBRARY_VERSION).tar.bz2 .sum-medialibrary"
+      ]
+    },
+    "meson-machinefile": {
+      "recipe_source_path": "contrib/src/meson-machinefile/rules.mak",
+      "source_expressions": []
+    },
+    "microdns": {
+      "sha512sums": [
+        "a6b15c65c74560fdba8973c63ffae9cdde4445f54196bb2d7d6348f6c15f8f162ef0a4e91b969ea3f2a60c701c3cc72799fcfba2fbf08c37f71ba8d5e3409702  microdns-0.1.2.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/microdns/rules.mak",
+      "source_expressions": [
+        "LIBMICRODNS_VERSION := 0.1.2",
+        "LIBMICRODNS_URL := $(GITHUB)/videolabs/libmicrodns/releases/download/$(LIBMICRODNS_VERSION)/microdns-$(LIBMICRODNS_VERSION).tar.xz",
+        "$(TARBALLS)/microdns-$(LIBMICRODNS_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(LIBMICRODNS_URL),microdns)",
+        ".sum-microdns: $(TARBALLS)/microdns-$(LIBMICRODNS_VERSION).tar.xz",
+        "microdns: microdns-$(LIBMICRODNS_VERSION).tar.xz .sum-microdns"
+      ]
+    },
+    "mingw64": {
+      "sha512sums": [
+        "17378a0e2abbbb688468a78cb0ba261f9001a1bc6e7d0270c24c4b8b13e5c6513e8fb8e617d08102fbc772c288ad81ec3a43ca756ed28f17cc5543f717a8bb6d  mingw-w64-v14.0.0.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/mingw64/rules.mak",
+      "source_expressions": [
+        "MINGW64_VERSION := 14.0.0",
+        "MINGW64_URL := $(SF)/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v$(MINGW64_VERSION).tar.bz2",
+        "# MINGW64_HASH=2c35e8ff0d33916bd490e8932cba2049cd1af3d0",
+        "# MINGW64_GITURL := https://git.code.sf.net/p/mingw-w64/mingw-w64",
+        "# $(TARBALLS)/mingw-w64-$(MINGW64_HASH).tar.xz:",
+        "# \t$(call download_git,$(MINGW64_GITURL),,$(MINGW64_HASH))",
+        "$(TARBALLS)/mingw-w64-v$(MINGW64_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(MINGW64_URL),winpthreads)",
+        ".sum-mingw64: mingw-w64-v$(MINGW64_VERSION).tar.bz2",
+        "# .sum-mingw64: mingw-w64-$(MINGW64_HASH).tar.xz",
+        "mingw64: mingw-w64-v$(MINGW64_VERSION).tar.bz2 .sum-mingw64",
+        "# mingw64: mingw-w64-$(MINGW64_HASH).tar.xz .sum-mingw64"
+      ]
+    },
+    "modplug": {
+      "sha512sums": [
+        "880e10154fd367ee24ace53ca7e32a5c1fee7dfff1f934e6499944c12779427da63e2f55f8d6ce25db0a42a5b4424053bf64305b31dbfc4ef6a8909924d655fd  libmodplug-0.8.9.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/modplug/rules.mak",
+      "source_expressions": [
+        "MODPLUG_VERSION := 0.8.9.0",
+        "MODPLUG_URL := $(SF)/modplug-xmms/libmodplug-$(MODPLUG_VERSION).tar.gz",
+        "$(TARBALLS)/libmodplug-$(MODPLUG_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(MODPLUG_URL),modplug)",
+        ".sum-modplug: libmodplug-$(MODPLUG_VERSION).tar.gz",
+        "libmodplug: libmodplug-$(MODPLUG_VERSION).tar.gz .sum-modplug"
+      ]
+    },
+    "mpg123": {
+      "sha512sums": [
+        "83d8fca128b1fd39e336e6052837b16951360d6f1a47919e00d4b7285717ee7cd4dd56c24bd873316ba6969081fe619cda93ebb20771aed052c6e9d07657f2ab  mpg123-1.33.6.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/mpg123/rules.mak",
+      "source_expressions": [
+        "MPG123_VERSION := 1.33.6",
+        "MPG123_URL := $(SF)/mpg123/mpg123/$(MPG123_VERSION)/mpg123-$(MPG123_VERSION).tar.bz2",
+        "$(TARBALLS)/mpg123-$(MPG123_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(MPG123_URL),mpg123)",
+        ".sum-mpg123: mpg123-$(MPG123_VERSION).tar.bz2",
+        "mpg123: mpg123-$(MPG123_VERSION).tar.bz2 .sum-mpg123"
+      ]
+    },
+    "mysofa": {
+      "sha512sums": [
+        "2058c94cd09aeeabe40975edd320d7447bd9e535108f32b2a5305c023c7bf89f0c2f44df182390b7e4be8f6ffc9b09c2e35817896bb5e63d3ec9f1bd5b7e972c  libmysofa-1.2.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/mysofa/rules.mak",
+      "source_expressions": [
+        "MYSOFA_VERSION := 1.2.1",
+        "MYSOFA_URL = $(GITHUB)/hoene/libmysofa/archive/v$(MYSOFA_VERSION).tar.gz",
+        "$(TARBALLS)/libmysofa-$(MYSOFA_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(MYSOFA_URL),mysofa)",
+        ".sum-mysofa: libmysofa-$(MYSOFA_VERSION).tar.gz",
+        "mysofa: libmysofa-$(MYSOFA_VERSION).tar.gz .sum-mysofa",
+        "\t-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ]
+    },
+    "ncurses": {
+      "sha512sums": [
+        "fc5a13409d2a530a1325776dcce3a99127ddc2c03999cfeb0065d0eee2d68456274fb1c7b3cc99c1937bc657d0e7fca97016e147f93c7821b5a4a6837db821e8  ncurses-6.5.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/ncurses/rules.mak",
+      "source_expressions": [
+        "NCURSES_VERSION := 6.5",
+        "NCURSES_URL := $(GNU)/ncurses/ncurses-$(NCURSES_VERSION).tar.gz",
+        "$(TARBALLS)/ncurses-$(NCURSES_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(NCURSES_URL),ncurses)",
+        ".sum-ncurses: ncurses-$(NCURSES_VERSION).tar.gz",
+        "ncurses: ncurses-$(NCURSES_VERSION).tar.gz .sum-ncurses"
+      ]
+    },
+    "nettle": {
+      "sha512sums": [
+        "5e44f59b37ec1e92345fce0b963151d1f2aabf01b3a197b8d931067c51af4ba025059c6a07f2bcd19b17eb49d6ede98f5c200e58d340959826cda473459d2fba  nettle-3.9.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/nettle/rules.mak",
+      "source_expressions": [
+        "NETTLE_VERSION := 3.9",
+        "NETTLE_URL := $(GNU)/nettle/nettle-$(NETTLE_VERSION).tar.gz",
+        "$(TARBALLS)/nettle-$(NETTLE_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(NETTLE_URL),nettle)",
+        ".sum-nettle: nettle-$(NETTLE_VERSION).tar.gz",
+        "nettle: nettle-$(NETTLE_VERSION).tar.gz .sum-nettle"
+      ]
+    },
+    "nfs": {
+      "sha512sums": [
+        "539790ab98aac7b2f25755b745d1f5e016518f1adb3748b8c58df187048bc31e091915d59e6359bb95c49dd986361cbbf2536edcda02598b0fac236762b61a46  libnfs-6.0.2.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/nfs/rules.mak",
+      "source_expressions": [
+        "NFS_VERSION := 6.0.2",
+        "NFS_URL := $(GITHUB)/sahlberg/libnfs/archive/libnfs-$(NFS_VERSION).tar.gz",
+        "$(TARBALLS)/libnfs-$(NFS_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(NFS_URL),nfs)",
+        ".sum-nfs: libnfs-$(NFS_VERSION).tar.gz",
+        "nfs: UNPACK_DIR=libnfs-libnfs-$(NFS_VERSION)",
+        "nfs: libnfs-$(NFS_VERSION).tar.gz .sum-nfs",
+        "\t$(APPLY) $(SRC)/nfs/0007-tls-add-support-for-kernel-without-TLS_1_3_VERSION.patch"
+      ]
+    },
+    "nvcodec": {
+      "sha512sums": [
+        "6e278c35737be5eea05582c4b47f8e36c58a8922983e5565b58357105d7fac2d7ba500e475a8bec598c0e6bca93eb4a0ed2867ddd198aa9f2a8c656eaa962dac  nv-codec-headers-13.0.19.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/nvcodec/rules.mak",
+      "source_expressions": [
+        "# NVCODEC_HASH := 84483da70d903239d4536763fde8c7e6c4e80784",
+        "# NVCODEC_GITURL := $(VIDEOLAN_GIT)/ffmpeg/nv-codec-headers.git",
+        "# NVCODEC_GITURL := $(GITHUB)/FFmpeg/nv-codec-headers.git",
+        "NVCODEC_VERSION := 13.0.19.0",
+        "NVCODEC_URL := https://code.ffmpeg.org/FFmpeg/nv-codec-headers/releases/download/n$(NVCODEC_VERSION)/nv-codec-headers-$(NVCODEC_VERSION).tar.gz",
+        "# $(TARBALLS)/nvcodec-$(NVCODEC_HASH).tar.xz:",
+        "# \t$(call download_git,$(NVCODEC_GITURL),,$(NVCODEC_HASH))",
+        "$(TARBALLS)/nv-codec-headers-$(NVCODEC_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(NVCODEC_URL),nvcodec)",
+        ".sum-nvcodec: nv-codec-headers-$(NVCODEC_VERSION).tar.gz",
+        "nvcodec: nv-codec-headers-$(NVCODEC_VERSION).tar.gz .sum-nvcodec"
+      ]
+    },
+    "ogg": {
+      "sha512sums": [
+        "2168548e57e23fadca4aa66351214b23d699bc3aa47f5d065f8b583a3fe85c99333014a6aa38e4021b0e3750115b88258a6c00cac1e1496cdee5f12cdc633814  libogg-1.3.6.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/ogg/rules.mak",
+      "source_expressions": [
+        "OGG_VERSION := 1.3.6",
+        "OGG_URL := $(XIPH)/ogg/libogg-$(OGG_VERSION).tar.xz",
+        "$(TARBALLS)/libogg-$(OGG_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(OGG_URL),ogg)",
+        ".sum-ogg: libogg-$(OGG_VERSION).tar.xz",
+        "libogg: libogg-$(OGG_VERSION).tar.xz .sum-ogg"
+      ]
+    },
+    "openapv": {
+      "sha512sums": [
+        "59a1d1168015e20cba984bdac098bbee1c4bd475832d553ce27f2c7c52a13fb60a19a48d94422220c007739883370a9cbce3158c7a1218063fd49a8d20270ec0  openapv-0.2.0.4.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/openapv/rules.mak",
+      "source_expressions": [
+        "OPENAPV_VERSION := 0.2.0.4",
+        "OPENAPV_URL := $(GITHUB)/AcademySoftwareFoundation/openapv/archive/refs/tags/v$(OPENAPV_VERSION).tar.gz",
+        "$(TARBALLS)/openapv-$(OPENAPV_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(OPENAPV_URL),openapv)",
+        ".sum-openapv: openapv-$(OPENAPV_VERSION).tar.gz",
+        "openapv: openapv-$(OPENAPV_VERSION).tar.gz .sum-openapv"
+      ]
+    },
+    "opencv4": {
+      "sha512sums": [
+        "ce4bada7b57c1a00439eca02abcba262732d5eabfd26090f6f83642d747a9a1a7908230bcd01a2b999c509e0c43c8b0dcb2b93ac824518b79cffe533f22652bb  opencv-4.4.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/opencv4/rules.mak",
+      "source_expressions": [
+        "OPENCV4_VERSION := 4.4.0",
+        "OPENCV4_URL := $(GITHUB)/opencv/opencv/archive/$(OPENCV4_VERSION).tar.gz",
+        "$(TARBALLS)/opencv-$(OPENCV4_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(OPENCV4_URL),opencv4)",
+        ".sum-opencv4: opencv-$(OPENCV4_VERSION).tar.gz",
+        "opencv4: opencv-$(OPENCV4_VERSION).tar.gz .sum-opencv4"
+      ]
+    },
+    "openjpeg": {
+      "sha512sums": [
+        "702a10e20caaf8209684ded7c9fcf32f5ba6a972cf2d9fcf2611cdc6a446d2c3bb60324205758e6b6f92278c8cf4ef0fbae511e6ffb45ed6e8df514db0c6ab25  openjpeg-2.5.4.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/openjpeg/rules.mak",
+      "source_expressions": [
+        "OPENJPEG_VERSION := 2.5.4",
+        "OPENJPEG_URL := $(GITHUB)/uclouvain/openjpeg/archive/v$(OPENJPEG_VERSION).tar.gz",
+        "$(TARBALLS)/openjpeg-$(OPENJPEG_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(OPENJPEG_URL),openjpeg)",
+        ".sum-openjpeg: openjpeg-$(OPENJPEG_VERSION).tar.gz",
+        "openjpeg: openjpeg-$(OPENJPEG_VERSION).tar.gz .sum-openjpeg"
+      ]
+    },
+    "opus": {
+      "sha512sums": [
+        "93742e86b2eb222808a5055e62627d142e6e7347b3d5aebb4d39b45df78ed7d437746c51eb24d724a7c865d064e9d16f4541a4ce6a82fcf7dcc23427d2252e16  opus-1.6.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/opus/rules.mak",
+      "source_expressions": [
+        "OPUS_VERSION := 1.6.1",
+        "OPUS_URL := $(XIPH)/opus/opus-$(OPUS_VERSION).tar.gz",
+        "$(TARBALLS)/opus-$(OPUS_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(OPUS_URL),opus)",
+        ".sum-opus: opus-$(OPUS_VERSION).tar.gz",
+        "opus: opus-$(OPUS_VERSION).tar.gz .sum-opus"
+      ]
+    },
+    "png": {
+      "sha512sums": [
+        "569f81d57dcce7bb874a45fa9f8db2044585245d2eb0c0485a1b03c2e338ecaec6bfda3cb94ad2a34951997414c69fc0373c8c5852d6c313c03e8a946ff345c6  libpng-1.6.53.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/png/rules.mak",
+      "source_expressions": [
+        "PNG_VERSION := 1.6.53",
+        "PNG_URL := $(SF)/libpng/libpng16/$(PNG_VERSION)/libpng-$(PNG_VERSION).tar.xz",
+        "$(TARBALLS)/libpng-$(PNG_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(PNG_URL),png)",
+        ".sum-png: libpng-$(PNG_VERSION).tar.xz",
+        "png: libpng-$(PNG_VERSION).tar.xz .sum-png"
+      ]
+    },
+    "postproc": {
+      "recipe_source_path": "contrib/src/postproc/rules.mak",
+      "source_expressions": [
+        "POSTPROC_GITURL:=$(GITHUB)/michaelni/libpostproc",
+        "\t$(call download_git,$(POSTPROC_GITURL),,$(POSTPROC_GITVERSION))"
+      ]
+    },
+    "projectM": {
+      "sha512sums": [
+        "8fe729c61c9799b4054add813daea4c2e6dca8ec499c5b3f1c0486a8b1a4b5be88309a7f497de9f819e317d5858e7bf1b2c44347e3adbddb7c2dad1b045859c8  libprojectM-4.1.6.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/projectM/rules.mak",
+      "source_expressions": [
+        "PROJECTM_VERSION := 4.1.6",
+        "PROJECTM_URL := $(GITHUB)/projectM-visualizer/projectm/releases/download/v$(PROJECTM_VERSION)/libprojectM-$(PROJECTM_VERSION).tar.gz",
+        "$(TARBALLS)/libprojectM-$(PROJECTM_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(PROJECTM_URL),projectM)",
+        ".sum-projectM: libprojectM-$(PROJECTM_VERSION).tar.gz",
+        "projectM: libprojectM-$(PROJECTM_VERSION).tar.gz .sum-projectM"
+      ]
+    },
+    "protobuf": {
+      "sha512sums": [
+        "370541974e9049963271ed6100c2b78a93d5c206d5ca8bcf00b423038bc3ec049e2c8025d5b306dcd0b3104b15559ac7d9d8a59e235eb94566678afb3c0cef6f  protobuf-3.21.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/protobuf/rules.mak",
+      "source_expressions": [
+        "PROTOBUF_VERSION := $(PROTOBUF_MAJVERSION).$(PROTOBUF_REVISION)",
+        "PROTOBUF_URL := $(GITHUB)/protocolbuffers/protobuf/releases/download/v$(PROTOBUF_VERSION)/protobuf-cpp-$(PROTOBUF_PACKAGE).tar.gz",
+        "ifeq ($(call need_pkg, \"protobuf-lite = $(PROTOBUF_VERSION)\"),)",
+        "\t$(call download_pkg,$(PROTOBUF_URL),protobuf)",
+        "$(TARBALLS)/protoc-$(PROTOBUF_VERSION)-cpp.tar.gz: $(TARBALLS)/protobuf-$(PROTOBUF_PACKAGE).tar.gz",
+        "protoc: protoc-$(PROTOBUF_VERSION)-cpp.tar.gz .sum-protoc"
+      ]
+    },
+    "pthread-stubs": {
+      "sha512sums": [
+        "0fec563f3833b84311b32cb13a4fd9832aeb0204c65b1541bf453d5d35693b2267c3cee656e00a4b8533b07a8f6320ca5c3672dcf8ab047cdac8628154c08954  libpthread-stubs-0.4.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/pthread-stubs/rules.mak",
+      "source_expressions": [
+        "PTHREAD_STUBS_VERSION := 0.4",
+        "PTHREAD_STUBS_URL := https://xcb.freedesktop.org/dist/libpthread-stubs-$(PTHREAD_STUBS_VERSION).tar.bz2",
+        "$(TARBALLS)/libpthread-stubs-$(PTHREAD_STUBS_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(PTHREAD_STUBS_URL),pthreads)",
+        ".sum-pthread-stubs: libpthread-stubs-$(PTHREAD_STUBS_VERSION).tar.bz2",
+        "libpthread-stubs: libpthread-stubs-$(PTHREAD_STUBS_VERSION).tar.bz2 .sum-pthread-stubs"
+      ]
+    },
+    "qt": {
+      "sha512sums": [
+        "ef364f939f23b622f67d21833c2dbf1fb74531d9a1e25b6d2e94ea5d747a40f20c6c3a24abef1e9710287366b7cb54dd090350d315601317779235c20743cc81 qtbase-everywhere-src-6.8.3.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/qt/rules.mak",
+      "source_expressions": [
+        "QTBASE_VERSION_FULL := $(QTBASE_VERSION)",
+        "QTBASE_URL := $(QT)/$(QTBASE_VERSION_FULL)/submodules/qtbase-everywhere-src-$(QTBASE_VERSION_FULL).tar.xz",
+        "ifeq ($(call need_pkg,\"Qt6Core >= $(QTBASE_VERSION_MAJOR) Qt6Gui >= $(QTBASE_VERSION_MAJOR) Qt6Widgets >= $(QTBASE_VERSION_MAJOR)\"),)",
+        "$(TARBALLS)/qtbase-everywhere-src-$(QTBASE_VERSION_FULL).tar.xz:",
+        "\t$(call download_pkg,$(QTBASE_URL),qt)",
+        ".sum-qt: qtbase-everywhere-src-$(QTBASE_VERSION_FULL).tar.xz",
+        "qt: qtbase-everywhere-src-$(QTBASE_VERSION_FULL).tar.xz .sum-qt",
+        "QTBASE_CONFIG += -DQT_NO_PACKAGE_VERSION_CHECK=TRUE"
+      ]
+    },
+    "qtdeclarative": {
+      "sha512sums": [
+        "75c9fdc8ba26ef95ae8ff0c82b18589b74d7ff3065e86e5bd8427bc36336e569eaa22fa07863f99d0592eec0c1a69c3409c7b3941eae14361ff523c058e56084 qtdeclarative-everywhere-src-6.8.3.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/qtdeclarative/rules.mak",
+      "source_expressions": [
+        "QTDECLARATIVE_VERSION := $(QTBASE_VERSION)",
+        "QTDECLARATIVE_URL := $(QT)/$(QTDECLARATIVE_VERSION)/submodules/qtdeclarative-everywhere-src-$(QTDECLARATIVE_VERSION).tar.xz",
+        "ifeq ($(call need_pkg,\"Qt6Qml >= $(QTBASE_VERSION_MAJOR) Qt6Quick >= $(QTBASE_VERSION_MAJOR) Qt6QuickControls2 >= $(QTBASE_VERSION_MAJOR) Qt6QuickLayouts >= $(QTBASE_VERSION_MAJOR) Qt6QmlWorkerScript >= $(QTBASE_VERSION_MAJOR)\"),)",
+        "$(TARBALLS)/qtdeclarative-everywhere-src-$(QTDECLARATIVE_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(QTDECLARATIVE_URL),qt)",
+        ".sum-qtdeclarative: qtdeclarative-everywhere-src-$(QTDECLARATIVE_VERSION).tar.xz",
+        "qtdeclarative: qtdeclarative-everywhere-src-$(QTDECLARATIVE_VERSION).tar.xz .sum-qtdeclarative"
+      ]
+    },
+    "qtshadertools": {
+      "sha512sums": [
+        "5f326bb097e09f9f9259b550ccf5fb05634d748eebf8b8c416225e3cd328c2b532c764a41b98a4d47633be446edaeaa3d4e5da1f4951b31e3da6ddc4392a47fc qtshadertools-everywhere-src-6.8.3.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/qtshadertools/rules.mak",
+      "source_expressions": [
+        "QTSHADERTOOLS_VERSION := $(QTBASE_VERSION)",
+        "QTSHADERTOOLS_URL := $(QT)/$(QTSHADERTOOLS_VERSION)/submodules/qtshadertools-everywhere-src-$(QTSHADERTOOLS_VERSION).tar.xz",
+        "$(TARBALLS)/qtshadertools-everywhere-src-$(QTSHADERTOOLS_VERSION).tar.xz:",
+        "\t$(call download,$(QTSHADERTOOLS_URL))",
+        ".sum-qtshadertools: qtshadertools-everywhere-src-$(QTSHADERTOOLS_VERSION).tar.xz",
+        "qtshadertools: qtshadertools-everywhere-src-$(QTSHADERTOOLS_VERSION).tar.xz .sum-qtshadertools"
+      ]
+    },
+    "qtsvg": {
+      "sha512sums": [
+        "213af7fdf92fb64c9b824dbe044f51d89e661ccc02c17cf109e65b962a7b1de84c71e1b1b58d6cad0cc9fccee80b97efe9ebcab3491b478fb9b64bcfd33986a4 qtsvg-everywhere-src-6.8.3.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/qtsvg/rules.mak",
+      "source_expressions": [
+        "QTSVG_VERSION := $(QTBASE_VERSION)",
+        "QTSVG_URL := $(QT)/$(QTSVG_VERSION)/submodules/qtsvg-everywhere-src-$(QTSVG_VERSION).tar.xz",
+        "ifeq ($(call need_pkg,\"Qt6Svg >= $(QTBASE_VERSION_MAJOR)\"),)",
+        "$(TARBALLS)/qtsvg-everywhere-src-$(QTSVG_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(QTSVG_URL),qt)",
+        ".sum-qtsvg: qtsvg-everywhere-src-$(QTSVG_VERSION).tar.xz",
+        "qtsvg: qtsvg-everywhere-src-$(QTSVG_VERSION).tar.xz .sum-qtsvg"
+      ]
+    },
+    "qtwayland": {
+      "sha512sums": [
+        "2edb6d3e85c06bcf689c3acfcc38b6ff0505569dfeec8bfb5a434fad563087ff917875ea56e639405af3cca8adc98206ab9f68dfaf8e2449300d010ffbb16699  qtwayland-everywhere-src-6.8.3.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/qtwayland/rules.mak",
+      "source_expressions": [
+        "QTWAYLAND_VERSION := $(QTBASE_VERSION)",
+        "QTWAYLAND_URL := $(QT)/$(QTWAYLAND_VERSION)/submodules/qtwayland-everywhere-src-$(QTWAYLAND_VERSION).tar.xz",
+        "$(TARBALLS)/qtwayland-everywhere-src-$(QTWAYLAND_VERSION).tar.xz:",
+        "\t$(call download,$(QTWAYLAND_URL))",
+        ".sum-qtwayland: qtwayland-everywhere-src-$(QTWAYLAND_VERSION).tar.xz",
+        "qtwayland: qtwayland-everywhere-src-$(QTWAYLAND_VERSION).tar.xz .sum-qtwayland"
+      ]
+    },
+    "rav1e": {
+      "sha512sums": [
+        "c2e03317ac36fe775863f38fc2d2eafc4075d152e26aefe932885af7dd3619ba5e16cde07f4eb48519c64fc8711d195b4fb51f770fcae081d1f486d089a1a8d1  rav1e-0.7.1-vendor.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/rav1e/rules.mak",
+      "source_expressions": [
+        "RAV1E_VERSION := 0.7.1",
+        "RAV1E_URL := https://crates.io/api/v1/crates/rav1e/$(RAV1E_VERSION)/download",
+        "$(TARBALLS)/rav1e-$(RAV1E_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(RAV1E_URL),rav1e)",
+        ".sum-rav1e: rav1e-$(RAV1E_VERSION).tar.gz",
+        "$(TARBALLS)/rav1e-$(RAV1E_VERSION)-vendor.tar.bz2: .sum-rav1e",
+        "\t$(call download_vendor,rav1e-$(RAV1E_VERSION)-vendor.tar.bz2,rav1e,rav1e-$(RAV1E_VERSION).tar.gz)",
+        ".sum-vendor-rav1e: rav1e-$(RAV1E_VERSION)-vendor.tar.bz2",
+        "rav1e-vendor: rav1e-$(RAV1E_VERSION)-vendor.tar.bz2 .sum-vendor-rav1e",
+        "rav1e: rav1e-$(RAV1E_VERSION).tar.gz .sum-rav1e"
+      ]
+    },
+    "rnnoise": {
+      "sha512sums": [
+        "5a282a76d1c9b818bb4edb0d1de868e8d86f50cf149e3c637ee2d383a33d36db298bdad9844a5f4923373ad227e385742928ad121e663e368bdc0b85ba04b56a  rnnoise-0.1.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/rnnoise/rules.mak",
+      "source_expressions": [
+        "RNNOISE_VERSION := 0.1.1",
+        "RNNOISE_URL := $(GITHUB)/xiph/rnnoise/archive/refs/tags/v${RNNOISE_VERSION}.tar.gz",
+        "$(TARBALLS)/rnnoise-$(RNNOISE_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(RNNOISE_URL),rnnoise)",
+        ".sum-rnnoise: rnnoise-$(RNNOISE_VERSION).tar.gz",
+        "rnnoise: rnnoise-$(RNNOISE_VERSION).tar.gz .sum-rnnoise"
+      ]
+    },
+    "salsa": {
+      "recipe_source_path": "contrib/src/salsa/rules.mak",
+      "source_expressions": [
+        "SALSA_URL = $(GITHUB)/tiwai/salsa-lib.git",
+        "SALSA_HASH = a3e5accc0b34ddc59fea2342f1ab1f8be179cf9d",
+        "\t$(call download_git,$(SALSA_URL),$(SALSA_TAG),$(SALSA_HASH))",
+        "\t$(call check_githash,$(SALSA_HASH))"
+      ]
+    },
+    "sam3": {
+      "sha512sums": [
+        "85b66e8630193d7ecda58850f057baed0f868a6c308cbd10e85f768e0f49c909879a65f4fd92e67b955b5de1f6666c81259f3ac265754af955528cd3b5c2f823  sam3.cpp-1.0.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/sam3/rules.mak",
+      "source_expressions": [
+        "SAM3_VERSION := 1.0.0",
+        "SAM3_URL := $(GITHUB)/PABannier/sam3.cpp/archive/refs/tags/v$(SAM3_VERSION).tar.gz",
+        "$(TARBALLS)/sam3.cpp-$(SAM3_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SAM3_URL),sam3)",
+        ".sum-sam3: sam3.cpp-$(SAM3_VERSION).tar.gz",
+        "sam3: sam3.cpp-$(SAM3_VERSION).tar.gz .sum-sam3"
+      ]
+    },
+    "samplerate": {
+      "sha512sums": [
+        "78596657963cbf06785e3e6e1190b093df71da52ca340e75bd8246a962cd79dd1c90fa5527c607cebcb296e2c1ee605015278b274e3b768f2f3fbeb0eadfb728  libsamplerate-0.1.9.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/samplerate/rules.mak",
+      "source_expressions": [
+        "SAMPLERATE_VERSION := 0.1.9",
+        "SAMPLERATE_URL := $(GITHUB)/libsndfile/libsamplerate/releases/download/$(SAMPLERATE_VERSION)/libsamplerate-$(SAMPLERATE_VERSION).tar.gz",
+        "$(TARBALLS)/libsamplerate-$(SAMPLERATE_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SAMPLERATE_URL),samplerate)",
+        ".sum-samplerate: libsamplerate-$(SAMPLERATE_VERSION).tar.gz",
+        "samplerate: libsamplerate-$(SAMPLERATE_VERSION).tar.gz .sum-samplerate"
+      ]
+    },
+    "shout": {
+      "sha512sums": [
+        "e8478cdbf9a27674c16a7b620d1576f2e31a47262b8e29b314d0f46d4e5be24b9a29790b7b226f48939bc34cacf5734fae0aa5686c7ed5879cdbd827ff8e0339  libshout-2.4.6.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/shout/rules.mak",
+      "source_expressions": [
+        "SHOUT_VERSION := 2.4.6",
+        "SHOUT_URL := $(XIPH)/libshout/libshout-$(SHOUT_VERSION).tar.gz",
+        "$(TARBALLS)/libshout-$(SHOUT_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SHOUT_URL),shout)",
+        ".sum-shout: libshout-$(SHOUT_VERSION).tar.gz",
+        "libshout: libshout-$(SHOUT_VERSION).tar.gz .sum-shout"
+      ]
+    },
+    "sidplay2": {
+      "sha512sums": [
+        "754cd41f3d2d76754049522c395022bc090f99ea838e6d1ffb8d7689f3aedad9b3879be0312d0af49ba108563296c1176d1e533d1151d5b33368bfda0a1910e3  sidplay-libs-2.1.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/sidplay2/rules.mak",
+      "source_expressions": [
+        "SID_VERSION := 2.1.1",
+        "SID_URL := $(SF)/sidplay2/sidplay2/sidplay-libs-$(SID_VERSION)/sidplay-libs-$(SID_VERSION).tar.gz",
+        "$(TARBALLS)/sidplay-libs-$(SID_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SID_URL),sidplay2)",
+        ".sum-sidplay2: sidplay-libs-$(SID_VERSION).tar.gz",
+        "sidplay-libs: sidplay-libs-$(SID_VERSION).tar.gz .sum-sidplay2"
+      ]
+    },
+    "smb2": {
+      "sha512sums": [
+        "7f481b22f90b82d19c6bb29537ef10229b3ff4aff3d46dff5b11ee22c9c0410f1d58f466cf0774507d1d6f03c06dd82b223b1f4be75da239402e57749382fe5f  libsmb2-6.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/smb2/rules.mak",
+      "source_expressions": [
+        "SMB2_VERSION := 6.1",
+        "SMB2_URL := $(GITHUB)/sahlberg/libsmb2/archive/refs/tags/libsmb2-$(SMB2_VERSION).tar.gz",
+        "$(TARBALLS)/libsmb2-$(SMB2_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SMB2_URL),smb2)",
+        ".sum-smb2: libsmb2-$(SMB2_VERSION).tar.gz",
+        "smb2: UNPACK_DIR=libsmb2-libsmb2-$(SMB2_VERSION)",
+        "smb2: libsmb2-$(SMB2_VERSION).tar.gz .sum-smb2"
+      ]
+    },
+    "soxr": {
+      "sha512sums": [
+        "f4883ed298d5650399283238aac3dbe78d605b988246bea51fa343d4a8ce5ce97c6e143f6c3f50a3ff81795d9c19e7a07217c586d4020f6ced102aceac46aaa8  soxr-0.1.3-Source.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/soxr/rules.mak",
+      "source_expressions": [
+        "SOXR_VERSION := 0.1.3",
+        "SOXR_URL := $(GITHUB)/chirlu/soxr/archive/refs/tags/$(SOXR_VERSION).tar.gz",
+        "$(TARBALLS)/soxr-$(SOXR_VERSION)-Source.tar.xz:",
+        "\t$(call download_pkg,$(SOXR_URL),soxr)",
+        ".sum-soxr: soxr-$(SOXR_VERSION)-Source.tar.xz",
+        "soxr: soxr-$(SOXR_VERSION)-Source.tar.xz .sum-soxr"
+      ]
+    },
+    "sparkle": {
+      "sha512sums": [
+        "cebe9f1b897e0823c51a736721b8d57e7269ef09b6b1efdbb09eacd20bbbd3504eee38a3b7c018730dd3764f766574d0c2058247439e8458d573ca41dc6510b8  Sparkle-2.8.1.zip"
+      ],
+      "recipe_source_path": "contrib/src/sparkle/rules.mak",
+      "source_expressions": [
+        "SPARKLE_VERSION := 2.8.1",
+        "SPARKLE_URL := $(GITHUB)/sparkle-project/Sparkle/archive/$(SPARKLE_VERSION).zip",
+        "$(TARBALLS)/Sparkle-$(SPARKLE_VERSION).zip:",
+        "\t$(call download_pkg,$(SPARKLE_URL),sparkle)",
+        ".sum-sparkle: Sparkle-$(SPARKLE_VERSION).zip",
+        "sparkle: Sparkle-$(SPARKLE_VERSION).zip .sum-sparkle"
+      ]
+    },
+    "spatialaudio": {
+      "sha512sums": [
+        "ef1835a94cd87c55ac9327762ae8f1143272de2463ca850299be15d6cf7f5a554e536cc18f70475c25e2c78f434b9c51de158a7246956c8c1f9de3256a67b87a  spatialaudio-0.3.0.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/spatialaudio/rules.mak",
+      "source_expressions": [
+        "SPATIALAUDIO_VERSION := 0.3.0",
+        "SPATIALAUDIO_URL = $(GITHUB)/videolabs/libspatialaudio/releases/download/$(SPATIALAUDIO_VERSION)/spatialaudio-$(SPATIALAUDIO_VERSION).tar.bz2",
+        "$(TARBALLS)/spatialaudio-$(SPATIALAUDIO_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(SPATIALAUDIO_URL),spatialaudio)",
+        ".sum-spatialaudio: spatialaudio-$(SPATIALAUDIO_VERSION).tar.bz2",
+        "spatialaudio: spatialaudio-$(SPATIALAUDIO_VERSION).tar.bz2 .sum-spatialaudio",
+        "\t-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ]
+    },
+    "speex": {
+      "sha512sums": [
+        "52e00300df82e1c7fb527b245af02b99a1f37faef74d004b7cd981052f1aa22a412cb18f5c7a5618df4c958f727c97eb7385beec99d68548d5b02e76192d4e0a  speex-1.2.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/speex/rules.mak",
+      "source_expressions": [
+        "SPEEX_VERSION := 1.2.1",
+        "SPEEX_URL := $(XIPH)/speex/speex-$(SPEEX_VERSION).tar.gz",
+        "$(TARBALLS)/speex-$(SPEEX_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SPEEX_URL),speex)",
+        ".sum-speex: speex-$(SPEEX_VERSION).tar.gz",
+        "speex: speex-$(SPEEX_VERSION).tar.gz .sum-speex"
+      ]
+    },
+    "speexdsp": {
+      "sha512sums": [
+        "41b5f37b48db5cb8c5a0f6437a4a8266d2627a5b7c1088de8549fe0bf0bb3105b7df8024fe207eef194096e0726ea73e2b53e0a4293d8db8e133baa0f8a3bad3  speexdsp-1.2.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/speexdsp/rules.mak",
+      "source_expressions": [
+        "SPEEXDSP_VERSION := 1.2.1",
+        "SPEEXDSP_URL := $(XIPH)/speex/speexdsp-$(SPEEXDSP_VERSION).tar.gz",
+        "$(TARBALLS)/speexdsp-$(SPEEXDSP_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SPEEXDSP_URL),speexdsp)",
+        ".sum-speexdsp: speexdsp-$(SPEEXDSP_VERSION).tar.gz",
+        "speexdsp: speexdsp-$(SPEEXDSP_VERSION).tar.gz .sum-speexdsp"
+      ]
+    },
+    "sqlite": {
+      "sha512sums": [
+        "a5ba5af9c8d6440d39ba67e3d5903c165df3f1d111e299efbe7c1cca4876d4d5aecd722e0133670daa6eb5cbf8a85c6a3d9852ab507a393615fb5245a3e1a743  sqlite-autoconf-3460100.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/sqlite/rules.mak",
+      "source_expressions": [
+        "SQLITE_VERSION := 3460100",
+        "SQLITE_URL := https://www.sqlite.org/2024/sqlite-autoconf-$(SQLITE_VERSION).tar.gz",
+        "$(TARBALLS)/sqlite-autoconf-$(SQLITE_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SQLITE_URL),sqlite)",
+        ".sum-sqlite: sqlite-autoconf-$(SQLITE_VERSION).tar.gz",
+        "sqlite: sqlite-autoconf-$(SQLITE_VERSION).tar.gz .sum-sqlite"
+      ]
+    },
+    "srt": {
+      "sha512sums": [
+        "ec4e5923531a8a7fd7778c739cb52208d24a91c569f31f3995d6e0695dffd83492e5eca2530b2e112ca37f1fd4520061d89ef42d1ded95e2516a9acda009bcaf  srt-1.5.4.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/srt/rules.mak",
+      "source_expressions": [
+        "SRT_VERSION := 1.5.4",
+        "SRT_URL := $(GITHUB)/Haivision/srt/archive/v$(SRT_VERSION).tar.gz",
+        "$(TARBALLS)/srt-$(SRT_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(SRT_URL),srt)",
+        ".sum-srt: srt-$(SRT_VERSION).tar.gz",
+        "srt: srt-$(SRT_VERSION).tar.gz .sum-srt",
+        "\t-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ]
+    },
+    "ssh2": {
+      "sha512sums": [
+        "8322b54a522b0cbbb07916d29ec045c08f8ed94bd8abb5e524038640e90a317667a25be46d95b62b101ed726ade0a51a90fb246cf34c045c38f927f4e439e431  libssh2-1.11.1.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/ssh2/rules.mak",
+      "source_expressions": [
+        "LIBSSH2_VERSION := 1.11.1",
+        "LIBSSH2_URL := https://www.libssh2.org/download/libssh2-$(LIBSSH2_VERSION).tar.xz",
+        "$(TARBALLS)/libssh2-$(LIBSSH2_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(LIBSSH2_URL),ssh2)",
+        ".sum-ssh2: libssh2-$(LIBSSH2_VERSION).tar.xz",
+        "ssh2: libssh2-$(LIBSSH2_VERSION).tar.xz .sum-ssh2"
+      ]
+    },
+    "taglib": {
+      "sha512sums": [
+        "061db9f0340e916133859dfdba6fdca496bff2813a3132d34736ad8fec6365b6da753e68adb338b2cc974be9d240d01312241428fe4a7df4b520a1bc4def0fb5  taglib-2.1.tar.gz",
+        "1ce12c8158a2f3bcddec104ceacedaea4031b4c88fc0fa1f1fae8dfa8df81c846861df9d01e8f294d79b9e4ab8c51bd1289f404eed24d07abc760688fee13090  utfcpp-3.2.5.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/taglib/rules.mak",
+      "source_expressions": [
+        "TAGLIB_VERSION := 2.1",
+        "TAGLIB_URL := $(GITHUB)/taglib/taglib/releases/download/v$(TAGLIB_VERSION)/taglib-$(TAGLIB_VERSION).tar.gz",
+        "UTFCPP_VERSION := 3.2.5",
+        "UTFCPP_URL := $(GITHUB)/nemtrif/utfcpp/archive/refs/tags/v$(UTFCPP_VERSION).tar.gz",
+        "$(TARBALLS)/taglib-$(TAGLIB_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(TAGLIB_URL),taglib)",
+        "$(TARBALLS)/utfcpp-$(UTFCPP_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(UTFCPP_URL),utfcpp)",
+        ".sum-taglib: taglib-$(TAGLIB_VERSION).tar.gz utfcpp-$(UTFCPP_VERSION).tar.gz",
+        "taglib: taglib-$(TAGLIB_VERSION).tar.gz .sum-taglib",
+        "taglib/3rdparty/utfcpp: utfcpp-$(UTFCPP_VERSION).tar.gz .sum-utfcpp taglib"
+      ]
+    },
+    "theora": {
+      "sha512sums": [
+        "849db0c916f0f0b1237a4893594ff4b9e72d4ad1dca42f3f2979af5971f42c3fe77a75b181dfdd1c1353bbca4c832d6ab43f6d509c0650901c692e96ceab5f26  libtheora-1.2.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/theora/rules.mak",
+      "source_expressions": [
+        "THEORA_VERSION := 1.2.0",
+        "THEORA_URL := $(XIPH)/theora/libtheora-$(THEORA_VERSION).tar.xz",
+        "THEORA_GITURL := https://gitlab.xiph.org/xiph/theora.git",
+        "$(TARBALLS)/libtheora-$(THEORA_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(THEORA_URL),theora)",
+        ".sum-theora: libtheora-$(THEORA_VERSION).tar.xz",
+        "\t$(call download_git,$(THEORA_GITURL),$(THEORA_GITBRANCH),$(THEORA_GITVERSION))",
+        "# libtheora: libtheora-$(THEORA_VERSION).tar.xz .sum-theora"
+      ]
+    },
+    "tiger": {
+      "sha512sums": [
+        "559e522b5127f32fdd08d62c40dfb493dc2db1efd1e21707d723ef27cbe03e7e38fb04d40856d824ed0c3c94a223ed1a0358fc11ecb30446b5ee5c7a3b802e6d  libtiger-0.3.4.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/tiger/rules.mak",
+      "source_expressions": [
+        "TIGER_VERSION := 0.3.4",
+        "TIGER_URL := $(GOOGLE_CODE)/libtiger/libtiger-$(TIGER_VERSION).tar.gz",
+        "$(TARBALLS)/libtiger-$(TIGER_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(TIGER_URL),tiger)",
+        ".sum-tiger: libtiger-$(TIGER_VERSION).tar.gz",
+        "libtiger: libtiger-$(TIGER_VERSION).tar.gz .sum-tiger"
+      ]
+    },
+    "tremor": {
+      "recipe_source_path": "contrib/src/tremor/rules.mak",
+      "source_expressions": [
+        "TREMOR_URL := https://gitlab.xiph.org/xiph/tremor.git",
+        "TREMOR_HASH := b56ffce0",
+        "\t$(call download_git,$(TREMOR_URL),master,$(TREMOR_HASH))"
+      ]
+    },
+    "twolame": {
+      "sha512sums": [
+        "cc594bc8d2322922280f915a3c0aa52540cca0350d6498bc96f3f60fd6e53f951e775ea015a44bdb29ec883b46b31a0e5483f6a5c188b02e30008289273c7d03  twolame-0.4.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/twolame/rules.mak",
+      "source_expressions": [
+        "TWOLAME_VERSION := 0.4.0",
+        "TWOLAME_URL := $(SF)/twolame/twolame-$(TWOLAME_VERSION).tar.gz",
+        "$(TARBALLS)/twolame-$(TWOLAME_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(TWOLAME_URL),twolame)",
+        ".sum-twolame: twolame-$(TWOLAME_VERSION).tar.gz",
+        "twolame: twolame-$(TWOLAME_VERSION).tar.gz .sum-twolame"
+      ]
+    },
+    "upnp": {
+      "sha512sums": [
+        "8aabd054d3c311abab762d15c739e5e10801e9a6caf09540560be9497cb632fdfc2c86a61522ab0b24e9baf20020ab0dab2a6e8e253c9cc1a1047efc701ba563  pupnp-release-1.14.20.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/upnp/rules.mak",
+      "source_expressions": [
+        "UPNP_VERSION := 1.14.20",
+        "UPNP_URL := $(GITHUB)/pupnp/pupnp/archive/refs/tags/release-$(UPNP_VERSION).tar.gz",
+        "$(TARBALLS)/pupnp-release-$(UPNP_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(UPNP_URL),upnp)",
+        ".sum-upnp: pupnp-release-$(UPNP_VERSION).tar.gz",
+        "upnp: pupnp-release-$(UPNP_VERSION).tar.gz .sum-upnp"
+      ]
+    },
+    "vncclient": {
+      "sha512sums": [
+        "3ad7e14eef3b591574714e320257ac465778e05bd157ddff09e48b990f35890bfa6883ce4ac027fcb08dccd96f721117d56aaee681482f7643cfee9adc59804b  LibVNCServer-0.9.15.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/vncclient/rules.mak",
+      "source_expressions": [
+        "VNCCLIENT_VERSION := 0.9.15",
+        "VNCCLIENT_URL := $(GITHUB)/LibVNC/libvncserver/archive/LibVNCServer-$(VNCCLIENT_VERSION).tar.gz",
+        "$(TARBALLS)/LibVNCServer-$(VNCCLIENT_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(VNCCLIENT_URL),vncclient)",
+        ".sum-vncclient: LibVNCServer-$(VNCCLIENT_VERSION).tar.gz",
+        "vncclient: LibVNCServer-$(VNCCLIENT_VERSION).tar.gz .sum-vncclient",
+        "\tmv libvncserver-LibVNCServer-$(VNCCLIENT_VERSION)  LibVNCServer-$(VNCCLIENT_VERSION)",
+        "\t-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \\"
+      ]
+    },
+    "vorbis": {
+      "sha512sums": [
+        "bbf5f11f623d959b3ba98d6b52806521b0b918b59b867f0658c153ea1013293364eead4987e9e71f8798021379310860a2e548fcf89d10caf23d45e41aba45cd  libvorbis-1.3.7.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/vorbis/rules.mak",
+      "source_expressions": [
+        "VORBIS_VERSION := 1.3.7",
+        "VORBIS_URL := $(XIPH)/vorbis/libvorbis-$(VORBIS_VERSION).tar.xz",
+        "$(TARBALLS)/libvorbis-$(VORBIS_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(VORBIS_URL),vorbis)",
+        ".sum-vorbis: libvorbis-$(VORBIS_VERSION).tar.xz",
+        "libvorbis: libvorbis-$(VORBIS_VERSION).tar.xz .sum-vorbis",
+        "\t$(HOSTVARS_CMAKE) $(CMAKE) -DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ]
+    },
+    "vpl": {
+      "sha512sums": [
+        "22b9f409a9b8ed551847e1b5a94d0c48502b5fbf68ec28021ba36d3f851ef83896205977e6b7f52c102f747a8fbc793424181ecd7edaf6058a39dc15b78d19cd libvpl-2.13.0.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/vpl/rules.mak",
+      "source_expressions": [
+        "VPL_VERSION := 2.13.0",
+        "VPL_URL := $(GITHUB)/intel/libvpl/archive/v${VPL_VERSION}/libvpl-${VPL_VERSION}.tar.gz",
+        "$(TARBALLS)/libvpl-$(VPL_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(VPL_URL),vpl)",
+        ".sum-vpl: libvpl-$(VPL_VERSION).tar.gz",
+        "vpl: libvpl-$(VPL_VERSION).tar.gz .sum-vpl"
+      ]
+    },
+    "vpx": {
+      "sha512sums": [
+        "824fe8719e4115ec359ae0642f5e1cea051d458f09eb8c24d60858cf082f66e411215e23228173ab154044bafbdfbb2d93b589bb726f55b233939b91f928aae0  libvpx-1.15.2.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/vpx/rules.mak",
+      "source_expressions": [
+        "VPX_VERSION := 1.15.2",
+        "VPX_URL := $(GITHUB)/webmproject/libvpx/archive/v${VPX_VERSION}.tar.gz",
+        "$(TARBALLS)/libvpx-$(VPX_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(VPX_URL),vpx)",
+        ".sum-vpx: libvpx-$(VPX_VERSION).tar.gz",
+        "libvpx: libvpx-$(VPX_VERSION).tar.gz .sum-vpx"
+      ]
+    },
+    "vulkan-headers": {
+      "sha512sums": [
+        "adebfc61501e67367d366a8b17833d064f925ada6480641ef3c128bbda3852087e02d67a09e90b2c188a47494b7e47a87db0d039465858e765e89dc6c2b370d7  Vulkan-Headers-1.3.275.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/vulkan-headers/rules.mak",
+      "source_expressions": [
+        "VULKAN_HEADERS_VERSION := 1.3.275",
+        "VULKAN_HEADERS_URL := $(GITHUB)/KhronosGroup/Vulkan-Headers/archive/v$(VULKAN_HEADERS_VERSION).tar.gz",
+        "VULKAN_HEADERS_MIN_VERSION := 1.3.219",
+        "VULKAN_HEADERS_MIN_VERSION_LIST := $(subst ., ,$(VULKAN_HEADERS_MIN_VERSION))",
+        "VULKAN_HEADERS_MIN_VERSION_NAME := $(subst $() ,_,$(wordlist 1,2,$(VULKAN_HEADERS_MIN_VERSION_LIST)))",
+        "# VK_MAKE_API_VERSION uses (uint32_t) casts which prevent the preprocessor",
+        "# VK_VERSION_X_Y header guard defines instead to detect major/minor, and",
+        "# then use VK_HEADER_VERSION which is not defined as a cast for the patch",
+        "# if defined(VK_VERSION_$(VULKAN_HEADERS_MIN_VERSION_NAME)) \\n",
+        "#    && VK_HEADER_VERSION >= $(lastword $(VULKAN_HEADERS_MIN_VERSION_LIST)) \\n",
+        "$(TARBALLS)/Vulkan-Headers-$(VULKAN_HEADERS_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(VULKAN_HEADERS_URL),vulkan-headers)",
+        ".sum-vulkan-headers: Vulkan-Headers-$(VULKAN_HEADERS_VERSION).tar.gz",
+        "vulkan-headers: Vulkan-Headers-$(VULKAN_HEADERS_VERSION).tar.gz .sum-vulkan-headers"
+      ]
+    },
+    "vulkan-loader": {
+      "sha512sums": [
+        "6345b57c37b9fcb2c1dd10c8184bf4121fbee660adc7b7c58d3f4bf5c07ba08ed006ac4eaecc7ce6e87ed27804b7970b04ee3ec8c841e9f0de81d0bd7fc53327  Vulkan-Loader-1.3.275.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/vulkan-loader/rules.mak",
+      "source_expressions": [
+        "VULKAN_LOADER_VERSION := 1.3.275",
+        "VULKAN_LOADER_URL := $(GITHUB)/KhronosGroup/Vulkan-Loader/archive/v$(VULKAN_LOADER_VERSION).tar.gz",
+        "$(TARBALLS)/Vulkan-Loader-$(VULKAN_LOADER_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(VULKAN_LOADER_URL),vulkan-loader)",
+        ".sum-vulkan-loader: Vulkan-Loader-$(VULKAN_LOADER_VERSION).tar.gz",
+        "vulkan-loader: Vulkan-Loader-$(VULKAN_LOADER_VERSION).tar.gz .sum-vulkan-loader"
+      ]
+    },
+    "wix": {
+      "sha512sums": [
+        "ff58d224e545722eb794d413c541ad483ab834f9ce92e2528fe8aeb645717ab077db833ae783e1a31ad9e50803eb80fdc9efcda72535493a3f0faea4aa3ba36d  wix3.14.1.8722.zip"
+      ],
+      "recipe_source_path": "contrib/src/wix/rules.mak",
+      "source_expressions": [
+        "WIX_VERSION=314",
+        "WIX_SUB_VERSION=1",
+        "WIX_FULL_VERSION=3.14.1.8722",
+        "WIX_URL := $(GITHUB)/wixtoolset/wix3/releases/download/wix$(WIX_VERSION)$(WIX_SUB_VERSION)rtm/wix$(WIX_VERSION)-binaries.zip",
+        ".sum-wix: wix$(WIX_FULL_VERSION).zip",
+        "$(TARBALLS)/wix$(WIX_FULL_VERSION).zip:",
+        "\t$(call download_pkg,$(WIX_URL),wix)",
+        "wix: UNZIP_PARAMS=-d wix$(WIX_FULL_VERSION)",
+        "wix: wix$(WIX_FULL_VERSION).zip .sum-wix"
+      ]
+    },
+    "wixlzx": {
+      "sha512sums": [
+        "26b1d2a5b582fcaa31ffaaf289711854897f91e8e5002bd8ddee2e69c95a60f53c6e3375d38fba4519ddd4a68bcf402c36eaef5a8faa6f3a4b8b2bc011e8f05a  wix3.5.2519.0.zip"
+      ],
+      "recipe_source_path": "contrib/src/wixlzx/rules.mak",
+      "source_expressions": [
+        "WIX_LZX_VERSION=35",
+        "WIX_LZX_FULL_VERSION=3.5.2519.0",
+        "# WIX_LZX_VERSION=36",
+        "# WIX_LZX_FULL_VERSION=3.6.3303.1",
+        "# WIX_LZX_FULL_VERSION=3.6.2221.0",
+        "# WIX_LZX_VERSION=37",
+        "# WIX_LZX_FULL_VERSION=3.7.1224.0",
+        "# WIX_LZX_VERSION=38",
+        "# WIX_LZX_FULL_VERSION=3.8.1128.0",
+        "# WIX_LZX_VERSION=39",
+        "# WIX_LZX_FULL_VERSION=3.9.1208.0",
+        "# WIX_LZX_VERSION=310",
+        "# WIX_LZX_FULL_VERSION=3.10.4.4718",
+        "# WIX_LZX_VERSION=311",
+        "# WIX_LZX_FULL_VERSION=3.11.2.4516",
+        "# WIX_LZX_VERSION=314",
+        "# WIX_LZX_FULL_VERSION=3.14.0.6526",
+        "# WIX_LZX_URL := https://wixtoolset.org/downloads/v$(WIX_LZX_FULL_VERSION)/wix$(WIX_LZX_VERSION)-binaries.zip",
+        "WIX_LZX_URL := $(CONTRIB_VIDEOLAN)/wixlzx/wix3.5.2519.0.zip",
+        ".sum-wixlzx: wix$(WIX_LZX_FULL_VERSION).zip",
+        "$(TARBALLS)/wix$(WIX_LZX_FULL_VERSION).zip:",
+        "\t$(call download_pkg,$(WIX_LZX_URL),wixlzx)",
+        "wixlzx: UNZIP_PARAMS=-d wix$(WIX_LZX_FULL_VERSION)",
+        "wixlzx: wix$(WIX_LZX_FULL_VERSION).zip .sum-wixlzx"
+      ]
+    },
+    "x262": {
+      "recipe_source_path": "contrib/src/x262/rules.mak",
+      "source_expressions": [
+        "X262_GITURL := $(VIDEOLAN_GIT)/videolan/x262.git",
+        "X262_HASH := bb887aa4c0a4da955524aa220b62998c3b50504e",
+        "\t$(call download_git,$(X262_GITURL),,$(X262_HASH))",
+        "\t$(call check_githash,$(X262_HASH))"
+      ]
+    },
+    "x264": {
+      "recipe_source_path": "contrib/src/x264/rules.mak",
+      "source_expressions": [
+        "X264_HASH := 3a21e97bf23676a0bf4616df8bc2207c9fd7b1d3",
+        "X264_VERSION := $(X264_HASH)",
+        "X264_GITURL := $(VIDEOLAN_GIT)/videolan/x264.git",
+        "$(TARBALLS)/x264-$(X264_VERSION).tar.xz:",
+        "\t$(call download_git,$(X264_GITURL),,$(X264_HASH))",
+        ".sum-x264: x264-$(X264_VERSION).tar.xz",
+        "\t$(call check_githash,$(X264_VERSION))",
+        "x264 x26410b: %: x264-$(X264_VERSION).tar.xz .sum-%"
+      ]
+    },
+    "x265": {
+      "sha512sums": [
+        "5af5b958ff507f96a52813a6b72847c9fbc555bf95af287ae7f011055338266fb647dfea3b7789730c7f5c746f7e6cb7d9395ba10cbe43eb5034d3ed99730c3f  x265_4.1.tar.gz"
+      ],
+      "recipe_source_path": "contrib/src/x265/rules.mak",
+      "source_expressions": [
+        "#X265_GITURL := https://github.com/videolan/x265",
+        "X265_VERSION := 4.1",
+        "X265_SNAPURL := $(VIDEOLAN)/x265/x265_$(X265_VERSION).tar.gz",
+        "\t$(call download_git,$(X265_GITURL))",
+        "$(TARBALLS)/x265_$(X265_VERSION).tar.gz:",
+        "\t$(call download_pkg,$(X265_SNAPURL),x265)",
+        ".sum-x265: x265_$(X265_VERSION).tar.gz",
+        "x265: x265_$(X265_VERSION).tar.gz .sum-x265"
+      ]
+    },
+    "xau": {
+      "sha512sums": [
+        "3ca454ba466a807ea28b0f715066d73dc76ad312697b121d43e4d5766215052e9b7ffb8fe3ed3e496fa3f2a13f164ac692ff85cc428e26731b679f0f06a1d562  libXau-1.0.9.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/xau/rules.mak",
+      "source_expressions": [
+        "XAU_VERSION := 1.0.9",
+        "XAU_URL := $(XORG)/lib/libXau-$(XAU_VERSION).tar.bz2",
+        "$(TARBALLS)/libXau-$(XAU_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(XAU_URL),xcb)",
+        ".sum-xau: libXau-$(XAU_VERSION).tar.bz2",
+        "libxau: libXau-$(XAU_VERSION).tar.bz2 .sum-xau"
+      ]
+    },
+    "xcb-proto": {
+      "sha512sums": [
+        "34c3795e5a48a66d89b72ee1777fb0bede489d5ec07018e6c9ef3c13bdd60b0358fc2c04a1f0ed0acb5b681aeeb92033db579036e4f5edd967fe56714c03acdf  xcb-proto-1.17.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/xcb-proto/rules.mak",
+      "source_expressions": [
+        "XCB_PROTO_VERSION := 1.17.0",
+        "XCB_PROTO_URL := $(XORG)/proto/xcb-proto-$(XCB_PROTO_VERSION).tar.xz",
+        "$(TARBALLS)/xcb-proto-$(XCB_PROTO_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(XCB_PROTO_URL),xcb)",
+        ".sum-xcb-proto: xcb-proto-$(XCB_PROTO_VERSION).tar.xz",
+        "xcb-proto: xcb-proto-$(XCB_PROTO_VERSION).tar.xz .sum-xcb-proto"
+      ]
+    },
+    "xcb": {
+      "sha512sums": [
+        "945b1f28e8b407a4d0ebf88c99ef3cbef763fd75e6eaa8e971946e44ce8dbe9b478c56ae85aaaadab7fdb25987e88570d9d4fb9ad2febd6d6bf21d644a0e10d0  libxcb-1.17.0.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/xcb/rules.mak",
+      "source_expressions": [
+        "XCB_VERSION := 1.17.0",
+        "XCB_URL := $(XORG)/lib/libxcb-$(XCB_VERSION).tar.xz",
+        "$(TARBALLS)/libxcb-$(XCB_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(XCB_URL),xcb)",
+        ".sum-xcb: libxcb-$(XCB_VERSION).tar.xz",
+        "libxcb: libxcb-$(XCB_VERSION).tar.xz .sum-xcb"
+      ]
+    },
+    "xorg-macros": {
+      "sha512sums": [
+        "6820fced14e28d505ed47c4e7e9fae17340e93caf94cc983683128b53833e257aed636bcac6204ed87ddc10132473ceb4bd2f6de53ea66ab8f71b8cd23fbfc15  util-macros-1.19.0.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/xorg-macros/rules.mak",
+      "source_expressions": [
+        "UTILS_MACROS_VERSION := 1.19.0",
+        "UTILS_MACROS_URL := $(XORG)/util/util-macros-$(UTILS_MACROS_VERSION).tar.bz2",
+        "$(TARBALLS)/util-macros-$(UTILS_MACROS_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(UTILS_MACROS_URL),xcb)",
+        ".sum-xorg-macros: util-macros-$(UTILS_MACROS_VERSION).tar.bz2",
+        "xorg-macros: util-macros-$(UTILS_MACROS_VERSION).tar.bz2 .sum-xorg-macros"
+      ]
+    },
+    "xproto": {
+      "sha512sums": [
+        "0e72d0673ae96906d88566e360fcd6d0b70deab50d108bc9caeccb3aa68e80d257407611649b4ddde2811c34c07c1eeb0b710243a9f7a9c3ff2c728832f7f647  xproto-7.0.29.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/xproto/rules.mak",
+      "source_expressions": [
+        "XPROTO_VERSION := 7.0.29",
+        "XPROTO_URL := $(XORG)/proto/xproto-$(XPROTO_VERSION).tar.bz2",
+        "$(TARBALLS)/xproto-$(XPROTO_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(XPROTO_URL),xcb)",
+        ".sum-xproto: xproto-$(XPROTO_VERSION).tar.bz2",
+        "xproto: xproto-$(XPROTO_VERSION).tar.bz2 .sum-xproto"
+      ]
+    },
+    "zlib": {
+      "sha512sums": [
+        "cf3d49fbabddc57cca99858feeca8f910e9de42a16014cddd406814d2d24ee33fee2af3805d7efbb1b04b05f55818092b000daf82502b675df65f2512c353f73  zlib-1.3.2.tar.xz"
+      ],
+      "recipe_source_path": "contrib/src/zlib/rules.mak",
+      "source_expressions": [
+        "ZLIB_VERSION := 1.3.2",
+        "ZLIB_URL := $(GITHUB)/madler/zlib/releases/download/v$(ZLIB_VERSION)/zlib-$(ZLIB_VERSION).tar.xz",
+        "$(TARBALLS)/zlib-$(ZLIB_VERSION).tar.xz:",
+        "\t$(call download_pkg,$(ZLIB_URL),zlib)",
+        ".sum-zlib: zlib-$(ZLIB_VERSION).tar.xz",
+        "zlib: zlib-$(ZLIB_VERSION).tar.xz .sum-zlib"
+      ]
+    },
+    "zvbi": {
+      "sha512sums": [
+        "3d73eb0a7d05fdf1e3f8a74cc9d4fcb2a0287285904d59230c832f42b91afb072e96bda7e396ef07f268348061a51242925746db124bbb713cf56bdfabdada5d  zvbi-0.2.35.tar.bz2"
+      ],
+      "recipe_source_path": "contrib/src/zvbi/rules.mak",
+      "source_expressions": [
+        "ZVBI_VERSION := 0.2.35",
+        "ZVBI_URL := $(SF)/zapping/zvbi-$(ZVBI_VERSION).tar.bz2",
+        "$(TARBALLS)/zvbi-$(ZVBI_VERSION).tar.bz2:",
+        "\t$(call download_pkg,$(ZVBI_URL),zvbi)",
+        ".sum-zvbi: zvbi-$(ZVBI_VERSION).tar.bz2",
+        "zvbi: zvbi-$(ZVBI_VERSION).tar.bz2 .sum-zvbi"
+      ]
+    }
+  }
+}

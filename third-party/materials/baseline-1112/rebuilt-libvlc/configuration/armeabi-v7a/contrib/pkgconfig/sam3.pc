@@ -1,0 +1,11 @@
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: sam3
+Description: Segment Anything Model 3 inference library
+Version: 1.0.0
+Requires: ggml
+Libs: -L${libdir} -lsam3
+Cflags: -I${includedir}

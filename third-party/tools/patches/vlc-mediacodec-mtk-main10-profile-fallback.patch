@@ -1,0 +1,57 @@
+--- a/modules/codec/omxil/mediacodec.c
++++ b/modules/codec/omxil/mediacodec.c
+@@ -211,6 +211,9 @@
+              MEDIACODEC_AUDIO_TEXT, MEDIACODEC_AUDIO_LONGTEXT)
+     add_bool(CFG_PREFIX "tunneled-playback", false,
+              MEDIACODEC_TUNNELEDPLAYBACK_TEXT, NULL)
++    add_bool(CFG_PREFIX "mtk-main10-profile-fallback", false,
++             "Try MediaTek HEVC Main10 when its profile declaration is incomplete",
++             "Only after all declared profile matches fail. Actual codec configuration still decides support.")
+     set_callbacks(OpenDecoderNdk, CloseDecoder)
+     add_shortcut("mediacodec_ndk")
+     add_submodule ()
+--- a/modules/codec/omxil/mediacodec_jni.c
++++ b/modules/codec/omxil/mediacodec_jni.c
+@@ -266,7 +266,14 @@
+                                              jfields.media_codec_list_class,
+                                              jfields.get_codec_count);
+ 
+-    for (int i = 0; i < num_codecs; i++)
++    /* Some MediaTek HEVC decoders expose only Main, but configure and render
++     * Main10 correctly. Prefer every declared match before this opt-in retry.
++     * This changes selection only: configure/start/output errors retain their
++     * normal failure path and software fallback. */
++    const bool retry_mtk_main10 = codec == VLC_CODEC_HEVC && profile == 2 &&
++        var_InheritBool(p_obj, "mediacodec-mtk-main10-profile-fallback");
++    const int passes = retry_mtk_main10 ? 2 : 1;
++    for (int i = 0; i < num_codecs * passes; i++)
+     {
+         jobject codec_capabilities = NULL;
+         jobject profile_levels = NULL;
+@@ -280,11 +287,16 @@
+         bool b_adaptive = false;
+ 
+         info = (*env)->CallStaticObjectMethod(env, jfields.media_codec_list_class,
+-                                              jfields.get_codec_info_at, i);
++                                              jfields.get_codec_info_at, i % num_codecs);
+ 
+         name = (*env)->CallObjectMethod(env, info, jfields.get_name);
+         name_len = (*env)->GetStringUTFLength(env, name);
+         name_ptr = (*env)->GetStringUTFChars(env, name, NULL);
++
++        const bool profile_retry = i >= num_codecs;
++        if (profile_retry && strncmp(name_ptr, "c2.mtk.", 7) != 0 &&
++            strncmp(name_ptr, "OMX.MTK.", 8) != 0)
++            goto loopclean;
+ 
+         if (OMXCodec_IsBlacklisted(name_ptr, name_len))
+             goto loopclean;
+@@ -330,7 +342,7 @@
+                 /* The mime type is matching for this component. We
+                    now check if the capabilities of the codec is
+                    matching the video format. */
+-                if (profile > 0)
++                if (profile > 0 && !profile_retry)
+                 {
+                     /* This decoder doesn't expose its profiles and is high
+                      * profile capable */

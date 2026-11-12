@@ -1,0 +1,1 @@
+[{"id": "b412122c4d4dad3f3b88f851e0be342495e6d030", "name": "issue_templates", "type": "tree", "path": ".gitlab/issue_templates", "mode": "040000"}, {"id": "b2ecc7852a13033070bc3d5a78a22f73f3843169", "name": "merge_request_templates", "type": "tree", "path": ".gitlab/merge_request_templates", "mode": "040000"}]

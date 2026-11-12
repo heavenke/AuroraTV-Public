@@ -1,0 +1,14 @@
+# libvorbisfile pkg-config source file
+
+prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi
+exec_prefix=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/bin
+libdir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/lib
+includedir=/root/.cache/aurora-vlc-lgpl/source/vlc/contrib/arm-linux-androideabi/include
+
+Name: vorbisfile
+Description: vorbisfile is a library that provides a convenient high-level API for decoding and basic manipulation of all Vorbis I audio streams
+Version: 1.3.7
+Conflicts:
+Libs:  -L${libdir} -lvorbisfile 
+Cflags:  -I${includedir} 
+Requires:   vorbis
