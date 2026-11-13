@@ -1,6 +1,6 @@
 # 第三方软件通知
 
-适用于极光视界 Aurora TV **v1.0.0.1112**，主线组件记录更新于2026-11-13。已发布公众版的对应组件以其同版本随包通知和校验清单为准。
+本清单记录极光视界 Aurora TV 使用的第三方组件。各发行包的组件版本以随包通知和对应校验清单为准。
 
 极光视界应用主体采用闭源分发。下列第三方软件保留原作者版权及各自许可证，媒体容器、编解码、字幕、加密和网络等能力中包含这些组件的工作。应用主体与品牌的授权说明、第三方软件的授权范围分别依照其相应条款执行。
 
@@ -16,6 +16,9 @@
 | Gson | 2.11.0，JSON 处理 | Apache-2.0，[Gson](https://github.com/google/gson/tree/gson-parent-2.11.0) |
 | ZXing Core | 3.5.3，二维码生成 | Apache-2.0，[ZXing](https://github.com/zxing/zxing/tree/zxing-3.5.3) |
 | EdDSA-Java | `net.i2p.crypto:eddsa:0.3.0`，Ed25519 验签 | CC0-1.0，[EdDSA-Java](https://github.com/str4d/ed25519-java) |
+| dexlib2 | `org.smali:dexlib2:2.5.2`，在私有派生缓存中适配第三方接口的常规 Toast 调用，保留下载原件及其校验身份 | BSD-3-Clause，部分 AOSP 文件为 Apache-2.0，[固定版本源码](https://github.com/JesusFreke/smali/tree/v2.5.2/dexlib2)、[完整上游通知](LICENSES/dexlib2-NOTICE.txt) |
+| Guava Android | `com.google.guava:guava:33.3.1-android`，DEX 读写所需集合与基础工具 | Apache-2.0，[固定版本源码](https://github.com/google/guava/tree/v33.3.1/android) |
+| JSR-305 注解 | `com.google.code.findbugs:jsr305:3.0.2`，dexlib2 的注解依赖 | Apache-2.0，[固定来源制品及源码](https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/) |
 | core-js 与 Babel 生成的运行时辅助代码 | 内置配置页的 ES5 与 Promise、集合兼容，支持 Android 5.0 WebView | MIT，[原始版权与许可](LICENSES/Config-web-runtime-LICENSE.txt) |
 | LibVLC Android 派生 SDK | 基于 `libvlc-all:4.0.0-eap29` 对应固定源码重构建的双 ARM 版本，VLC 引擎与 Java/JNI 接口 | 官方 `l` 构建配置，LGPL-3.0-or-later 与所含组件各自的授权、附加致谢条款；Java/JNI 文件保留原声明，[LibVLC Android](https://code.videolan.org/videolan/libvlcjni)、[VideoLAN](https://www.videolan.org/vlc/libvlc.html) |
 | LibVLC 所含 libass、FreeType、HarfBuzz 与 FriBidi | libass 0.17.4、FreeType 2.13.1、HarfBuzz 11.5.0、FriBidi 1.0.16，字幕与字体渲染 | 分别保留 ISC、FreeType License、Old MIT、LGPL 及各独立文件声明，[组件版权与许可原文](LICENSES/VLC-contrib-NOTICES.txt) |
@@ -34,7 +37,7 @@ IJK 两种 ARM ABI 原生库保留上游 GSY SDK 制品字节，其 FFmpeg 构�
 
 使用者保留依据相应 LGPL 许可证复制、研究、修改和再分发这些库的权利，以及为使用修改后的库和调试相关修改所需的替换、重新链接与逆向工程权利。这些权利依相应许可证优先适用。完整条款见本仓库附带的许可证原文。[LGPL 2.1 原文](LICENSES/LGPL-2.1.txt)、[LGPL 3.0 原文](LICENSES/LGPL-3.0.txt)、[GPL 3.0 基础条款](LICENSES/GPL-3.0.txt)
 
-本版本第三方库的源码、构建资料、原始版权通知及制品对应关系通过同版本 Release 的第三方资料附件提供。附件清单区分实际原生版本标识、上游提交、构建说明与来源证据。Android 应用业务实现的授权范围由应用自身说明确定。[同版本发布与第三方资料](https://github.com/heavenke/AuroraTV-Public/releases)
+本版本第三方库的源码、构建资料、原始版权通知及制品对应关系在公众版仓库中增量维护，清单记录原生版本标识、上游提交和构建说明。Android 应用业务实现的授权范围由应用自身说明确定。[第三方源码与构建材料](https://github.com/heavenke/AuroraTV-Public/tree/main/third-party)
 
 共享库替换、重新链接及 Android 自签安装的操作流程另附说明。[第三方共享库替换与重新打包](Library-replacement.md)
 
@@ -94,6 +97,7 @@ OpenSSL Project、Eric Young 与 Tim Hudson 的原始版权、再分发条件和
 - [LLVM libunwind 许可证与 LLVM exception](LICENSES/LLVM-libunwind-LICENSE.txt)
 - [VLC 所用源码组件的版权与许可通知](LICENSES/VLC-contrib-NOTICES.txt)
 - [ZXing 上游 NOTICE](LICENSES/ZXing-NOTICE.txt)
+- [dexlib2 上游版权与许可通知](LICENSES/dexlib2-NOTICE.txt)
 - [原文来源与文件校验值](LICENSES/SOURCES.md)
 
 源码包中的独立组件继续保留各自许可证、版权及 NOTICE 文件。媒体来源插件与其发布者的代码另按对应作者许可使用；用户自行配置后取得的 JAR 由对应来源提供。rtp2httpd 作为独立 HTTP TS 服务进行互操作，相关项目按其自己的发行许可提供。[rtp2httpd](https://github.com/stackia/rtp2httpd)

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "scope": "Unmodified upstream third-party Java source materials only",
+  "components": [
+    {
+      "component": "dexlib2",
+      "version": "2.5.2",
+      "license": "BSD-3-Clause; Apache-2.0 portions",
+      "source_url": "https://repo.maven.apache.org/maven2/org/smali/dexlib2/2.5.2/dexlib2-2.5.2-sources.jar",
+      "archive_sha256": "fc13852385dd3fd233c088df8ed1ce4d5496bb0c87104381a01a20005862c3de",
+      "maven_sha1": "21990bce9ff4b17861d08425fb3f67313213a0d0",
+      "archive_size_bytes": 944703,
+      "directory": "sources/dexlib2-2.5.2-sources",
+      "archive_file_count": 589,
+      "file_count": 590,
+      "tree_sha256": "06ab8eb24432f9d4a89d4313ffe272f3e7198347be1ad5bfccb1b009ac297ead",
+      "additional_upstream_notices": [
+        {
+          "file": "UPSTREAM-NOTICE.txt",
+          "source": "https://raw.githubusercontent.com/JesusFreke/smali/v2.5.2/NOTICE",
+          "sha256": "e247d92c57251fc3e674b5366bafd40ed644bfc7c4a55172e464685a25622945"
+        }
+      ]
+    },
+    {
+      "component": "guava",
+      "version": "33.3.1-android",
+      "license": "Apache-2.0",
+      "source_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/33.3.1-android/guava-33.3.1-android-sources.jar",
+      "archive_sha256": "1933a9fb7ee8535749600d7298fa9511589631010e90907db8459797c31238ca",
+      "maven_sha1": "2ae2a0eae13f886159651ed3a41a97b968137a06",
+      "archive_size_bytes": 1825657,
+      "directory": "sources/guava-33.3.1-android-sources",
+      "archive_file_count": 618,
+      "file_count": 619,
+      "tree_sha256": "7ac4130f99f8270a29e0ecd56c4f06be25a879de1705f51de58433e8b7104f31",
+      "additional_upstream_notices": [
+        {
+          "file": "UPSTREAM-LICENSE.txt",
+          "source": "https://raw.githubusercontent.com/google/guava/v33.3.1/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "component": "jsr305",
+      "version": "3.0.2",
+      "license": "Apache-2.0",
+      "source_url": "https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar",
+      "archive_sha256": "1c9e85e272d0708c6a591dc74828c71603053b48cc75ae83cce56912a2aa063b",
+      "maven_sha1": "b19b5927c2c25b6c70f093767041e641ae0b1b35",
+      "archive_size_bytes": 18102,
+      "directory": "sources/jsr305-3.0.2-sources",
+      "archive_file_count": 32,
+      "file_count": 32,
+      "tree_sha256": "8b209006fc9f6a7f9eadd473049ff30f0e9ce9f344a963bf5f99f22e38ee5c50",
+      "additional_upstream_notices": []
+    }
+  ]
+}

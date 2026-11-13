@@ -35,3 +35,7 @@ Linux依赖、NDK版本、审计与封装参数见[LibVLC重构建说明](tools/
 固定上游地址不可用时，获取脚本使用已公开的1112源码资料补充副本，校验整个资料包后仅取索引指定的原始归档，并再次校验归档SHA-256。该既有补充资料的SHA-256为`73baaa44cd9079f9b5bbe1bf2b5afb3715308f71120ce308735d5d323c21caa2`。[既有1112第三方源码资料](https://github.com/heavenke/AuroraTV-Public/releases/download/v1.0.0.1112/AuroraTV-ThirdParty-Sources-v1.0.0.1112.zip)
 
 后续版本继续在本目录维护新增补丁、源码与当前清单，并使用Git记录差异。
+
+## Java 依赖源码增量
+
+固定版本 dexlib2 2.5.2、Guava 33.3.1-android 和 JSR-305 3.0.2 的官方源码制品已展开至 `sources/`，保留文件原文与上游许可。源码制品地址、Maven 校验值、SHA-256 与展开目录摘要见 [Java 源码索引](java-source-index.json)。
