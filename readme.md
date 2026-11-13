@@ -26,11 +26,19 @@ Android 5.0+，ARM64/ARM32 架构。
 | <img src="images/tv-live.png" alt="TV端直播界面" width="600"> | <img src="images/tablet-live.png" alt="触屏端直播界面" width="600"> |
 | <img src="images/tv-library.png" alt="TV端媒体库界面" width="600"> | <img src="images/tablet-library.png" alt="触屏端媒体库界面" width="600"> |
 
+| 手机直播页 | 手机媒体库 |
+| --- | --- |
+| <img src="images/phone-live.jpg" alt="手机端直播界面" width="600"> | <img src="images/phone-library.jpg" alt="手机端媒体库界面" width="600"> |
+
 # 关于
 
-本应用主体架构是自行设计, 部份实现由AI辅助开发.
+本应用主体架构是自行设计, 部份实现由AI辅助开发。
 
-本应用主体版权归 X-Team 所有并保留全部权利，未经授权不得进行逆向破解及收费分发。媒体内容由用户自行配置的来源提供。反馈时请附设备、Android 版本、引擎及复现步骤，并移除私有地址与凭据。
+本应用主体版权归 X-Team 所有并保留全部权利，未经授权不得进行逆向破解及收费分发。
+
+本应用只提供解码播放功能, 媒体内容由用户自行配置的来源提供。
+
+反馈时请附设备、Android 版本、引擎及复现步骤，并移除私有地址与凭据。
 
 [第三方组件说明](THIRD_PARTY_NOTICES.md) · [第三方源码与替换材料](third-party/) · [库替换说明](Library-replacement.md)
 
