@@ -103,3 +103,28 @@ OpenSSL Project、Eric Young 与 Tim Hudson 的原始版权、再分发条件和
 源码包中的独立组件继续保留各自许可证、版权及 NOTICE 文件。媒体来源插件与其发布者的代码另按对应作者许可使用；用户自行配置后取得的 JAR 由对应来源提供。rtp2httpd 作为独立 HTTP TS 服务进行互操作，相关项目按其自己的发行许可提供。[rtp2httpd](https://github.com/stackia/rtp2httpd)
 
 各第三方软件的担保和责任条款按所附原文执行。
+
+## Python 运行时与固定依赖
+
+Python 来源实际使用 Chaquopy 15.0.1，Android target 为 `com.chaquo.python:target:3.11.6-0`。这两项随 APK 提供的 Java/JNI、解释器、标准库和所含独立组件保留各自原始声明。Chaquopy 固定源码提交为 `826262dee50f7abfd27edc9072996ddfe2ffbab2`，其中包含 Android target 补丁与构建配方。[官方固定源码](https://github.com/chaquo/chaquopy/tree/826262dee50f7abfd27edc9072996ddfe2ffbab2)
+
+| 组件 | 本次打包版本 | 许可 |
+| --- | --- | --- |
+| Chaquopy | 15.0.1 | MIT |
+| Chaquopy bootstrap 的 pyelftools / Construct | 0.26 / 2.06 | Public domain / MIT |
+| CPython 与标准库 | 3.11.6，target 3.11.6-0 | PSF 及原文所列独立组件条款 |
+| requests | 2.32.3 | Apache-2.0 |
+| PyCryptodome | 3.9.4 | Public domain、BSD-2-Clause 及所含算法条款 |
+| idna | 3.20 | BSD-3-Clause |
+| urllib3 | 2.8.0 | MIT |
+| charset-normalizer | 3.5.2 | MIT |
+| certifi | 2026.10.23 | MPL-2.0 |
+| target OpenSSL / SQLite / libffi / bzip2 / liblzma | 3.0.5 / 3.39.2 / 3.4.4 / 1.0.8 / 5.4.5 | 各自原始许可 |
+
+CPython 的完整历史 LICENSE、标准库完整附带通知、Chaquopy MIT、六项 pip 包的实际 dist-info 原文及 target 支持库许可证已保存至 APK assets。清单逐项保留文件 SHA-256 与固定官方来源。[Python 原文、校验与源码清单](LICENSES/Python-SOURCES.md)
+
+certifi 的原始通知与 MPL-2.0 全文一起随包提供。对应源码可从官方同版本发布页取得，未修改其覆盖文件。[certifi 2026.10.23 官方源码](https://pypi.org/project/certifi/2026.10.23/#files)、[官方仓库](https://github.com/certifi/python-certifi)
+
+用户另行配置的 Python 影视脚本未包含在本仓库的第三方源码材料和 APK 中。相关代码的版权与授权由各自发布者提供。
+
+certifi 对应源码随仓库提供。[Python 依赖源码清单](third-party/python/SOURCES.md)
