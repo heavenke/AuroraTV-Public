@@ -2,6 +2,11 @@
 
 # 极光视界 · Aurora TV
 
+<p align="center">
+  <a href="https://aurora-tv.com/"><strong>🌌 极光视界官网正式上线 · aurora-tv.com</strong></a><br>
+  界面预览 · 使用指南 · 应用下载
+</p>
+
 基于原生 Android TV 开发的聚合式媒体播放平台, 采用Material Design 3风格视觉语言, 兼容 Android TV、机顶盒、手机、平板、车机, 支持遥控器、PC键盘与触屏操作。
 
 # 设备要求
