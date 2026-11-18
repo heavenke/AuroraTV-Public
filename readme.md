@@ -15,6 +15,12 @@ Android 5.0+，ARM64/ARM32 架构。
 
 [下载最新安装包](https://github.com/heavenke/AuroraTV-Public/releases/latest/download/release.apk) · [更新日志](CHANGELOG.md)
 
+## 配置与使用教程
+
+[📖 图文配置与使用教程（GitHub Wiki）](https://github.com/heavenke/AuroraTV-Public/wiki) · [官网使用指南](https://aurora-tv.com/guide/getting-started)
+
+从安装和首次向导开始，了解直播、节目单、台标、点播来源、分类排序、播放操作与日志导出。
+
 ## 功能
 
 - **媒体聚合**　接入飞牛影视、Emby、Jellyfin 和 TVBox/影视仓，支持多站点、二级媒体库、搜索、筛选及自定义首页分类。
