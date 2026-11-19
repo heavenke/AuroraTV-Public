@@ -2,7 +2,13 @@
 
 本目录提供公众版使用的第三方源码、授权通知、配置与必要SDK补丁。极光视界应用主体及品牌版权归其权利人所有，主体按闭源方式分发；各第三方文件继续适用其原有许可证。
 
-## 目录与制品对应
+## 当前公众版：MPV 单引擎
+
+v1.0.7.261119 的对应源码、构建配方、原始许可与两 ABI 摘要位于 [mpv/](mpv/README.md)。其中 `downloads/` 保留实际源码归档，`tools/mpv/` 提供固定构建配方及兼容补丁，`licenses/` 与 `manifests/` 分别提供原始通知和对应制品摘要。后续只增量更新变化文件，Release 分发安装 APK。
+
+以下目录属于旧版材料，为满足已分发历史版本的许可与重构建要求而保留，不代表当前公众版仍提供其他播放引擎。原 `current/` 中的 LibVLC 清单也属于此历史范围。
+
+## v1.0.6 及更早版本的历史材料
 
 - `sources/`直接展开固定版本的VLC、LibVLC JNI、两版IJK、对应FFmpeg、OpenSSL、libyuv、SoundTouch、DVD组件、LIVE555和Java绑定源码，供Git按文件增量维护。原始归档摘要及每个展开文件的摘要见`source-tree-manifest.json`。
 - `current/`记录当前双ARM LibVLC派生SDK的逐文件摘要与模块授权审计。当前AAR SHA-256为`bc3928df4b1bcf8314e1776d741d96556426037a5eb99d1e1a3080e065308b8e`。

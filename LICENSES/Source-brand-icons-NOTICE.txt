@@ -1,0 +1,32 @@
+Source branding in the setup wizard
+
+FnOS Video
+The recognizable mark is based on the original vector silhouette from the
+user-provided FnOS Video Android application, version 1.12.2. Its palette and
+surrounding tile have been adapted to Aurora TV. FnOS marks belong to their owner.
+
+Emby
+The mark uses the Emby outline distributed by Simple Icons under CC0 1.0.
+https://github.com/simple-icons/simple-icons/blob/develop/icons/emby.svg
+The gradient palette and surrounding tile are adaptations. Emby is a third-party
+trademark. The CC0 legal text is included in CC0-1.0.txt.
+
+Jellyfin
+Copyright Jellyfin contributors. Based on the original icon-transparent.svg.
+https://github.com/jellyfin/jellyfin-ux/blob/master/branding/SVG/icon-transparent.svg
+The original contours are retained and the palette is adapted to Aurora TV.
+This artwork adaptation is available under Creative Commons Attribution-ShareAlike
+4.0 International. Its editable contours are ic_source_jellyfin.xml in the Android
+resources. See Jellyfin-branding-LICENSE.txt for the license text.
+
+TVBox
+The original Box application icon is from takagen99/Box.
+https://github.com/takagen99/Box/blob/main/app/src/main/res/drawable/app_icon.png
+The user supplied this original PNG in TVBOX-LOGO. It is retained independently as
+setup_source_tvbox.png. The setup view applies Aurora color grading while
+preserving the separate box faces and tape. This artwork is available under AGPL-3.0.
+See TVBox-branding-AGPL-3.0.txt for the license text.
+
+The station logos used on the channel-logo setup page were supplied by the user.
+They identify their corresponding broadcasters and retain their original colors.
+All trademarks remain the property of their respective owners.

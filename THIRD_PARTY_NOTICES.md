@@ -16,24 +16,39 @@
 | Gson | 2.11.0，JSON 处理 | Apache-2.0，[Gson](https://github.com/google/gson/tree/gson-parent-2.11.0) |
 | ZXing Core | 3.5.3，二维码生成 | Apache-2.0，[ZXing](https://github.com/zxing/zxing/tree/zxing-3.5.3) |
 | EdDSA-Java | `net.i2p.crypto:eddsa:0.3.0`，Ed25519 验签 | CC0-1.0，[EdDSA-Java](https://github.com/str4d/ed25519-java) |
-| dexlib2 | `org.smali:dexlib2:2.5.2`，在私有派生缓存中适配第三方接口的常规 Toast 调用，保留下载原件及其校验身份 | BSD-3-Clause，部分 AOSP 文件为 Apache-2.0，[固定版本源码](https://github.com/JesusFreke/smali/tree/v2.5.2/dexlib2)、[完整上游通知](LICENSES/dexlib2-NOTICE.txt) |
-| Guava Android | `com.google.guava:guava:33.3.1-android`，DEX 读写所需集合与基础工具 | Apache-2.0，[固定版本源码](https://github.com/google/guava/tree/v33.3.1/android) |
-| JSR-305 注解 | `com.google.code.findbugs:jsr305:3.0.2`，dexlib2 的注解依赖 | Apache-2.0，[固定来源制品及源码](https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/) |
+| Guava Android | `com.google.guava:guava:33.3.1-android`，媒体组件共用的集合与基础工具 | Apache-2.0，[固定版本源码](https://github.com/google/guava/tree/v33.3.1/android) |
+| JSR-305 注解 | `com.google.code.findbugs:jsr305:3.0.2`，共用库的注解依赖 | Apache-2.0，[固定来源制品及源码](https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/) |
 | core-js 与 Babel 生成的运行时辅助代码 | 内置配置页的 ES5 与 Promise、集合兼容，支持 Android 5.0 WebView | MIT，[原始版权与许可](LICENSES/Config-web-runtime-LICENSE.txt) |
-| LibVLC Android 派生 SDK | 基于 `libvlc-all:4.0.0-eap29` 对应固定源码重构建的双 ARM 版本，VLC 引擎与 Java/JNI 接口 | 官方 `l` 构建配置，LGPL-3.0-or-later 与所含组件各自的授权、附加致谢条款；Java/JNI 文件保留原声明，[LibVLC Android](https://code.videolan.org/videolan/libvlcjni)、[VideoLAN](https://www.videolan.org/vlc/libvlc.html) |
-| LibVLC 所含 libass、FreeType、HarfBuzz 与 FriBidi | libass 0.17.4、FreeType 2.13.1、HarfBuzz 11.5.0、FriBidi 1.0.16，字幕与字体渲染 | 分别保留 ISC、FreeType License、Old MIT、LGPL 及各独立文件声明，[组件版权与许可原文](LICENSES/VLC-contrib-NOTICES.txt) |
-| IJK Java 绑定的 GSY 维护制品 | `io.github.carguo:gsyijkjava:1.0.0` | 制品及相关 Java 文件为 Apache-2.0，原文件保留其各自声明，[GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)、[IJK Java 绑定](https://github.com/CarGuo/ijkplayer/tree/30eb9441945da795079492041a791c121d2b8206/android/ijkplayer/ijkplayer-java) |
-| IJK 原生维护制品 | `gsyvideoplayer-arm64:11.3.0`、`gsyvideoplayer-armv7a:11.3.0`，IJK、ijksdl、FFmpeg 等共享库 | IJK / FFmpeg 相关代码为 LGPL-2.1-or-later，各子组件按自身声明，[IJK](https://github.com/bilibili/ijkplayer)、[GSYVideoPlayer 11.3.0](https://github.com/CarGuo/GSYVideoPlayer/tree/v11.3.0) |
-| OpenSSL | IJK ARM64 包含 1.1.1w，ARMv7 包含 1.0.2q | OpenSSL License 与 Original SSLeay License，[OpenSSL](https://github.com/openssl/openssl) |
 | Android NDK C++ 运行库 | NDK r28c `28.2.13676358` 的双 ARM `libc++_shared.so`，Clang 19.0.1、LLVM 固定提交 `97a699bf4812a18fb657c2779f5296a4ab2694d2` | libc++、libc++abi、libunwind 的 Apache-2.0 WITH LLVM-exception 及保留的历史条款，[Android LLVM 对应源码](https://android.googlesource.com/toolchain/llvm-project/+/97a699bf4812a18fb657c2779f5296a4ab2694d2/) |
 
 AndroidX、Kotlin 和其它传递依赖随解析后的运行时一起使用。各项目内独立文件及所含依赖的授权声明继续有效，详细原始通知、源码与构建资料按照本版本的第三方资料清单查阅。
 
+## Python 插件运行时与依赖
+
+Python 来源使用 Chaquopy 15.0.1 与 Android CPython target 3.11.6-0，保留双 ARM 和 Android 5.0 支持。下列依赖随 APK 提供，原始许可证按本次实际打包版本保存。完整原文、摘要、官方源码与 target 构建配方统一列在来源清单中。[Python 许可证与源码清单](LICENSES/Python-SOURCES.md)
+
+| 组件 | 实际版本 | 许可与随包原文 |
+| --- | --- | --- |
+| Chaquopy Java / JNI 运行时 | 15.0.1 | MIT，[原文](LICENSES/Chaquopy-15.0.1-LICENSE.txt) |
+| Chaquopy bootstrap 中的 pyelftools / Construct | 0.26 / 2.06 | Public domain / MIT，[pyelftools 原文](LICENSES/Chaquopy-pyelftools-0.26-LICENSE.txt)、[Construct 原文](LICENSES/Chaquopy-construct-2.06-LICENSE.txt) |
+| CPython 解释器与标准库 | 3.11.6，Android target 3.11.6-0 | PSF 及各独立组件原声明，[历史许可全文](LICENSES/CPython-3.11.6-LICENSE.txt)、[标准库完整附带通知](LICENSES/CPython-3.11.6-stdlib-NOTICES.txt) |
+| requests | 2.32.3 | Apache-2.0，[原文](LICENSES/requests-2.32.3-LICENSE.txt) |
+| PyCryptodome | 3.9.4 | Public domain、BSD-2-Clause 及所含算法声明，[完整原文](LICENSES/pycryptodome-3.9.4-LICENSE.txt) |
+| idna | 3.20 | BSD-3-Clause，[原文](LICENSES/idna-3.20-LICENSE.txt) |
+| urllib3 | 2.8.0 | MIT，[原文](LICENSES/urllib3-2.8.0-LICENSE.txt) |
+| charset-normalizer | 3.5.2 | MIT，[原文](LICENSES/charset_normalizer-3.5.2-LICENSE.txt) |
+| certifi / Mozilla CA 集合 | 2026.10.23 | MPL-2.0，[原始通知](LICENSES/certifi-2026.10.23-LICENSE.txt)、[MPL-2.0 全文](LICENSES/MPL-2.0.txt) |
+| CPython target 的 OpenSSL、SQLite、libffi、bzip2、liblzma | 3.0.5、3.39.2、3.4.4、1.0.8、5.4.5 | 各自保留 Apache-2.0、public-domain、MIT/BSD 等原声明，详见 [完整原文及固定来源](LICENSES/Python-SOURCES.md) |
+
+certifi 对应的 MPL 源码从官方同版本发布页获取，覆盖文件保持上游内容。[certifi 2026.10.23 官方源码发布](https://pypi.org/project/certifi/2026.10.23/#files)、[certifi 官方仓库](https://github.com/certifi/python-certifi)
+
+Chaquopy 对 CPython 的 Android target 适配补丁与构建配方保留在固定上游提交中。Python 脚本的来源、作者及许可由相应配置发布者提供，用户私有影视脚本未随 APK 分发。[Chaquopy 固定源码及 Android 构建配方](https://github.com/chaquo/chaquopy/tree/826262dee50f7abfd27edc9072996ddfe2ffbab2)
+
 ## LGPL 组件与用户权利
 
-LibVLC、IJK 及其所含相关库以共享库形式提供。本发行版的 LibVLC 使用固定上游基址及公开补丁重新构建，选择官方 `l` 许可配置，关闭 GPL contrib 并额外排除已核实主授权为 GPL 的插件。LibVLC 组合中的独立组件继续适用各自许可证及附加条款。
+MPV 0.42.0 与 FFmpeg 9.0.2、libplacebo 7.387.0、libass 0.17.5、mbedTLS 3.6.7、FreeType 2.15.0、FriBidi 1.0.17、HarfBuzz 15.0.0、libunibreak 8.0、libxml2 2.15.4、fontconfig 2.18.3、dav1d 1.5.3 组成独立共享库 `libaurora_mpv_core.so`。MPV 以 `gpl=false` 构建，FFmpeg 关闭 GPL/nonfree 并启用 version3；该核心按 LGPL-3.0-or-later 提供，内部依赖同时保留其各自条款。MPV C API 和 Android 环境入口与应用薄 JNI 动态链接，允许用户修改、重新链接及替换核心。
 
-IJK 两种 ARM ABI 原生库保留上游 GSY SDK 制品字节，其 FFmpeg 构建均声明 `--disable-gpl` 与 `--disable-nonfree`。GSY 制品的 Apache 发布元数据和各原生库的 LGPL 许可分别适用于对应代码。
+原始许可证和版权声明见 [MPV](third-party/mpv/licenses/mpv/Copyright)、[FFmpeg](third-party/mpv/licenses/ffmpeg/LICENSE.md)、[libplacebo](third-party/mpv/licenses/libplacebo/LICENSE)、[libass](third-party/mpv/licenses/libass/COPYING)、[mbedTLS](third-party/mpv/licenses/mbedtls/LICENSE)、[FreeType](third-party/mpv/licenses/freetype/docs/FTL.TXT)、[FriBidi](third-party/mpv/licenses/fribidi/COPYING)、[HarfBuzz](third-party/mpv/licenses/harfbuzz/COPYING)、[libunibreak](third-party/mpv/licenses/unibreak/LICENCE)、[libxml2](third-party/mpv/licenses/libxml2/Copyright)、[fontconfig](third-party/mpv/licenses/fontconfig/COPYING)、[dav1d](third-party/mpv/licenses/dav1d/COPYING)。构建时使用的 GLAD、Jinja、MarkupSafe、fast_float 的原始通知与 NDK 静态运行时通知也保留在 `MPV/` 下。固定源码归档、完整构建配方和两 ABI 对应清单随该版 APK 的第三方资料附件提供。
 
 使用者保留依据相应 LGPL 许可证复制、研究、修改和再分发这些库的权利，以及为使用修改后的库和调试相关修改所需的替换、重新链接与逆向工程权利。这些权利依相应许可证优先适用。完整条款见本仓库附带的许可证原文。[LGPL 2.1 原文](LICENSES/LGPL-2.1.txt)、[LGPL 3.0 原文](LICENSES/LGPL-3.0.txt)、[GPL 3.0 基础条款](LICENSES/GPL-3.0.txt)
 
@@ -41,51 +56,13 @@ IJK 两种 ARM ABI 原生库保留上游 GSY SDK 制品字节，其 FFmpeg 构�
 
 共享库替换、重新链接及 Android 自签安装的操作流程另附说明。[第三方共享库替换与重新打包](Library-replacement.md)
 
-## 原生组件版本对应信息
-
-| 制品部分 | 随包标识或上游对应信息 |
-| --- | --- |
-| LibVLC core | `4.0.0-dev-37538-gc84ef1eda4`，对应 VLC 提交 `c84ef1eda4f14f8b57a5b266b51c843cf51ed28b` |
-| LibVLC JNI / Android 构建材料 | Android `libvlc-4.0.0-eap29` 标签所锁定的 JNI 提交 `a8d53a9151d7e4a9a5dfd0a5eb1cd92669afdc21` |
-| 本发行版 LibVLC 派生 AAR | Android API 21，`arm64-v8a` 与 `armeabi-v7a`；当前主线AAR SHA-256为`bc3928df4b1bcf8314e1776d741d96556426037a5eb99d1e1a3080e065308b8e`，逐共享库指纹和补丁见同版本源码资料 |
-| IJK ARM64 | `k0.8.8-43-g30eb9441`，对应维护提交 `30eb9441945da795079492041a791c121d2b8206`；FFmpeg 构建标识 4.1.6 |
-| IJK ARMv7 | `k0.8.8-32-ge99d640e`，对应维护提交 `e99d640e5fe94c65132379307f92d7180bcde8e7`；FFmpeg 构建标识 `4.0--ijk0.8.8--20210205--001` |
-
-以上原生标识用于定位对应材料，构建分支和外部依赖版本按第三方资料附件内的逐项映射说明确定。[VLC core 提交](https://github.com/videolan/vlc/tree/c84ef1eda4f14f8b57a5b266b51c843cf51ed28b)、[IJK ARM64 提交](https://github.com/CarGuo/ijkplayer/tree/30eb9441945da795079492041a791c121d2b8206)、[IJK ARMv7 提交](https://github.com/CarGuo/ijkplayer/tree/e99d640e5fe94c65132379307f92d7180bcde8e7)
-
-## LibVLC 构建与功能差异
-
-X-Team 在上述固定基址应用 Android 构建补丁和模块筛选，重新生成两种 ABI 的 `libvlc.so`、`libvlcjni.so`，并采用对应 NDK r28c 的 `libc++_shared.so`。Java `classes.jar`、Android Manifest 和 Android 资源保留 eap29 Maven 制品原字节。所用构建脚本、源码归档、补丁、工具链来源、实际配置和模块授权审计随同版本第三方资料提供。
-
-2026-11-13本轮增量修改两种ABI的`libvlc.so`，其他JNI、运行库、Java及既有派生SDK资源字节保持。补丁路径为`tools/patches/vlc-mediacodec-mtk-main10-profile-fallback.patch`，为MediaTek HEVC Main10的profile漏报增加可选候选检索轮次。原生开关默认关闭，极光视界在自动与硬解模式启用；优先采用原有声明匹配候选，随后才允许对应MTK候选进入真实codec配置，配置及输出失败沿用原回退处理。该修改继续受对应VLC文件原有许可证约束。
-
-最终每个 ABI 注册 305 个静态插件。筛选移除了 dummy / rc 命令行接口、file_logger / syslog 日志插件、Lua、stream_out_cycle / stream_out_rtp 流输出、hqdn3d 降噪、rotate 任意角度旋转及 deinterlace 软件去隔行插件族，包含对应架构优化实现。原 AAR 的 Lua 封面、网页播放列表脚本与 3D HRTF `.sofa` 数据一起移除。
-
-本轮双ABI重新执行模块源授权审计，各为305个注册插件，GPL主授权模块源命中0；各自报告与当前AAR摘要清单保留对应关系。封装工具同时检查ELF节表边界以拒绝截断文件，原生播放能力由APP集成回归另行记录。
-
-实际注册表包含 TS、MKV、avcodec、MediaCodec、Android 显示、libass 和 FreeType 模块，字幕字体依赖设备系统字体及对应字体渲染组件。RTSP 等能力沿用所选 `l` 配置下的实际模块集合。模块存在性、原生播放回归及用户实际观看效果分别记录于构建资料和测试结果。
-
-LibVLC 构建所用源码归档中的版权、许可证和作者通知另行汇编保留，每节列出归档名、原始路径及 SHA-256。汇编也保留源码包内可选组件、测试文件和宿主工具的通知；实际链接范围按同版本构建配置、链接记录及模块清单核对，各通知分别适用于其覆盖文件。[VLC 组件原始通知](LICENSES/VLC-contrib-NOTICES.txt)
-
 ## FreeType 致谢
 
-本软件部分基于 FreeType Team 的工作。FreeType 的原始版权、许可条件与免责条款保存在组件通知汇编的 `freetype-2.13.1/docs/FTL.TXT` 中。[FreeType Project](https://www.freetype.org/)、[组件通知与 FTL 原文](LICENSES/VLC-contrib-NOTICES.txt)
-
-## Media3 组件改动通知
-
-本发行版对 Media3 1.6.1 的 `androidx.media3.exoplayer.audio.AudioTrackPositionTracker` 构造过程进行了单点字节码转换。原构造器中反射查询 `AudioTrack.getLatency` 的调用被替换为空方法引用，后续沿用该组件已有的公开 `AudioTimestamp` / 播放头计时回退。其它媒体提取、字幕及播放功能继续由相应上游模块提供。此改动由 X-Team 在本发行版中应用，相关 Media3 代码仍受 Apache-2.0 许可约束。[上游原始文件](https://github.com/androidx/media/blob/1.6.1/libraries/exoplayer/src/main/java/androidx/media3/exoplayer/audio/AudioTrackPositionTracker.java)
-
-## OpenSSL 致谢
-
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/).
-
-This product includes cryptographic software written by Eric Young (eay@cryptsoft.com).
-
-This product includes software written by Tim Hudson (tjh@cryptsoft.com).
-
-OpenSSL Project、Eric Young 与 Tim Hudson 的原始版权、再分发条件和免责条款保存在对应许可证文件中。[OpenSSL 1.1.1w 许可证](LICENSES/OpenSSL-1.1.1w-LICENSE.txt)、[OpenSSL 1.0.2q 许可证](LICENSES/OpenSSL-1.0.2q-LICENSE.txt)
+本软件部分基于 FreeType Team 的工作。[FreeType 许可原文](third-party/mpv/licenses/freetype/docs/FTL.TXT)
 
 ## 许可证原文与附带通知
+
+配置向导中的来源标识采用对应品牌轮廓并调整为极光配色。标识来源、修改及许可见随包的 Source-brand-icons-NOTICE.txt，Jellyfin 和 TVBox 图形保留各自的许可文本与可编辑资源。
 
 - [Apache License 2.0](LICENSES/Apache-2.0.txt)
 - [GNU Lesser General Public License 2.1](LICENSES/LGPL-2.1.txt)
@@ -95,36 +72,9 @@ OpenSSL Project、Eric Young 与 Tim Hudson 的原始版权、再分发条件和
 - [LLVM libc++ 许可证与 LLVM exception](LICENSES/LLVM-libcxx-LICENSE.txt)
 - [LLVM libc++abi 许可证与 LLVM exception](LICENSES/LLVM-libcxxabi-LICENSE.txt)
 - [LLVM libunwind 许可证与 LLVM exception](LICENSES/LLVM-libunwind-LICENSE.txt)
-- [VLC 所用源码组件的版权与许可通知](LICENSES/VLC-contrib-NOTICES.txt)
 - [ZXing 上游 NOTICE](LICENSES/ZXing-NOTICE.txt)
-- [dexlib2 上游版权与许可通知](LICENSES/dexlib2-NOTICE.txt)
 - [原文来源与文件校验值](LICENSES/SOURCES.md)
 
 源码包中的独立组件继续保留各自许可证、版权及 NOTICE 文件。媒体来源插件与其发布者的代码另按对应作者许可使用；用户自行配置后取得的 JAR 由对应来源提供。rtp2httpd 作为独立 HTTP TS 服务进行互操作，相关项目按其自己的发行许可提供。[rtp2httpd](https://github.com/stackia/rtp2httpd)
 
 各第三方软件的担保和责任条款按所附原文执行。
-
-## Python 运行时与固定依赖
-
-Python 来源实际使用 Chaquopy 15.0.1，Android target 为 `com.chaquo.python:target:3.11.6-0`。这两项随 APK 提供的 Java/JNI、解释器、标准库和所含独立组件保留各自原始声明。Chaquopy 固定源码提交为 `826262dee50f7abfd27edc9072996ddfe2ffbab2`，其中包含 Android target 补丁与构建配方。[官方固定源码](https://github.com/chaquo/chaquopy/tree/826262dee50f7abfd27edc9072996ddfe2ffbab2)
-
-| 组件 | 本次打包版本 | 许可 |
-| --- | --- | --- |
-| Chaquopy | 15.0.1 | MIT |
-| Chaquopy bootstrap 的 pyelftools / Construct | 0.26 / 2.06 | Public domain / MIT |
-| CPython 与标准库 | 3.11.6，target 3.11.6-0 | PSF 及原文所列独立组件条款 |
-| requests | 2.32.3 | Apache-2.0 |
-| PyCryptodome | 3.9.4 | Public domain、BSD-2-Clause 及所含算法条款 |
-| idna | 3.20 | BSD-3-Clause |
-| urllib3 | 2.8.0 | MIT |
-| charset-normalizer | 3.5.2 | MIT |
-| certifi | 2026.10.23 | MPL-2.0 |
-| target OpenSSL / SQLite / libffi / bzip2 / liblzma | 3.0.5 / 3.39.2 / 3.4.4 / 1.0.8 / 5.4.5 | 各自原始许可 |
-
-CPython 的完整历史 LICENSE、标准库完整附带通知、Chaquopy MIT、六项 pip 包的实际 dist-info 原文及 target 支持库许可证已保存至 APK assets。清单逐项保留文件 SHA-256 与固定官方来源。[Python 原文、校验与源码清单](LICENSES/Python-SOURCES.md)
-
-certifi 的原始通知与 MPL-2.0 全文一起随包提供。对应源码可从官方同版本发布页取得，未修改其覆盖文件。[certifi 2026.10.23 官方源码](https://pypi.org/project/certifi/2026.10.23/#files)、[官方仓库](https://github.com/certifi/python-certifi)
-
-用户另行配置的 Python 影视脚本未包含在本仓库的第三方源码材料和 APK 中。相关代码的版权与授权由各自发布者提供。
-
-certifi 对应源码随仓库提供。[Python 依赖源码清单](third-party/python/SOURCES.md)

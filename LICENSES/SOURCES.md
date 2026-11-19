@@ -1,5 +1,7 @@
 # 许可证原文来源
 
+Python 来源运行时与依赖新增 Chaquopy 15.0.1、CPython 3.11.6-0、六项固定 pip 包及 target 支持库，原文文件、SHA-256 和对应官方源码集中记录于 [Python 许可证来源清单](Python-SOURCES.md)。
+
 下列文件以原始字节保存自相应官方项目。SHA-256可用于核对本仓库保存的文本。组件的实际版本与使用方式见根目录THIRD_PARTY_NOTICES.md。
 
 LGPL 3.0 原文引用 GPL 3.0 的基础条款，两份原文一起提供。各组件具体适用的版本与附加条款，以该组件及其文件声明为准。
@@ -13,7 +15,6 @@ LGPL 3.0 原文引用 GPL 3.0 的基础条款，两份原文一起提供。各�
 | [OpenSSL-1.0.2q-LICENSE.txt](OpenSSL-1.0.2q-LICENSE.txt) | [官方原文](https://raw.githubusercontent.com/openssl/openssl/OpenSSL_1_0_2q/LICENSE) | `c8f60f4842bbad0353f5d81620e72b168b5638ca3a0a999f5da113b22491612e` |
 | [LLVM-libcxx-LICENSE.txt](LLVM-libcxx-LICENSE.txt) | [NDK r28c 对应原文](https://android.googlesource.com/toolchain/llvm-project/+/97a699bf4812a18fb657c2779f5296a4ab2694d2/libcxx/LICENSE.TXT) | `539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b` |
 | [ZXing-NOTICE.txt](ZXing-NOTICE.txt) | [官方原文](https://raw.githubusercontent.com/zxing/zxing/zxing-3.5.3/NOTICE) | `4db4b60aace29ec6c5c4f13ca9cac1930d3c0c54bcc67dceead0c10771120e66` |
-| [dexlib2-NOTICE.txt](dexlib2-NOTICE.txt) | [smali v2.5.2 官方原文](https://raw.githubusercontent.com/JesusFreke/smali/v2.5.2/NOTICE) | `e247d92c57251fc3e674b5366bafd40ed644bfc7c4a55172e464685a25622945` |
 | [LGPL-3.0.txt](LGPL-3.0.txt) | [GNU官方说明](https://www.gnu.org/licenses/lgpl-3.0.txt) / [保存文本来源](https://www.gnu.org/licenses/lgpl-3.0.txt) | `e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118` |
 | [GPL-3.0.txt](GPL-3.0.txt) | [GNU官方说明](https://www.gnu.org/licenses/gpl-3.0.txt) / [保存文本来源](https://www.gnu.org/licenses/gpl-3.0.txt) | `3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986` |
 | [LLVM-libcxxabi-LICENSE.txt](LLVM-libcxxabi-LICENSE.txt) | [NDK r28c 对应原文](https://android.googlesource.com/toolchain/llvm-project/+/97a699bf4812a18fb657c2779f5296a4ab2694d2/libcxxabi/LICENSE.TXT) | `e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c` |
@@ -26,7 +27,7 @@ LGPL 3.0 原文引用 GPL 3.0 的基础条款，两份原文一起提供。各�
 
 共享库替换、重新链接、APK 自签及更新流程见专门说明。[第三方共享库替换与重新打包](../Library-replacement.md)
 
-DEX 适配依赖固定为 dexlib2 2.5.2 与 Guava 33.3.1-android。对应源码分别来自 [dexlib2 2.5.2 源码制品](https://repo.maven.apache.org/maven2/org/smali/dexlib2/2.5.2/dexlib2-2.5.2-sources.jar)、[smali v2.5.2](https://github.com/JesusFreke/smali/tree/v2.5.2/dexlib2) 与 [Guava 33.3.1-android 源码制品](https://repo.maven.apache.org/maven2/com/google/guava/guava/33.3.1-android/guava-33.3.1-android-sources.jar)。JSR-305 3.0.2 注解的 [固定源码制品](https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar) 沿用其 Apache-2.0 声明。
+Guava 共用库固定为 33.3.1-android，[固定源码制品](https://repo.maven.apache.org/maven2/com/google/guava/guava/33.3.1-android/guava-33.3.1-android-sources.jar)。JSR-305 3.0.2 注解的 [固定源码制品](https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar) 沿用其 Apache-2.0 声明。
 
 ## 配置页面兼容代码
 

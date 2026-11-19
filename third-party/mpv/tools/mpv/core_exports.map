@@ -1,0 +1,4 @@
+{
+    global: mpv_*; aurora_mpv_*;
+    local: *;
+};

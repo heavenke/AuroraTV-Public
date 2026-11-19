@@ -1,0 +1,29 @@
+{
+  "abi": "arm64-v8a",
+  "androidApi": 21,
+  "mpv": "0.42.0",
+  "license": "LGPL-3.0-or-later combined native component",
+  "gpl": false,
+  "nonfree": false,
+  "sha256": "4b96522785955f926c052acfcd42c8045f4d5384eea70c44832941781972c838",
+  "bytes": 29520,
+  "bridgeObjectSha256": "849f6f9b03e606ea7cef71c1827061be85aaa4654a36cc8855e51835c034076c",
+  "coreSha256": "577b007c5dac81dd3cf61b6c3aa28bec79989cf3aa157a0f2066e78d65ae5f7f",
+  "coreBytes": 25910744,
+  "ffmpegMediaCodecSourceSha256": "65c052d96211e4d79ab8a61575c8622d3e6f9b5fe2d7afaecad61754453284d8",
+  "sourcesLockSha256": "a137bf8bc721db9275cca38a118ec63b56c77cbb5d5d2661916bf2c9d13df485",
+  "dependencies": {
+    "mpv": "LGPL-2.1-or-later",
+    "ffmpeg": "LGPL-3.0-or-later",
+    "mbedtls": "Apache-2.0",
+    "freetype": "FTL",
+    "fribidi": "LGPL-2.1-or-later",
+    "harfbuzz": "MIT",
+    "unibreak": "Zlib",
+    "libxml2": "MIT",
+    "fontconfig": "MIT",
+    "libass": "ISC",
+    "libplacebo": "LGPL-2.1-or-later",
+    "dav1d": "BSD-2-Clause"
+  }
+}

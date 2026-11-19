@@ -1,0 +1,29 @@
+{
+  "abi": "armeabi-v7a",
+  "androidApi": 21,
+  "mpv": "0.42.0",
+  "license": "LGPL-3.0-or-later combined native component",
+  "gpl": false,
+  "nonfree": false,
+  "sha256": "44272511e68b9c8232f00b016221fd2cc366d6ab8a06f594f2641d6a093f5f50",
+  "bytes": 27188,
+  "bridgeObjectSha256": "8efda07e4655d11d30d6c2ab679730d6e6cef109efa6cf9a3d7c748cac41c54e",
+  "coreSha256": "a57fd5c653a550913df5be6075cc81ac5a8ba111b47335c698813687bfc08d65",
+  "coreBytes": 22908496,
+  "ffmpegMediaCodecSourceSha256": "65c052d96211e4d79ab8a61575c8622d3e6f9b5fe2d7afaecad61754453284d8",
+  "sourcesLockSha256": "a137bf8bc721db9275cca38a118ec63b56c77cbb5d5d2661916bf2c9d13df485",
+  "dependencies": {
+    "mpv": "LGPL-2.1-or-later",
+    "ffmpeg": "LGPL-3.0-or-later",
+    "mbedtls": "Apache-2.0",
+    "freetype": "FTL",
+    "fribidi": "LGPL-2.1-or-later",
+    "harfbuzz": "MIT",
+    "unibreak": "Zlib",
+    "libxml2": "MIT",
+    "fontconfig": "MIT",
+    "libass": "ISC",
+    "libplacebo": "LGPL-2.1-or-later",
+    "dav1d": "BSD-2-Clause"
+  }
+}

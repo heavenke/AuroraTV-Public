@@ -1,14 +1,14 @@
 # 第三方共享库替换与重新打包
 
-极光视界以 Android 共享库方式使用 LibVLC、IJK 等组件。使用者可依对应许可证修改这些库、重新链接或替换共享库，并进行调试这些修改所需的逆向工程。应用主体采用闭源分发，第三方组件的权利按其许可证保留。[第三方软件通知](THIRD_PARTY_NOTICES.md)
+极光视界以 Android 共享库方式使用 MPV。使用者可依对应许可证修改这些库、重新链接或替换共享库，并进行调试这些修改所需的逆向工程。应用主体采用闭源分发，第三方组件的权利按其许可证保留。[第三方软件通知](THIRD_PARTY_NOTICES.md)
 
 ## 准备对应版本
 
-从Release下载正式APK，从本仓库third-party目录读取对应源码、补丁、构建规则与摘要。上游提交、工具链、配置和组件许可证用于重建对应共享库。各组件及传递依赖分别适用其原始许可。[源码与构建资料](third-party/)
+下载同一 Release 中的正式 APK、第三方源码与构建资料附件，核对附件清单及 SHA-256。资料中的上游提交、补丁、工具链、配置和组件许可证用于重建对应共享库。各组件及传递依赖分别适用其原始许可。[发布与附件](https://github.com/heavenke/AuroraTV-Public/releases)
 
 正式 APK 提供已经编译的 `classes*.dex`、资源、Manifest 和共享库。替换共享库时可复用其中的应用对象代码，保留 Java/JNI 接口和原有库加载名称。按设备 ABI 准备完整兼容的共享库集合，分别放入 `lib/arm64-v8a/` 或 `lib/armeabi-v7a/`。静态链接到共享库的组件修改后，需要重新链接包含它的共享库；修改引入额外共享库依赖时，一并放入对应 ABI 目录。
 
-本版 LibVLC 使用 NDK r28c 重建，替换时应一并核对 `libvlc.so`、`libvlcjni.so` 与 `libc++_shared.so` 的兼容关系。实际工具链、模块配置和每个共享库的 SHA-256 见同版本资料清单。
+MPV 的可替换 LGPL 核心为 `libaurora_mpv_core.so`，两 ARM ABI 均保留上游 `mpv_*` C API、`aurora_mpv_android_initialize`、`aurora_mpv_ffmpeg_license` 和 `aurora_mpv_ffmpeg_configuration`。`libaurora_mpv.so` 是独立应用 JNI，动态使用上述接口，替换兼容核心时可继续复用 APK 中的原 JNI 与应用对象代码。核心私有链接其 C++ 运行时。对应资料中的 `tools/mpv/README.md` 说明仅重建 LGPL 核心的命令，不依赖应用业务源码；没有阻止用户替换核心的运行时内容摘要校验。
 
 ## 替换与签名
 
