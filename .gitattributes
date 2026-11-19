@@ -3,3 +3,4 @@ LICENSES/SOURCES.md text eol=lf
 *.png binary
 
 third-party/** -text
+third-party/mpv/** -whitespace
