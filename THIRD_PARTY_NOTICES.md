@@ -78,3 +78,7 @@ MPV 0.42.0 与 FFmpeg 9.0.2、libplacebo 7.387.0、libass 0.17.5、mbedTLS 3.6.7
 源码包中的独立组件继续保留各自许可证、版权及 NOTICE 文件。媒体来源插件与其发布者的代码另按对应作者许可使用；用户自行配置后取得的 JAR 由对应来源提供。rtp2httpd 作为独立 HTTP TS 服务进行互操作，相关项目按其自己的发行许可提供。[rtp2httpd](https://github.com/stackia/rtp2httpd)
 
 各第三方软件的担保和责任条款按所附原文执行。
+
+## 挂载媒体库与刮削
+
+SMB 挂载使用 SMBJ、ASN One、MBassador、SLF4J 和 Bouncy Castle。网页元数据解析使用 jsoup。相关许可与通知见 [LICENSES](LICENSES)。挂载媒体库的在线资料可来自 IMDb、豆瓣、TMDB、Wikidata 和中文维基百科。Aurora TV 使用 TMDB 资料，未经 TMDB 认证或背书。

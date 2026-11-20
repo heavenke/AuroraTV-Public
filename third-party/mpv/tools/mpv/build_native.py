@@ -14,6 +14,12 @@ import tarfile
 import time
 import urllib.request
 import uuid
+from hardware_codec_selection import apply_hardware_codec_selection
+from codec_result_hooks import apply_codec_result_hooks
+from codec_rejection_hooks import apply_codec_rejection_hooks
+from codec_stage_hooks import apply_codec_stage_hooks
+from native_render_ahead import apply_native_render_ahead
+from hevc_invalid_atc import apply_hevc_invalid_atc
 
 ROOT = Path(__file__).resolve().parents[2]
 LOCK = json.loads((Path(__file__).with_name('sources.lock.json')).read_text(encoding='utf-8'))
@@ -98,6 +104,125 @@ def prepare_sources(args):
         if original.count(call) != 1:
             raise RuntimeError('Unexpected FFmpeg MediaCodec HEVC source')
         decoder.write_text(original.replace(call, HEVC_EXTRADATA_GUARD + call), encoding='utf-8')
+    # Optional observer of actual MediaCodec-rendered frames. The weak call keeps
+    # the FFmpeg archive usable on its own, including the HEVC safety test.
+    wrapper = source_root / 'ffmpeg/libavcodec/mediacodec_wrapper.c'
+    original = wrapper.read_text(encoding='utf-8')
+    marker = '\n/* Aurora optional output observer.'
+    if marker in original:
+        original = original[:original.index(marker)]
+    wrapper.write_text(original.rstrip() + '\n' + Path(__file__).with_name('codec_output_hooks.inc').read_text(encoding='utf-8'), encoding='utf-8')
+    common = source_root / 'ffmpeg/libavcodec/mediacodecdec_common.c'
+    original = common.read_text(encoding='utf-8')
+    declaration = 'extern void aurora_mpv_android_codec_started(void *, void *, int, int, int64_t) __attribute__((weak));\n\n'
+    start = 'int ff_mediacodec_dec_init(AVCodecContext *avctx, MediaCodecDecContext *s,'
+    if declaration not in original:
+        if original.count(start) != 1: raise RuntimeError('Unexpected MediaCodec initialization source')
+        original = original.replace(start, declaration + start)
+    hook = '''    if (aurora_mpv_android_codec_started && s->surface &&
+        ((FFANativeWindow *)s->surface)->surface && avctx->codec_type == AVMEDIA_TYPE_VIDEO)
+        aurora_mpv_android_codec_started(s->codec, ((FFANativeWindow *)s->surface)->surface,
+                                         avctx->width, avctx->height, s->aurora_epoch);
+
+'''
+    start = '    av_log(avctx, AV_LOG_DEBUG, "MediaCodec %p started successfully\\n", s->codec);'
+    if hook not in original:
+        if original.count(start) != 1: raise RuntimeError('Unexpected MediaCodec start source')
+        original = original.replace(start, hook + start)
+    common.write_text(original, encoding='utf-8')
+    original = common.read_text(encoding='utf-8')
+    if '#include "jni.h"' not in original:
+        original = original.replace('#include "mediacodec.h"\n', '#include "mediacodec.h"\n#include "jni.h"\n')
+    # With a JVM, the enumerator has already excluded software video codecs.
+    # Do not let an NDK type-only fallback undo that safety guarantee.
+    original = original.replace('        if (!s->use_ndk_codec) {\n            return AVERROR_EXTERNAL;',
+        '        if (!s->use_ndk_codec || av_jni_get_java_vm(avctx)) {\n            return AVERROR_EXTERNAL;')
+    common.write_text(original, encoding='utf-8')
+    # Carry the caller's immutable file generation into codec construction.
+    # Reading a mutable "current generation" from a delayed codec-start callback
+    # could otherwise admit an old decoder after a rapid channel change.
+    header = source_root / 'ffmpeg/libavcodec/mediacodecdec_common.h'
+    original = header.read_text(encoding='utf-8')
+    if 'int64_t aurora_epoch;' not in original:
+        if original.count('    bool use_ndk_codec;') != 1: raise RuntimeError('Unexpected MediaCodec context layout')
+        original = original.replace('    bool use_ndk_codec;', '    bool use_ndk_codec;\n    int64_t aurora_epoch;')
+    if 'int64_t aurora_client;' not in original:
+        original = original.replace('    int64_t aurora_epoch;', '    int64_t aurora_epoch;\n    int64_t aurora_client;')
+    header.write_text(original, encoding='utf-8')
+    original = decoder.read_text(encoding='utf-8')
+    if 'int64_t aurora_epoch;' not in original:
+        if original.count('    int operating_rate;') != 1: raise RuntimeError('Unexpected MediaCodec decoder layout')
+        original = original.replace('    int operating_rate;', '    int operating_rate;\n    int64_t aurora_epoch;')
+    if 's->ctx->aurora_epoch = s->aurora_epoch;' not in original:
+        original = original.replace('    s->ctx->use_ndk_codec = s->use_ndk_codec;',
+            '    s->ctx->use_ndk_codec = s->use_ndk_codec;\n    s->ctx->aurora_epoch = s->aurora_epoch;')
+    if 'int64_t aurora_client;' not in original:
+        original = original.replace('    int64_t aurora_epoch;', '    int64_t aurora_epoch;\n    int64_t aurora_client;')
+    if 's->ctx->aurora_client = s->aurora_client;' not in original:
+        original = original.replace('    s->ctx->aurora_epoch = s->aurora_epoch;',
+            '    s->ctx->aurora_epoch = s->aurora_epoch;\n    s->ctx->aurora_client = s->aurora_client;')
+    option = '''    { "aurora_epoch", "Caller file generation for optional rendered-frame observation",
+            OFFSET(aurora_epoch), AV_OPT_TYPE_INT64, {.i64 = 0}, 0, INT64_MAX, VD },
+'''
+    if option not in original:
+        original = original.replace('static const AVOption ff_mediacodec_vdec_options[] = {\n',
+            'static const AVOption ff_mediacodec_vdec_options[] = {\n' + option)
+    client_option = '''    { "aurora_client", "Caller session identity for optional hardware-codec result observation",
+            OFFSET(aurora_client), AV_OPT_TYPE_INT64, {.i64 = 0}, 0, INT64_MAX, VD },
+'''
+    if client_option not in original:
+        original = original.replace('static const AVOption ff_mediacodec_vdec_options[] = {\n',
+            'static const AVOption ff_mediacodec_vdec_options[] = {\n' + client_option)
+    decoder.write_text(original, encoding='utf-8')
+    original = decoder.read_text(encoding='utf-8')
+    timing_log = '''        av_log(avctx, AV_LOG_VERBOSE,
+               "HEVC timing VUI=%u/%u poc=%d:%d field=%d VPS=%u/%u\\n",
+               sps->vui.vui_time_scale, sps->vui.vui_num_units_in_tick,
+               sps->vui.vui_poc_proportional_to_timing_flag,
+               sps->vui.vui_num_ticks_poc_diff_one_minus1 + 1, sps->vui.field_seq_flag,
+               vps->vps_time_scale, vps->vps_num_units_in_tick);
+'''
+    if timing_log not in original:
+        marker = '        avctx->level   = sps->ptl.general_ptl.level_idc;\n'
+        if original.count(marker) != 1: raise RuntimeError('Unexpected HEVC parameter metadata')
+        decoder.write_text(original.replace(marker, marker + timing_log), encoding='utf-8')
+    # A TextureView consumes a timestamped buffer, independently of the delayed
+    # informational OnFrameRendered notification. The application still requires
+    # an actual TextureView update matching this exact ticket before showing it.
+    public = source_root / 'ffmpeg/libavcodec/mediacodec.c'
+    original = public.read_text(encoding='utf-8')
+    declaration = '''#include "mediacodec_surface.h"
+#include "libavutil/time.h"
+extern int64_t aurora_mpv_android_prepare_texture_frame(void *, int64_t, int64_t) __attribute__((weak));
+extern void aurora_mpv_android_texture_frame_submitted(void *, int64_t, int64_t, int, int64_t) __attribute__((weak));
+'''
+    if declaration not in original:
+        original = original.replace('#include "mediacodecdec_common.h"\n', '#include "mediacodecdec_common.h"\n' + declaration)
+    timed_release = '''        void *surface = ctx->surface ? ((FFANativeWindow *)ctx->surface)->surface : NULL;
+        int64_t stamp = render && surface && aurora_mpv_android_prepare_texture_frame &&
+            aurora_mpv_android_texture_frame_submitted ?
+            aurora_mpv_android_prepare_texture_frame(surface, ctx->aurora_epoch, buffer->pts) : 0;
+        if (stamp > 0) {
+            int64_t begin = av_gettime_relative();
+            int result = ff_AMediaCodec_releaseOutputBufferAtTime(ctx->codec, buffer->index, stamp);
+            aurora_mpv_android_texture_frame_submitted(surface, ctx->aurora_epoch, stamp,
+                result, (av_gettime_relative() - begin) * 1000);
+            return result;
+        }
+        if (stamp < 0)
+            return ff_AMediaCodec_releaseOutputBuffer(ctx->codec, buffer->index, 0);
+'''
+    marker = '        return ff_AMediaCodec_releaseOutputBuffer(ctx->codec, buffer->index, render);'
+    if timed_release not in original:
+        if original.count(marker) != 1: raise RuntimeError('Unexpected MediaCodec buffer release source')
+        original = original.replace(marker, timed_release + marker)
+    public.write_text(original, encoding='utf-8')
+    apply_hardware_codec_selection(source_root / 'ffmpeg')
+    apply_codec_rejection_hooks(source_root / 'ffmpeg')
+    apply_codec_result_hooks(source_root / 'ffmpeg')
+    apply_codec_stage_hooks(source_root / 'ffmpeg')
+    apply_native_render_ahead(source_root / 'mpv')
+    apply_hevc_invalid_atc(source_root / 'ffmpeg')
     return source_root
 
 
@@ -194,6 +319,7 @@ def build_abi(args, sources, abi):
             '--pkg-config-flags=--static','--extra-cflags='+' '.join(flags)+' -I'+str(prefix/'include'),
             '--extra-ldflags=-L'+str(prefix/'lib'),'--disable-shared','--enable-static','--enable-pic',
             '--disable-gpl','--disable-nonfree','--enable-version3','--enable-jni','--enable-mediacodec',
+            '--enable-bsf=hevc_metadata',
             '--enable-mbedtls','--enable-libxml2','--enable-libdav1d','--disable-vulkan','--disable-programs',
             '--disable-doc','--disable-devices','--disable-muxers','--disable-encoders','--disable-avdevice']
         step('ffmpeg',[ffargs,['make','-j'+str(args.jobs)],['make','install']],working=build)
@@ -210,10 +336,25 @@ def build_abi(args, sources, abi):
         if next(row['value'] for row in options if row['name']=='gpl') is not False:raise RuntimeError('GPL mpv build rejected')
 
     # Refresh the patched archive even when the configure/build was cached.
-    ffmpeg_source_stamp = digest(sources/'ffmpeg/libavcodec/mediacodecdec.c')
+    ffmpeg_root = sources / 'ffmpeg'
+    ffmpeg_inputs = [ffmpeg_root / name for name in (
+        'configure', 'libavcodec/mediacodec.c', 'libavcodec/mediacodecdec.c',
+        'libavcodec/mediacodecdec_common.c', 'libavcodec/mediacodecdec_common.h',
+        'libavcodec/mediacodec_wrapper.c', 'libavcodec/bsf/h265_metadata.c',
+        'libavcodec/bsf/aurora_hevc_invalid_atc.inc', 'libavcodec/bsf/aurora_hevc_invalid_atc_filter.inc',
+        'libavcodec/bsf/aurora_hevc_hlg_atc.inc')]
+    ffmpeg_inputs += sorted(path for path in (ffmpeg_root / 'libavcodec').glob('cbs*')
+                            if path.suffix in ('.c', '.h'))
+    ffmpeg_source_stamp = hashlib.sha256(''.join(digest(path) for path in ffmpeg_inputs).encode()).hexdigest()
     ffmpeg_build = work/'build-ffmpeg'
     step('ffmpeg-hevc-guard', [['make', '-j'+str(args.jobs)], ['make', 'install']],
          working=ffmpeg_build, source_stamp=ffmpeg_source_stamp)
+
+    # The link-only path must also refresh a locally patched native VO.
+    mpv_source_stamp = digest(sources / 'mpv/video/out/vo_mediacodec_embed.c')
+    step('mpv-native-output', [['ninja', '-C', str(work/'build-mpv'), '-j', str(args.jobs)],
+         ['ninja', '-C', str(work/'build-mpv'), 'install']], step_env=meson_env,
+         source_stamp=mpv_source_stamp)
 
     if args.stage != 'dependencies':
         bridge=ROOT/'app/src/main/cpp/mpv_jni.c'
@@ -248,6 +389,8 @@ def build_abi(args, sources, abi):
                 'bridgeObjectSha256':digest(obj)} if args.stage != 'core' else {}),
             'coreSha256':digest(output/'libaurora_mpv_core.so'),'coreBytes':(output/'libaurora_mpv_core.so').stat().st_size,
             'ffmpegMediaCodecSourceSha256':ffmpeg_source_stamp,
+            'mpvNativeOutputSourceSha256':mpv_source_stamp,
+            'androidEnvironmentSourceSha256':digest(Path(__file__).with_name('android_env.c')),
             'sourcesLockSha256':digest(Path(__file__).with_name('sources.lock.json')),
             'dependencies':LICENSES},indent=2)+'\n')
     return {'abi':abi,'prefix':str(prefix),'complete':True}

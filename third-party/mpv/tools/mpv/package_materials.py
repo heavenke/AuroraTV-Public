@@ -47,10 +47,11 @@ def main():
         text = args.ndk/name
         if not text.is_file(): raise RuntimeError('Missing NDK notice: '+name)
         (notices/('NDK-'+name)).write_bytes(text.read_bytes())
-    for name in ('build_native.py', 'sources.lock.json', 'android_env.c', 'core_exports.map', 'exports.map', 'README.md', 'package_materials.py'):
+    for name in ('build_native.py', 'sources.lock.json', 'android_env.c', 'codec_output_hooks.inc', 'codec_result_hooks.py', 'codec_result_hooks.inc', 'codec_rejection_hooks.py', 'codec_rejection_hooks.inc', 'codec_stage_hooks.py', 'codec_stage_hooks.inc', 'hardware_codec_selection.py', 'hardware_codec_selection.inc', 'hevc_invalid_atc.py', 'hevc_invalid_atc.inc', 'hevc_invalid_atc_filter.inc', 'hevc_hlg_atc.inc', 'native_render_ahead.py', 'core_exports.map', 'exports.map', 'README.md', 'package_materials.py'):
         materials['tools/mpv/'+name] = recipe/name
-    for test in (recipe/'tests').glob('*.c'):
-        materials['tools/mpv/tests/'+test.name] = test
+    for pattern in ('*.c', '*.py'):
+        for test in (recipe/'tests').glob(pattern):
+            materials['tools/mpv/tests/'+test.name] = test
     for abi in ('arm64-v8a', 'armeabi-v7a'):
         manifest_path = args.native/abi/'build-manifest.json'
         manifest = json.loads(manifest_path.read_text())
