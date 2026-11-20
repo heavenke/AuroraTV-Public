@@ -52,6 +52,8 @@ def main():
     for pattern in ('*.c', '*.py'):
         for test in (recipe/'tests').glob(pattern):
             materials['tools/mpv/tests/'+test.name] = test
+    for name in ('surface_texture_interop.py', 'surface_texture_interop.c'):
+        materials['tools/mpv/'+name] = recipe/name
     for abi in ('arm64-v8a', 'armeabi-v7a'):
         manifest_path = args.native/abi/'build-manifest.json'
         manifest = json.loads(manifest_path.read_text())

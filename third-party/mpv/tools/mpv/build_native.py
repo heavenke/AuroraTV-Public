@@ -19,6 +19,7 @@ from codec_result_hooks import apply_codec_result_hooks
 from codec_rejection_hooks import apply_codec_rejection_hooks
 from codec_stage_hooks import apply_codec_stage_hooks
 from native_render_ahead import apply_native_render_ahead
+from surface_texture_interop import apply_surface_texture_interop
 from hevc_invalid_atc import apply_hevc_invalid_atc
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -222,6 +223,7 @@ extern void aurora_mpv_android_texture_frame_submitted(void *, int64_t, int64_t,
     apply_codec_result_hooks(source_root / 'ffmpeg')
     apply_codec_stage_hooks(source_root / 'ffmpeg')
     apply_native_render_ahead(source_root / 'mpv')
+    apply_surface_texture_interop(source_root / 'mpv')
     apply_hevc_invalid_atc(source_root / 'ffmpeg')
     return source_root
 
@@ -352,9 +354,15 @@ def build_abi(args, sources, abi):
 
     # The link-only path must also refresh a locally patched native VO.
     mpv_source_stamp = digest(sources / 'mpv/video/out/vo_mediacodec_embed.c')
+    texture_inputs = [sources / 'mpv' / name for name in (
+        'video/out/hwdec/hwdec_surfacetexture.c', 'video/out/gpu/hwdec.c',
+        'video/out/gpu/hwdec.h', 'video/out/gpu/video.c', 'video/hwdec.c',
+        'video/hwdec.h', 'video/decode/vd_lavc.c', 'video/mp_image.c',
+        'video/mp_image.h', 'meson.build')]
+    texture_source_stamp = hashlib.sha256(''.join(digest(path) for path in texture_inputs).encode()).hexdigest()
     step('mpv-native-output', [['ninja', '-C', str(work/'build-mpv'), '-j', str(args.jobs)],
          ['ninja', '-C', str(work/'build-mpv'), 'install']], step_env=meson_env,
-         source_stamp=mpv_source_stamp)
+         source_stamp=mpv_source_stamp + ':' + texture_source_stamp)
 
     if args.stage != 'dependencies':
         bridge=ROOT/'app/src/main/cpp/mpv_jni.c'
@@ -390,6 +398,7 @@ def build_abi(args, sources, abi):
             'coreSha256':digest(output/'libaurora_mpv_core.so'),'coreBytes':(output/'libaurora_mpv_core.so').stat().st_size,
             'ffmpegMediaCodecSourceSha256':ffmpeg_source_stamp,
             'mpvNativeOutputSourceSha256':mpv_source_stamp,
+            'mpvTextureInteropSourceSha256':texture_source_stamp,
             'androidEnvironmentSourceSha256':digest(Path(__file__).with_name('android_env.c')),
             'sourcesLockSha256':digest(Path(__file__).with_name('sources.lock.json')),
             'dependencies':LICENSES},indent=2)+'\n')

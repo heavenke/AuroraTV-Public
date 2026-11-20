@@ -36,6 +36,8 @@ Android 的 zlib/EGL/GLES 使用 NDK 系统头文件和链接桩，脚本生成�
 
 `hardware_codec_selection.py/.inc` 保留 profile 优先选择。在 API 29 及以上，当厂商遗漏 profile 声明时，仅对系统明确标为硬件加速的视频组件补做 MIME 匹配；继续排除软件与要求安全／隧道模式的组件，真实配置与启动仍由系统决定。`codec_result_hooks.py/.inc` 观察选择、配置、启动及输出格式初始化的实际结果，并携带不可变的 `aurora_client` 和文件代次。客户端不会把原生状态值误当成 MPV 错误码；最终硬件失败会停止音频并解释失败格式和阶段，重建输出也始终保留用户选择的解码模式。
 
+`surface_texture_interop.py/.c` 为 libmpv GPU 输出增加第二种 MediaCodec Surface 传递方式。先保留原有的 AImageReader 尝试，解码器拒绝该输出时再尝试 SurfaceTexture，最后才尝试硬解拷贝。解码器和 GPU 映射器按同一输出身份配对，并用解码原始 PTS 核对实际取得的纹理。裁剪、方向和字幕继续由原有 GPU 播放流程处理，解码方式与上游连接均由原输入保留。
+
 ```bash
 python3 tools/mpv/package_materials.py --downloads ./downloads --native ./native \
   --ndk /opt/android-ndk-r28c --output ./mpv-corresponding-source.zip
