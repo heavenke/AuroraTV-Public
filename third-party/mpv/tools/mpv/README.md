@@ -30,13 +30,29 @@ Android 的 zlib/EGL/GLES 使用 NDK 系统头文件和链接桩，脚本生成�
 
 ## 对应材料与替换
 
-直播硬解的 SurfaceView 和 TextureView 路径可使用 `mediacodec_embed` 直接向 Android Surface 输出；点播和显式软解继续使用 libmpv OpenGL。SurfaceView 只有在系统支持真实帧回调时才启用：Java MediaCodec 从 API 23 起支持，NDK 对应接口通过运行时符号检测（API 33 起提供）。TextureView 从 API 21 起使用逐缓冲时间戳与实际 View 更新交叉确认，解码提交本身不计作显示帧。不支持的输出能力在同一 MPV／解码方式下重建 GPU 输出，不启用软解回退。
+直播硬解的 SurfaceView 和 TextureView 路径可使用 `mediacodec_embed` 直接向 Android Surface 输出。普通点播和软解使用 libmpv OpenGL；已确认支持的单层杜比视界点播可在 SurfaceView 使用原生输出。SurfaceView 只有在系统支持真实帧回调时才启用：Java MediaCodec 从 API 23 起支持，NDK 对应接口通过运行时符号检测（API 33 起提供）。TextureView 从 API 21 起使用逐缓冲时间戳与实际 View 更新交叉确认，解码提交本身不计作显示帧。直播的输出重建不启用软解回退。
 
 `codec_output_hooks.inc` 和构建脚本的 FFmpeg 修改将每次文件打开的 `aurora_epoch` 原样交给输出观察器。显示帧还需匹配解码器令牌与当前 Surface；播放器销毁前先移除回调登记，因此迟到回调不能访问已释放实例或把上一台计作新台首帧。该可选接口不影响原有 `mpv_*` API；核心未提供接口时，客户端保留 GPU 路径。
 
 `hardware_codec_selection.py/.inc` 保留 profile 优先选择。在 API 29 及以上，当厂商遗漏 profile 声明时，仅对系统明确标为硬件加速的视频组件补做 MIME 匹配；继续排除软件与要求安全／隧道模式的组件，真实配置与启动仍由系统决定。`codec_result_hooks.py/.inc` 观察选择、配置、启动及输出格式初始化的实际结果，并携带不可变的 `aurora_client` 和文件代次。客户端不会把原生状态值误当成 MPV 错误码；最终硬件失败会停止音频并解释失败格式和阶段，重建输出也始终保留用户选择的解码模式。
 
 `surface_texture_interop.py/.c` 为 libmpv GPU 输出增加第二种 MediaCodec Surface 传递方式。先保留原有的 AImageReader 尝试，解码器拒绝该输出时再尝试 SurfaceTexture，最后才尝试硬解拷贝。解码器和 GPU 映射器按同一输出身份配对，并用解码原始 PTS 核对实际取得的纹理。裁剪、方向和字幕继续由原有 GPU 播放流程处理，解码方式与上游连接均由原输入保留。
+
+### 杜比视界与色彩映射
+
+点播在同一 demux 流的 `on_preloaded` hook 中读取轨道的 Dolby Vision Profile、Level 和尺寸，在初始化解码器前决定输出；不为格式检测重复请求上游。普通视频保持既有解码偏好。已识别的杜比片源依次使用以下策略：
+
+1. 「杜比视界」启用，且当前显示、非安全／非隧道硬件解码器、Profile 和尺寸均支持时，在 SurfaceView 使用原生杜比解码与输出。当前仅放行单层 Profile 5、8，不宣称完整增强层／FEL 支持。
+2. 原生杜比不可用或开关关闭时，「色彩映射」启用则明确选择 CPU 解码，读取逐帧 RPU，经过 libplacebo reshaping、色彩转换及 BT.2390 映射到 BT.709 SDR。此结果不是系统原生杜比输出。
+3. 「色彩映射」关闭则使用普通硬解，禁止自动软解回退。Profile 5 的基础层不保证普通硬解颜色正确。
+
+两个开关共用 `ConfigStore` 偏好，默认启用；播放高级面板的杜比视界开关与解码设置联动。TextureView 暂不宣称原生杜比支持，按色彩映射设置选路并提示切换 SurfaceView。系统能力声明不代替真实配置、出帧和显示层验证。
+
+`dolby_vision_codec.py/.inc` 仅在显式 `aurora_dovi=1` 时使用 `video/dolby-vision`，并严格匹配杜比 Profile。`dolby_vision_mapping.py/.inc` 将现有 LGPL libplacebo 的 RPU 处理接入 libmpv OpenGL，构建显式启用 `dovi`、继续禁用 `libdovi`。多项式／MMR 系数使用动态 uniform，普通非杜比帧不进入此分支。原生点播的文本字幕通过 Android 覆盖层显示；图形字幕明确报告不支持，不伪装为已显示。
+
+点播的普通 HDR10／HLG 同样受「色彩映射」控制。`hdr_metadata.py` 只读导出真实的传递函数与原色，缺少 MPV 字段时读取 FFmpeg `lav_codecpar`；不凭 10 位、Main10 或文件名推测 HDR。开启时使用 BT.2390 映射到 BT.709 SDR，关闭时使用 clip 而不压缩高光；输出所需的传递函数与色域转换仍会执行。原硬解／软解偏好保持不变。晚到的真实解码色彩信息可在同一会话补充映射，不重新请求上游。此扩展仅覆盖点播，直播保持既有路径。
+
+杜比视界起播标志仅在当前显示支持杜比、原生 Dolby MIME 解码器实际启动且输出真实帧后短暂显示；软件映射、普通硬解与仅有片源标签的情况不显示。提示约 3 秒后淡出，切源、错误、退出或隐藏输出时清除，不代表或强制触发厂商系统提示。
 
 ```bash
 python3 tools/mpv/package_materials.py --downloads ./downloads --native ./native \
@@ -53,4 +69,4 @@ python3 tools/mpv/package_materials.py --downloads ./downloads --native ./native
 
 探测保留完整启动包，禁止 `nobuffer` 丢掉补送关键帧；当前使用 2 秒流信息分析上限、8 MiB 探测上限，完整参数已就绪时可提前结束，避免在高码率 HEVC 两组参数之间加入时因缺少 VPS/SPS/PPS 而无法启动。关闭启动阶段额外帧率采样，保留 0.1 秒预读和 50 ms 音频缓冲。GL 线程仍按 MPV 目标呈现时刻等待，保持 A/V 同步。直播暂停、后台、换源和释放取消旧网络，恢复由统一控制器管理。HLS/点播沿用鉴权、Range 回退、广告及原始时间轴模块。性能结论以实机记录为准，本地模拟 TS 不代表运营商 FCC 的回源与补流性能。
 
-自动和硬解模式均仅使用 MediaCodec。软件解码只在手动选择时开启。直播硬解统一保留待送显帧，并在 HDR 转 SDR 时使用 Reinhard 色调映射降低 GPU 计算量。配置按每个输入传递，直播策略不会留在随后打开的点播输入上。首次启动 SDK 21–23 选择 TextureView，SDK 24 及以上选择 SurfaceView，设备配置保留已保存的选择。
+自动和硬解模式通常仅使用 MediaCodec；用户明确启用「色彩映射」时，杜比片源按上述选路策略使用软件解码，其余软件解码只在手动选择时开启。直播硬解统一保留待送显帧，并在 HDR 转 SDR 时使用 Reinhard 色调映射降低 GPU 计算量。配置按每个输入传递，直播策略不会留在随后打开的点播输入上。首次启动 SDK 21–23 选择 TextureView，SDK 24 及以上选择 SurfaceView，设备配置保留已保存的选择。

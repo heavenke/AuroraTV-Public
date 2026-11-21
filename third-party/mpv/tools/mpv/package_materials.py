@@ -52,13 +52,19 @@ def main():
     for pattern in ('*.c', '*.py'):
         for test in (recipe/'tests').glob(pattern):
             materials['tools/mpv/tests/'+test.name] = test
-    for name in ('surface_texture_interop.py', 'surface_texture_interop.c'):
+    for name in ('surface_texture_interop.py', 'surface_texture_interop.c', 'dolby_vision_codec.py', 'dolby_vision_codec.inc',
+                 'dolby_vision_mapping.py', 'dolby_vision_mapping.inc', 'hdr_metadata.py'):
         materials['tools/mpv/'+name] = recipe/name
+    bridge_source = ROOT/'app/src/main/cpp/mpv_jni.c'
+    # The replaceable LGPL core is public; the application's thin JNI remains
+    # proprietary. Validate it when packaging from the app tree, never publish it.
     for abi in ('arm64-v8a', 'armeabi-v7a'):
         manifest_path = args.native/abi/'build-manifest.json'
         manifest = json.loads(manifest_path.read_text())
         if manifest['coreSha256'] != digest(args.native/abi/'libaurora_mpv_core.so'):
             raise RuntimeError('Native digest mismatch: '+abi)
+        if bridge_source.is_file() and manifest.get('bridgeSourceSha256') and manifest['bridgeSourceSha256'] != digest(bridge_source):
+            raise RuntimeError('JNI bridge source digest mismatch: '+abi)
         materials['manifests/'+abi+'.json'] = manifest_path
     for notice in notices.rglob('*'):
         if notice.is_file(): materials['licenses/'+notice.relative_to(notices).as_posix()] = notice

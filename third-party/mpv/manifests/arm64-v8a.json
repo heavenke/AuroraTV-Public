@@ -5,12 +5,9 @@
   "license": "LGPL-3.0-or-later combined native component",
   "gpl": false,
   "nonfree": false,
-  "sha256": "8160e5f60022fa5239af800a181a654c904cade64382456eb6cf78d52901fef2",
-  "bytes": 40600,
-  "bridgeObjectSha256": "1350608622d7a1ba948688af4463b1b970b95b7e3c2741b9c09b99d3a7fc1590",
-  "coreSha256": "ff71f9d3ee68ac6eb943b8d68e66bcf7740b66c63f86eb026ccec05fd72f6bd9",
-  "coreBytes": 25939056,
-  "ffmpegMediaCodecSourceSha256": "47880e4c07a06f3c59c61ec7a2957dd579214f49db815a8283d174f174ab3da1",
+  "coreSha256": "db66639aa1fd5df82c8a4e1656ecf1d46ac6d0f9a65f678b1d97c644565bd11b",
+  "coreBytes": 25947120,
+  "ffmpegMediaCodecSourceSha256": "a9c6530a1ec47aa122250920f74307c946959895c27a8f65e763f566879905f3",
   "mpvNativeOutputSourceSha256": "89da3a4a739f3a71c82ba95b22fbf8dc74be2927a956108c516d46a80fe196f3",
   "androidEnvironmentSourceSha256": "b6c42134853dded06c2a23531a1b0eb5480bb4ea98c922c2a71db94d9bb8f372",
   "sourcesLockSha256": "a137bf8bc721db9275cca38a118ec63b56c77cbb5d5d2661916bf2c9d13df485",
@@ -28,5 +25,11 @@
     "libplacebo": "LGPL-2.1-or-later",
     "dav1d": "BSD-2-Clause"
   },
-  "mpvTextureInteropSourceSha256": "e0313a99ae22ff7e1ecc811e3bebb98dfd7552e78c9fb8970d6a69308b94d5e9"
+  "mpvTextureInteropSourceSha256": "9ffaa0331733919f380c87e345e497da9b4b0a8829291b0d726cb24c09935118",
+  "dolbyVisionCodecPatchSha256": "45045a9db66c3aadc0424cc24f7964795ed9d329d8f93253eb7df5be9d3e317b",
+  "libplaceboDoviEnabled": true,
+  "mpvHdrMetadataSourceSha256": "2366f6ffaec7269d805c4d8d1909434ba1df5ae27bf0b059d4051cc834cff826",
+  "sha256": "3fbdbe0795bfc2d4c3cba4e50eee95d16904bc30fda7a21052cfc730e38cc216",
+  "bytes": 66664,
+  "bridgeSourceSha256": "f6559fe2535ebbb1aaf913411034cd6b6494bcb68099e85239250d1a00bbd80d"
 }

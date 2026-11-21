@@ -15,11 +15,14 @@ import time
 import urllib.request
 import uuid
 from hardware_codec_selection import apply_hardware_codec_selection
+from dolby_vision_codec import apply_dolby_vision_codec
 from codec_result_hooks import apply_codec_result_hooks
 from codec_rejection_hooks import apply_codec_rejection_hooks
 from codec_stage_hooks import apply_codec_stage_hooks
 from native_render_ahead import apply_native_render_ahead
 from surface_texture_interop import apply_surface_texture_interop
+from dolby_vision_mapping import apply_dolby_vision_mapping
+from hdr_metadata import apply_hdr_metadata
 from hevc_invalid_atc import apply_hevc_invalid_atc
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -219,11 +222,14 @@ extern void aurora_mpv_android_texture_frame_submitted(void *, int64_t, int64_t,
         original = original.replace(marker, timed_release + marker)
     public.write_text(original, encoding='utf-8')
     apply_hardware_codec_selection(source_root / 'ffmpeg')
+    apply_dolby_vision_codec(source_root / 'ffmpeg')
     apply_codec_rejection_hooks(source_root / 'ffmpeg')
     apply_codec_result_hooks(source_root / 'ffmpeg')
     apply_codec_stage_hooks(source_root / 'ffmpeg')
     apply_native_render_ahead(source_root / 'mpv')
     apply_surface_texture_interop(source_root / 'mpv')
+    apply_dolby_vision_mapping(source_root / 'mpv')
+    apply_hdr_metadata(source_root / 'mpv')
     apply_hevc_invalid_atc(source_root / 'ffmpeg')
     return source_root
 
@@ -328,7 +334,7 @@ def build_abi(args, sources, abi):
         configuration=(build/'config.h').read_text()
         for macro,value in [('CONFIG_GPL',0),('CONFIG_NONFREE',0),('CONFIG_VERSION3',1)]:
             if '#define '+macro+' '+str(value) not in configuration:raise RuntimeError('Unexpected FFmpeg license: '+macro)
-        meson('libplacebo',['-Dvulkan=disabled','-Dopengl=enabled','-Dgl-proc-addr=enabled','-Dd3d11=disabled',
+        meson('libplacebo',['-Ddovi=enabled','-Dlibdovi=disabled','-Dvulkan=disabled','-Dopengl=enabled','-Dgl-proc-addr=enabled','-Dd3d11=disabled',
             '-Dglslang=disabled','-Dshaderc=disabled','-Ddemos=false','-Dtests=false','-Dbench=false'])
         meson('mpv',['-Dgpl=false','-Dlibmpv=true','-Dcplayer=false','-Dbuild-date=false','-Dmanpage-build=disabled',
             '-Dlua=disabled','-Djavascript=disabled','-Dlibcurl=disabled','-Dlibavdevice=disabled',
@@ -337,12 +343,21 @@ def build_abi(args, sources, abi):
         options=json.loads((work/'build-mpv/meson-info/intro-buildoptions.json').read_text())
         if next(row['value'] for row in options if row['name']=='gpl') is not False:raise RuntimeError('GPL mpv build rejected')
 
+    # A link/core build may reuse an older prefix with auto-features=disabled.
+    # Enable the internal LGPL reshaper explicitly; libdovi/Rust is not needed.
+    if args.stage in ('link', 'core'):
+        meson('libplacebo',['-Ddovi=enabled','-Dlibdovi=disabled','-Dvulkan=disabled','-Dopengl=enabled','-Dgl-proc-addr=enabled','-Dd3d11=disabled',
+            '-Dglslang=disabled','-Dshaderc=disabled','-Ddemos=false','-Dtests=false','-Dbench=false'])
+    placebo_config = (prefix/'include/libplacebo/config.h').read_text()
+    if '#define PL_HAVE_DOVI 1' not in placebo_config:
+        raise RuntimeError('Dolby Vision reshaping was not enabled in libplacebo')
+
     # Refresh the patched archive even when the configure/build was cached.
     ffmpeg_root = sources / 'ffmpeg'
     ffmpeg_inputs = [ffmpeg_root / name for name in (
         'configure', 'libavcodec/mediacodec.c', 'libavcodec/mediacodecdec.c',
         'libavcodec/mediacodecdec_common.c', 'libavcodec/mediacodecdec_common.h',
-        'libavcodec/mediacodec_wrapper.c', 'libavcodec/bsf/h265_metadata.c',
+        'libavcodec/mediacodec_wrapper.c', 'libavcodec/mediacodec_wrapper.h', 'libavcodec/bsf/h265_metadata.c',
         'libavcodec/bsf/aurora_hevc_invalid_atc.inc', 'libavcodec/bsf/aurora_hevc_invalid_atc_filter.inc',
         'libavcodec/bsf/aurora_hevc_hlg_atc.inc')]
     ffmpeg_inputs += sorted(path for path in (ffmpeg_root / 'libavcodec').glob('cbs*')
@@ -358,7 +373,9 @@ def build_abi(args, sources, abi):
         'video/out/hwdec/hwdec_surfacetexture.c', 'video/out/gpu/hwdec.c',
         'video/out/gpu/hwdec.h', 'video/out/gpu/video.c', 'video/hwdec.c',
         'video/hwdec.h', 'video/decode/vd_lavc.c', 'video/mp_image.c',
-        'video/mp_image.h', 'meson.build')]
+        'video/mp_image.h', 'meson.build', 'video/out/gpu/shader_cache.c',
+        'video/out/gpu/shader_cache.h', 'video/out/gpu/aurora_dolby_vision_mapping.inc',
+        'video/out/opengl/common.c', 'player/command.c')]
     texture_source_stamp = hashlib.sha256(''.join(digest(path) for path in texture_inputs).encode()).hexdigest()
     step('mpv-native-output', [['ninja', '-C', str(work/'build-mpv'), '-j', str(args.jobs)],
          ['ninja', '-C', str(work/'build-mpv'), 'install']], step_env=meson_env,
@@ -397,8 +414,11 @@ def build_abi(args, sources, abi):
                 'bridgeObjectSha256':digest(obj)} if args.stage != 'core' else {}),
             'coreSha256':digest(output/'libaurora_mpv_core.so'),'coreBytes':(output/'libaurora_mpv_core.so').stat().st_size,
             'ffmpegMediaCodecSourceSha256':ffmpeg_source_stamp,
+            'dolbyVisionCodecPatchSha256':hashlib.sha256(''.join(digest(Path(__file__).with_name(name)) for name in
+                ('dolby_vision_codec.py', 'dolby_vision_codec.inc')).encode()).hexdigest(),
             'mpvNativeOutputSourceSha256':mpv_source_stamp,
             'mpvTextureInteropSourceSha256':texture_source_stamp,
+            'mpvHdrMetadataSourceSha256':digest(sources/'mpv/player/command.c'),
             'androidEnvironmentSourceSha256':digest(Path(__file__).with_name('android_env.c')),
             'sourcesLockSha256':digest(Path(__file__).with_name('sources.lock.json')),
             'dependencies':LICENSES},indent=2)+'\n')
