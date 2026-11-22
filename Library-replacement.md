@@ -4,7 +4,7 @@
 
 ## 准备对应版本
 
-下载同一 Release 中的正式 APK、第三方源码与构建资料附件，核对附件清单及 SHA-256。资料中的上游提交、补丁、工具链、配置和组件许可证用于重建对应共享库。各组件及传递依赖分别适用其原始许可。[发布与附件](https://github.com/heavenke/AuroraTV-Public/releases)
+从对应 Release 下载正式 APK，并从同一版本标签的仓库中获取 [第三方源码与构建资料](third-party/)。GitHub 自动提供的 Source code (zip/tar.gz) 也包含这些材料；核对资料中的清单及 SHA-256。上游提交、补丁、工具链、配置和组件许可证用于重建对应共享库，各组件及传递依赖分别适用其原始许可。[版本发布](https://github.com/heavenke/AuroraTV-Public/releases)
 
 正式 APK 提供已经编译的 `classes*.dex`、资源、Manifest 和共享库。替换共享库时可复用其中的应用对象代码，保留 Java/JNI 接口和原有库加载名称。按设备 ABI 准备完整兼容的共享库集合，分别放入 `lib/arm64-v8a/` 或 `lib/armeabi-v7a/`。静态链接到共享库的组件修改后，需要重新链接包含它的共享库；修改引入额外共享库依赖时，一并放入对应 ABI 目录。
 
