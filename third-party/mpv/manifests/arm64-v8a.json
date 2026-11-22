@@ -29,7 +29,8 @@
   "dolbyVisionCodecPatchSha256": "45045a9db66c3aadc0424cc24f7964795ed9d329d8f93253eb7df5be9d3e317b",
   "libplaceboDoviEnabled": true,
   "mpvHdrMetadataSourceSha256": "2366f6ffaec7269d805c4d8d1909434ba1df5ae27bf0b059d4051cc834cff826",
-  "sha256": "3fbdbe0795bfc2d4c3cba4e50eee95d16904bc30fda7a21052cfc730e38cc216",
-  "bytes": 66664,
-  "bridgeSourceSha256": "f6559fe2535ebbb1aaf913411034cd6b6494bcb68099e85239250d1a00bbd80d"
+  "sha256": "334275bd7bf556cee9a766601abe32946e9533ec5a6e83834ad5d5cee1aed3df",
+  "bytes": 67664,
+  "bridgeSourceSha256": "8d88f72ea46235697f622a5363d028fa8722d43e084686ced08e7f23459be3af",
+  "bridgeMappingCompatibilitySha256": "4e8bc9f615eeba19633ae9fa8de95145256a45f8d849c43cacce9289568be2f0"
 }
