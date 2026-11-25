@@ -13,7 +13,7 @@
 
 Android 5.0+，ARM64/ARM32 架构。
 
-[下载最新安装包](https://github.com/heavenke/AuroraTV-Public/releases/latest/download/AuroraTV-v1.0.11.261126-release-signed.apk) · [更新日志](CHANGELOG.md)
+[下载最新安装包](https://github.com/heavenke/AuroraTV-Public/releases/latest/download/AuroraTV-v1.0.10.261123-release-signed.apk) · [更新日志](CHANGELOG.md)
 
 ## 配置与使用教程
 
