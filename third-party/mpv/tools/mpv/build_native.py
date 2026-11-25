@@ -21,6 +21,7 @@ from codec_rejection_hooks import apply_codec_rejection_hooks
 from codec_stage_hooks import apply_codec_stage_hooks
 from native_render_ahead import apply_native_render_ahead
 from surface_texture_interop import apply_surface_texture_interop
+from gpu_render_failure import apply_gpu_render_failure
 from dolby_vision_mapping import apply_dolby_vision_mapping
 from hdr_metadata import apply_hdr_metadata
 from hevc_invalid_atc import apply_hevc_invalid_atc
@@ -228,6 +229,7 @@ extern void aurora_mpv_android_texture_frame_submitted(void *, int64_t, int64_t,
     apply_codec_stage_hooks(source_root / 'ffmpeg')
     apply_native_render_ahead(source_root / 'mpv')
     apply_surface_texture_interop(source_root / 'mpv')
+    apply_gpu_render_failure(source_root / 'mpv')
     apply_dolby_vision_mapping(source_root / 'mpv')
     apply_hdr_metadata(source_root / 'mpv')
     apply_hevc_invalid_atc(source_root / 'ffmpeg')
@@ -371,6 +373,7 @@ def build_abi(args, sources, abi):
     mpv_source_stamp = digest(sources / 'mpv/video/out/vo_mediacodec_embed.c')
     texture_inputs = [sources / 'mpv' / name for name in (
         'video/out/hwdec/hwdec_surfacetexture.c', 'video/out/gpu/hwdec.c',
+        'video/out/gpu/libmpv_gpu.c', 'video/out/gpu/video.h',
         'video/out/gpu/hwdec.h', 'video/out/gpu/video.c', 'video/hwdec.c',
         'video/hwdec.h', 'video/decode/vd_lavc.c', 'video/mp_image.c',
         'video/mp_image.h', 'meson.build', 'video/out/gpu/shader_cache.c',

@@ -5,8 +5,8 @@
   "license": "LGPL-3.0-or-later combined native component",
   "gpl": false,
   "nonfree": false,
-  "coreSha256": "db66639aa1fd5df82c8a4e1656ecf1d46ac6d0f9a65f678b1d97c644565bd11b",
-  "coreBytes": 25947120,
+  "coreSha256": "3b78cb2adc5c01e7472f3bf79bd46c5e0b0262adede7c3aec41fe68d6a439670",
+  "coreBytes": 25948512,
   "ffmpegMediaCodecSourceSha256": "a9c6530a1ec47aa122250920f74307c946959895c27a8f65e763f566879905f3",
   "mpvNativeOutputSourceSha256": "89da3a4a739f3a71c82ba95b22fbf8dc74be2927a956108c516d46a80fe196f3",
   "androidEnvironmentSourceSha256": "b6c42134853dded06c2a23531a1b0eb5480bb4ea98c922c2a71db94d9bb8f372",
@@ -25,12 +25,15 @@
     "libplacebo": "LGPL-2.1-or-later",
     "dav1d": "BSD-2-Clause"
   },
-  "mpvTextureInteropSourceSha256": "9ffaa0331733919f380c87e345e497da9b4b0a8829291b0d726cb24c09935118",
+  "mpvTextureInteropSourceSha256": "19fb4e6ee4129dc0abb44aa5a3c988a133546b10b832900f827a34c83c4f0106",
   "dolbyVisionCodecPatchSha256": "45045a9db66c3aadc0424cc24f7964795ed9d329d8f93253eb7df5be9d3e317b",
   "libplaceboDoviEnabled": true,
   "mpvHdrMetadataSourceSha256": "2366f6ffaec7269d805c4d8d1909434ba1df5ae27bf0b059d4051cc834cff826",
-  "sha256": "334275bd7bf556cee9a766601abe32946e9533ec5a6e83834ad5d5cee1aed3df",
-  "bytes": 67664,
-  "bridgeSourceSha256": "8d88f72ea46235697f622a5363d028fa8722d43e084686ced08e7f23459be3af",
-  "bridgeMappingCompatibilitySha256": "4e8bc9f615eeba19633ae9fa8de95145256a45f8d849c43cacce9289568be2f0"
+  "sha256": "78cea51ae80843f69d78a74ff9557423f9afa5d64191ef0607df7809c46af79f",
+  "bytes": 49192,
+  "bridgeSourceSha256": "8d00815827dcd21206cc92d64791011426f837e30138d6780eb2c31fcb185fd7",
+  "bridgeMappingCompatibilitySha256": "4e8bc9f615eeba19633ae9fa8de95145256a45f8d849c43cacce9289568be2f0",
+  "bridgeObjectSha256": "88d465249ec674b927d21d12e8c3ca9b1534fafe1fc6689815b44c233555ce54",
+  "bridgeRenderRejectionSha256": "bb38bf352ea9f8c6b7c95f414d8b18709678d8dee492d08a80fe98ae5111f427",
+  "gpuRenderFailurePatchSha256": "e5eac0ea659b20b49d3c35b50735bb59dcd75bd3284e8cc7a069de8ab72676b7"
 }

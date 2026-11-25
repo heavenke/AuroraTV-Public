@@ -14,7 +14,7 @@ trademark. The CC0 legal text is included in CC0-1.0.txt.
 Jellyfin
 Copyright Jellyfin contributors. Based on the original icon-transparent.svg.
 https://github.com/jellyfin/jellyfin-ux/blob/master/branding/SVG/icon-transparent.svg
-The original contours are retained and the palette is adapted to Aurora TV.
+The original contours are retained in the XML source mark on an Aurora TV tile.
 This artwork adaptation is available under Creative Commons Attribution-ShareAlike
 4.0 International. Its editable contours are ic_source_jellyfin.xml in the Android
 resources. See Jellyfin-branding-LICENSE.txt for the license text.
@@ -22,11 +22,23 @@ resources. See Jellyfin-branding-LICENSE.txt for the license text.
 TVBox
 The original Box application icon is from takagen99/Box.
 https://github.com/takagen99/Box/blob/main/app/src/main/res/drawable/app_icon.png
-The user supplied this original PNG in TVBOX-LOGO. It is retained independently as
-setup_source_tvbox.png. The setup view applies Aurora color grading while
-preserving the separate box faces and tape. This artwork is available under AGPL-3.0.
+The user supplied the original PNG in TVBOX-LOGO. Its box faces and tape were
+adapted to finite-color vector paths as ic_source_tvbox.xml; no source PNG is
+packaged. The original gray faces and red tape remain distinct on the surrounding
+Aurora tile. This artwork adaptation is available under AGPL-3.0.
 See TVBox-branding-AGPL-3.0.txt for the license text.
 
 The station logos used on the channel-logo setup page were supplied by the user.
 They identify their corresponding broadcasters and retain their original colors.
 All trademarks remain the property of their respective owners.
+
+OpenList logo — designed by @ubnm (https://github.com/ubnm), OpenList Team. HD remaster: @meethuthu; vector conversion: @cxw620. https://github.com/OpenListTeam/Logo/blob/a0393230a7cdba2d530f611d32755f7e40543ab5/logo.svg . Aurora TV adapts the two original paths to Android vector and web icons with theme colors. This adapted logo is distributed under CC BY-NC-SA 4.0; see OpenList-logo-CC-BY-NC-SA-4.0.txt.
+
+115 Desktop
+The original 256x256 icon was extracted at the user's request from the
+115-Desktop 1.5.8.3 executable's RT_GROUP_ICON 1. Its real numeral
+contour is adapted as a single Aurora teal path in ic_source_disk115.xml; the white
+app-shell background is omitted and the contour is uniformly recentered. No PNG/ICO or bitmap
+wrapper is packaged as the 115 source drawable. The original mark identifies the
+115 source and remains the property of its owner. The surrounding Aurora tile is
+separate. Source hashes and contour conversion are recorded in Source-vectorization-PROVENANCE.txt.

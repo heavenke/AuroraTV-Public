@@ -35,3 +35,11 @@ Guava 共用库固定为 33.3.1-android，[固定源码制品](https://repo.mave
 - Babel runtime helpers 7.29.14 的 LICENSE 原文来自锁定 npm 包，项目来源 https://github.com/babel/babel，原文 SHA-256 为 `4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30`。
 
 合集文件 `Config-web-runtime-LICENSE.txt` 的 SHA-256 为 `592cfcdf3c3fe98e9ed6b86177313ad5de826bab47edf83842f0776df8570f5c`。构建依赖锁定在 `tools/config-web/package-lock.json`，对应离线页面随 APK 提供。
+
+
+## v1.0.11新增原文与数据来源
+
+- [115driver-MIT.txt](115driver-MIT.txt)：https://github.com/SheltonZhu/115driver/blob/main/LICENSE ，SHA-256 `cdda11718b340b7482dc76b6b0fc9da7b98a2f497ab82cf101a4426fb03c7243`。
+- [OpenList-logo-CC-BY-NC-SA-4.0.txt](OpenList-logo-CC-BY-NC-SA-4.0.txt)：https://github.com/OpenListTeam/Logo ，SHA-256 `1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1`。
+- OpenCC词典的固定上游链接与未改动文件SHA-256见 [SOURCES.json](../third-party/opencc/SOURCES.json)。
+- 来源标识的更新通知与转换记录见 [Source-brand-icons-NOTICE.txt](Source-brand-icons-NOTICE.txt)、[Source-vectorization-PROVENANCE.txt](Source-vectorization-PROVENANCE.txt)。

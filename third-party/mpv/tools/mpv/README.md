@@ -22,7 +22,7 @@ python3 tools/mpv/build_native.py \
   --downloads ./downloads --cache ./build-cache --output ./native --stage core
 ```
 
-主线使用 `--stage all` 构建包括应用 JNI 的完整集合，或用 `--stage link` 在已有依赖上重新链接。公开对应源码附件只需 `dependencies`、`core` 两步。文件缓存目录和配置哈希不同会触发对应步骤，源码归档摘要不匹配会停止。修改第三方源码后请使用新的缓存目录/更新锁定归档，避免复用旧构建步骤。
+主线使用 `--stage all` 构建包括应用 JNI 的完整集合，或用 `--stage link` 在已有依赖上重新链接。公开对应源码材料只需 `dependencies`、`core` 两步。文件缓存目录和配置哈希不同会触发对应步骤，源码归档摘要不匹配会停止。修改第三方源码后请使用新的缓存目录/更新锁定归档，避免复用旧构建步骤。
 
 Android 的 zlib/EGL/GLES 使用 NDK 系统头文件和链接桩，脚本生成相应 pkg-config 描述，不打包系统共享库。mbedTLS 的随机设备显式设置为 `/dev/urandom`。MPV 的构建期 Matroska Python 生成器延迟求值类型注解以兼容 Python 3.8。FFmpeg 的 HEVC MediaCodec 适配在缺少 VPS/SPS/PPS 配置时返回 `AVERROR_INVALIDDATA`，让 libmpv 处理解码器回退。上述源码变化都由 `prepare_sources` 实施，制品清单记录 MediaCodec 源文件摘要。
 
@@ -61,7 +61,7 @@ python3 tools/mpv/package_materials.py --downloads ./downloads --native ./native
   --ndk /opt/android-ndk-r28c --output ./mpv-corresponding-source.zip
 ```
 
-收集器验证全部源码和产物摘要，包含所有源码归档、构建/链接配方、Android 环境帮助函数、两 ABI 清单、原始许可证及 NDK 通知，并更新 APK 内通知目录。公开分发新版本时必须随对应 APK 提供此附件，不能只提供上游仓库链接。它不包含用户来源、配置、媒体、凭据或应用主体实现。
+收集器验证全部源码和产物摘要，包含所有源码归档、构建/链接配方、Android 环境帮助函数、两 ABI 清单、原始许可证及 NDK 通知，并更新 APK 内通知目录。公开分发新版本时，将材料纳入公众版仓库对应版本标签，随 GitHub 自动生成的源码归档获取；不得单独上传 Release 附件，也不能只提供上游仓库链接。它不包含用户来源、配置、媒体、凭据或应用主体实现。
 
 替换同 ABI 的 `lib/arm64-v8a/libaurora_mpv_core.so` 或 `lib/armeabi-v7a/libaurora_mpv_core.so`，保留公开 C API、Android 入口和 SONAME；薄 JNI 可继续使用 APK 原对象代码。核心导出表不锁定内容摘要，允许用户研究、修改和替换。重新打包、自签及必要调试权利见随包 `third_party/Library-replacement.md`。新增依赖时一并提供其兼容库和对应源码/许可。
 

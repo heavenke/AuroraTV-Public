@@ -52,7 +52,7 @@ def main():
     for pattern in ('*.c', '*.py'):
         for test in (recipe/'tests').glob(pattern):
             materials['tools/mpv/tests/'+test.name] = test
-    for name in ('surface_texture_interop.py', 'surface_texture_interop.c', 'dolby_vision_codec.py', 'dolby_vision_codec.inc',
+    for name in ('surface_texture_interop.py', 'surface_texture_interop.c', 'gpu_render_failure.py', 'dolby_vision_codec.py', 'dolby_vision_codec.inc',
                  'dolby_vision_mapping.py', 'dolby_vision_mapping.inc', 'hdr_metadata.py'):
         materials['tools/mpv/'+name] = recipe/name
     bridge_source = ROOT/'app/src/main/cpp/mpv_jni.c'

@@ -1,0 +1,35 @@
+Vector source mark provenance
+
+115 Desktop 1.5.8.3
+User-provided source: C:/Program Files/115-Desktop/115-Desktop.exe
+Executable SHA-256: f3c5bd2cb1535a52ca90ca418b4437a72fdb779575405badb03f39753745c8f6
+PE resource group: RT_GROUP_ICON 1 (16, 32, 48 and 256-pixel icons).
+Original selected 256x256 PNG SHA-256: 89d67563a33a721c4a404c2fc324b337ab922e5404a63c4857ec84936c8071f0
+The executable was mapped as a resource-only data file and was never started.
+The original PNG/ICO are retained in ignored local audit artifacts only.
+The app-shell white background is intentionally removed. The real numeral contour
+is retained as one path and uniformly refitted to a 64-unit viewport with a
+4-unit visual inset; its Aurora theme fill is #7BE0D1. No contour stretching is used.
+Production drawable: ic_source_disk115.xml (no bitmap wrapper).
+
+TVBox
+User-provided setup_source_tvbox.png reference retained in ignored local audit artifacts only.
+Original 512x512 PNG SHA-256: 4e30f1ae4e82aae8501f710d08aecc27b762688f37e927528be2746598b46331
+The original box's three gray faces, black edges and two red tape faces were
+converted to nine finite-palette vector paths, simplified to 152 path commands.
+Production drawable: ic_source_tvbox.xml (no bitmap wrapper).
+No AI redrawing was used. Contour simplification tolerance is 0.75 reference pixels
+in the 512-pixel TVBox source; curves/coordinates are rounded to 0.01 reference pixels.
+
+All source providers now use the same XML drawable renderer and each XML's own
+fill/stroke colors; the surrounding Aurora gradient tile remains independent.
+The brand marks remain the property of their respective owners. TVBox adaptation
+retains its upstream AGPL-3.0 license described in Source-brand-icons-NOTICE.txt.
+Original raster references are not production drawable/assets or Release attachments.
+
+Baidu Netdisk
+The corrected official ring-and-open-infinity contour is unchanged. Its original
+split red-left/blue-right base bar is retained as two short adjoining rounded-end
+paths below the main contour, with a gap and a 2-unit bottom inset in the 64-unit
+viewport. Original red/blue are replaced with dark #419B9A / light #82E5D3 Aurora
+teal to keep the two sections distinct. No original red/blue fill is retained.

@@ -82,3 +82,10 @@ MPV 0.42.0 与 FFmpeg 9.0.2、libplacebo 7.387.0、libass 0.17.5、mbedTLS 3.6.7
 ## 挂载媒体库与刮削
 
 SMB 挂载使用 SMBJ、ASN One、MBassador、SLF4J 和 Bouncy Castle。网页元数据解析使用 jsoup。相关许可与通知见 [LICENSES](LICENSES)。挂载媒体库的在线资料可来自 IMDb、豆瓣、TMDB、Wikidata 和中文维基百科。Aurora TV 使用 TMDB 资料，未经 TMDB 认证或背书。
+
+
+## 本轮新增来源与词典资料
+
+115来源中的m115算法按MIT许可参考SheltonZhu/115driver适配，原始版权与完整许可见 [115driver-MIT.txt](LICENSES/115driver-MIT.txt)。
+
+OpenCC 1.1.9词典数据遵循Apache-2.0，固定源码、原始通知及摘要见 [third-party/opencc/](third-party/opencc/)。来源图形的可编辑XML及各自归属见 [third-party/branding/](third-party/branding/)。
