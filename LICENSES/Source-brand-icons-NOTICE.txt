@@ -24,8 +24,8 @@ The original Box application icon is from takagen99/Box.
 https://github.com/takagen99/Box/blob/main/app/src/main/res/drawable/app_icon.png
 The user supplied the original PNG in TVBOX-LOGO. Its box faces and tape were
 adapted to finite-color vector paths as ic_source_tvbox.xml; no source PNG is
-packaged. The original gray faces and red tape remain distinct on the surrounding
-Aurora tile. This artwork adaptation is available under AGPL-3.0.
+packaged. The box faces use Aurora teal/blue, its tape uses violet, and its outline uses slate;
+the original contours remain distinct on the surrounding Aurora tile. This artwork adaptation is available under AGPL-3.0.
 See TVBox-branding-AGPL-3.0.txt for the license text.
 
 The station logos used on the channel-logo setup page were supplied by the user.
@@ -42,3 +42,8 @@ app-shell background is omitted and the contour is uniformly recentered. No PNG/
 wrapper is packaged as the 115 source drawable. The original mark identifies the
 115 source and remains the property of its owner. The surrounding Aurora tile is
 separate. Source hashes and contour conversion are recorded in Source-vectorization-PROVENANCE.txt.
+
+Thunder Netdisk and Guangya Cloud
+Provider marks are used only to identify their media sources. Their original
+trademark and artwork rights remain with their owners. Aurora colors are applied
+to the reference contours; no original marketing text or bitmap is packaged.

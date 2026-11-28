@@ -1,6 +1,6 @@
 # 当前公众版的 MPV 对应材料
 
-v1.0.11.261126 使用 MPV 0.42.0 单引擎。核心为独立、可替换的 `libaurora_mpv_core.so`，涵盖 ARM64 与 ARM32，构建目标 Android API 21。应用主体与薄 JNI 不属于这里公开的第三方核心源码。
+v1.0.12.261128 使用 MPV 0.42.0 单引擎。核心为独立、可替换的 `libaurora_mpv_core.so`，涵盖 ARM64 与 ARM32，构建目标 Android API 21。应用主体与薄 JNI 不属于这里公开的第三方核心源码。
 
 - `downloads/`：已经核验的原始第三方源码归档，获取地址、固定版本与 SHA-256 见 `tools/mpv/sources.lock.json`。
 - `tools/mpv/`：核心构建配方、Android 环境入口、导出表、兼容补丁与独立回归。

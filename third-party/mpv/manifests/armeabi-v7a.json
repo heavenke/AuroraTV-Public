@@ -29,11 +29,11 @@
   "dolbyVisionCodecPatchSha256": "45045a9db66c3aadc0424cc24f7964795ed9d329d8f93253eb7df5be9d3e317b",
   "libplaceboDoviEnabled": true,
   "mpvHdrMetadataSourceSha256": "2366f6ffaec7269d805c4d8d1909434ba1df5ae27bf0b059d4051cc834cff826",
-  "sha256": "03c83b4fc5948015c74d2588bfb8dcd2c97beac51d3d5bbf2807b8dda2093aea",
+  "sha256": "cfe79158b63736b60d91f831657e8f683106faa748c73f57ac9eb619102bf3d7",
   "bytes": 48708,
-  "bridgeSourceSha256": "8d00815827dcd21206cc92d64791011426f837e30138d6780eb2c31fcb185fd7",
+  "bridgeSourceSha256": "ba4015835ffc86f9d14528b2eb4f5003df344fa0b32869269d224c310866f425",
   "bridgeMappingCompatibilitySha256": "4e8bc9f615eeba19633ae9fa8de95145256a45f8d849c43cacce9289568be2f0",
-  "bridgeObjectSha256": "9a2f92524762d46d864f67ce0255f7cd863f81449ad36cb709894cbe62811beb",
+  "bridgeObjectSha256": "d210eb651c85ed7b51d31b866c373e453bd65a1a579bb5864e28f4634bfa18b0",
   "bridgeRenderRejectionSha256": "bb38bf352ea9f8c6b7c95f414d8b18709678d8dee492d08a80fe98ae5111f427",
   "gpuRenderFailurePatchSha256": "e5eac0ea659b20b49d3c35b50735bb59dcd75bd3284e8cc7a069de8ab72676b7"
 }

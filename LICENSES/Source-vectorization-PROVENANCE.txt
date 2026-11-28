@@ -33,3 +33,8 @@ split red-left/blue-right base bar is retained as two short adjoining rounded-en
 paths below the main contour, with a gap and a 2-unit bottom inset in the 64-unit
 viewport. Original red/blue are replaced with dark #419B9A / light #82E5D3 Aurora
 teal to keep the two sections distinct. No original red/blue fill is retained.
+
+v1.0.12 TVBox theme update
+The existing finite-palette contours are unchanged. Box faces now use Aurora
+teal/blue, tape uses violet, and edges use slate. The corresponding current XML
+is published in third-party/branding/ic_source_tvbox.xml under its retained AGPL-3.0 notice.

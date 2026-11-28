@@ -43,3 +43,10 @@ Guava 共用库固定为 33.3.1-android，[固定源码制品](https://repo.mave
 - [OpenList-logo-CC-BY-NC-SA-4.0.txt](OpenList-logo-CC-BY-NC-SA-4.0.txt)：https://github.com/OpenListTeam/Logo ，SHA-256 `1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1`。
 - OpenCC词典的固定上游链接与未改动文件SHA-256见 [SOURCES.json](../third-party/opencc/SOURCES.json)。
 - 来源标识的更新通知与转换记录见 [Source-brand-icons-NOTICE.txt](Source-brand-icons-NOTICE.txt)、[Source-vectorization-PROVENANCE.txt](Source-vectorization-PROVENANCE.txt)。
+
+## v1.0.12新增许可材料
+
+- [Emoji2-1.5.0-LICENSE.txt](Emoji2-1.5.0-LICENSE.txt)：与APK随包原文一致，SHA-256 `0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594`。
+- [115-sdk-go-Apache-2.0.txt](115-sdk-go-Apache-2.0.txt)：与APK随包原文一致，SHA-256 `50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a`。
+
+Emoji2 1.5.0 的组件与字体许可来自该版本AAR随附通知；115 SDK许可来自协议参考项目，客户端未合入其Go源码。

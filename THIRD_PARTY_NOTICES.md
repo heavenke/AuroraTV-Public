@@ -9,6 +9,7 @@
 | 组件或制品 | 版本与用途 | 许可及官方来源 |
 | --- | --- | --- |
 | AndroidX Core、AppCompat、Activity、Lifecycle、RecyclerView、ViewPager2 及其传递模块 | UI、生命周期、可访问性、分页与平台兼容 | Apache-2.0，[AndroidX](https://android.googlesource.com/platform/frameworks/support/) |
+| AndroidX Emoji2 Bundled | 1.5.0，公告与更新日志的离线 Emoji 字体兼容 | Apache-2.0、SIL OFL-1.1、Unicode License；[完整原文](LICENSES/Emoji2-1.5.0-LICENSE.txt)、[官方组件](https://developer.android.com/jetpack/androidx/releases/emoji2#1.5.0) |
 | Material Components for Android | 1.12.0，界面基础组件与主题 | Apache-2.0，[Material Components](https://github.com/material-components/material-components-android) |
 | Kotlin 标准库与 kotlinx.coroutines | Kotlin 运行时、协程与 Android 调度，直接引用 coroutines 1.8.1 | Apache-2.0，[Kotlin](https://github.com/JetBrains/kotlin)、[kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) |
 | AndroidX Media3 | 1.6.1，ExoPlayer、HLS、UI 及 extractor、container、datasource 等传递模块 | Apache-2.0，[Media3 1.6.1](https://github.com/androidx/media/tree/1.6.1) |
@@ -89,3 +90,9 @@ SMB 挂载使用 SMBJ、ASN One、MBassador、SLF4J 和 Bouncy Castle。网页�
 115来源中的m115算法按MIT许可参考SheltonZhu/115driver适配，原始版权与完整许可见 [115driver-MIT.txt](LICENSES/115driver-MIT.txt)。
 
 OpenCC 1.1.9词典数据遵循Apache-2.0，固定源码、原始通知及摘要见 [third-party/opencc/](third-party/opencc/)。来源图形的可编辑XML及各自归属见 [third-party/branding/](third-party/branding/)。
+
+## 网盘协议参考
+
+115 OAuth设备授权、刷新及只读目录与播放协议对照参考 [OpenListTeam/115-sdk-go](https://github.com/OpenListTeam/115-sdk-go)，极光使用独立Kotlin实现；参考项目的Apache-2.0原文保存在[115 SDK许可](LICENSES/115-sdk-go-Apache-2.0.txt)。历史115driver Cookie实验不再随当前客户端编译，其原文继续作为历史材料保留。
+
+迅雷、光鸭、夸克、百度和天翼的只读接入协议参考对应官方服务及 [OpenList驱动](https://github.com/OpenListTeam/OpenList/tree/main/drivers)，不包含这些驱动的Go实现、上传、删除或转存功能。网盘品牌标识仅用于来源识别，其商标与原始图形权利仍归各自所有者。

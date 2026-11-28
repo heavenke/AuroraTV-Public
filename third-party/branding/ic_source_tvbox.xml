@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Finite-palette contour adaptation of the user-provided TVBox mark: three grey box faces and red tape. Original raster references are local audit artifacts, not packaged source drawables. -->
+<!-- User-provided TVBox contour preserved: Aurora teal/blue box faces, violet tape and a slate outline. Original raster references remain local audit artifacts, never packaged drawables. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="96dp" android:height="96dp" android:viewportWidth="512" android:viewportHeight="512">
     <group android:translateX="253" android:translateY="0">
-        <path android:fillColor="#FF635F5F" android:pathData="M0,0L6,0L240,113L243,117L243,395L238,400L6,512L0,512L-221,405L-235,398L-237,395L-237,117L-232,112Z"/>
+        <path android:fillColor="#FF77D5C3" android:pathData="M0,0L6,0L240,113L243,117L243,395L238,400L6,512L0,512L-221,405L-235,398L-237,395L-237,117L-232,112Z"/>
     </group>
     <group android:translateX="253" android:translateY="0">
-        <path android:fillColor="#FF000000" android:pathData="M0,0L6,0L240,113L243,117L243,395L238,400L6,512L0,512L-221,405L-235,398L-237,395L-237,117L-232,112Z M-140,84L-210,118L-212,120L-48,200L-47,208L-50,211L-56,211L-211,136L-222,132L-222,388L-22,485L-7,492L-4,492L-4,237L-26,225L-27,224L-27,217L-23,214L-17,215L2,224L56,199L63,199L65,202L65,208L62,211L10,236L10,492L15,491L228,388L228,132L219,135L159,164L158,256L157,261L100,288L93,289L89,285L88,192L-131,86L-136,84Z"/>
+        <path android:fillColor="#FF425875" android:pathData="M0,0L6,0L240,113L243,117L243,395L238,400L6,512L0,512L-221,405L-235,398L-237,395L-237,117L-232,112Z M-140,84L-210,118L-212,120L-48,200L-47,208L-50,211L-56,211L-211,136L-222,132L-222,388L-22,485L-7,492L-4,492L-4,237L-26,225L-27,224L-27,217L-23,214L-17,215L2,224L56,199L63,199L65,202L65,208L62,211L10,236L10,492L15,491L228,388L228,132L219,135L159,164L158,256L157,261L100,288L93,289L89,285L88,192L-131,86L-136,84Z"/>
     </group>
     <group android:translateX="479" android:translateY="132">
-        <path android:fillColor="#FF52565A" android:pathData="M0,0L2,0L2,256L-198,353L-213,360L-216,360L-216,104L-162,78L-161,76L-161,69L-141,60L-138,60L-137,153L-133,157L-126,156L-71,129L-69,129L-68,124L-67,32Z"/>
+        <path android:fillColor="#FF738FCE" android:pathData="M0,0L2,0L2,256L-198,353L-213,360L-216,360L-216,104L-162,78L-161,76L-161,69L-141,60L-138,60L-137,153L-133,157L-126,156L-71,129L-69,129L-68,124L-67,32Z"/>
     </group>
     <group android:translateX="113" android:translateY="84">
-        <path android:fillColor="#FF6B6864" android:pathData="M0,0L7,1L226,107L223,110L208,117L203,115L196,115L144,140L121,130L115,131L112,133L95,124L92,116L-71,37L-72,35Z"/>
+        <path android:fillColor="#FF9DE6D9" android:pathData="M0,0L7,1L226,107L223,110L208,117L203,115L196,115L144,140L121,130L115,131L112,133L95,124L92,116L-71,37L-72,35Z"/>
     </group>
     <group android:translateX="254" android:translateY="16">
-        <path android:fillColor="#FF6B6864" android:pathData="M0,0L6,1L217,103L214,106L156,134L150,132L-60,30L-56,27Z"/>
+        <path android:fillColor="#FF8FADE0" android:pathData="M0,0L6,1L217,103L214,106L156,134L150,132L-60,30L-56,27Z"/>
     </group>
     <group android:translateX="176" android:translateY="54">
-        <path android:fillColor="#FFC1484E" android:pathData="M0,0L6,2L215,103L215,105L174,125L168,124L-43,22L-39,19Z"/>
+        <path android:fillColor="#FFC3A7F5" android:pathData="M0,0L6,2L215,103L215,105L174,125L168,124L-43,22L-39,19Z"/>
     </group>
     <group android:translateX="396" android:translateY="172">
-        <path android:fillColor="#FFC22F4D" android:pathData="M0,0L1,0L1,79L-39,99L-41,98L-41,20Z"/>
+        <path android:fillColor="#FFAA89DE" android:pathData="M0,0L1,0L1,79L-39,99L-41,98L-41,20Z"/>
     </group>
     <group android:translateX="53" android:translateY="306">
-        <path android:fillColor="#FF000000" android:pathData="M0,0L8,1L72,32L75,36L75,42L71,46L65,46L-1,14L-5,9L-4,3Z"/>
+        <path android:fillColor="#FF425875" android:pathData="M0,0L8,1L72,32L75,36L75,42L71,46L65,46L-1,14L-5,9L-4,3Z"/>
     </group>
     <group android:translateX="52" android:translateY="342">
-        <path android:fillColor="#FF000000" android:pathData="M0,0L7,0L40,16L45,21L44,28L41,30L34,30L-1,13L-4,8L-3,3Z"/>
+        <path android:fillColor="#FF425875" android:pathData="M0,0L7,0L40,16L45,21L44,28L41,30L34,30L-1,13L-4,8L-3,3Z"/>
     </group>
 </vector>

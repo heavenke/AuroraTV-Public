@@ -4,7 +4,7 @@
 
 ## 当前公众版：MPV 单引擎
 
-v1.0.10.261123 的对应源码、构建配方、原始许可与两 ABI 摘要位于 [mpv/](mpv/README.md)。其中 `downloads/` 保留实际源码归档，`tools/mpv/` 提供固定构建配方及兼容补丁，`licenses/` 与 `manifests/` 分别提供原始通知和对应制品摘要。后续只增量更新变化文件，Release 分发安装 APK；同一版本标签的 Source code (zip/tar.gz) 包含这些公开材料。
+v1.0.12.261128 的对应源码、构建配方、原始许可与两 ABI 摘要位于 [mpv/](mpv/README.md)。其中 `downloads/` 保留实际源码归档，`tools/mpv/` 提供固定构建配方及兼容补丁，`licenses/` 与 `manifests/` 分别提供原始通知和对应制品摘要。后续只增量更新变化文件，Release 分发安装 APK；同一版本标签的 Source code (zip/tar.gz) 包含这些公开材料。
 
 以下目录属于旧版材料，为满足已分发历史版本的许可与重构建要求而保留，不代表当前公众版仍提供其他播放引擎。原 `current/` 中的 LibVLC 清单也属于此历史范围。
 
