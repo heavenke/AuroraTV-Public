@@ -35,10 +35,10 @@ Android 5.0+，ARM64/ARM32 架构。
 
 ## 已支持列表
 
-- **影视服务器**　飞牛影视、Emby、Jellyfin
-- **网盘挂载**　夸克网盘、百度网盘、115云盘、天翼云盘
-- **兼容点播源**　TVBox
-- **其它类型**　OpenList、WebDav、SMB共享
+- **影视服务器:**　飞牛影视、Emby、Jellyfin
+- **网盘挂载:**　夸克网盘、百度网盘、115网盘、天翼云盘、迅雷网盘、光鸭云盘
+- **兼容点播源:**　TVBox
+- **其它类型:**　OpenList、WebDav、SMB共享
 
 ## 界面
 
@@ -52,6 +52,12 @@ Android 5.0+，ARM64/ARM32 架构。
 | 手机直播页 | 手机媒体库 |
 | --- | --- |
 | <img src="images/phone-live.jpg" alt="手机端直播界面" width="600"> | <img src="https://raw.githubusercontent.com/heavenke/AuroraTV-Public/fcdbe4f00787a9cec430e3f7efe25bf8f9db35f6/images/phone-library.jpg" alt="手机端媒体库界面" width="600"> |
+
+## 致谢
+
+- 播放器内核使用了[MPV](https://github.com/mpv-player/mpv) 开源内核。
+- 部份网盘接口使用了[OpenList](https://github.com/OpenListTeam/OpenList) 驱动。
+- TVBox 爬虫采用了[takagen99](https://github.com/takagen99/Box) 大佬维护的TVBox仓库中部份代码。
 
 # 关于
 
